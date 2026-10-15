@@ -2,22 +2,23 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'self'; img-src 'self'; base-uri 'none'; form-action 'none'">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'self'; font-src 'self'; img-src 'self'; base-uri 'none'; form-action 'none'">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Merchient · Claims review for supplement ads on Meta</title>
 <meta name="description" content="Vera, Merchient’s AI claims employee, checks a US supplement brand’s Meta ads, landing pages and reviews, quotes each risky claim, says who would act on it (Meta, the FTC or the FDA) and drafts a safe rewrite. A person checks every report.">
 <link rel="canonical" href="https://merchient.com/">
 <meta name="color-scheme" content="light dark">
-<meta name="theme-color" content="#fbfaf7" media="(prefers-color-scheme: light)">
-<meta name="theme-color" content="#111315" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#f2eee3" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#121210" media="(prefers-color-scheme: dark)">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Merchient">
-<meta property="og:title" content="Vera reads every claim in your ads the way Meta, the FTC and the FDA will.">
+<meta property="og:title" content="Keep the hook. Lose the claim that gets your best ad rejected.">
 <meta property="og:description" content="Claims review for US supplement brands running Meta ads. The first report is free.">
 <meta property="og:url" content="https://merchient.com/">
 <link rel="icon" href="favicon.ico" sizes="32x32">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="preload" href="fonts/archivo-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -25,15 +26,12 @@
 
 <header class="site-header">
   <div class="wrap header-inner">
-    <a class="brand" href="./">
-      <svg class="mark" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><rect width="32" height="32" rx="7"/><path d="M9 22V10l7 7.5 7-7.5v12"/></svg>
-      Merchient
-    </a>
+    <a class="brand" href="./">Merchient</a>
     <nav class="site-nav" aria-label="Main">
       <a href="#how">How it works</a>
       <a href="#pricing">Price</a>
       <a href="#faq">FAQ</a>
-      <a class="btn btn-primary btn-small" href="mailto:hello@merchient.com?subject=Free%20report%20request&amp;body=Brand%20name%3A%20%0D%0AWebsite%3A%20%0D%0A">Get your free report</a>
+      <a class="btn btn-small" href="mailto:hello@merchient.com?subject=Free%20report%20request&amp;body=Brand%20name%3A%20%0D%0AWebsite%3A%20%0D%0A">Get your free report</a>
     </nav>
   </div>
 </header>
@@ -41,160 +39,218 @@
 <main id="main">
 
   <section class="hero">
-    <div class="wrap">
-      <p class="eyebrow">For US supplement brands running Meta ads</p>
-      <h1>Vera reads every claim in your ads the way Meta, the FTC and the FDA will.</h1>
-      <p class="lead">You want ads that keep running, an ad account that stays safe, and the strongest claims you are allowed to make. Vera quotes each risky claim, says who would act on it and drafts a safe rewrite that keeps the hook.</p>
-      <p class="ai-note"><strong>Vera is an AI employee.</strong> She is Merchient’s claims employee, and a person checks every report before it reaches you.</p>
-      <div class="actions">
-        <a class="btn btn-primary" href="mailto:hello@merchient.com?subject=Free%20report%20request&amp;body=Brand%20name%3A%20%0D%0AWebsite%3A%20%0D%0A">Get your free report</a>
-        <a class="btn btn-secondary" href="mailto:hello@merchient.com?subject=Founding%20brand&amp;body=Brand%20name%3A%20%0D%0AWebsite%3A%20%0D%0A">Become a founding brand</a>
-      </div>
-      <p class="small">The first report is free, before you pay anything. Or email <a href="mailto:hello@merchient.com">hello@merchient.com</a>.</p>
-    </div>
-  </section>
-
-  <section class="section" id="what">
-    <div class="wrap split">
+    <div class="wrap hero-grid">
       <div>
-        <h2>What Vera does</h2>
-        <p>Vera checks every live ad, landing page and review. For each risky claim, she quotes the line, says who would act on it (Meta, the FTC or the FDA) and drafts a safe rewrite that keeps the hook.</p>
-        <p>She reads, and she drafts. She never posts, edits or pauses anything in your accounts.</p>
-        <p>A person checks every report before it reaches you.</p>
+        <p class="kicker">For US supplement brands on Meta</p>
+        <h1>Keep the hook. Lose the <span class="hit">claim</span> that gets your best ad rejected.</h1>
+        <p class="lede">Your best ad pulled. Your ad account restricted mid-launch. Vera, Merchient’s AI employee, reads every claim in your ads, landing pages and reviews the way Meta, the FTC and the FDA will, and drafts a rewrite that keeps the hook.</p>
+        <div class="cta-row">
+          <a class="btn" href="mailto:hello@merchient.com?subject=Free%20report%20request&amp;body=Brand%20name%3A%20%0D%0AWebsite%3A%20%0D%0A">Get your free report</a>
+          <p class="cta-note">Free, before you pay anything. No access needed.</p>
+        </div>
       </div>
-      <figure class="finding">
-        <figcaption>
-          <span class="tag">Example</span>
-          <span class="finding-note">A generic supplement line written for this page, not a real brand’s ad.</span>
-        </figcaption>
-        <div class="finding-block">
-          <p class="label">Ad line</p>
-          <blockquote class="quote">“Struggling with arthritis? Our turmeric formula ends joint pain in 7 days.”</blockquote>
-        </div>
-        <div class="finding-block">
-          <p class="label">Who would act</p>
-          <dl class="actors">
-            <div><dt>Meta</dt><dd>The opening question implies the viewer has a medical condition. Meta’s personal attributes policy does not allow that.</dd></div>
-            <div><dt>FDA</dt><dd>Ending arthritis pain is a claim to treat a disease, and a supplement may not claim to treat a disease.</dd></div>
-            <div><dt>FTC</dt><dd>“Ends joint pain in 7 days” is a health claim, and health claims need competent and reliable scientific evidence.</dd></div>
-          </dl>
-        </div>
-        <div class="finding-block">
-          <p class="label">Safe rewrite that keeps the hook</p>
-          <blockquote class="quote rewrite">“Love your morning walk? Our turmeric formula helps support healthy joints.*”</blockquote>
-          <p class="footnote">*These statements have not been evaluated by the Food and Drug Administration. This product is not intended to diagnose, treat, cure, or prevent any disease.</p>
+
+      <figure class="mail" aria-label="Fictional example of a morning brief from Vera">
+        <p class="fic">Fictional example</p>
+        <div class="mail-card">
+          <p class="mail-title">Morning brief</p>
+          <p class="mail-meta">From Vera, AI employee at Merchient · to you · 6:04 AM</p>
+          <div class="bar-xl" aria-hidden="true"></div>
+          <p class="mail-subject">1 new risk, 1 change, the rest all clear</p>
+          <div class="bar-m" aria-hidden="true"></div>
+          <div class="mail-item">
+            <p><span class="tag tag-risk">New risk</span></p>
+            <p class="where">Ad “Spring reset, video 3”</p>
+            <p>“Finally, a probiotic that ends bloating <span class="hit">for good</span>.”</p>
+            <p><b>FTC:</b> “for good” promises a permanent result, which needs strong evidence.</p>
+            <p><b>Rewrite:</b> “Finally, a probiotic for everyday digestive comfort.*”</p>
+          </div>
+          <div class="hair" aria-hidden="true"></div>
+          <div class="mail-item">
+            <p><span class="tag tag-change">Changed</span></p>
+            <p class="where">Landing page /sleep</p>
+            <p>The headline now says “<span class="hit">clinically proven</span>”. <b>FTC:</b> that needs trials on this formula. A rewrite is ready if you have none.</p>
+          </div>
+          <div class="hair" aria-hidden="true"></div>
+          <div class="mail-item">
+            <p><span class="tag tag-clear">All clear</span></p>
+            <p>Your other live ads, landing pages and new reviews.</p>
+          </div>
+          <div class="bar-m" aria-hidden="true"></div>
+          <p class="mail-sign">Send me any new ad before launch and you will have a verdict today. Vera, AI employee at Merchient</p>
         </div>
       </figure>
     </div>
   </section>
 
-  <section class="section alt" id="how">
+  <section class="section" id="examples">
     <div class="wrap">
-      <h2>How it works</h2>
-      <ol class="steps">
+      <p class="kicker">Before and after</p>
+      <h2>Every ad line gets a facts panel.</h2>
+      <p class="section-lede">Three fictional ad lines, read the way Vera reads yours: what’s in each claim, who would act on it, and a rewrite that keeps what made the ad work.</p>
+      <div class="facts-grid">
+
+        <article class="facts panel">
+          <p class="panel-title">Claims Facts</p>
+          <p class="meta">Serving size: 1 ad line</p>
+          <p class="meta">Category: gut · <span class="fic">Fictional example</span></p>
+          <div class="bar-xl" aria-hidden="true"></div>
+          <p class="facts-line">“<span class="hit">Bloated again?</span> This probiotic <span class="hit">heals leaky gut</span> <span class="hit">in 14 days</span>.”</p>
+          <div class="bar-m" aria-hidden="true"></div>
+          <table>
+            <thead><tr><th scope="col">Risky phrase</th><th scope="col">Who would act</th></tr></thead>
+            <tbody>
+              <tr><td><b>“Bloated again?”</b><small>asks about the viewer’s health, against Meta’s personal attributes policy</small></td><td>Meta</td></tr>
+              <tr><td><b>“heals leaky gut”</b><small>reads as a treatment claim, which a supplement can’t make</small></td><td>FDA</td></tr>
+              <tr><td><b>“in 14 days”</b><small>needs competent and reliable scientific evidence</small></td><td>FTC</td></tr>
+            </tbody>
+          </table>
+          <div class="bar-xl" aria-hidden="true"></div>
+          <p class="rw-label">Safe rewrite, keeps the hook</p>
+          <p class="rw">“14 mornings, one new habit: a daily probiotic to support digestive health.*”</p>
+          <div class="hair" aria-hidden="true"></div>
+          <p class="facts-fn">*These statements have not been evaluated by the Food and Drug Administration. This product is not intended to diagnose, treat, cure, or prevent any disease.</p>
+        </article>
+
+        <article class="facts panel">
+          <p class="panel-title">Claims Facts</p>
+          <p class="meta">Serving size: 1 ad line</p>
+          <p class="meta">Category: sleep · <span class="fic">Fictional example</span></p>
+          <div class="bar-xl" aria-hidden="true"></div>
+          <p class="facts-line">“<span class="hit">Can’t sleep?</span> <span class="hit">Cure insomnia</span> naturally and <span class="hit">fall asleep in 10 minutes</span>.”</p>
+          <div class="bar-m" aria-hidden="true"></div>
+          <table>
+            <thead><tr><th scope="col">Risky phrase</th><th scope="col">Who would act</th></tr></thead>
+            <tbody>
+              <tr><td><b>“Can’t sleep?”</b><small>implies the viewer has a health condition</small></td><td>Meta</td></tr>
+              <tr><td><b>“Cure insomnia”</b><small>insomnia is a disease, so this is a drug claim</small></td><td>FDA</td></tr>
+              <tr><td><b>“in 10 minutes”</b><small>a specific result that needs proof</small></td><td>FTC</td></tr>
+            </tbody>
+          </table>
+          <div class="bar-xl" aria-hidden="true"></div>
+          <p class="rw-label">Safe rewrite, keeps the hook</p>
+          <p class="rw">“Your 10-minute wind-down: magnesium and L-theanine to support restful sleep.*”</p>
+          <div class="hair" aria-hidden="true"></div>
+          <p class="facts-fn">*These statements have not been evaluated by the Food and Drug Administration. This product is not intended to diagnose, treat, cure, or prevent any disease.</p>
+        </article>
+
+        <article class="facts panel">
+          <p class="panel-title">Claims Facts</p>
+          <p class="meta">Serving size: 1 ad line</p>
+          <p class="meta">Category: men’s health · <span class="fic">Fictional example</span></p>
+          <div class="bar-xl" aria-hidden="true"></div>
+          <p class="facts-line">“<span class="hit">Low T?</span> <span class="hit">Fix it</span> and <span class="hit">boost testosterone 300% in 30 days</span>.”</p>
+          <div class="bar-m" aria-hidden="true"></div>
+          <table>
+            <thead><tr><th scope="col">Risky phrase</th><th scope="col">Who would act</th></tr></thead>
+            <tbody>
+              <tr><td><b>“Low T?”</b><small>assumes a medical condition about the viewer</small></td><td>Meta</td></tr>
+              <tr><td><b>“Fix it”</b><small>a supplement can’t claim to fix a medical condition</small></td><td>FDA</td></tr>
+              <tr><td><b>“300% in 30 days”</b><small>a number that needs solid proof</small></td><td>FTC</td></tr>
+            </tbody>
+          </table>
+          <div class="bar-xl" aria-hidden="true"></div>
+          <p class="rw-label">Safe rewrite, keeps the hook</p>
+          <p class="rw">“Built for training days: zinc and vitamin D to support healthy testosterone levels.*”</p>
+          <div class="hair" aria-hidden="true"></div>
+          <p class="facts-fn">*These statements have not been evaluated by the Food and Drug Administration. This product is not intended to diagnose, treat, cure, or prevent any disease.</p>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="how">
+    <div class="wrap">
+      <p class="kicker">How it works</p>
+      <h2>Suggested use.</h2>
+      <ol class="use">
         <li>
-          <h3>The free report</h3>
-          <p>Ask for it by email. It reads only your public ads and pages, so it needs no access. Before you pay anything, Vera checks every live ad, landing page and review, and a person checks the report before it reaches you.</p>
+          <h3>Ask for the free report.</h3>
+          <p>A free first report before paying anything: every live ad, landing page and review checked; each risky claim quoted, with who would act on it (Meta, the FTC or the FDA) and a safe rewrite that keeps the hook. It reads only your public ads and pages, so it needs no access.</p>
         </li>
         <li>
-          <h3>Share the ad account, view-only</h3>
+          <h3>Share your ad account, view-only.</h3>
           <p>After you join, it takes two minutes to share the ad account with Merchient, view-only, in Meta Business Suite. <a href="connect.html">Here are the steps</a>. Nothing to log in to, no software. You get the full first report within 48 hours of connecting, counted from when you share it.</p>
         </li>
         <li>
-          <h3>Vera every morning</h3>
-          <p>A brief from Vera every morning: new or changed risks, or a one-line all-clear. Any new ad you send her before launch gets a verdict and a safe rewrite the same day.</p>
+          <h3>Read Vera’s brief every morning.</h3>
+          <p>A brief from Vera every morning: new or changed risks, or a one-line all-clear. Before launch, any new ad sent to Vera gets a verdict and a safe rewrite the same day.</p>
         </li>
       </ol>
     </div>
   </section>
 
-  <section class="section" id="get">
+  <section class="section" id="watch">
     <div class="wrap">
-      <h2>What you get</h2>
-      <ol class="get">
-        <li><strong>A free first report before paying anything:</strong> every live ad, landing page and review checked; each risky claim quoted, with who would act on it (Meta, the FTC or the FDA) and a safe rewrite that keeps the hook.</li>
-        <li><strong>A brief from Vera every morning:</strong> new or changed risks, or a one-line all-clear.</li>
-        <li><strong>Ad checks before launch:</strong> any new ad sent to Vera gets a verdict and a safe rewrite the same day.</li>
-        <li><strong>Every week, what changed</strong> in Meta, FTC and FDA rules and what it means for your ads.</li>
-        <li><span class="tag">Bonus</span><strong>A competitor claims watch,</strong> showing which claims rivals run and which ones disappeared.</li>
-        <li><strong>A person checks every report</strong> before it reaches you.</li>
-      </ol>
-    </div>
-  </section>
-
-  <section class="section alt" id="guarantees">
-    <div class="wrap">
-      <h2>Guarantees</h2>
-      <div class="cards">
-        <div class="card">
-          <h3>30 days money back</h3>
-          <p>30 days money back, no questions asked, once per brand.</p>
-        </div>
-        <div class="card">
-          <h3>Rejection guarantee</h3>
-          <p>If Meta rejects one of your ads for a claim Vera reviewed (in a morning brief or a check before launch) and did not flag, that month’s fee is refunded or credited, your choice; it applies when the ad that ran is the text and media Vera reviewed and Meta’s notice names a claim-related policy; a claim Vera flagged, at any tier, that ran anyway is not covered.</p>
-        </div>
-      </div>
-      <h3 class="limits-title">Honest limits</h3>
-      <ul class="limits">
-        <li>Risk review, not legal advice.</li>
-        <li>No promise that an account is never restricted, because Meta acts for reasons beyond claims.</li>
-      </ul>
+      <p class="kicker">What Vera watches</p>
+      <h2>Ingredients.</h2>
+      <p class="ingredients"><b>Ingredients:</b> your live ads, your landing pages, the reviews you show, weekly rule changes from Meta, the FTC and the FDA, and your competitors’ claims <b>(bonus)</b>.</p>
+      <dl class="ing">
+        <div><dt>Live ads</dt><dd>Every line, read the way Meta, the FTC and the FDA will.</dd></div>
+        <div><dt>Landing pages</dt><dd>The pages your ads send people to. Meta, the FTC and the FDA read those too.</dd></div>
+        <div><dt>Reviews</dt><dd>The reviews you show can make claims for you.</dd></div>
+        <div><dt>Rule changes, every week</dt><dd>Every week, what changed in Meta, FTC and FDA rules and what it means for your ads.</dd></div>
+        <div><dt>Competitors <span class="bonus">Bonus</span></dt><dd>A competitor claims watch, showing which claims rivals run and which ones disappeared.</dd></div>
+      </dl>
     </div>
   </section>
 
   <section class="section" id="pricing">
-    <div class="wrap split">
-      <div>
-        <h2>Founding price</h2>
-        <p class="section-lead">5 founding places, because a person reviews every report.</p>
-        <p>In return for the founding price: an honest testimonial after 30 days, if the brand is happy.</p>
-      </div>
-      <div class="price-card">
-        <p class="tag">Founding brands</p>
-        <p class="price"><span class="amount">$1,500</span> <span class="per">a month</span></p>
-        <p>Founding brands pay $1,500 a month; the standard price is $3,000.</p>
-        <ul class="checks">
-          <li>Locked for 12 months while the subscription runs.</li>
-          <li>Month to month, cancel any time.</li>
-          <li>30 days money back, no questions asked, once per brand.</li>
-        </ul>
-        <div class="actions">
-          <a class="btn btn-primary" href="mailto:hello@merchient.com?subject=Founding%20brand&amp;body=Brand%20name%3A%20%0D%0AWebsite%3A%20%0D%0A">Become a founding brand</a>
-          <a class="btn btn-secondary" href="mailto:hello@merchient.com?subject=Free%20report%20request&amp;body=Brand%20name%3A%20%0D%0AWebsite%3A%20%0D%0A">Get your free report</a>
+    <div class="wrap">
+      <p class="kicker">Price</p>
+      <h2>The founding offer.</h2>
+      <div class="offer-grid">
+        <div class="panel">
+          <p class="panel-title">Founding brands</p>
+          <p class="price"><span>$1,500</span> a month</p>
+          <div class="bar-xl" aria-hidden="true"></div>
+          <table class="terms-table">
+            <tbody>
+              <tr><th scope="row">Price</th><td>Founding brands pay $1,500 a month; the standard price is $3,000.</td></tr>
+              <tr><th scope="row">Locked</th><td>Locked for 12 months while the subscription runs.</td></tr>
+              <tr><th scope="row">Term</th><td>Month to month, cancel any time.</td></tr>
+              <tr><th scope="row">Places</th><td>5 founding places, because a person reviews every report.</td></tr>
+              <tr><th scope="row">In return</th><td>In return for the founding price: an honest testimonial after 30 days, if the brand is happy.</td></tr>
+            </tbody>
+          </table>
         </div>
-        <p class="small">Billed monthly in advance through Stripe.</p>
+        <div>
+          <div class="guar">
+            <h3>30 days money back</h3>
+            <p>30 days money back, no questions asked, once per brand.</p>
+          </div>
+          <div class="guar">
+            <h3>Rejection guarantee</h3>
+            <p>If Meta rejects one of your ads for a claim Vera reviewed (in a morning brief or a check before launch) and did not flag, that month’s fee is refunded or credited, your choice; it applies when the ad that ran is the text and media Vera reviewed and Meta’s notice names a claim-related policy; a claim Vera flagged, at any tier, that ran anyway is not covered.</p>
+          </div>
+          <p class="exact">The full terms are in our <a href="terms.html">terms of service</a>.</p>
+        </div>
       </div>
+      <p class="warnings"><b>Warnings:</b> Risk review, not legal advice. No promise that an account is never restricted, because Meta acts for reasons beyond claims.</p>
     </div>
   </section>
 
-  <section class="section alt" id="faq">
-    <div class="wrap narrow">
-      <h2>Questions</h2>
-      <div class="faq">
-        <h3>Is Vera an AI?</h3>
-        <p>Yes. Vera is an AI employee, Merchient’s claims employee. A person checks every report before it reaches you.</p>
-        <h3>What access do you need?</h3>
-        <p>None for the free report: it reads only your public ads and pages. After you join, view-only access to your Meta ad account, which takes two minutes to share: <a href="connect.html">connect your ad account</a>. Nothing to log in to, no software. Vera never posts, edits or pauses anything in your accounts: she reads, and she drafts. You can remove the access at any time in Meta Business Suite.</p>
-        <h3>Is this legal advice?</h3>
-        <p>No. This is risk review, not legal advice, and you stay responsible for your ads. There is also no promise that an account is never restricted, because Meta acts for reasons beyond claims.</p>
-        <h3>Can I cancel?</h3>
-        <p>Yes. Month to month, cancel any time; cancelling takes effect at the end of the paid month. There is also 30 days money back, no questions asked, once per brand.</p>
-        <h3>What do you do with my data?</h3>
-        <p>We use it only for your reports, briefs and replies, and we never sell it. Anthropic (for Claude), Google Cloud, Google Workspace and Stripe process it for us. To get a copy or have it deleted, email <a href="mailto:hello@merchient.com">hello@merchient.com</a>. The <a href="privacy.html">privacy policy</a> and the <a href="data-deletion.html">data deletion page</a> have the details.</p>
-      </div>
+  <section class="section" id="faq">
+    <div class="wrap">
+      <p class="kicker">Questions</p>
+      <h2>Short answers.</h2>
+      <dl class="faq">
+        <div><dt>Is Vera a person?</dt><dd>No. Vera is an AI employee. A person checks every report before it reaches you.</dd></div>
+        <div><dt>What access do you need?</dt><dd>None for the free report: it reads only your public ads and pages. After you join, view-only access to your Meta ad account, which takes two minutes to share: <a href="connect.html">connect your ad account</a>. Nothing to log in to, no software. Vera never posts, edits or pauses anything in your accounts: she reads, and she drafts. You can remove the access at any time in Meta Business Suite.</dd></div>
+        <div><dt>Is this legal advice?</dt><dd>No. This is risk review, not legal advice, and you stay responsible for your ads.</dd></div>
+        <div><dt>Can I cancel?</dt><dd>Yes. Month to month, cancel any time; cancelling takes effect at the end of the paid month. There is also 30 days money back, no questions asked, once per brand.</dd></div>
+        <div><dt>What do you do with my data?</dt><dd>We use it only for your reports, briefs and replies, and we never sell it. Anthropic (for Claude), Google Cloud, Google Workspace and Stripe process it for us. To get a copy or have it deleted, email <a href="mailto:hello@merchient.com">hello@merchient.com</a>. The <a href="privacy.html">privacy policy</a> and the <a href="data-deletion.html">data deletion page</a> have the details.</dd></div>
+      </dl>
     </div>
   </section>
 
-  <section class="section">
-    <div class="wrap narrow center">
-      <h2>Start with the free report</h2>
-      <p>Before you pay anything, Vera checks every live ad, landing page and review, and a person checks the report before it reaches you.</p>
-      <div class="actions">
-        <a class="btn btn-primary" href="mailto:hello@merchient.com?subject=Free%20report%20request&amp;body=Brand%20name%3A%20%0D%0AWebsite%3A%20%0D%0A">Get your free report</a>
-        <a class="btn btn-secondary" href="mailto:hello@merchient.com?subject=Founding%20brand&amp;body=Brand%20name%3A%20%0D%0AWebsite%3A%20%0D%0A">Become a founding brand</a>
-      </div>
-      <p class="small">Or email <a href="mailto:hello@merchient.com">hello@merchient.com</a></p>
+  <section class="final">
+    <div class="wrap">
+      <h2>Read the label on your own ads. Free.</h2>
+      <p>Send us your brand. Vera quotes every risky claim in your public ads and pages, with who would act on it and a rewrite. Before you pay anything.</p>
+      <a class="btn" href="mailto:hello@merchient.com?subject=Free%20report%20request&amp;body=Brand%20name%3A%20%0D%0AWebsite%3A%20%0D%0A">Get your free report</a>
+      <p class="alt">Or write to hello@merchient.com</p>
     </div>
   </section>
 
