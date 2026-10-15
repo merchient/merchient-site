@@ -229,6 +229,35 @@ p, ul, ol, dl, table, figure { margin: 0 0 1em; }
 .access dd { margin: 0; font-weight: 700; }
 @media (min-width: 700px) { .access { grid-template-columns: 1fr 1fr; } }
 
+/* Sample report */
+
+.sample-top { padding: 48px 0 44px; }
+.sample-top h1 { max-width: 16ch; }
+.fic-lg { margin-bottom: 18px; padding: 3px 10px; font-size: var(--t-s); }
+.letter { margin-bottom: 22px; font-size: 1.05rem; }
+.letter p:last-child { margin-bottom: 0; }
+.letter-label { margin: 0; font: 700 var(--t-xs)/1.3 var(--narrow); letter-spacing: .06em; text-transform: uppercase; }
+.letter-subject { margin: 2px 0 4px; font-size: clamp(1.3rem, 1.1rem + 1vw, 1.75rem); font-weight: 900; line-height: 1.15; letter-spacing: -.02em; }
+.letter-meta { margin: 0; color: var(--muted); font-size: var(--t-s); }
+.signoff { margin-top: 14px; font-weight: 700; }
+.items { display: grid; gap: 22px; margin-bottom: 22px; }
+.item .meta { margin: 4px 0 0; font-size: var(--t-s); }
+.item-head { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 10px; margin: 0 0 8px; }
+.item-no { font: 700 var(--t-s)/1.2 var(--narrow); letter-spacing: .06em; text-transform: uppercase; }
+.tier { display: inline-block; padding: 1px 8px; font: 700 var(--t-xs)/1.6 var(--narrow); letter-spacing: .08em; text-transform: uppercase; }
+.tier-red { background: var(--accent); color: var(--on-accent); }
+.tier-yellow { background: #f5c84c; color: #111111; }
+.tier-open { padding: 0 7px; border: 1.5px solid var(--ink); }
+.item-table { width: 100%; margin: 0; border-collapse: collapse; font-size: var(--t-s); }
+.item-table th { width: 34%; padding: 7px 10px 7px 0; font: 700 var(--t-xs)/1.35 var(--narrow); letter-spacing: .05em; text-align: left; text-transform: uppercase; vertical-align: top; }
+.item-table td { padding: 7px 0; vertical-align: top; }
+.item-table tr + tr th, .item-table tr + tr td { border-top: 1px solid var(--ink); }
+.item-table .rw-row td { font-weight: 700; }
+.item .facts-fn { margin-top: 2px; }
+.sample-link { font-weight: 800; }
+.final .sample-link { color: var(--on-accent); }
+@media (min-width: 1000px) { .items { grid-template-columns: repeat(3, minmax(0, 1fr)); align-items: start; } }
+
 /* Motion, only for people who have not asked for less. Each animation runs once, and nothing starts hidden. */
 
 @media (prefers-reduced-motion: no-preference) {
