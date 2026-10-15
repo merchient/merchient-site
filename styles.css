@@ -289,12 +289,83 @@ p, ul, ol, dl, table, figure { margin: 0 0 1em; }
 .caught li p { margin: 0 0 6px; max-width: 52em; }
 .state { display: flex; flex-wrap: wrap; align-items: center; gap: 4px 10px; color: var(--muted); font-size: var(--t-s); }
 
+/* The walk-through under the hero: about 12 seconds, looping, pausable. Its still style is the final frame. */
+
+.demo-section { padding: 52px 0 64px; border-top: 3px solid var(--ink); }
+.demo { position: relative; margin: 22px 0 0; }
+.demo-pause { position: absolute; top: 10px; right: 12px; width: 1px; height: 1px; opacity: 0; }
+.demo-window { background: var(--label); border: 2px solid var(--ink); }
+.demo-bar { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 14px; padding: 8px 12px; border-bottom: 4px solid var(--ink); font: 700 var(--t-xs)/1.4 var(--narrow); letter-spacing: .06em; text-transform: uppercase; }
+.demo-title { flex: 1 1 auto; }
+.demo-status { display: grid; }
+.demo-status > span { grid-area: 1 / 1; padding: 0 7px; background: var(--ink); color: var(--label); }
+.st-read, .st-flag { opacity: 0; }
+.st-flag { background: var(--accent) !important; color: var(--on-accent) !important; }
+.pause-label { padding: 1px 8px; border: 1.5px solid var(--ink); cursor: pointer; }
+.pause-label .when-off { display: none; }
+.demo-pause:checked + .demo-window .when-on { display: none; }
+.demo-pause:checked + .demo-window .when-off { display: inline; }
+.demo-pause:focus-visible + .demo-window .pause-label { outline: 3px solid var(--accent); outline-offset: 2px; }
+.demo-body { display: grid; gap: 16px; padding: 14px; }
+.demo-page .fic { margin-bottom: 10px; }
+.demo-line { margin: 0 0 4px; padding: 6px 8px; font-size: 1.05rem; line-height: 1.45; }
+.demo-name { font-size: 1.5rem; font-weight: 900; letter-spacing: -.03em; }
+.demo-swap { display: grid; }
+.demo-old, .demo-new { grid-area: 1 / 1; }
+.demo-old { opacity: 0; }
+.demo-new { font-weight: 800; }
+.demo-tick { display: inline-flex; align-items: center; gap: 5px; margin-top: 6px; padding: 1px 8px; background: var(--ink); color: var(--label); font: 700 var(--t-xs)/1.6 var(--narrow); letter-spacing: .08em; text-transform: uppercase; }
+.tick-icon { width: 14px; height: 14px; }
+.demo-card { align-self: start; padding: 10px 12px 12px; background: var(--paper); border: 2px solid var(--ink); font-size: var(--t-s); }
+.demo-card-title { margin: 0 0 6px; padding-bottom: 6px; border-bottom: 4px solid var(--ink); font: 700 var(--t-xs)/1.3 var(--narrow); letter-spacing: .06em; text-transform: uppercase; }
+.demo-card dl { margin: 0; }
+.demo-card dl div { padding: 6px 0; border-top: 1px solid var(--ink); }
+.demo-card dl div:first-child { border-top: 0; }
+.demo-card dt { font: 700 var(--t-xs)/1.3 var(--narrow); letter-spacing: .05em; text-transform: uppercase; }
+.demo-card dd { margin: 2px 0 0; font-weight: 700; }
+.demo figcaption { margin-top: 10px; color: var(--muted); font-size: var(--t-s); max-width: 60em; }
+.strip-kicker { margin: 34px 0 0; }
+.strip { display: grid; margin: 10px 0 0; padding: 0; list-style: none; counter-reset: strip; border-top: 4px solid var(--ink); }
+.strip li { display: grid; grid-template-columns: 2.6rem minmax(0, 1fr); align-items: baseline; padding: 12px 0; border-bottom: 1px solid var(--ink); counter-increment: strip; }
+.strip li::before { content: counter(strip); color: var(--accent); font: 900 1.9rem/1 var(--sans); letter-spacing: -.04em; }
+.strip p { margin: 0; font-size: var(--t-l); font-weight: 800; line-height: 1.25; letter-spacing: -.01em; }
+@media (min-width: 900px) {
+  .demo-body { grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr); gap: 28px; padding: 22px; }
+  .demo-line { font-size: 1.2rem; }
+  .demo-name { font-size: 1.9rem; }
+  .strip { grid-template-columns: repeat(3, minmax(0, 1fr)); column-gap: 28px; }
+}
+
 /* Motion, only for people who have not asked for less. Each animation runs once, and nothing starts hidden. */
 
 @media (prefers-reduced-motion: no-preference) {
   .bar-xl { transform-origin: left; animation: fill .7s cubic-bezier(.3, .7, .2, 1) .2s both; }
   .rw-label { animation: stamp .45s cubic-bezier(.2, .9, .3, 1.4) .9s both; }
   .btn { transition: background-color .15s ease, border-color .15s ease, color .15s ease; }
+  /* The walk-through: one 12-second story, looping; hover or the Pause toggle stops it */
+  .demo .l1 { animation: d-read1 12s linear infinite; }
+  .demo .l2 { animation: d-read2 12s linear infinite; }
+  .demo .l3 { animation: d-flag 12s linear infinite; }
+  .demo .l4 { animation: d-read4 12s linear infinite; }
+  .demo-old { animation: d-old 12s linear infinite; }
+  .demo-new { animation: d-new 12s linear infinite; }
+  .demo-tick { animation: d-tick 12s ease-out infinite; }
+  .demo-card { animation: d-card 12s ease infinite; }
+  .st-read { animation: d-st-read 12s linear infinite; }
+  .st-flag { animation: d-st-flag 12s linear infinite; }
+  .st-fixed { animation: d-st-fixed 12s linear infinite; }
+  .demo-pause:checked + .demo-window *, .demo-window:hover * { animation-play-state: paused; }
+  @keyframes d-read1 { 0%, 1% { background: transparent; box-shadow: none; } 3%, 8% { background: var(--accent-soft); box-shadow: inset 3px 0 0 var(--accent); } 10%, 100% { background: transparent; box-shadow: none; } }
+  @keyframes d-read2 { 0%, 9% { background: transparent; box-shadow: none; } 11%, 15% { background: var(--accent-soft); box-shadow: inset 3px 0 0 var(--accent); } 17%, 100% { background: transparent; box-shadow: none; } }
+  @keyframes d-flag { 0%, 16% { background: transparent; box-shadow: none; } 18%, 55% { background: var(--accent-soft); box-shadow: inset 3px 0 0 var(--accent), inset 0 -3px 0 var(--accent); } 58%, 100% { background: transparent; box-shadow: none; } }
+  @keyframes d-read4 { 0%, 64% { background: transparent; box-shadow: none; } 66%, 72% { background: var(--accent-soft); box-shadow: inset 3px 0 0 var(--accent); } 74%, 100% { background: transparent; box-shadow: none; } }
+  @keyframes d-old { 0%, 54% { opacity: 1; } 57%, 96% { opacity: 0; } 99%, 100% { opacity: 1; } }
+  @keyframes d-new { 0%, 56% { opacity: 0; } 59%, 95% { opacity: 1; } 98%, 100% { opacity: 0; } }
+  @keyframes d-tick { 0%, 61% { opacity: 0; transform: scale(.6); } 64% { opacity: 1; transform: scale(1.12); } 66%, 93% { opacity: 1; transform: none; } 96%, 100% { opacity: 0; transform: none; } }
+  @keyframes d-card { 0%, 21% { opacity: 0; transform: translateY(8px); } 25%, 91% { opacity: 1; transform: none; } 95%, 100% { opacity: 0; transform: translateY(8px); } }
+  @keyframes d-st-read { 0%, 19% { opacity: 1; } 21%, 96% { opacity: 0; } 98%, 100% { opacity: 1; } }
+  @keyframes d-st-flag { 0%, 19% { opacity: 0; } 21%, 56% { opacity: 1; } 58%, 100% { opacity: 0; } }
+  @keyframes d-st-fixed { 0%, 57% { opacity: 0; } 59%, 95% { opacity: 1; } 97%, 100% { opacity: 0; } }
   @keyframes fill { from { transform: scaleX(.15); } to { transform: none; } }
   @keyframes stamp { from { transform: scale(1.25) rotate(-3deg); } to { transform: none; } }
 }
