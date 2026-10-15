@@ -258,9 +258,10 @@ p, ul, ol, dl, table, figure { margin: 0 0 1em; }
 .final .sample-link { color: var(--on-accent); }
 @media (min-width: 1000px) { .items { grid-template-columns: repeat(3, minmax(0, 1fr)); align-items: start; } }
 
-/* Calls to action: booking first, the free report beside it */
+/* Calls to action: the free scan first, the booking call beside it */
 
 .secondary-link { font-size: var(--t-s); font-weight: 800; }
+.cta-line { max-width: 34em; margin: 12px 0 0; color: var(--muted); font-size: var(--t-s); }
 .final .secondary-link { color: var(--on-accent); }
 .final .cta-row { margin: 22px 0 6px; }
 .offer-cta { margin-top: 18px; }
