@@ -258,6 +258,19 @@ p, ul, ol, dl, table, figure { margin: 0 0 1em; }
 .final .sample-link { color: var(--on-accent); }
 @media (min-width: 1000px) { .items { grid-template-columns: repeat(3, minmax(0, 1fr)); align-items: start; } }
 
+/* Calls to action: booking first, the free report beside it */
+
+.secondary-link { font-size: var(--t-s); font-weight: 800; }
+.final .secondary-link { color: var(--on-accent); }
+.final .cta-row { margin: 22px 0 6px; }
+.offer-cta { margin-top: 18px; }
+.offer-cta .btn { width: 100%; }
+.offer-q { margin: 10px 0 0; font-size: var(--t-s); text-align: center; }
+@media (max-width: 430px) {
+  .brand { padding: 5px 7px 4px; font-size: .95rem; letter-spacing: .1em; }
+  .site-nav .btn-small { min-height: 40px; padding: 0 10px; font-size: .82rem; }
+}
+
 /* Motion, only for people who have not asked for less. Each animation runs once, and nothing starts hidden. */
 
 @media (prefers-reduced-motion: no-preference) {
