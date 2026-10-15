@@ -298,7 +298,7 @@ p, ul, ol, dl, table, figure { margin: 0 0 1em; }
 .demo-bar { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 14px; padding: 8px 12px; border-bottom: 4px solid var(--ink); font: 700 var(--t-xs)/1.4 var(--narrow); letter-spacing: .06em; text-transform: uppercase; }
 .demo-title { flex: 1 1 auto; }
 .demo-status { display: grid; }
-.demo-status > span { grid-area: 1 / 1; padding: 0 7px; background: var(--ink); color: var(--label); }
+.demo-status > span { grid-area: 1 / 1; justify-self: start; padding: 0 7px; background: var(--ink); color: var(--label); }
 .st-read, .st-flag { opacity: 0; }
 .st-flag { background: var(--accent) !important; color: var(--on-accent) !important; }
 .pause-label { padding: 1px 8px; border: 1.5px solid var(--ink); cursor: pointer; }
