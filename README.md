@@ -9,6 +9,8 @@ It is a static site: plain HTML pages and one stylesheet, with no build step, no
 - `index.html`: the main page
 - `connect.html`: how to share a Meta ad account with Merchient, view-only
 - `sample-report.html`: a fictional brand's free first report, as Vera writes one
+- `vera-month.html`: a fictional training brand's month with Vera
+- `findings.html`: anonymised findings from supplement brands' own websites
 - `privacy.html`: privacy policy
 - `terms.html`: terms of service
 - `data-deletion.html`: how to have data deleted and remove Merchient's access in Meta
