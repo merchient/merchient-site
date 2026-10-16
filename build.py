@@ -31,6 +31,8 @@ FOUNDING_PLACES_LEFT = 5
 # service does not answer. Switching it on also loosens the home page's content
 # security policy (script-src 'self', connect-src for the service) and means the
 # privacy and security pages must say where the scan data goes. Then run build.py.
+# (Off, Chrome logs one console notice on https: a form that targets "mailto:" is
+# not a secure endpoint. It changes nothing for the visitor.)
 SCAN_API_ON = False
 SCAN_API_URL = 'https://api.merchient.com/api/scan'
 
@@ -258,8 +260,7 @@ SCAN_OFF = '''<!--scan-->
           </form>
           <!--/scan-->'''
 SCAN_ON = '''<!--scan-->
-          <form class="scan" action="mailto:hello@merchient.com" method="get" data-api="%s">
-            <input type="hidden" name="subject" value="Free&nbsp;scan&nbsp;request">
+          <form class="scan" method="get" data-api="%s">
             <label for="scan-website">Your website</label>
             <input id="scan-website" name="website" type="text" inputmode="url" autocomplete="url" placeholder="yourbrand.com" required>
             <label for="scan-email">Your work email</label>
@@ -307,7 +308,7 @@ SCAN_JS = '''// Posts the home page's scan form to Merchient's scan service. If 
 
 def scan_apply(page):
     """Writes the scan box, and the home page's content security policy, for SCAN_API_ON."""
-    csp = CSP_BASE + ("script-src 'self'; connect-src %s; form-action mailto:" % SCAN_API_URL.rsplit('/', 2)[0]
+    csp = CSP_BASE + ("script-src 'self'; connect-src %s; form-action 'none'" % SCAN_API_URL.rsplit('/', 2)[0]
                       if SCAN_API_ON else 'form-action mailto:')
     box = SCAN_ON % html.escape(SCAN_API_URL, quote=True) if SCAN_API_ON else SCAN_OFF
     page, n = SCAN_BLOCK.subn(lambda m: box, page)
