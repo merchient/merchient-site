@@ -1,0 +1,88 @@
+{
+  "slug": "passionflower",
+  "ingredient": "Passionflower",
+  "also_called": [
+    "Passiflora incarnata",
+    "Passion flower"
+  ],
+  "title": "What can you say about passionflower in your ads and on your site?",
+  "summary": "The library supports 2 wordings for passionflower; the strongest is \"Traditionally used in herbal medicine to help relieve restlessness or nervousness\" (limited, 0.25-8 g dried herb top (or extract equivalent) a day). Avoid wording that names or implies a disease, a drug or a treatment, such as \"Treats insomnia\".",
+  "supported_wordings": [
+    {
+      "wording": "Traditionally used in herbal medicine to help relieve restlessness or nervousness.",
+      "evidence_strength": "limited",
+      "why": "Traditional use in Health Canada's monograph; no other listed source covers it.",
+      "daily_dose": "0.25-8 g dried herb top (or extract equivalent) a day",
+      "dose_details": "Adolescents 12 to 17 and adults. Water extracts (decoction, infusion, aqueous dry extract) start at 1 g a day.",
+      "form": "Dried herb top, powder or extracts",
+      "sources": [
+        {
+          "name": "Health Canada monograph: Passionflower",
+          "url": "https://webprod.hc-sc.gc.ca/nhpid-bdipsn/atReq?atid=passionflower.passiflore&lang=eng"
+        }
+      ]
+    },
+    {
+      "wording": "Traditionally used in herbal medicine as a sleep aid for occasional sleeplessness during times of mental stress.",
+      "evidence_strength": "limited",
+      "why": "Traditional use in Health Canada's monograph; no other listed source covers it.",
+      "daily_dose": "0.25-8 g dried herb top (or extract equivalent) a day",
+      "dose_details": "Adolescents 12 to 17 and adults. Water extracts (decoction, infusion, aqueous dry extract) start at 1 g a day. Take 1 hour before bedtime as needed. Health Canada asks people to see a practitioner if sleeplessness lasts more than 4 weeks.",
+      "form": "Dried herb top, powder or extracts",
+      "sources": [
+        {
+          "name": "Health Canada monograph: Passionflower",
+          "url": "https://webprod.hc-sc.gc.ca/nhpid-bdipsn/atReq?atid=passionflower.passiflore&lang=eng"
+        }
+      ]
+    }
+  ],
+  "wordings_to_avoid": [
+    {
+      "wording": "Treats insomnia",
+      "reason": "disease",
+      "why": "Names a sleep disorder; Health Canada says sleeplessness lasting more than 4 weeks needs a practitioner.",
+      "meta_ads_only": false
+    },
+    {
+      "wording": "Treats anxiety",
+      "reason": "disease",
+      "why": "Names a mental health disorder; the supported wording is restlessness or nervousness.",
+      "meta_ads_only": false
+    },
+    {
+      "wording": "Works like a sleeping pill or a benzodiazepine",
+      "reason": "drug",
+      "why": "Compares the product to a drug.",
+      "meta_ads_only": false
+    },
+    {
+      "wording": "Helps you fall asleep, without 'occasional'",
+      "reason": "disease",
+      "why": "FDA's 2000 rule (page 1031) says help falling asleep implies treating insomnia unless the context makes clear the product is only for occasional sleeplessness.",
+      "meta_ads_only": false
+    }
+  ],
+  "evidence_strengths": {
+    "strong": "At least two listed sources support it independently at a comparable dose and form, and none disagrees.",
+    "moderate": "One listed source supports it as an evidence-based use at that dose, and no listed source disagrees.",
+    "limited": "The only support is traditional use, the sources disagree, or the source itself calls the evidence weak."
+  },
+  "reasons_to_avoid": {
+    "disease": "names or implies a disease",
+    "drug": "names a drug or presents the product as one",
+    "treatment": "promises to treat, cure or prevent a condition"
+  },
+  "sources": [
+    {
+      "name": "Health Canada monograph: Passionflower",
+      "url": "https://webprod.hc-sc.gc.ca/nhpid-bdipsn/atReq?atid=passionflower.passiflore&lang=eng"
+    },
+    {
+      "name": "FDA final rule on structure/function statements, 65 FR 1000 (6 January 2000), page 1031",
+      "url": "https://www.federalregister.gov/documents/full_text/text/2000/01/06/00-53.txt"
+    }
+  ],
+  "disclaimer": "Not legal advice. This guide shows the wording that published evidence supports at a daily dose, from the sources linked below; it is not a ruling on any claim. Your own product, its form and dose, and your own evidence still need to match the wording you use.",
+  "date_reviewed": "2026-10-15"
+}

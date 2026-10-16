@@ -1,0 +1,67 @@
+{
+  "slug": "elderberry",
+  "ingredient": "Elderberry",
+  "also_called": [
+    "Elder",
+    "Black elder",
+    "American elder",
+    "Sambucus nigra",
+    "Elderflower"
+  ],
+  "title": "What can you say about elderberry in your ads and on your site?",
+  "summary": "The library supports 1 wording for elderberry; the strongest is \"A source of antioxidants that help protect cells against damage from free radicals\" (limited, up to 18 g dried fruit (or extract equivalent) a day). Avoid wording that names or implies a disease, a drug or a treatment, such as \"Shortens colds or flu\".",
+  "supported_wordings": [
+    {
+      "wording": "A source of antioxidants that help protect cells against damage from free radicals.",
+      "evidence_strength": "limited",
+      "why": "Health Canada lists it for the fruit with a maximum dose only; no other listed source covers it.",
+      "daily_dose": "up to 18 g dried fruit (or extract equivalent) a day",
+      "dose_details": "Adults 18 and older, up to 18 g dried fruit a day; Health Canada sets no minimum for this use.",
+      "form": "Dried elder fruit (berries) or extracts",
+      "sources": [
+        {
+          "name": "Health Canada monograph: Elder - Sambucus",
+          "url": "https://webprod.hc-sc.gc.ca/nhpid-bdipsn/atReq?atid=elder.sureau2&lang=eng"
+        }
+      ]
+    }
+  ],
+  "wordings_to_avoid": [
+    {
+      "wording": "Shortens colds or flu",
+      "reason": "disease",
+      "why": "Names infectious diseases.",
+      "meta_ads_only": false
+    },
+    {
+      "wording": "Protects against COVID-19",
+      "reason": "disease",
+      "why": "Names a disease; NCCIH finds no good evidence for it.",
+      "meta_ads_only": false
+    },
+    {
+      "wording": "Boosts immunity for flu season",
+      "reason": "disease",
+      "why": "Implies protection against an infectious disease.",
+      "meta_ads_only": false
+    }
+  ],
+  "evidence_strengths": {
+    "strong": "At least two listed sources support it independently at a comparable dose and form, and none disagrees.",
+    "moderate": "One listed source supports it as an evidence-based use at that dose, and no listed source disagrees.",
+    "limited": "The only support is traditional use, the sources disagree, or the source itself calls the evidence weak."
+  },
+  "reasons_to_avoid": {
+    "disease": "names or implies a disease",
+    "drug": "names a drug or presents the product as one",
+    "treatment": "promises to treat, cure or prevent a condition"
+  },
+  "sources": [
+    {
+      "name": "Health Canada monograph: Elder - Sambucus",
+      "url": "https://webprod.hc-sc.gc.ca/nhpid-bdipsn/atReq?atid=elder.sureau2&lang=eng"
+    }
+  ],
+  "disclaimer": "Not legal advice. This guide shows the wording that published evidence supports at a daily dose, from the sources linked below; it is not a ruling on any claim. Your own product, its form and dose, and your own evidence still need to match the wording you use.",
+  "date_reviewed": "2026-10-14"
+}

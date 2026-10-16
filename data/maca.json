@@ -1,0 +1,85 @@
+{
+  "slug": "maca",
+  "ingredient": "Maca",
+  "also_called": [
+    "Lepidium meyenii"
+  ],
+  "title": "What can you say about maca in your ads and on your site?",
+  "summary": "The library supports 3 wordings for maca; the strongest is \"Helps support the emotional aspects of sexual health\" (moderate, 3-3.5 g dried root a day). Avoid wording that names or implies a disease, a drug or a treatment, such as \"Treats erectile dysfunction\".",
+  "supported_wordings": [
+    {
+      "wording": "A source of antioxidants that help protect cells against damage from free radicals.",
+      "evidence_strength": "limited",
+      "why": "Health Canada sets a maximum dose only; no other listed source covers it.",
+      "daily_dose": "up to 3 g dried root a day",
+      "dose_details": "Adults 18 and older, up to 3 g a day.",
+      "form": "Dried root or hypocotyl",
+      "sources": [
+        {
+          "name": "Health Canada monograph: Maca - Lepidium meyenii",
+          "url": "https://webprod.hc-sc.gc.ca/nhpid-bdipsn/atReq?atid=maca.lepidium.meyenii2&lang=eng"
+        }
+      ]
+    },
+    {
+      "wording": "Helps support the emotional aspects of sexual health.",
+      "evidence_strength": "moderate",
+      "why": "Health Canada lists it at 3-3.5 g a day; no other listed source covers it.",
+      "daily_dose": "3-3.5 g dried root a day",
+      "dose_details": "Adults 18 and older; ask a practitioner for use beyond 6 weeks at more than 3 g a day.",
+      "form": "Dried root or hypocotyl",
+      "sources": [
+        {
+          "name": "Health Canada monograph: Maca - Lepidium meyenii",
+          "url": "https://webprod.hc-sc.gc.ca/nhpid-bdipsn/atReq?atid=maca.lepidium.meyenii2&lang=eng"
+        }
+      ]
+    },
+    {
+      "wording": "Helps support a healthy mood balance during menopause.",
+      "evidence_strength": "moderate",
+      "why": "Health Canada lists it at 2-3.5 g a day; no other listed source covers it.",
+      "daily_dose": "2-3.5 g dried root a day",
+      "dose_details": "Adult women; ask a practitioner for use beyond 3 months (0.6-3 g a day) or 6 weeks (more than 3 g a day).",
+      "form": "Dried root or hypocotyl",
+      "sources": [
+        {
+          "name": "Health Canada monograph: Maca - Lepidium meyenii",
+          "url": "https://webprod.hc-sc.gc.ca/nhpid-bdipsn/atReq?atid=maca.lepidium.meyenii2&lang=eng"
+        }
+      ]
+    }
+  ],
+  "wordings_to_avoid": [
+    {
+      "wording": "Treats erectile dysfunction",
+      "reason": "disease",
+      "why": "Names a medical condition.",
+      "meta_ads_only": false
+    },
+    {
+      "wording": "Treats depression during menopause",
+      "reason": "disease",
+      "why": "Names a mental health disorder; the supported wording is mood balance.",
+      "meta_ads_only": false
+    }
+  ],
+  "evidence_strengths": {
+    "strong": "At least two listed sources support it independently at a comparable dose and form, and none disagrees.",
+    "moderate": "One listed source supports it as an evidence-based use at that dose, and no listed source disagrees.",
+    "limited": "The only support is traditional use, the sources disagree, or the source itself calls the evidence weak."
+  },
+  "reasons_to_avoid": {
+    "disease": "names or implies a disease",
+    "drug": "names a drug or presents the product as one",
+    "treatment": "promises to treat, cure or prevent a condition"
+  },
+  "sources": [
+    {
+      "name": "Health Canada monograph: Maca - Lepidium meyenii",
+      "url": "https://webprod.hc-sc.gc.ca/nhpid-bdipsn/atReq?atid=maca.lepidium.meyenii2&lang=eng"
+    }
+  ],
+  "disclaimer": "Not legal advice. This guide shows the wording that published evidence supports at a daily dose, from the sources linked below; it is not a ruling on any claim. Your own product, its form and dose, and your own evidence still need to match the wording you use.",
+  "date_reviewed": "2026-10-14"
+}

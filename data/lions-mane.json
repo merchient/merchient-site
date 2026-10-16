@@ -1,0 +1,64 @@
+{
+  "slug": "lions-mane",
+  "ingredient": "Lion's mane",
+  "also_called": [
+    "Hericium erinaceus",
+    "Lion's mane mushroom"
+  ],
+  "title": "What can you say about lion's mane in your ads and on your site?",
+  "summary": "The library supports 1 wording for lion's mane; the strongest is \"A source of fungal polysaccharides and antioxidants\" (limited, up to 2.8 g dried fruiting body or mycelium a day). Avoid wording that names or implies a disease, a drug or a treatment, such as \"Improves memory in dementia or Alzheimer's disease\".",
+  "supported_wordings": [
+    {
+      "wording": "A source of fungal polysaccharides and antioxidants.",
+      "evidence_strength": "limited",
+      "why": "Health Canada sets a maximum dose only; no other listed source covers it.",
+      "daily_dose": "up to 2.8 g dried fruiting body or mycelium a day",
+      "dose_details": "Up to 2.8 g a day, dry or powdered, per Health Canada; no minimum is set.",
+      "form": "Dried or powdered fruiting body or mycelium",
+      "sources": [
+        {
+          "name": "Health Canada monograph: Mushrooms",
+          "url": "https://webprod.hc-sc.gc.ca/nhpid-bdipsn/atReq?atid=mushrooms.champignons&lang=eng"
+        }
+      ]
+    }
+  ],
+  "wordings_to_avoid": [
+    {
+      "wording": "Improves memory in dementia or Alzheimer's disease",
+      "reason": "disease",
+      "why": "Names diseases.",
+      "meta_ads_only": false
+    },
+    {
+      "wording": "Treats depression or anxiety",
+      "reason": "disease",
+      "why": "Names mental health disorders.",
+      "meta_ads_only": false
+    },
+    {
+      "wording": "Regrows nerves after injury",
+      "reason": "disease",
+      "why": "Implies repair of a damaged body system; no listed source supports it.",
+      "meta_ads_only": false
+    }
+  ],
+  "evidence_strengths": {
+    "strong": "At least two listed sources support it independently at a comparable dose and form, and none disagrees.",
+    "moderate": "One listed source supports it as an evidence-based use at that dose, and no listed source disagrees.",
+    "limited": "The only support is traditional use, the sources disagree, or the source itself calls the evidence weak."
+  },
+  "reasons_to_avoid": {
+    "disease": "names or implies a disease",
+    "drug": "names a drug or presents the product as one",
+    "treatment": "promises to treat, cure or prevent a condition"
+  },
+  "sources": [
+    {
+      "name": "Health Canada monograph: Mushrooms",
+      "url": "https://webprod.hc-sc.gc.ca/nhpid-bdipsn/atReq?atid=mushrooms.champignons&lang=eng"
+    }
+  ],
+  "disclaimer": "Not legal advice. This guide shows the wording that published evidence supports at a daily dose, from the sources linked below; it is not a ruling on any claim. Your own product, its form and dose, and your own evidence still need to match the wording you use.",
+  "date_reviewed": "2026-10-14"
+}

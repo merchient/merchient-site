@@ -1,0 +1,85 @@
+{
+  "slug": "collagen-peptides",
+  "ingredient": "Collagen peptides",
+  "also_called": [
+    "Hydrolyzed collagen",
+    "Hydrolysed collagen",
+    "Collagen"
+  ],
+  "title": "What can you say about collagen peptides in your ads and on your site?",
+  "summary": "The library supports 2 wordings for collagen peptides; the strongest is \"Provides amino acids the body uses to build protein, including muscle protein\" (moderate, 2.6-10 g hydrolyzed collagen a day). Avoid wording that names or implies a disease, a drug or a treatment, such as \"Helps manage joint pain, or relieves joint pain\".",
+  "supported_wordings": [
+    {
+      "wording": "Provides amino acids the body uses to build protein, including muscle protein.",
+      "evidence_strength": "moderate",
+      "why": "Health Canada lists it based on collagen's amino acid content; no other listed source covers it.",
+      "daily_dose": "2.6-10 g hydrolyzed collagen a day",
+      "dose_details": "Adults 18 and older. Health Canada also accepts a smaller amount if it supplies at least set minimums of each amino acid named.",
+      "form": "Hydrolyzed collagen",
+      "sources": [
+        {
+          "name": "Health Canada monograph: Hydrolyzed collagen",
+          "url": "https://webprod.hc-sc.gc.ca/nhpid-bdipsn/atReq?atid=hydrolized.collagen&lang=eng"
+        }
+      ]
+    },
+    {
+      "wording": "Provides lysine, which helps the body form collagen.",
+      "evidence_strength": "moderate",
+      "why": "Health Canada lists it; no other listed source covers it.",
+      "daily_dose": "up to 10 g hydrolyzed collagen a day",
+      "dose_details": "The daily amount must supply at least 133 mg lysine; the maximum is 10 g hydrolyzed collagen. Adults 18 and older.",
+      "form": "Hydrolyzed collagen",
+      "sources": [
+        {
+          "name": "Health Canada monograph: Hydrolyzed collagen",
+          "url": "https://webprod.hc-sc.gc.ca/nhpid-bdipsn/atReq?atid=hydrolized.collagen&lang=eng"
+        }
+      ]
+    }
+  ],
+  "wordings_to_avoid": [
+    {
+      "wording": "Helps manage joint pain, or relieves joint pain",
+      "reason": "disease",
+      "why": "FDA's 2000 rule (page 1016) says 'joint pain' is characteristic of arthritis, so joint-pain wording is a disease claim in a US review.",
+      "meta_ads_only": false
+    },
+    {
+      "wording": "Relieves arthritis or osteoarthritis pain",
+      "reason": "disease",
+      "why": "Names a disease. Health Canada lists osteoarthritis wording, but it names a disease; the joint-pain wording without a disease name is listed separately.",
+      "meta_ads_only": false
+    },
+    {
+      "wording": "Rebuilds cartilage in damaged or arthritic joints",
+      "reason": "disease",
+      "why": "Implies reversing joint disease; no listed source supports it.",
+      "meta_ads_only": false
+    },
+    {
+      "wording": "Works like a pain reliever",
+      "reason": "drug",
+      "why": "Compares the product to a drug.",
+      "meta_ads_only": false
+    }
+  ],
+  "evidence_strengths": {
+    "strong": "At least two listed sources support it independently at a comparable dose and form, and none disagrees.",
+    "moderate": "One listed source supports it as an evidence-based use at that dose, and no listed source disagrees.",
+    "limited": "The only support is traditional use, the sources disagree, or the source itself calls the evidence weak."
+  },
+  "reasons_to_avoid": {
+    "disease": "names or implies a disease",
+    "drug": "names a drug or presents the product as one",
+    "treatment": "promises to treat, cure or prevent a condition"
+  },
+  "sources": [
+    {
+      "name": "Health Canada monograph: Hydrolyzed collagen",
+      "url": "https://webprod.hc-sc.gc.ca/nhpid-bdipsn/atReq?atid=hydrolized.collagen&lang=eng"
+    }
+  ],
+  "disclaimer": "Not legal advice. This guide shows the wording that published evidence supports at a daily dose, from the sources linked below; it is not a ruling on any claim. Your own product, its form and dose, and your own evidence still need to match the wording you use.",
+  "date_reviewed": "2026-10-14"
+}

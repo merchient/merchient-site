@@ -1,0 +1,98 @@
+{
+  "slug": "coenzyme-q10",
+  "ingredient": "Coenzyme Q10",
+  "also_called": [
+    "CoQ10",
+    "Ubiquinone",
+    "Ubiquinone-10",
+    "Ubidecarenone"
+  ],
+  "title": "What can you say about coenzyme Q10 in your ads and on your site?",
+  "summary": "The library supports 2 wordings for coenzyme Q10; the strongest is \"Helps maintain cardiovascular health\" (moderate, 30-300 mg a day). Avoid wording that names or implies a disease, a drug or a treatment, such as \"Treats heart failure or heart disease\".",
+  "supported_wordings": [
+    {
+      "wording": "Helps maintain cardiovascular health.",
+      "evidence_strength": "moderate",
+      "why": "Health Canada lists it at 30-300 mg a day (15-300 mg for ubiquinol); no other listed source covers it.",
+      "daily_dose": "30-300 mg a day",
+      "dose_details": "Adults 18 and older. Health Canada: 30-300 mg a day of coenzyme Q10. Its ubiquinol monograph gives 15-300 mg a day of ubiquinol for the same use, so a ubiquinol product at 15-30 mg a day shows here as below the range.",
+      "form": "Coenzyme Q10 (ubiquinone), or ubiquinol (see details)",
+      "sources": [
+        {
+          "name": "Health Canada monograph: Coenzyme Q10",
+          "url": "https://webprod.hc-sc.gc.ca/nhpid-bdipsn/atReq?atid=coenzyme.q10&lang=eng"
+        },
+        {
+          "name": "Health Canada monograph: Ubiquinol",
+          "url": "https://webprod.hc-sc.gc.ca/nhpid-bdipsn/atReq?atid=ubiquinol2&lang=eng"
+        }
+      ]
+    },
+    {
+      "wording": "Provides an antioxidant that helps protect cells against damage from free radicals.",
+      "evidence_strength": "limited",
+      "why": "Health Canada sets a maximum dose only; no other listed source covers it.",
+      "daily_dose": "up to 300 mg a day",
+      "dose_details": "Adults 18 and older; Health Canada sets a maximum of 300 mg a day for coenzyme Q10 and for ubiquinol.",
+      "form": "Coenzyme Q10 (ubiquinone) or ubiquinol",
+      "sources": [
+        {
+          "name": "Health Canada monograph: Coenzyme Q10",
+          "url": "https://webprod.hc-sc.gc.ca/nhpid-bdipsn/atReq?atid=coenzyme.q10&lang=eng"
+        },
+        {
+          "name": "Health Canada monograph: Ubiquinol",
+          "url": "https://webprod.hc-sc.gc.ca/nhpid-bdipsn/atReq?atid=ubiquinol2&lang=eng"
+        }
+      ]
+    }
+  ],
+  "wordings_to_avoid": [
+    {
+      "wording": "Treats heart failure or heart disease",
+      "reason": "disease",
+      "why": "Names diseases; the supported wording is maintaining cardiovascular health.",
+      "meta_ads_only": false
+    },
+    {
+      "wording": "Lowers blood pressure",
+      "reason": "disease",
+      "why": "Names a disease marker. FDA's 2000 rule (page 1006) counts a claim that a product promotes low blood pressure as a disease claim.",
+      "meta_ads_only": false
+    },
+    {
+      "wording": "Prevents migraines",
+      "reason": "disease",
+      "why": "Names a disease. Health Canada's migraine use is a Canada only note.",
+      "meta_ads_only": false
+    },
+    {
+      "wording": "Relieves statin muscle pain",
+      "reason": "disease",
+      "why": "Implies treating a side effect of a drug, a medical condition; no listed source supports it.",
+      "meta_ads_only": false
+    }
+  ],
+  "evidence_strengths": {
+    "strong": "At least two listed sources support it independently at a comparable dose and form, and none disagrees.",
+    "moderate": "One listed source supports it as an evidence-based use at that dose, and no listed source disagrees.",
+    "limited": "The only support is traditional use, the sources disagree, or the source itself calls the evidence weak."
+  },
+  "reasons_to_avoid": {
+    "disease": "names or implies a disease",
+    "drug": "names a drug or presents the product as one",
+    "treatment": "promises to treat, cure or prevent a condition"
+  },
+  "sources": [
+    {
+      "name": "Health Canada monograph: Coenzyme Q10",
+      "url": "https://webprod.hc-sc.gc.ca/nhpid-bdipsn/atReq?atid=coenzyme.q10&lang=eng"
+    },
+    {
+      "name": "Health Canada monograph: Ubiquinol",
+      "url": "https://webprod.hc-sc.gc.ca/nhpid-bdipsn/atReq?atid=ubiquinol2&lang=eng"
+    }
+  ],
+  "disclaimer": "Not legal advice. This guide shows the wording that published evidence supports at a daily dose, from the sources linked below; it is not a ruling on any claim. Your own product, its form and dose, and your own evidence still need to match the wording you use.",
+  "date_reviewed": "2026-10-15"
+}

@@ -1,0 +1,63 @@
+{
+  "slug": "glycine",
+  "ingredient": "Glycine",
+  "also_called": [
+    "Aminoacetic acid"
+  ],
+  "title": "What can you say about glycine in your ads and on your site?",
+  "summary": "The library supports 1 wording for glycine; the strongest is \"Provides a non-essential amino acid involved in muscle protein synthesis\" (moderate, 160-1,800 mg a day). Avoid wording that names or implies a disease, a drug or a treatment, such as \"Treats insomnia, or a cure for sleep problems\".",
+  "supported_wordings": [
+    {
+      "wording": "Provides a non-essential amino acid involved in muscle protein synthesis.",
+      "evidence_strength": "moderate",
+      "why": "Health Canada lists it at 160 mg to 1.8 g a day; no other listed source covers glycine.",
+      "daily_dose": "160-1,800 mg a day",
+      "dose_details": "Adults 18 and older. Health Canada lists this use in its workout supplements monograph, for products with at least one non-essential amino acid at or above its minimum dose; for glycine that is 160 mg a day, and the maximum is 1.8 g a day.",
+      "form": "Glycine, taken by mouth, as in a workout supplement",
+      "sources": [
+        {
+          "name": "Health Canada monograph: Workout Supplements",
+          "url": "https://webprod.hc-sc.gc.ca/nhpid-bdipsn/atReq?atid=workout.supplements.entrainement&lang=eng"
+        }
+      ]
+    }
+  ],
+  "wordings_to_avoid": [
+    {
+      "wording": "Treats insomnia, or a cure for sleep problems",
+      "reason": "treatment",
+      "why": "Names a sleep disorder and promises to treat it; no listed source supports sleep wording for glycine.",
+      "meta_ads_only": false
+    },
+    {
+      "wording": "Works like a sleeping pill",
+      "reason": "drug",
+      "why": "Compares the product to a drug.",
+      "meta_ads_only": false
+    },
+    {
+      "wording": "Lowers blood sugar in diabetes",
+      "reason": "disease",
+      "why": "Names a disease; no listed source supports it.",
+      "meta_ads_only": false
+    }
+  ],
+  "evidence_strengths": {
+    "strong": "At least two listed sources support it independently at a comparable dose and form, and none disagrees.",
+    "moderate": "One listed source supports it as an evidence-based use at that dose, and no listed source disagrees.",
+    "limited": "The only support is traditional use, the sources disagree, or the source itself calls the evidence weak."
+  },
+  "reasons_to_avoid": {
+    "disease": "names or implies a disease",
+    "drug": "names a drug or presents the product as one",
+    "treatment": "promises to treat, cure or prevent a condition"
+  },
+  "sources": [
+    {
+      "name": "Health Canada monograph: Workout Supplements",
+      "url": "https://webprod.hc-sc.gc.ca/nhpid-bdipsn/atReq?atid=workout.supplements.entrainement&lang=eng"
+    }
+  ],
+  "disclaimer": "Not legal advice. This guide shows the wording that published evidence supports at a daily dose, from the sources linked below; it is not a ruling on any claim. Your own product, its form and dose, and your own evidence still need to match the wording you use.",
+  "date_reviewed": "2026-10-15"
+}

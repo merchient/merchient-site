@@ -1,0 +1,115 @@
+{
+  "slug": "black-cohosh",
+  "ingredient": "Black cohosh",
+  "also_called": [
+    "Actaea racemosa",
+    "Cimicifuga racemosa"
+  ],
+  "title": "What can you say about black cohosh in your ads and on your site?",
+  "summary": "The library supports 4 wordings for black cohosh; the strongest is \"Used in herbal medicine to help relieve premenstrual symptoms\" (moderate, 40-2,400 mg dried root a day). Avoid wording that names or implies a disease, a drug or a treatment, such as \"Treats menopause, or replaces hormone therapy (HRT)\".",
+  "supported_wordings": [
+    {
+      "wording": "Used in herbal medicine to help relieve symptoms associated with menopause.",
+      "evidence_strength": "limited",
+      "why": "Health Canada lists it, but ODS reports trials and guidelines that do not show it works for hot flashes.",
+      "daily_dose": "40-2,400 mg dried root a day",
+      "dose_details": "Adults 18 and older. Health Canada: 40-2,400 mg of dried root and/or rhizome a day, as dried herb or an ethanol or water extract.",
+      "form": "Dried root and/or rhizome, or its ethanol or water extract",
+      "sources": [
+        {
+          "name": "Health Canada monograph: Black Cohosh",
+          "url": "https://webprod.hc-sc.gc.ca/nhpid-bdipsn/atReq?atid=black.cohosh.actee.noire2&lang=eng"
+        },
+        {
+          "name": "NIH ODS fact sheet: Black Cohosh (health professional)",
+          "url": "https://ods.od.nih.gov/factsheets/BlackCohosh-HealthProfessional/"
+        }
+      ],
+      "where_sources_disagree": "Health Canada lists this use at 40-2,400 mg dried root a day. ODS reports that a review found no significant reduction in hot flashes and other vasomotor symptoms, and that the American College of Obstetricians and Gynecologists concluded in 2015 that the data do not show herbal supplements such as black cohosh work for them."
+    },
+    {
+      "wording": "Used in herbal medicine to help relieve premenstrual symptoms.",
+      "evidence_strength": "moderate",
+      "why": "Health Canada lists it as a herbal medicine use at 40-2,400 mg dried root a day; no other listed source covers it.",
+      "daily_dose": "40-2,400 mg dried root a day",
+      "dose_details": "Adults 18 and older. Health Canada: 40-2,400 mg of dried root and/or rhizome a day, as dried herb or an ethanol or water extract.",
+      "form": "Dried root and/or rhizome, or its ethanol or water extract",
+      "sources": [
+        {
+          "name": "Health Canada monograph: Black Cohosh",
+          "url": "https://webprod.hc-sc.gc.ca/nhpid-bdipsn/atReq?atid=black.cohosh.actee.noire2&lang=eng"
+        }
+      ]
+    },
+    {
+      "wording": "Traditionally used in herbal medicine to help ease nervous tension.",
+      "evidence_strength": "limited",
+      "why": "A traditional use in Health Canada's monograph.",
+      "daily_dose": "40-2,400 mg dried root a day",
+      "dose_details": "Adults 18 and older. Health Canada: 40-2,400 mg of dried root and/or rhizome a day, as dried herb or an ethanol or water extract.",
+      "form": "Dried root and/or rhizome, or its ethanol or water extract",
+      "sources": [
+        {
+          "name": "Health Canada monograph: Black Cohosh",
+          "url": "https://webprod.hc-sc.gc.ca/nhpid-bdipsn/atReq?atid=black.cohosh.actee.noire2&lang=eng"
+        }
+      ]
+    },
+    {
+      "wording": "Traditionally used in herbal medicine to help relieve the pain associated with menstruation.",
+      "evidence_strength": "limited",
+      "why": "A traditional use in Health Canada's monograph.",
+      "daily_dose": "40-2,400 mg dried root a day",
+      "dose_details": "Adults 18 and older. Health Canada: 40-2,400 mg of dried root and/or rhizome a day, as dried herb or an ethanol or water extract.",
+      "form": "Dried root and/or rhizome, or its ethanol or water extract",
+      "sources": [
+        {
+          "name": "Health Canada monograph: Black Cohosh",
+          "url": "https://webprod.hc-sc.gc.ca/nhpid-bdipsn/atReq?atid=black.cohosh.actee.noire2&lang=eng"
+        }
+      ]
+    }
+  ],
+  "wordings_to_avoid": [
+    {
+      "wording": "Treats menopause, or replaces hormone therapy (HRT)",
+      "reason": "drug",
+      "why": "Presents the product as a replacement for a drug therapy.",
+      "meta_ads_only": false
+    },
+    {
+      "wording": "Relieves arthritis or sciatica pain",
+      "reason": "disease",
+      "why": "Names diseases.",
+      "meta_ads_only": false
+    },
+    {
+      "wording": "Treats PCOS or infertility",
+      "reason": "disease",
+      "why": "Names diseases.",
+      "meta_ads_only": false
+    }
+  ],
+  "evidence_strengths": {
+    "strong": "At least two listed sources support it independently at a comparable dose and form, and none disagrees.",
+    "moderate": "One listed source supports it as an evidence-based use at that dose, and no listed source disagrees.",
+    "limited": "The only support is traditional use, the sources disagree, or the source itself calls the evidence weak."
+  },
+  "reasons_to_avoid": {
+    "disease": "names or implies a disease",
+    "drug": "names a drug or presents the product as one",
+    "treatment": "promises to treat, cure or prevent a condition"
+  },
+  "sources": [
+    {
+      "name": "Health Canada monograph: Black Cohosh",
+      "url": "https://webprod.hc-sc.gc.ca/nhpid-bdipsn/atReq?atid=black.cohosh.actee.noire2&lang=eng"
+    },
+    {
+      "name": "NIH ODS fact sheet: Black Cohosh (health professional)",
+      "url": "https://ods.od.nih.gov/factsheets/BlackCohosh-HealthProfessional/"
+    }
+  ],
+  "disclaimer": "Not legal advice. This guide shows the wording that published evidence supports at a daily dose, from the sources linked below; it is not a ruling on any claim. Your own product, its form and dose, and your own evidence still need to match the wording you use.",
+  "date_reviewed": "2026-10-15"
+}

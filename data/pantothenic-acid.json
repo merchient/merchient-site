@@ -1,0 +1,111 @@
+{
+  "slug": "pantothenic-acid",
+  "ingredient": "Pantothenic acid (vitamin B5)",
+  "also_called": [
+    "Vitamin B5",
+    "Vitamin B-5",
+    "Calcium pantothenate",
+    "Calcium D-pantothenate",
+    "D-calcium pantothenate"
+  ],
+  "title": "What can you say about pantothenic acid (vitamin B5) in your ads and on your site?",
+  "summary": "The library supports 4 wordings for pantothenic acid (vitamin B5); the strongest is \"Supports normal energy-yielding metabolism\" (strong, 0.9-500 mg a day). Avoid wording that names or implies a disease, a drug or a treatment, such as \"Clears acne\".",
+  "supported_wordings": [
+    {
+      "wording": "Supports normal energy-yielding metabolism.",
+      "evidence_strength": "strong",
+      "why": "Listed by Health Canada and authorized in the EU after EFSA review.",
+      "daily_dose": "0.9-500 mg a day",
+      "dose_details": "Adults 19 and older. Health Canada: 0.4-500 mg a day. EU: at least 0.9 mg, 15% of the 6 mg EU reference value (Regulation (EU) No 1169/2011, Annex XIII).",
+      "form": "Calcium D-pantothenate or another salt on Health Canada's list, counted as pantothenic acid",
+      "sources": [
+        {
+          "name": "Health Canada monograph: Multi-Vitamin/Mineral Supplements",
+          "url": "https://webprod.hc-sc.gc.ca/nhpid-bdipsn/atReq?atid=multi_vitmin_suppl&lang=eng"
+        },
+        {
+          "name": "Commission Regulation (EU) No 432/2012, list of permitted health claims",
+          "url": "https://publications.europa.eu/resource/celex/32012R0432"
+        }
+      ]
+    },
+    {
+      "wording": "Helps reduce tiredness and fatigue.",
+      "evidence_strength": "moderate",
+      "why": "Authorized in the EU after EFSA review; Health Canada does not list it.",
+      "daily_dose": "at least 0.9 mg a day",
+      "dose_details": "EU: at least 0.9 mg, 15% of the 6 mg EU reference value (Regulation (EU) No 1169/2011, Annex XIII). Health Canada does not list this use; its monograph gives 0.4-500 mg a day for adults.",
+      "form": "Calcium D-pantothenate or another salt on Health Canada's list, counted as pantothenic acid",
+      "sources": [
+        {
+          "name": "Commission Regulation (EU) No 432/2012, list of permitted health claims",
+          "url": "https://publications.europa.eu/resource/celex/32012R0432"
+        }
+      ]
+    },
+    {
+      "wording": "Supports normal mental performance.",
+      "evidence_strength": "moderate",
+      "why": "Authorized in the EU after EFSA review; Health Canada does not list it.",
+      "daily_dose": "at least 0.9 mg a day",
+      "dose_details": "EU: at least 0.9 mg, 15% of the 6 mg EU reference value (Regulation (EU) No 1169/2011, Annex XIII). Health Canada does not list this use; its monograph gives 0.4-500 mg a day for adults.",
+      "form": "Calcium D-pantothenate or another salt on Health Canada's list, counted as pantothenic acid",
+      "sources": [
+        {
+          "name": "Commission Regulation (EU) No 432/2012, list of permitted health claims",
+          "url": "https://publications.europa.eu/resource/celex/32012R0432"
+        }
+      ]
+    },
+    {
+      "wording": "Supports normal synthesis and metabolism of steroid hormones, vitamin D and some neurotransmitters.",
+      "evidence_strength": "moderate",
+      "why": "Authorized in the EU after EFSA review; Health Canada does not list it.",
+      "daily_dose": "at least 0.9 mg a day",
+      "dose_details": "EU: at least 0.9 mg, 15% of the 6 mg EU reference value (Regulation (EU) No 1169/2011, Annex XIII). Health Canada does not list this use; its monograph gives 0.4-500 mg a day for adults.",
+      "form": "Calcium D-pantothenate or another salt on Health Canada's list, counted as pantothenic acid",
+      "sources": [
+        {
+          "name": "Commission Regulation (EU) No 432/2012, list of permitted health claims",
+          "url": "https://publications.europa.eu/resource/celex/32012R0432"
+        }
+      ]
+    }
+  ],
+  "wordings_to_avoid": [
+    {
+      "wording": "Clears acne",
+      "reason": "disease",
+      "why": "Acne is a disease.",
+      "meta_ads_only": false
+    },
+    {
+      "wording": "Treats hair loss (alopecia)",
+      "reason": "disease",
+      "why": "Names a disease.",
+      "meta_ads_only": false
+    }
+  ],
+  "evidence_strengths": {
+    "strong": "At least two listed sources support it independently at a comparable dose and form, and none disagrees.",
+    "moderate": "One listed source supports it as an evidence-based use at that dose, and no listed source disagrees.",
+    "limited": "The only support is traditional use, the sources disagree, or the source itself calls the evidence weak."
+  },
+  "reasons_to_avoid": {
+    "disease": "names or implies a disease",
+    "drug": "names a drug or presents the product as one",
+    "treatment": "promises to treat, cure or prevent a condition"
+  },
+  "sources": [
+    {
+      "name": "Health Canada monograph: Multi-Vitamin/Mineral Supplements",
+      "url": "https://webprod.hc-sc.gc.ca/nhpid-bdipsn/atReq?atid=multi_vitmin_suppl&lang=eng"
+    },
+    {
+      "name": "Commission Regulation (EU) No 432/2012, list of permitted health claims",
+      "url": "https://publications.europa.eu/resource/celex/32012R0432"
+    }
+  ],
+  "disclaimer": "Not legal advice. This guide shows the wording that published evidence supports at a daily dose, from the sources linked below; it is not a ruling on any claim. Your own product, its form and dose, and your own evidence still need to match the wording you use.",
+  "date_reviewed": "2026-10-15"
+}

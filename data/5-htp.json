@@ -1,0 +1,96 @@
+{
+  "slug": "5-htp",
+  "ingredient": "5-HTP",
+  "also_called": [
+    "5-Hydroxytryptophan",
+    "5-Hydroxy-L-tryptophan",
+    "L-5-Hydroxytryptophan",
+    "L-5-HTP"
+  ],
+  "title": "What can you say about 5-HTP in your ads and on your site?",
+  "summary": "The library supports 2 wordings for 5-HTP; the strongest is \"Helps promote a healthy mood balance\" (moderate, 150-300 mg a day). Avoid wording that names or implies a disease, a drug or a treatment, such as \"Treats depression or anxiety\".",
+  "supported_wordings": [
+    {
+      "wording": "Helps promote a healthy mood balance.",
+      "evidence_strength": "moderate",
+      "why": "Health Canada lists it at 150-300 mg a day; no other listed source covers 5-HTP.",
+      "daily_dose": "150-300 mg a day",
+      "dose_details": "Adults 18 and older; take with food. Health Canada: start low and build up over 2 weeks to limit stomach upset, and use it for at least 2 weeks to see an effect.",
+      "form": "5-HTP (L-5-hydroxytryptophan) from Griffonia seed or biosynthesis",
+      "sources": [
+        {
+          "name": "Health Canada monograph: 5-HTP",
+          "url": "https://webprod.hc-sc.gc.ca/nhpid-bdipsn/atReq?atid=5htp&lang=eng"
+        }
+      ]
+    },
+    {
+      "wording": "With a reduced-calorie diet and more physical activity, helps with weight management by reducing carbohydrate cravings.",
+      "evidence_strength": "moderate",
+      "why": "Health Canada lists it at 750-900 mg a day with diet and exercise; no other listed source covers it.",
+      "daily_dose": "750-900 mg a day",
+      "dose_details": "Adults 18 and older; at most 300 mg per dose, taken 30 minutes before meals. Health Canada asks for a practitioner's advice beyond 12 weeks for products giving over 600 mg a day, and says not to use it in pregnancy.",
+      "form": "5-HTP (L-5-hydroxytryptophan) from Griffonia seed or biosynthesis",
+      "sources": [
+        {
+          "name": "Health Canada monograph: 5-HTP",
+          "url": "https://webprod.hc-sc.gc.ca/nhpid-bdipsn/atReq?atid=5htp&lang=eng"
+        }
+      ]
+    }
+  ],
+  "wordings_to_avoid": [
+    {
+      "wording": "Treats depression or anxiety",
+      "reason": "disease",
+      "why": "Names mental health disorders. Health Canada asks people with a psychological disorder such as anxiety or depression to consult a practitioner before use.",
+      "meta_ads_only": false
+    },
+    {
+      "wording": "A natural antidepressant, or works like Prozac or an SSRI",
+      "reason": "drug",
+      "why": "Compares the product to a drug class. FDA's 2000 rule (page 1027) cites 'Herbal Prozac' as wording that ties a product to an approved drug.",
+      "meta_ads_only": false
+    },
+    {
+      "wording": "Treats insomnia or sleep disturbances",
+      "reason": "disease",
+      "why": "Names a sleep disorder. FDA's 2000 rule (page 1031) reads sleep wording as disease wording unless it is limited to occasional sleeplessness.",
+      "meta_ads_only": false
+    },
+    {
+      "wording": "Prevents migraines, or relieves fibromyalgia",
+      "reason": "disease",
+      "why": "Names diseases. Health Canada lists both uses, but they are condition uses (see notes).",
+      "meta_ads_only": false
+    },
+    {
+      "wording": "Treats obesity",
+      "reason": "disease",
+      "why": "FDA's 2000 rule (page 1026) counts obesity as a disease; the supported wording is weight management with diet and exercise.",
+      "meta_ads_only": false
+    }
+  ],
+  "evidence_strengths": {
+    "strong": "At least two listed sources support it independently at a comparable dose and form, and none disagrees.",
+    "moderate": "One listed source supports it as an evidence-based use at that dose, and no listed source disagrees.",
+    "limited": "The only support is traditional use, the sources disagree, or the source itself calls the evidence weak."
+  },
+  "reasons_to_avoid": {
+    "disease": "names or implies a disease",
+    "drug": "names a drug or presents the product as one",
+    "treatment": "promises to treat, cure or prevent a condition"
+  },
+  "sources": [
+    {
+      "name": "Health Canada monograph: 5-HTP",
+      "url": "https://webprod.hc-sc.gc.ca/nhpid-bdipsn/atReq?atid=5htp&lang=eng"
+    },
+    {
+      "name": "FDA final rule on structure/function statements, 65 FR 1000 (6 January 2000), page 1012",
+      "url": "https://www.federalregister.gov/documents/full_text/text/2000/01/06/00-53.txt"
+    }
+  ],
+  "disclaimer": "Not legal advice. This guide shows the wording that published evidence supports at a daily dose, from the sources linked below; it is not a ruling on any claim. Your own product, its form and dose, and your own evidence still need to match the wording you use.",
+  "date_reviewed": "2026-10-15"
+}

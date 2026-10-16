@@ -1,0 +1,61 @@
+{
+  "slug": "cranberry",
+  "ingredient": "Cranberry",
+  "also_called": [
+    "Vaccinium macrocarpon"
+  ],
+  "title": "What can you say about cranberry in your ads and on your site?",
+  "summary": "The library supports 1 wording for cranberry; the strongest is \"Provides antioxidants that help protect cells against free radical damage\" (moderate, up to 30 g fresh fruit a day). Avoid wording that names or implies a disease, a drug or a treatment, such as \"Prevents or treats urinary tract infections (UTIs), outside FDA's qualified wording\".",
+  "supported_wordings": [
+    {
+      "wording": "Provides antioxidants that help protect cells against free radical damage.",
+      "evidence_strength": "moderate",
+      "why": "Health Canada lists it at up to 30 g of fresh fruit a day; no other listed source covers it.",
+      "daily_dose": "up to 30 g fresh fruit a day",
+      "dose_details": "Adults 18 and older. Health Canada: not more than 30 g of fresh fruit a day (about 4-5 g dried fruit), or not more than 950 ml of juice.",
+      "form": "Fresh, dried or powdered fruit, counted as fresh fruit",
+      "sources": [
+        {
+          "name": "Health Canada monograph: Cranberry",
+          "url": "https://webprod.hc-sc.gc.ca/nhpid-bdipsn/atReq?atid=cranberry.canneberge2&lang=eng"
+        }
+      ]
+    }
+  ],
+  "wordings_to_avoid": [
+    {
+      "wording": "Prevents or treats urinary tract infections (UTIs), outside FDA's qualified wording",
+      "reason": "disease",
+      "why": "Names a disease. FDA's qualified claim for cranberry dietary supplements has set wording and conditions (see fda_health_claims).",
+      "meta_ads_only": false
+    },
+    {
+      "wording": "Works like an antibiotic for bladder infections",
+      "reason": "drug",
+      "why": "Presents the product as a drug.",
+      "meta_ads_only": false
+    }
+  ],
+  "evidence_strengths": {
+    "strong": "At least two listed sources support it independently at a comparable dose and form, and none disagrees.",
+    "moderate": "One listed source supports it as an evidence-based use at that dose, and no listed source disagrees.",
+    "limited": "The only support is traditional use, the sources disagree, or the source itself calls the evidence weak."
+  },
+  "reasons_to_avoid": {
+    "disease": "names or implies a disease",
+    "drug": "names a drug or presents the product as one",
+    "treatment": "promises to treat, cure or prevent a condition"
+  },
+  "sources": [
+    {
+      "name": "Health Canada monograph: Cranberry",
+      "url": "https://webprod.hc-sc.gc.ca/nhpid-bdipsn/atReq?atid=cranberry.canneberge2&lang=eng"
+    },
+    {
+      "name": "FDA qualified health claim: Cranberry dietary supplements and recurrent urinary tract infection in healthy women",
+      "url": "https://www.fda.gov/media/140304/download"
+    }
+  ],
+  "disclaimer": "Not legal advice. This guide shows the wording that published evidence supports at a daily dose, from the sources linked below; it is not a ruling on any claim. Your own product, its form and dose, and your own evidence still need to match the wording you use.",
+  "date_reviewed": "2026-10-15"
+}

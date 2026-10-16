@@ -1,0 +1,125 @@
+{
+  "slug": "fenugreek",
+  "ingredient": "Fenugreek",
+  "also_called": [
+    "Trigonella foenum-graecum"
+  ],
+  "title": "What can you say about fenugreek in your ads and on your site?",
+  "summary": "The library supports 5 wordings for fenugreek; the strongest is \"A source of antioxidants that help protect cells against damage from free radicals\" (limited, up to 30 g dried seed (or extract equivalent) a day). Avoid wording that names or implies a disease, a drug or a treatment, such as \"Lowers blood sugar in diabetes, or helps manage diabetes\".",
+  "supported_wordings": [
+    {
+      "wording": "A source of antioxidants that help protect cells against damage from free radicals.",
+      "evidence_strength": "limited",
+      "why": "Health Canada lists it with a maximum dose only and no minimum; no other listed source covers it.",
+      "daily_dose": "up to 30 g dried seed (or extract equivalent) a day",
+      "dose_details": "Adults 18 and older, up to 30 g a day. Health Canada sets no minimum for this use.",
+      "form": "Dried seed or non-standardized seed extracts",
+      "sources": [
+        {
+          "name": "Health Canada monograph: Fenugreek - Oral",
+          "url": "https://webprod.hc-sc.gc.ca/nhpid-bdipsn/atReq?atid=fenugreek.oral2&lang=eng"
+        }
+      ]
+    },
+    {
+      "wording": "Used in herbal medicine to help stimulate the appetite.",
+      "evidence_strength": "limited",
+      "why": "Health Canada lists it as a herbal medicine use that labels may call traditional; no other listed source covers it, and no trial evidence was read.",
+      "daily_dose": "2-30 g dried seed (or extract equivalent) a day",
+      "dose_details": "Adults 18 and older.",
+      "form": "Dried seed or non-standardized seed extracts",
+      "sources": [
+        {
+          "name": "Health Canada monograph: Fenugreek - Oral",
+          "url": "https://webprod.hc-sc.gc.ca/nhpid-bdipsn/atReq?atid=fenugreek.oral2&lang=eng"
+        }
+      ]
+    },
+    {
+      "wording": "Used in herbal medicine as a digestive tonic to aid digestion.",
+      "evidence_strength": "limited",
+      "why": "Health Canada lists it as a herbal medicine use that labels may call traditional; no other listed source covers it, and no trial evidence was read.",
+      "daily_dose": "2-30 g dried seed (or extract equivalent) a day",
+      "dose_details": "Adults 18 and older.",
+      "form": "Dried seed or non-standardized seed extracts",
+      "sources": [
+        {
+          "name": "Health Canada monograph: Fenugreek - Oral",
+          "url": "https://webprod.hc-sc.gc.ca/nhpid-bdipsn/atReq?atid=fenugreek.oral2&lang=eng"
+        }
+      ]
+    },
+    {
+      "wording": "Used in herbal medicine to help promote breast milk production.",
+      "evidence_strength": "limited",
+      "why": "Health Canada lists it as a herbal medicine use that labels may call traditional; no other listed source covers it, and no trial evidence was read.",
+      "daily_dose": "2-30 g dried seed (or extract equivalent) a day",
+      "dose_details": "Adults 18 and older. Health Canada: ask a health care practitioner before use if pregnant.",
+      "form": "Dried seed or non-standardized seed extracts",
+      "sources": [
+        {
+          "name": "Health Canada monograph: Fenugreek - Oral",
+          "url": "https://webprod.hc-sc.gc.ca/nhpid-bdipsn/atReq?atid=fenugreek.oral2&lang=eng"
+        }
+      ]
+    },
+    {
+      "wording": "Used in herbal medicine as a supporting measure for healthy glucose levels.",
+      "evidence_strength": "limited",
+      "why": "Health Canada lists it as a herbal medicine use that labels may call traditional, framed as supportive; no other listed source covers it, and no trial evidence was read.",
+      "daily_dose": "2-30 g dried seed (or extract equivalent) a day",
+      "dose_details": "Adults 18 and older. Health Canada: ask a health care practitioner before use if you have diabetes.",
+      "form": "Dried seed or non-standardized seed extracts",
+      "sources": [
+        {
+          "name": "Health Canada monograph: Fenugreek - Oral",
+          "url": "https://webprod.hc-sc.gc.ca/nhpid-bdipsn/atReq?atid=fenugreek.oral2&lang=eng"
+        }
+      ]
+    }
+  ],
+  "wordings_to_avoid": [
+    {
+      "wording": "Lowers blood sugar in diabetes, or helps manage diabetes",
+      "reason": "disease",
+      "why": "Names a disease. Health Canada's wording is about supporting healthy glucose levels, with a caution for people with diabetes.",
+      "meta_ads_only": false
+    },
+    {
+      "wording": "Lowers high cholesterol (hyperlipidemia)",
+      "reason": "disease",
+      "why": "Names a disease. Health Canada lists this herbal use, but it names a disease.",
+      "meta_ads_only": false
+    },
+    {
+      "wording": "Relieves gastritis or dyspepsia",
+      "reason": "disease",
+      "why": "Names diseases. Health Canada lists this herbal use, but it names diseases.",
+      "meta_ads_only": false
+    },
+    {
+      "wording": "Boosts testosterone, or treats low testosterone",
+      "reason": "disease",
+      "why": "Low testosterone as a diagnosis is a medical condition; no listed source supports a testosterone claim for fenugreek.",
+      "meta_ads_only": false
+    }
+  ],
+  "evidence_strengths": {
+    "strong": "At least two listed sources support it independently at a comparable dose and form, and none disagrees.",
+    "moderate": "One listed source supports it as an evidence-based use at that dose, and no listed source disagrees.",
+    "limited": "The only support is traditional use, the sources disagree, or the source itself calls the evidence weak."
+  },
+  "reasons_to_avoid": {
+    "disease": "names or implies a disease",
+    "drug": "names a drug or presents the product as one",
+    "treatment": "promises to treat, cure or prevent a condition"
+  },
+  "sources": [
+    {
+      "name": "Health Canada monograph: Fenugreek - Oral",
+      "url": "https://webprod.hc-sc.gc.ca/nhpid-bdipsn/atReq?atid=fenugreek.oral2&lang=eng"
+    }
+  ],
+  "disclaimer": "Not legal advice. This guide shows the wording that published evidence supports at a daily dose, from the sources linked below; it is not a ruling on any claim. Your own product, its form and dose, and your own evidence still need to match the wording you use.",
+  "date_reviewed": "2026-10-14"
+}

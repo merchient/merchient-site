@@ -1,0 +1,200 @@
+{
+  "slug": "vitamin-c",
+  "ingredient": "Vitamin C",
+  "also_called": [
+    "Ascorbic acid",
+    "L-ascorbic acid"
+  ],
+  "title": "What can you say about vitamin C in your ads and on your site?",
+  "summary": "The library supports 8 wordings for vitamin C; the strongest is \"Provides an antioxidant that helps protect cells against damage from free radicals\" (strong, 6-2,000 mg a day). Avoid wording that names or implies a disease, a drug or a treatment, such as \"Prevents, cures or shortens colds and flu\".",
+  "supported_wordings": [
+    {
+      "wording": "Provides an antioxidant that helps protect cells against damage from free radicals.",
+      "evidence_strength": "strong",
+      "why": "Health Canada lists antioxidant wording, and the EU authorizes protection of cells from oxidative stress after EFSA review.",
+      "daily_dose": "6-2,000 mg a day",
+      "dose_details": "Health Canada: 6-2,000 mg a day for adults 19 and older (6-1,800 mg at 14 to 18). EU: at least 12 mg, 15% of the 80 mg EU reference value (Regulation (EU) No 1169/2011, Annex XIII). ODS upper limit: 2,000 mg a day for adults.",
+      "form": "Ascorbic acid or a listed ascorbate, counted as vitamin C",
+      "sources": [
+        {
+          "name": "Health Canada monograph: Multi-Vitamin/Mineral Supplements",
+          "url": "https://webprod.hc-sc.gc.ca/nhpid-bdipsn/atReq?atid=multi_vitmin_suppl&lang=eng"
+        },
+        {
+          "name": "Commission Regulation (EU) No 432/2012, list of permitted health claims",
+          "url": "https://publications.europa.eu/resource/celex/32012R0432"
+        }
+      ]
+    },
+    {
+      "wording": "Helps form collagen for healthy bones, cartilage, teeth and gums.",
+      "evidence_strength": "strong",
+      "why": "Health Canada lists collagen formation for bones, cartilage, teeth and gums, and the EU authorizes normal collagen formation for the same tissues after EFSA review.",
+      "daily_dose": "6-2,000 mg a day",
+      "dose_details": "Health Canada: 6-2,000 mg a day for adults 19 and older (6-1,800 mg at 14 to 18). EU: at least 12 mg, 15% of the 80 mg EU reference value (Regulation (EU) No 1169/2011, Annex XIII). ODS upper limit: 2,000 mg a day for adults.",
+      "form": "Ascorbic acid or a listed ascorbate, counted as vitamin C",
+      "sources": [
+        {
+          "name": "Health Canada monograph: Multi-Vitamin/Mineral Supplements",
+          "url": "https://webprod.hc-sc.gc.ca/nhpid-bdipsn/atReq?atid=multi_vitmin_suppl&lang=eng"
+        },
+        {
+          "name": "Commission Regulation (EU) No 432/2012, list of permitted health claims",
+          "url": "https://publications.europa.eu/resource/celex/32012R0432"
+        }
+      ]
+    },
+    {
+      "wording": "Supports normal immune function.",
+      "evidence_strength": "strong",
+      "why": "Listed by Health Canada and authorized in the EU after EFSA review.",
+      "daily_dose": "6-2,000 mg a day",
+      "dose_details": "Health Canada: 6-2,000 mg a day for adults 19 and older (6-1,800 mg at 14 to 18). EU: at least 12 mg, 15% of the 80 mg EU reference value (Regulation (EU) No 1169/2011, Annex XIII). ODS upper limit: 2,000 mg a day for adults.",
+      "form": "Ascorbic acid or a listed ascorbate, counted as vitamin C",
+      "sources": [
+        {
+          "name": "Health Canada monograph: Multi-Vitamin/Mineral Supplements",
+          "url": "https://webprod.hc-sc.gc.ca/nhpid-bdipsn/atReq?atid=multi_vitmin_suppl&lang=eng"
+        },
+        {
+          "name": "Commission Regulation (EU) No 432/2012, list of permitted health claims",
+          "url": "https://publications.europa.eu/resource/celex/32012R0432"
+        }
+      ]
+    },
+    {
+      "wording": "Supports normal function of the nervous system.",
+      "evidence_strength": "strong",
+      "why": "Listed by Health Canada and authorized in the EU after EFSA review.",
+      "daily_dose": "6-2,000 mg a day",
+      "dose_details": "Health Canada: 6-2,000 mg a day for adults 19 and older (6-1,800 mg at 14 to 18). EU: at least 12 mg, 15% of the 80 mg EU reference value (Regulation (EU) No 1169/2011, Annex XIII). ODS upper limit: 2,000 mg a day for adults.",
+      "form": "Ascorbic acid or a listed ascorbate, counted as vitamin C",
+      "sources": [
+        {
+          "name": "Health Canada monograph: Multi-Vitamin/Mineral Supplements",
+          "url": "https://webprod.hc-sc.gc.ca/nhpid-bdipsn/atReq?atid=multi_vitmin_suppl&lang=eng"
+        },
+        {
+          "name": "Commission Regulation (EU) No 432/2012, list of permitted health claims",
+          "url": "https://publications.europa.eu/resource/celex/32012R0432"
+        }
+      ]
+    },
+    {
+      "wording": "Helps the body absorb iron.",
+      "evidence_strength": "moderate",
+      "why": "Authorized in the EU after EFSA review; Health Canada does not list it.",
+      "daily_dose": "12-2,000 mg a day",
+      "dose_details": "EU: at least 12 mg, 15% of the 80 mg EU reference value (Regulation (EU) No 1169/2011, Annex XIII). 2,000 mg a day is the ODS upper limit for adults.",
+      "form": "Ascorbic acid or a listed ascorbate, counted as vitamin C",
+      "sources": [
+        {
+          "name": "Commission Regulation (EU) No 432/2012, list of permitted health claims",
+          "url": "https://publications.europa.eu/resource/celex/32012R0432"
+        }
+      ]
+    },
+    {
+      "wording": "Helps reduce tiredness and fatigue.",
+      "evidence_strength": "moderate",
+      "why": "Authorized in the EU after EFSA review; Health Canada does not list it.",
+      "daily_dose": "12-2,000 mg a day",
+      "dose_details": "EU: at least 12 mg, 15% of the 80 mg EU reference value (Regulation (EU) No 1169/2011, Annex XIII). 2,000 mg a day is the ODS upper limit for adults.",
+      "form": "Ascorbic acid or a listed ascorbate, counted as vitamin C",
+      "sources": [
+        {
+          "name": "Commission Regulation (EU) No 432/2012, list of permitted health claims",
+          "url": "https://publications.europa.eu/resource/celex/32012R0432"
+        }
+      ]
+    },
+    {
+      "wording": "Plays a part in normal energy metabolism.",
+      "evidence_strength": "moderate",
+      "why": "Authorized in the EU after EFSA review; Health Canada lists only a role in the body's ability to metabolize nutrients.",
+      "daily_dose": "12-2,000 mg a day",
+      "dose_details": "EU: at least 12 mg, 15% of the 80 mg EU reference value (Regulation (EU) No 1169/2011, Annex XIII). 2,000 mg a day is the ODS upper limit for adults.",
+      "form": "Ascorbic acid or a listed ascorbate, counted as vitamin C",
+      "sources": [
+        {
+          "name": "Commission Regulation (EU) No 432/2012, list of permitted health claims",
+          "url": "https://publications.europa.eu/resource/celex/32012R0432"
+        }
+      ]
+    },
+    {
+      "wording": "Helps maintain normal immune function during and after intense physical exercise.",
+      "evidence_strength": "moderate",
+      "why": "Authorized in the EU after EFSA review; Health Canada does not list it.",
+      "daily_dose": "200-2,000 mg a day",
+      "dose_details": "EU: the product must give 200 mg a day, and the consumer must be told the effect comes from 200 mg a day on top of the recommended daily intake. 2,000 mg a day is the ODS upper limit for adults.",
+      "form": "Ascorbic acid or a listed ascorbate, counted as vitamin C",
+      "sources": [
+        {
+          "name": "Commission Regulation (EU) No 432/2012, list of permitted health claims",
+          "url": "https://publications.europa.eu/resource/celex/32012R0432"
+        }
+      ]
+    }
+  ],
+  "wordings_to_avoid": [
+    {
+      "wording": "Prevents, cures or shortens colds and flu",
+      "reason": "disease",
+      "why": "Names infectious diseases; the supported wording is normal immune function.",
+      "meta_ads_only": false
+    },
+    {
+      "wording": "Boosts immunity to fight infections",
+      "reason": "disease",
+      "why": "Implies an effect on infections; the supported wording is normal immune function.",
+      "meta_ads_only": false
+    },
+    {
+      "wording": "Fights or prevents cancer",
+      "reason": "disease",
+      "why": "Names a disease. FDA's qualified claims on antioxidant vitamins and cancer come with disclaimers saying the evidence is limited or highly uncertain (see fda_health_claims).",
+      "meta_ads_only": false
+    },
+    {
+      "wording": "Heals wounds",
+      "reason": "treatment",
+      "why": "Promises to heal damage to the body. Health Canada's wound-healing use is a Canada only note.",
+      "meta_ads_only": false
+    }
+  ],
+  "evidence_strengths": {
+    "strong": "At least two listed sources support it independently at a comparable dose and form, and none disagrees.",
+    "moderate": "One listed source supports it as an evidence-based use at that dose, and no listed source disagrees.",
+    "limited": "The only support is traditional use, the sources disagree, or the source itself calls the evidence weak."
+  },
+  "reasons_to_avoid": {
+    "disease": "names or implies a disease",
+    "drug": "names a drug or presents the product as one",
+    "treatment": "promises to treat, cure or prevent a condition"
+  },
+  "sources": [
+    {
+      "name": "Health Canada monograph: Multi-Vitamin/Mineral Supplements",
+      "url": "https://webprod.hc-sc.gc.ca/nhpid-bdipsn/atReq?atid=multi_vitmin_suppl&lang=eng"
+    },
+    {
+      "name": "Commission Regulation (EU) No 432/2012, list of permitted health claims",
+      "url": "https://publications.europa.eu/resource/celex/32012R0432"
+    },
+    {
+      "name": "NIH ODS fact sheet: Vitamin C (health professional)",
+      "url": "https://ods.od.nih.gov/factsheets/VitaminC-HealthProfessional/"
+    },
+    {
+      "name": "FDA qualified health claim: Antioxidant vitamins and risk of certain cancers",
+      "url": "https://www.fda.gov/Food/IngredientsPackagingLabeling/LabelingNutrition/ucm072789.htm"
+    },
+    {
+      "name": "FDA qualified health claim: Vitamins C and E and site-specific cancers",
+      "url": "https://www.fda.gov/Food/IngredientsPackagingLabeling/LabelingNutrition/ucm166913.htm"
+    }
+  ],
+  "disclaimer": "Not legal advice. This guide shows the wording that published evidence supports at a daily dose, from the sources linked below; it is not a ruling on any claim. Your own product, its form and dose, and your own evidence still need to match the wording you use.",
+  "date_reviewed": "2026-10-15"
+}

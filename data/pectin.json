@@ -1,0 +1,90 @@
+{
+  "slug": "pectin",
+  "ingredient": "Pectin",
+  "also_called": [
+    "Pectins",
+    "Apple pectin",
+    "Citrus pectin"
+  ],
+  "title": "What can you say about pectin in your ads and on your site?",
+  "summary": "The library supports 2 wordings for pectin; the strongest is \"Helps maintain normal blood cholesterol levels\" (moderate, at least 6 g pectin a day). Avoid wording that names or implies a disease, a drug or a treatment, such as \"Lowers cholesterol\", and keep \"When taken with a meal, helps reduce the rise in blood sugar after that meal\" off Meta ads.",
+  "supported_wordings": [
+    {
+      "wording": "Helps maintain normal blood cholesterol levels.",
+      "evidence_strength": "moderate",
+      "why": "Authorized in the EU after EFSA review; no other listed source covers it.",
+      "daily_dose": "at least 6 g pectin a day",
+      "dose_details": "EU: a daily intake of 6 g of pectins.",
+      "form": "Pectins",
+      "sources": [
+        {
+          "name": "Commission Regulation (EU) No 432/2012, list of permitted health claims",
+          "url": "https://publications.europa.eu/resource/celex/32012R0432"
+        }
+      ]
+    },
+    {
+      "wording": "When taken with a meal, helps reduce the rise in blood sugar after that meal.",
+      "evidence_strength": "moderate",
+      "why": "Authorized in the EU after EFSA review; no other listed source covers it.",
+      "daily_dose": "at least 10 g pectin a day",
+      "dose_details": "EU: 10 g of pectins per quantified portion, eaten as part of the meal; the dose is per meal.",
+      "form": "Pectins",
+      "sources": [
+        {
+          "name": "Commission Regulation (EU) No 432/2012, list of permitted health claims",
+          "url": "https://publications.europa.eu/resource/celex/32012R0432"
+        }
+      ],
+      "meta_ads": "Wording to avoid in Meta ads. On your site it is supported wording."
+    }
+  ],
+  "wordings_to_avoid": [
+    {
+      "wording": "Lowers cholesterol",
+      "reason": "disease",
+      "why": "FDA's 2000 rule gives 'lowers cholesterol' as a disease claim (page 1015).",
+      "meta_ads_only": false
+    },
+    {
+      "wording": "Lowers blood sugar in diabetes, or helps manage diabetes",
+      "reason": "disease",
+      "why": "Names a disease.",
+      "meta_ads_only": false
+    },
+    {
+      "wording": "Stops diarrhea",
+      "reason": "disease",
+      "why": "Diarrhea is a sign of disease; no listed source supports it.",
+      "meta_ads_only": false
+    },
+    {
+      "wording": "When taken with a meal, helps reduce the rise in blood sugar after that meal.",
+      "reason": "disease",
+      "why": "Blood sugar is a health-condition claim on Meta, so this wording stays off Meta ads, as chromium's blood glucose wording does (library decision of 2026-10-15; Meta's ad policies were not read). It stays supported wording for pages.",
+      "meta_ads_only": true
+    }
+  ],
+  "evidence_strengths": {
+    "strong": "At least two listed sources support it independently at a comparable dose and form, and none disagrees.",
+    "moderate": "One listed source supports it as an evidence-based use at that dose, and no listed source disagrees.",
+    "limited": "The only support is traditional use, the sources disagree, or the source itself calls the evidence weak."
+  },
+  "reasons_to_avoid": {
+    "disease": "names or implies a disease",
+    "drug": "names a drug or presents the product as one",
+    "treatment": "promises to treat, cure or prevent a condition"
+  },
+  "sources": [
+    {
+      "name": "Commission Regulation (EU) No 432/2012, list of permitted health claims",
+      "url": "https://publications.europa.eu/resource/celex/32012R0432"
+    },
+    {
+      "name": "FDA final rule on structure/function statements, 65 FR 1000 (6 January 2000), page 1018",
+      "url": "https://www.federalregister.gov/documents/full_text/text/2000/01/06/00-53.txt"
+    }
+  ],
+  "disclaimer": "Not legal advice. This guide shows the wording that published evidence supports at a daily dose, from the sources linked below; it is not a ruling on any claim. Your own product, its form and dose, and your own evidence still need to match the wording you use.",
+  "date_reviewed": "2026-10-14"
+}

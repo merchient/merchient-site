@@ -1,0 +1,115 @@
+{
+  "slug": "oat-beta-glucan",
+  "ingredient": "Oat beta-glucan",
+  "also_called": [
+    "Oat beta glucan",
+    "Beta-glucan from oats",
+    "Oat bran beta-glucan",
+    "Barley beta-glucan"
+  ],
+  "title": "What can you say about oat beta-glucan in your ads and on your site?",
+  "summary": "The library supports 3 wordings for oat beta-glucan; the strongest is \"Helps maintain normal blood cholesterol levels\" (strong, 3-10 g beta-glucan a day). Avoid wording that names or implies a disease, a drug or a treatment, such as \"Lowers cholesterol, or reduces heart disease risk, outside FDA's authorized wording and conditions\", and keep \"When taken with a meal, helps reduce the rise in blood sugar after that meal\" off Meta ads.",
+  "supported_wordings": [
+    {
+      "wording": "Helps maintain normal blood cholesterol levels.",
+      "evidence_strength": "strong",
+      "why": "The EU authorizes maintenance of normal blood cholesterol at 3 g a day, and Health Canada lists LDL cholesterol lowering at 2-10 g a day.",
+      "daily_dose": "3-10 g beta-glucan a day",
+      "dose_details": "EU: 3 g of beta-glucans a day from oats, oat bran, barley or barley bran, with at least 1 g per portion. Health Canada: 2-10 g a day for adults 18 and older for its LDL cholesterol use.",
+      "form": "Beta-glucan from oats, oat bran, barley or barley bran",
+      "sources": [
+        {
+          "name": "Commission Regulation (EU) No 432/2012, list of permitted health claims",
+          "url": "https://publications.europa.eu/resource/celex/32012R0432"
+        },
+        {
+          "name": "Health Canada monograph: Beta-Glucan",
+          "url": "https://webprod.hc-sc.gc.ca/nhpid-bdipsn/atReq?atid=beta.glucane&lang=eng"
+        }
+      ]
+    },
+    {
+      "wording": "When taken with a meal, helps reduce the rise in blood sugar after that meal.",
+      "evidence_strength": "moderate",
+      "why": "Health Canada and the EU both accept it, but on clearly different dose measures (per day and per meal).",
+      "daily_dose": "2-10 g beta-glucan a day",
+      "dose_details": "Health Canada: 2-10 g a day for adults, for healthy glucose metabolism within two hours after a meal. EU: at least 4 g of beta-glucans from oats or barley for each 30 g of available carbohydrates in the meal.",
+      "form": "Beta-glucan from oats or barley",
+      "sources": [
+        {
+          "name": "Health Canada monograph: Beta-Glucan",
+          "url": "https://webprod.hc-sc.gc.ca/nhpid-bdipsn/atReq?atid=beta.glucane&lang=eng"
+        },
+        {
+          "name": "Commission Regulation (EU) No 432/2012, list of permitted health claims",
+          "url": "https://publications.europa.eu/resource/celex/32012R0432"
+        }
+      ],
+      "meta_ads": "Wording to avoid in Meta ads. On your site it is supported wording."
+    },
+    {
+      "wording": "A source of fibre that helps support a healthy digestive system.",
+      "evidence_strength": "moderate",
+      "why": "One listed source, Health Canada, lists it, citing nutrition references.",
+      "daily_dose": "2-10 g beta-glucan a day",
+      "dose_details": "Health Canada: 2-10 g a day for adults ('Source of fiber for the maintenance of good health'; 'Helps support and maintain a healthy digestive system').",
+      "form": "Beta-glucan from oats or barley",
+      "sources": [
+        {
+          "name": "Health Canada monograph: Beta-Glucan",
+          "url": "https://webprod.hc-sc.gc.ca/nhpid-bdipsn/atReq?atid=beta.glucane&lang=eng"
+        }
+      ]
+    }
+  ],
+  "wordings_to_avoid": [
+    {
+      "wording": "Lowers cholesterol, or reduces heart disease risk, outside FDA's authorized wording and conditions",
+      "reason": "disease",
+      "why": "FDA's 2000 rule gives 'lowers cholesterol' as a disease claim (page 1015); heart disease risk belongs only in the authorized health claim (21 CFR 101.81).",
+      "meta_ads_only": false
+    },
+    {
+      "wording": "Lowers blood sugar in diabetes, or helps manage diabetes",
+      "reason": "disease",
+      "why": "Names a disease.",
+      "meta_ads_only": false
+    },
+    {
+      "wording": "When taken with a meal, helps reduce the rise in blood sugar after that meal.",
+      "reason": "disease",
+      "why": "Blood sugar is a health-condition claim on Meta, so this wording stays off Meta ads, as chromium's blood glucose wording does (library decision of 2026-10-15; Meta's ad policies were not read). It stays supported wording for pages.",
+      "meta_ads_only": true
+    }
+  ],
+  "evidence_strengths": {
+    "strong": "At least two listed sources support it independently at a comparable dose and form, and none disagrees.",
+    "moderate": "One listed source supports it as an evidence-based use at that dose, and no listed source disagrees.",
+    "limited": "The only support is traditional use, the sources disagree, or the source itself calls the evidence weak."
+  },
+  "reasons_to_avoid": {
+    "disease": "names or implies a disease",
+    "drug": "names a drug or presents the product as one",
+    "treatment": "promises to treat, cure or prevent a condition"
+  },
+  "sources": [
+    {
+      "name": "Commission Regulation (EU) No 432/2012, list of permitted health claims",
+      "url": "https://publications.europa.eu/resource/celex/32012R0432"
+    },
+    {
+      "name": "Health Canada monograph: Beta-Glucan",
+      "url": "https://webprod.hc-sc.gc.ca/nhpid-bdipsn/atReq?atid=beta.glucane&lang=eng"
+    },
+    {
+      "name": "FDA final rule on structure/function statements, 65 FR 1000 (6 January 2000), page 1018",
+      "url": "https://www.federalregister.gov/documents/full_text/text/2000/01/06/00-53.txt"
+    },
+    {
+      "name": "FDA authorized health claim: Soluble fiber from whole oats or barley and reduced risk of coronary heart disease",
+      "url": "https://www.ecfr.gov/current/title-21/chapter-I/subchapter-B/part-101/subpart-E/section-101.81"
+    }
+  ],
+  "disclaimer": "Not legal advice. This guide shows the wording that published evidence supports at a daily dose, from the sources linked below; it is not a ruling on any claim. Your own product, its form and dose, and your own evidence still need to match the wording you use.",
+  "date_reviewed": "2026-10-14"
+}

@@ -1,0 +1,79 @@
+{
+  "slug": "dim",
+  "ingredient": "DIM",
+  "also_called": [
+    "3,3'-Diindolylmethane",
+    "Diindolylmethane",
+    "3,3'-Methylenebis-1H-indole"
+  ],
+  "title": "What can you say about DIM in your ads and on your site?",
+  "summary": "The library supports 2 wordings for DIM; the strongest is \"Helps support healthy estrogen metabolism\" (moderate, 60-200 mg a day). Avoid wording that names or implies a disease, a drug or a treatment, such as \"Prevents or treats breast, prostate or cervical cancer\".",
+  "supported_wordings": [
+    {
+      "wording": "Helps support healthy estrogen metabolism.",
+      "evidence_strength": "moderate",
+      "why": "Health Canada lists it at 60-200 mg a day; no other listed source covers DIM.",
+      "daily_dose": "60-200 mg a day",
+      "dose_details": "Adults 18 and older. Health Canada asks for a practitioner's advice before use, to rule out a serious cause of hormonal imbalance.",
+      "form": "3,3'-Diindolylmethane (DIM), isolated or synthetic",
+      "sources": [
+        {
+          "name": "Health Canada monograph: 3,3'-Diindolylmethane (DIM)",
+          "url": "https://webprod.hc-sc.gc.ca/nhpid-bdipsn/atReq?atid=diindolylmethane&lang=eng"
+        }
+      ]
+    },
+    {
+      "wording": "Provides an antioxidant that helps protect cells against damage from free radicals.",
+      "evidence_strength": "limited",
+      "why": "Health Canada sets a maximum dose only; no other listed source covers it.",
+      "daily_dose": "up to 200 mg a day",
+      "dose_details": "Adults 18 and older; Health Canada sets a maximum of 200 mg a day.",
+      "form": "3,3'-Diindolylmethane (DIM), isolated or synthetic",
+      "sources": [
+        {
+          "name": "Health Canada monograph: 3,3'-Diindolylmethane (DIM)",
+          "url": "https://webprod.hc-sc.gc.ca/nhpid-bdipsn/atReq?atid=diindolylmethane&lang=eng"
+        }
+      ]
+    }
+  ],
+  "wordings_to_avoid": [
+    {
+      "wording": "Prevents or treats breast, prostate or cervical cancer",
+      "reason": "disease",
+      "why": "Names diseases; no listed source supports it.",
+      "meta_ads_only": false
+    },
+    {
+      "wording": "Treats estrogen dominance, PCOS or endometriosis",
+      "reason": "disease",
+      "why": "Names or implies hormonal disorders. Health Canada asks for a practitioner's advice before use, to rule out a serious cause of hormonal imbalance.",
+      "meta_ads_only": false
+    },
+    {
+      "wording": "Blocks estrogen like an aromatase inhibitor or tamoxifen",
+      "reason": "drug",
+      "why": "Compares the product to drugs.",
+      "meta_ads_only": false
+    }
+  ],
+  "evidence_strengths": {
+    "strong": "At least two listed sources support it independently at a comparable dose and form, and none disagrees.",
+    "moderate": "One listed source supports it as an evidence-based use at that dose, and no listed source disagrees.",
+    "limited": "The only support is traditional use, the sources disagree, or the source itself calls the evidence weak."
+  },
+  "reasons_to_avoid": {
+    "disease": "names or implies a disease",
+    "drug": "names a drug or presents the product as one",
+    "treatment": "promises to treat, cure or prevent a condition"
+  },
+  "sources": [
+    {
+      "name": "Health Canada monograph: 3,3'-Diindolylmethane (DIM)",
+      "url": "https://webprod.hc-sc.gc.ca/nhpid-bdipsn/atReq?atid=diindolylmethane&lang=eng"
+    }
+  ],
+  "disclaimer": "Not legal advice. This guide shows the wording that published evidence supports at a daily dose, from the sources linked below; it is not a ruling on any claim. Your own product, its form and dose, and your own evidence still need to match the wording you use.",
+  "date_reviewed": "2026-10-15"
+}

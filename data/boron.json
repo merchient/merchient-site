@@ -1,0 +1,36 @@
+{
+  "slug": "boron",
+  "ingredient": "Boron",
+  "also_called": [],
+  "title": "What can you say about boron in your ads and on your site?",
+  "summary": "The library gives no supported wording for boron, because no listed source supports one at a dose. Avoid wording that names or implies a disease, a drug or a treatment, such as \"Treats arthritis\".",
+  "supported_wordings": [],
+  "wordings_to_avoid": [
+    {
+      "wording": "Treats arthritis",
+      "reason": "disease",
+      "why": "Names a disease.",
+      "meta_ads_only": false
+    },
+    {
+      "wording": "Raises testosterone, or treats low testosterone",
+      "reason": "disease",
+      "why": "Low testosterone as a diagnosis is a medical condition; no listed source supports it.",
+      "meta_ads_only": false
+    }
+  ],
+  "evidence_gap": "No listed source gives a use with a dose for boron. Health Canada's multi-vitamin/mineral monograph (dated 26 June 2026) lists boron among its complementary ingredients (Table 4) and says no claim can be supported on them; its general 'source of' statements (section 4.1) cover only the vitamins and minerals in Tables 1 to 3, so none applies to boron. ODS sets no recommended intake; FDA lists no health claim; Regulation (EU) No 432/2012 has none.",
+  "evidence_strengths": {
+    "strong": "At least two listed sources support it independently at a comparable dose and form, and none disagrees.",
+    "moderate": "One listed source supports it as an evidence-based use at that dose, and no listed source disagrees.",
+    "limited": "The only support is traditional use, the sources disagree, or the source itself calls the evidence weak."
+  },
+  "reasons_to_avoid": {
+    "disease": "names or implies a disease",
+    "drug": "names a drug or presents the product as one",
+    "treatment": "promises to treat, cure or prevent a condition"
+  },
+  "sources": [],
+  "disclaimer": "Not legal advice. This guide shows the wording that published evidence supports at a daily dose, from the sources linked below; it is not a ruling on any claim. Your own product, its form and dose, and your own evidence still need to match the wording you use.",
+  "date_reviewed": "2026-10-14"
+}

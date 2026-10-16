@@ -1,0 +1,46 @@
+{
+  "slug": "bacillus-coagulans",
+  "ingredient": "Bacillus coagulans",
+  "also_called": [
+    "Weizmannia coagulans",
+    "Heyndrickxia coagulans",
+    "Lactobacillus sporogenes"
+  ],
+  "title": "What can you say about Bacillus coagulans in your ads and on your site?",
+  "summary": "The library gives no supported wording for Bacillus coagulans, because no listed source supports one at a dose. Avoid wording that names or implies a disease, a drug or a treatment, such as \"Relieves IBS or IBS symptoms\".",
+  "supported_wordings": [],
+  "wordings_to_avoid": [
+    {
+      "wording": "Relieves IBS or IBS symptoms",
+      "reason": "disease",
+      "why": "Names a disease.",
+      "meta_ads_only": false
+    },
+    {
+      "wording": "Stops diarrhea, or treats gut infections",
+      "reason": "disease",
+      "why": "Diarrhea and infections are disease states; no listed source supports it.",
+      "meta_ads_only": false
+    },
+    {
+      "wording": "Relieves constipation, without 'occasional'",
+      "reason": "treatment",
+      "why": "FDA's 2000 rule (page 1015) accepts only the 'occasional constipation' form.",
+      "meta_ads_only": false
+    }
+  ],
+  "evidence_gap": "No listed source gives a use with a dose for Bacillus coagulans. Health Canada's probiotics monograph (dated 24 April 2026) excludes it, with Bacillus clausii, Bacillus indicus and Bacillus subtilis, in Appendix I, Table 6 ('Excluded live microorganisms from this monograph'), so none of its uses or doses apply, and no other Health Canada monograph for it is in the monograph list. FDA lists no health claim, and Regulation (EU) No 432/2012 has none.",
+  "evidence_strengths": {
+    "strong": "At least two listed sources support it independently at a comparable dose and form, and none disagrees.",
+    "moderate": "One listed source supports it as an evidence-based use at that dose, and no listed source disagrees.",
+    "limited": "The only support is traditional use, the sources disagree, or the source itself calls the evidence weak."
+  },
+  "reasons_to_avoid": {
+    "disease": "names or implies a disease",
+    "drug": "names a drug or presents the product as one",
+    "treatment": "promises to treat, cure or prevent a condition"
+  },
+  "sources": [],
+  "disclaimer": "Not legal advice. This guide shows the wording that published evidence supports at a daily dose, from the sources linked below; it is not a ruling on any claim. Your own product, its form and dose, and your own evidence still need to match the wording you use.",
+  "date_reviewed": "2026-10-14"
+}

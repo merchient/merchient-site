@@ -1,0 +1,134 @@
+{
+  "slug": "vitamin-d",
+  "ingredient": "Vitamin D",
+  "also_called": [
+    "Vitamin D3",
+    "Cholecalciferol",
+    "Vitamin D2",
+    "Ergocalciferol"
+  ],
+  "title": "What can you say about vitamin D in your ads and on your site?",
+  "summary": "The library supports 4 wordings for vitamin D; the strongest is \"Helps build and maintain strong bones and teeth\" (strong, 1-25 µg (40-1,000 IU) a day). Avoid wording that names or implies a disease, a drug or a treatment, such as \"Prevents osteoporosis or fractures, outside FDA's authorized calcium and vitamin D wording\".",
+  "supported_wordings": [
+    {
+      "wording": "Helps build and maintain strong bones and teeth.",
+      "evidence_strength": "strong",
+      "why": "Listed by Health Canada and authorized in the EU after EFSA review.",
+      "daily_dose": "1-25 µg (40-1,000 IU) a day",
+      "dose_details": "Health Canada: 1-25 µg a day for adults (1 IU = 0.025 µg). The EU claim applies to products that are at least a 'source' of vitamin D. ODS: the recommended intake for adults is 15-20 µg (600-800 IU) a day.",
+      "form": "Vitamin D3 or D2",
+      "sources": [
+        {
+          "name": "Health Canada monograph: Multi-Vitamin/Mineral Supplements",
+          "url": "https://webprod.hc-sc.gc.ca/nhpid-bdipsn/atReq?atid=multi_vitmin_suppl&lang=eng"
+        },
+        {
+          "name": "Commission Regulation (EU) No 432/2012, list of permitted health claims",
+          "url": "https://publications.europa.eu/resource/celex/32012R0432"
+        }
+      ]
+    },
+    {
+      "wording": "Helps the body absorb and use calcium and phosphorus.",
+      "evidence_strength": "strong",
+      "why": "Listed by Health Canada and authorized in the EU after EFSA review.",
+      "daily_dose": "1-25 µg (40-1,000 IU) a day",
+      "dose_details": "Health Canada: 1-25 µg a day for adults. The EU claim applies to products that are at least a 'source' of vitamin D.",
+      "form": "Vitamin D3 or D2",
+      "sources": [
+        {
+          "name": "Health Canada monograph: Multi-Vitamin/Mineral Supplements",
+          "url": "https://webprod.hc-sc.gc.ca/nhpid-bdipsn/atReq?atid=multi_vitmin_suppl&lang=eng"
+        },
+        {
+          "name": "Commission Regulation (EU) No 432/2012, list of permitted health claims",
+          "url": "https://publications.europa.eu/resource/celex/32012R0432"
+        }
+      ]
+    },
+    {
+      "wording": "Supports normal immune function.",
+      "evidence_strength": "strong",
+      "why": "Listed by Health Canada and authorized in the EU after EFSA review.",
+      "daily_dose": "1-25 µg (40-1,000 IU) a day",
+      "dose_details": "Health Canada: 1-25 µg a day for adults. The EU claim applies to products that are at least a 'source' of vitamin D.",
+      "form": "Vitamin D3 or D2",
+      "sources": [
+        {
+          "name": "Health Canada monograph: Multi-Vitamin/Mineral Supplements",
+          "url": "https://webprod.hc-sc.gc.ca/nhpid-bdipsn/atReq?atid=multi_vitmin_suppl&lang=eng"
+        },
+        {
+          "name": "Commission Regulation (EU) No 432/2012, list of permitted health claims",
+          "url": "https://publications.europa.eu/resource/celex/32012R0432"
+        }
+      ]
+    },
+    {
+      "wording": "Supports normal muscle function.",
+      "evidence_strength": "moderate",
+      "why": "Authorized in the EU after EFSA review; Health Canada does not list it.",
+      "daily_dose": "0.75-25 µg (up to 1,000 IU) a day",
+      "dose_details": "EU: the product must be at least a 'source' of vitamin D, which is 15% of the 5 µg EU nutrient reference value, or 0.75 µg (Regulation (EU) No 1169/2011, Annex XIII). 25 µg is Health Canada's general adult maximum.",
+      "form": "Vitamin D3 or D2",
+      "sources": [
+        {
+          "name": "Commission Regulation (EU) No 432/2012, list of permitted health claims",
+          "url": "https://publications.europa.eu/resource/celex/32012R0432"
+        }
+      ]
+    }
+  ],
+  "wordings_to_avoid": [
+    {
+      "wording": "Prevents osteoporosis or fractures, outside FDA's authorized calcium and vitamin D wording",
+      "reason": "disease",
+      "why": "Names a disease. The supported route is FDA's authorized claim, with its wording and conditions (see fda_health_claims).",
+      "meta_ads_only": false
+    },
+    {
+      "wording": "Protects against colds, flu or COVID-19",
+      "reason": "disease",
+      "why": "Names infectious diseases; the supported wording is normal immune function.",
+      "meta_ads_only": false
+    },
+    {
+      "wording": "Treats depression or seasonal affective disorder",
+      "reason": "disease",
+      "why": "Names mental health disorders.",
+      "meta_ads_only": false
+    },
+    {
+      "wording": "Lowers cancer risk",
+      "reason": "disease",
+      "why": "Names a disease.",
+      "meta_ads_only": false
+    }
+  ],
+  "evidence_strengths": {
+    "strong": "At least two listed sources support it independently at a comparable dose and form, and none disagrees.",
+    "moderate": "One listed source supports it as an evidence-based use at that dose, and no listed source disagrees.",
+    "limited": "The only support is traditional use, the sources disagree, or the source itself calls the evidence weak."
+  },
+  "reasons_to_avoid": {
+    "disease": "names or implies a disease",
+    "drug": "names a drug or presents the product as one",
+    "treatment": "promises to treat, cure or prevent a condition"
+  },
+  "sources": [
+    {
+      "name": "Health Canada monograph: Multi-Vitamin/Mineral Supplements",
+      "url": "https://webprod.hc-sc.gc.ca/nhpid-bdipsn/atReq?atid=multi_vitmin_suppl&lang=eng"
+    },
+    {
+      "name": "Commission Regulation (EU) No 432/2012, list of permitted health claims",
+      "url": "https://publications.europa.eu/resource/celex/32012R0432"
+    },
+    {
+      "name": "FDA authorized health claim: Calcium, vitamin D and osteoporosis",
+      "url": "https://www.ecfr.gov/current/title-21/chapter-I/subchapter-B/part-101/subpart-E/section-101.72"
+    }
+  ],
+  "disclaimer": "Not legal advice. This guide shows the wording that published evidence supports at a daily dose, from the sources linked below; it is not a ruling on any claim. Your own product, its form and dose, and your own evidence still need to match the wording you use.",
+  "date_reviewed": "2026-10-14"
+}

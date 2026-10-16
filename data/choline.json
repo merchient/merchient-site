@@ -1,0 +1,101 @@
+{
+  "slug": "choline",
+  "ingredient": "Choline",
+  "also_called": [],
+  "title": "What can you say about choline in your ads and on your site?",
+  "summary": "The library supports 3 wordings for choline; the strongest is \"Supports normal liver function\" (strong, 27-1,000 mg a day). Avoid wording that names or implies a disease, a drug or a treatment, such as \"Treats fatty liver disease (NAFLD)\".",
+  "supported_wordings": [
+    {
+      "wording": "Supports normal liver function.",
+      "evidence_strength": "strong",
+      "why": "Health Canada lists liver function, and the EU authorizes maintenance of normal liver function after EFSA review.",
+      "daily_dose": "27-1,000 mg a day",
+      "dose_details": "Health Canada: 27-1,000 mg a day for ages 14 and older (19-1,000 mg for children 1 to 13), counted as choline itself, not the weight of the salt. EU: the food must contain at least 82.5 mg of choline per 100 g, 100 ml or single portion. 3,500 mg a day is the ODS upper limit for adults.",
+      "form": "Choline from choline bitartrate, chloride, citrate or another listed salt, counted as choline",
+      "sources": [
+        {
+          "name": "Health Canada monograph: Multi-Vitamin/Mineral Supplements",
+          "url": "https://webprod.hc-sc.gc.ca/nhpid-bdipsn/atReq?atid=multi_vitmin_suppl&lang=eng"
+        },
+        {
+          "name": "Commission Regulation (EU) No 432/2012, list of permitted health claims",
+          "url": "https://publications.europa.eu/resource/celex/32012R0432"
+        }
+      ]
+    },
+    {
+      "wording": "Supports normal lipid metabolism.",
+      "evidence_strength": "moderate",
+      "why": "Authorized in the EU after EFSA review; Health Canada does not list it.",
+      "daily_dose": "82.5-3,500 mg a day",
+      "dose_details": "EU: the food must contain at least 82.5 mg of choline per 100 g, 100 ml or single portion. 3,500 mg a day is the ODS upper limit for adults.",
+      "form": "Choline from choline bitartrate, chloride, citrate or another listed salt, counted as choline",
+      "sources": [
+        {
+          "name": "Commission Regulation (EU) No 432/2012, list of permitted health claims",
+          "url": "https://publications.europa.eu/resource/celex/32012R0432"
+        }
+      ]
+    },
+    {
+      "wording": "Supports normal homocysteine metabolism.",
+      "evidence_strength": "moderate",
+      "why": "Authorized in the EU after EFSA review; Health Canada does not list it.",
+      "daily_dose": "82.5-3,500 mg a day",
+      "dose_details": "EU: the food must contain at least 82.5 mg of choline per 100 g, 100 ml or single portion. 3,500 mg a day is the ODS upper limit for adults.",
+      "form": "Choline from choline bitartrate, chloride, citrate or another listed salt, counted as choline",
+      "sources": [
+        {
+          "name": "Commission Regulation (EU) No 432/2012, list of permitted health claims",
+          "url": "https://publications.europa.eu/resource/celex/32012R0432"
+        }
+      ]
+    }
+  ],
+  "wordings_to_avoid": [
+    {
+      "wording": "Treats fatty liver disease (NAFLD)",
+      "reason": "disease",
+      "why": "Names a disease; the supported wording is normal liver function.",
+      "meta_ads_only": false
+    },
+    {
+      "wording": "Detoxes or cleanses the liver",
+      "reason": "treatment",
+      "why": "Implies removing damage or toxins from an organ; the supported wording is normal liver function.",
+      "meta_ads_only": false
+    },
+    {
+      "wording": "Prevents dementia or Alzheimer's disease",
+      "reason": "disease",
+      "why": "Names diseases; no listed source supports brain or memory wording for choline.",
+      "meta_ads_only": false
+    }
+  ],
+  "evidence_strengths": {
+    "strong": "At least two listed sources support it independently at a comparable dose and form, and none disagrees.",
+    "moderate": "One listed source supports it as an evidence-based use at that dose, and no listed source disagrees.",
+    "limited": "The only support is traditional use, the sources disagree, or the source itself calls the evidence weak."
+  },
+  "reasons_to_avoid": {
+    "disease": "names or implies a disease",
+    "drug": "names a drug or presents the product as one",
+    "treatment": "promises to treat, cure or prevent a condition"
+  },
+  "sources": [
+    {
+      "name": "Health Canada monograph: Multi-Vitamin/Mineral Supplements",
+      "url": "https://webprod.hc-sc.gc.ca/nhpid-bdipsn/atReq?atid=multi_vitmin_suppl&lang=eng"
+    },
+    {
+      "name": "Commission Regulation (EU) No 432/2012, list of permitted health claims",
+      "url": "https://publications.europa.eu/resource/celex/32012R0432"
+    },
+    {
+      "name": "NIH ODS fact sheet: Choline (health professional)",
+      "url": "https://ods.od.nih.gov/factsheets/Choline-HealthProfessional/"
+    }
+  ],
+  "disclaimer": "Not legal advice. This guide shows the wording that published evidence supports at a daily dose, from the sources linked below; it is not a ruling on any claim. Your own product, its form and dose, and your own evidence still need to match the wording you use.",
+  "date_reviewed": "2026-10-15"
+}

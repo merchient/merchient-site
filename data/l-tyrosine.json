@@ -1,0 +1,63 @@
+{
+  "slug": "l-tyrosine",
+  "ingredient": "L-tyrosine",
+  "also_called": [
+    "Tyrosine"
+  ],
+  "title": "What can you say about L-tyrosine in your ads and on your site?",
+  "summary": "The library supports 1 wording for L-tyrosine; the strongest is \"Helps decrease cognitive fatigue during physically stressful situations, such as extended wakefulness\" (moderate, 10-20 g a day). Avoid wording that names or implies a disease, a drug or a treatment, such as \"Treats ADHD\".",
+  "supported_wordings": [
+    {
+      "wording": "Helps decrease cognitive fatigue during physically stressful situations, such as extended wakefulness.",
+      "evidence_strength": "moderate",
+      "why": "Health Canada lists it at 10-20 g a day; no other listed source covers it.",
+      "daily_dose": "10-20 g a day",
+      "dose_details": "Adults 18 and older. Health Canada: 10-20 g a day, at most 10 g per dose, taken up to 1 hour before or during physical stress, for occasional use only.",
+      "form": "L-tyrosine",
+      "sources": [
+        {
+          "name": "Health Canada monograph: Tyrosine, L-",
+          "url": "https://webprod.hc-sc.gc.ca/nhpid-bdipsn/atReq?atid=l.tyrosine2&lang=eng"
+        }
+      ]
+    }
+  ],
+  "wordings_to_avoid": [
+    {
+      "wording": "Treats ADHD",
+      "reason": "disease",
+      "why": "Names a disease.",
+      "meta_ads_only": false
+    },
+    {
+      "wording": "Treats depression",
+      "reason": "disease",
+      "why": "Names a disease.",
+      "meta_ads_only": false
+    },
+    {
+      "wording": "Boosts thyroid function in hypothyroidism",
+      "reason": "disease",
+      "why": "Names a disease.",
+      "meta_ads_only": false
+    }
+  ],
+  "evidence_strengths": {
+    "strong": "At least two listed sources support it independently at a comparable dose and form, and none disagrees.",
+    "moderate": "One listed source supports it as an evidence-based use at that dose, and no listed source disagrees.",
+    "limited": "The only support is traditional use, the sources disagree, or the source itself calls the evidence weak."
+  },
+  "reasons_to_avoid": {
+    "disease": "names or implies a disease",
+    "drug": "names a drug or presents the product as one",
+    "treatment": "promises to treat, cure or prevent a condition"
+  },
+  "sources": [
+    {
+      "name": "Health Canada monograph: Tyrosine, L-",
+      "url": "https://webprod.hc-sc.gc.ca/nhpid-bdipsn/atReq?atid=l.tyrosine2&lang=eng"
+    }
+  ],
+  "disclaimer": "Not legal advice. This guide shows the wording that published evidence supports at a daily dose, from the sources linked below; it is not a ruling on any claim. Your own product, its form and dose, and your own evidence still need to match the wording you use.",
+  "date_reviewed": "2026-10-15"
+}

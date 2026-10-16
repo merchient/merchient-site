@@ -1,0 +1,77 @@
+{
+  "slug": "chamomile",
+  "ingredient": "Chamomile (German)",
+  "also_called": [
+    "German chamomile",
+    "Matricaria chamomilla",
+    "Chamomile"
+  ],
+  "title": "What can you say about chamomile (German) in your ads and on your site?",
+  "summary": "The library supports 2 wordings for chamomile (German); the strongest is \"Traditionally used in herbal medicine to help relieve mild, occasional digestive upset such as gas, bloating and belching\" (limited, 1.5-24 g dried flower (or extract equivalent) a day). Avoid wording that names or implies a disease, a drug or a treatment, such as \"Treats anxiety\".",
+  "supported_wordings": [
+    {
+      "wording": "Traditionally used in herbal medicine to help relieve mild, occasional digestive upset such as gas, bloating and belching.",
+      "evidence_strength": "limited",
+      "why": "Traditional use in Health Canada's monograph; no other listed source covers it.",
+      "daily_dose": "1.5-24 g dried flower (or extract equivalent) a day",
+      "dose_details": "Adults 18 and older; Health Canada gives smaller doses for children 2 and older.",
+      "form": "Dried flower, powder, tea or extracts",
+      "sources": [
+        {
+          "name": "Health Canada monograph: Chamomile, German - Oral",
+          "url": "https://webprod.hc-sc.gc.ca/nhpid-bdipsn/atReq?atid=cham.germ.oral.orale2&lang=eng"
+        }
+      ]
+    },
+    {
+      "wording": "Traditionally used in herbal medicine to help relieve restlessness or nervousness, which helps promote sleep.",
+      "evidence_strength": "limited",
+      "why": "Traditional use in Health Canada's monograph; no other listed source covers it.",
+      "daily_dose": "1.5-24 g dried flower (or extract equivalent) a day",
+      "dose_details": "Adults 18 and older.",
+      "form": "Dried flower, powder, tea or extracts",
+      "sources": [
+        {
+          "name": "Health Canada monograph: Chamomile, German - Oral",
+          "url": "https://webprod.hc-sc.gc.ca/nhpid-bdipsn/atReq?atid=cham.germ.oral.orale2&lang=eng"
+        }
+      ]
+    }
+  ],
+  "wordings_to_avoid": [
+    {
+      "wording": "Treats anxiety",
+      "reason": "disease",
+      "why": "Names a mental health disorder; NCCIH's anxiety findings are research only.",
+      "meta_ads_only": false
+    },
+    {
+      "wording": "Soothes gut inflammation or inflammatory bowel conditions",
+      "reason": "disease",
+      "why": "Names or implies a disease.",
+      "meta_ads_only": false
+    }
+  ],
+  "evidence_strengths": {
+    "strong": "At least two listed sources support it independently at a comparable dose and form, and none disagrees.",
+    "moderate": "One listed source supports it as an evidence-based use at that dose, and no listed source disagrees.",
+    "limited": "The only support is traditional use, the sources disagree, or the source itself calls the evidence weak."
+  },
+  "reasons_to_avoid": {
+    "disease": "names or implies a disease",
+    "drug": "names a drug or presents the product as one",
+    "treatment": "promises to treat, cure or prevent a condition"
+  },
+  "sources": [
+    {
+      "name": "Health Canada monograph: Chamomile, German - Oral",
+      "url": "https://webprod.hc-sc.gc.ca/nhpid-bdipsn/atReq?atid=cham.germ.oral.orale2&lang=eng"
+    },
+    {
+      "name": "FDA final rule on structure/function statements, 65 FR 1000 (6 January 2000), page 1031",
+      "url": "https://www.federalregister.gov/documents/full_text/text/2000/01/06/00-53.txt"
+    }
+  ],
+  "disclaimer": "Not legal advice. This guide shows the wording that published evidence supports at a daily dose, from the sources linked below; it is not a ruling on any claim. Your own product, its form and dose, and your own evidence still need to match the wording you use.",
+  "date_reviewed": "2026-10-14"
+}

@@ -1,0 +1,61 @@
+{
+  "slug": "apigenin",
+  "ingredient": "Apigenin",
+  "also_called": [],
+  "title": "What can you say about apigenin in your ads and on your site?",
+  "summary": "The library supports 1 wording for apigenin; the strongest is \"Provides an antioxidant that helps protect cells against damage from free radicals\" (limited, up to 20 mg a day). Avoid wording that names or implies a disease, a drug or a treatment, such as \"Treats insomnia, or a cure for sleep problems\".",
+  "supported_wordings": [
+    {
+      "wording": "Provides an antioxidant that helps protect cells against damage from free radicals.",
+      "evidence_strength": "limited",
+      "why": "Health Canada sets a maximum dose only; no other listed source covers it.",
+      "daily_dose": "up to 20 mg a day",
+      "dose_details": "Adults 18 and older; take with a meal. Health Canada's antioxidants monograph sets a maximum of 20 mg a day and no minimum.",
+      "form": "Apigenin, from plant sources or synthetic",
+      "sources": [
+        {
+          "name": "Health Canada monograph: Antioxidants",
+          "url": "https://webprod.hc-sc.gc.ca/nhpid-bdipsn/atReq?atid=antiox&lang=eng"
+        }
+      ]
+    }
+  ],
+  "wordings_to_avoid": [
+    {
+      "wording": "Treats insomnia, or a cure for sleep problems",
+      "reason": "treatment",
+      "why": "Names a sleep disorder; no listed source supports sleep wording for apigenin.",
+      "meta_ads_only": false
+    },
+    {
+      "wording": "Works like a sleeping pill, or a natural Ambien",
+      "reason": "drug",
+      "why": "Compares the product to a drug.",
+      "meta_ads_only": false
+    },
+    {
+      "wording": "Fights or prevents cancer",
+      "reason": "disease",
+      "why": "Names a disease; no listed source supports it.",
+      "meta_ads_only": false
+    }
+  ],
+  "evidence_strengths": {
+    "strong": "At least two listed sources support it independently at a comparable dose and form, and none disagrees.",
+    "moderate": "One listed source supports it as an evidence-based use at that dose, and no listed source disagrees.",
+    "limited": "The only support is traditional use, the sources disagree, or the source itself calls the evidence weak."
+  },
+  "reasons_to_avoid": {
+    "disease": "names or implies a disease",
+    "drug": "names a drug or presents the product as one",
+    "treatment": "promises to treat, cure or prevent a condition"
+  },
+  "sources": [
+    {
+      "name": "Health Canada monograph: Antioxidants",
+      "url": "https://webprod.hc-sc.gc.ca/nhpid-bdipsn/atReq?atid=antiox&lang=eng"
+    }
+  ],
+  "disclaimer": "Not legal advice. This guide shows the wording that published evidence supports at a daily dose, from the sources linked below; it is not a ruling on any claim. Your own product, its form and dose, and your own evidence still need to match the wording you use.",
+  "date_reviewed": "2026-10-15"
+}

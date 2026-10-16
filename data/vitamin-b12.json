@@ -1,0 +1,137 @@
+{
+  "slug": "vitamin-b12",
+  "ingredient": "Vitamin B12",
+  "also_called": [
+    "Cobalamin",
+    "Cyanocobalamin",
+    "Methylcobalamin",
+    "Hydroxocobalamin",
+    "Adenosylcobalamin"
+  ],
+  "title": "What can you say about vitamin B12 in your ads and on your site?",
+  "summary": "The library supports 5 wordings for vitamin B12; the strongest is \"Plays a part in normal energy metabolism\" (strong, 0.14-1,000 µg a day). Avoid wording that names or implies a disease, a drug or a treatment, such as \"Treats anemia, including pernicious anemia\".",
+  "supported_wordings": [
+    {
+      "wording": "Plays a part in normal energy metabolism.",
+      "evidence_strength": "strong",
+      "why": "Health Canada lists energy metabolism and the EU authorizes normal energy-yielding metabolism.",
+      "daily_dose": "0.14-1,000 µg a day",
+      "dose_details": "Health Canada: 0.14-1,000 µg a day for adults 19 and older. EU: at least 0.375 µg, 15% of the 2.5 µg EU reference value (Regulation (EU) No 1169/2011, Annex XIII). ODS: no upper limit was set.",
+      "form": "Any vitamin B12 form",
+      "sources": [
+        {
+          "name": "Health Canada monograph: Multi-Vitamin/Mineral Supplements",
+          "url": "https://webprod.hc-sc.gc.ca/nhpid-bdipsn/atReq?atid=multi_vitmin_suppl&lang=eng"
+        },
+        {
+          "name": "Commission Regulation (EU) No 432/2012, list of permitted health claims",
+          "url": "https://publications.europa.eu/resource/celex/32012R0432"
+        }
+      ]
+    },
+    {
+      "wording": "Helps form red blood cells.",
+      "evidence_strength": "strong",
+      "why": "Listed by Health Canada and authorized in the EU after EFSA review.",
+      "daily_dose": "0.14-1,000 µg a day",
+      "dose_details": "Health Canada: 0.14-1,000 µg a day for adults 19 and older. EU: at least 0.375 µg, 15% of the 2.5 µg EU reference value (Regulation (EU) No 1169/2011, Annex XIII). ODS: no upper limit was set.",
+      "form": "Any vitamin B12 form",
+      "sources": [
+        {
+          "name": "Health Canada monograph: Multi-Vitamin/Mineral Supplements",
+          "url": "https://webprod.hc-sc.gc.ca/nhpid-bdipsn/atReq?atid=multi_vitmin_suppl&lang=eng"
+        },
+        {
+          "name": "Commission Regulation (EU) No 432/2012, list of permitted health claims",
+          "url": "https://publications.europa.eu/resource/celex/32012R0432"
+        }
+      ]
+    },
+    {
+      "wording": "Supports normal immune function.",
+      "evidence_strength": "strong",
+      "why": "Listed by Health Canada and authorized in the EU after EFSA review.",
+      "daily_dose": "0.14-1,000 µg a day",
+      "dose_details": "Health Canada: 0.14-1,000 µg a day for adults 19 and older. EU: at least 0.375 µg, 15% of the 2.5 µg EU reference value (Regulation (EU) No 1169/2011, Annex XIII). ODS: no upper limit was set.",
+      "form": "Any vitamin B12 form",
+      "sources": [
+        {
+          "name": "Health Canada monograph: Multi-Vitamin/Mineral Supplements",
+          "url": "https://webprod.hc-sc.gc.ca/nhpid-bdipsn/atReq?atid=multi_vitmin_suppl&lang=eng"
+        },
+        {
+          "name": "Commission Regulation (EU) No 432/2012, list of permitted health claims",
+          "url": "https://publications.europa.eu/resource/celex/32012R0432"
+        }
+      ]
+    },
+    {
+      "wording": "Supports normal function of the nervous system.",
+      "evidence_strength": "strong",
+      "why": "Listed by Health Canada and authorized in the EU after EFSA review.",
+      "daily_dose": "0.14-1,000 µg a day",
+      "dose_details": "Health Canada: 0.14-1,000 µg a day for adults 19 and older. EU: at least 0.375 µg, 15% of the 2.5 µg EU reference value (Regulation (EU) No 1169/2011, Annex XIII). ODS: no upper limit was set.",
+      "form": "Any vitamin B12 form",
+      "sources": [
+        {
+          "name": "Health Canada monograph: Multi-Vitamin/Mineral Supplements",
+          "url": "https://webprod.hc-sc.gc.ca/nhpid-bdipsn/atReq?atid=multi_vitmin_suppl&lang=eng"
+        },
+        {
+          "name": "Commission Regulation (EU) No 432/2012, list of permitted health claims",
+          "url": "https://publications.europa.eu/resource/celex/32012R0432"
+        }
+      ]
+    },
+    {
+      "wording": "Helps reduce tiredness and fatigue.",
+      "evidence_strength": "moderate",
+      "why": "Authorized in the EU after EFSA review; Health Canada does not list it.",
+      "daily_dose": "0.38-1,000 µg a day",
+      "dose_details": "EU: at least 0.375 µg, 15% of the 2.5 µg EU reference value. 1,000 µg is Health Canada's adult maximum.",
+      "form": "Any vitamin B12 form",
+      "sources": [
+        {
+          "name": "Commission Regulation (EU) No 432/2012, list of permitted health claims",
+          "url": "https://publications.europa.eu/resource/celex/32012R0432"
+        }
+      ]
+    }
+  ],
+  "wordings_to_avoid": [
+    {
+      "wording": "Treats anemia, including pernicious anemia",
+      "reason": "disease",
+      "why": "Names a disease.",
+      "meta_ads_only": false
+    },
+    {
+      "wording": "Boosts energy for people with chronic fatigue",
+      "reason": "disease",
+      "why": "Implies an effect on a medical condition; the supported wording is normal energy metabolism and less tiredness.",
+      "meta_ads_only": false
+    }
+  ],
+  "evidence_strengths": {
+    "strong": "At least two listed sources support it independently at a comparable dose and form, and none disagrees.",
+    "moderate": "One listed source supports it as an evidence-based use at that dose, and no listed source disagrees.",
+    "limited": "The only support is traditional use, the sources disagree, or the source itself calls the evidence weak."
+  },
+  "reasons_to_avoid": {
+    "disease": "names or implies a disease",
+    "drug": "names a drug or presents the product as one",
+    "treatment": "promises to treat, cure or prevent a condition"
+  },
+  "sources": [
+    {
+      "name": "Health Canada monograph: Multi-Vitamin/Mineral Supplements",
+      "url": "https://webprod.hc-sc.gc.ca/nhpid-bdipsn/atReq?atid=multi_vitmin_suppl&lang=eng"
+    },
+    {
+      "name": "Commission Regulation (EU) No 432/2012, list of permitted health claims",
+      "url": "https://publications.europa.eu/resource/celex/32012R0432"
+    }
+  ],
+  "disclaimer": "Not legal advice. This guide shows the wording that published evidence supports at a daily dose, from the sources linked below; it is not a ruling on any claim. Your own product, its form and dose, and your own evidence still need to match the wording you use.",
+  "date_reviewed": "2026-10-14"
+}

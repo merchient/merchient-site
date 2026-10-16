@@ -1,0 +1,82 @@
+{
+  "slug": "vitamin-k",
+  "ingredient": "Vitamin K",
+  "also_called": [
+    "Vitamin K1",
+    "Vitamin K2",
+    "Phylloquinone",
+    "Phytonadione",
+    "Menaquinone-7",
+    "MK-7",
+    "Menaquinone-4",
+    "MK-4"
+  ],
+  "title": "What can you say about vitamin K in your ads and on your site?",
+  "summary": "The library supports 2 wordings for vitamin K; the strongest is \"Supports normal blood clotting\" (moderate, at least 11.25 µg a day). Avoid wording that names or implies a disease, a drug or a treatment, such as \"Prevents or reverses artery calcification or heart disease\".",
+  "supported_wordings": [
+    {
+      "wording": "Supports normal blood clotting.",
+      "evidence_strength": "moderate",
+      "why": "Authorized in the EU after EFSA review; Health Canada lists no specific use.",
+      "daily_dose": "at least 11.25 µg a day",
+      "dose_details": "EU: at least 11.25 µg, 15% of the 75 µg EU reference value (Regulation (EU) No 1169/2011, Annex XIII). Health Canada's monograph gives vitamin K1 and K2 at 6-120 µg a day for adults but lists no specific use for it.",
+      "form": "Vitamin K1 or K2, counted as total vitamin K",
+      "sources": [
+        {
+          "name": "Commission Regulation (EU) No 432/2012, list of permitted health claims",
+          "url": "https://publications.europa.eu/resource/celex/32012R0432"
+        }
+      ]
+    },
+    {
+      "wording": "Helps maintain normal bones.",
+      "evidence_strength": "moderate",
+      "why": "Authorized in the EU after EFSA review; Health Canada lists no specific use.",
+      "daily_dose": "at least 11.25 µg a day",
+      "dose_details": "EU: at least 11.25 µg, 15% of the 75 µg EU reference value (Regulation (EU) No 1169/2011, Annex XIII). Health Canada's monograph gives vitamin K1 and K2 at 6-120 µg a day for adults but lists no specific use for it.",
+      "form": "Vitamin K1 or K2, counted as total vitamin K",
+      "sources": [
+        {
+          "name": "Commission Regulation (EU) No 432/2012, list of permitted health claims",
+          "url": "https://publications.europa.eu/resource/celex/32012R0432"
+        }
+      ]
+    }
+  ],
+  "wordings_to_avoid": [
+    {
+      "wording": "Prevents or reverses artery calcification or heart disease",
+      "reason": "disease",
+      "why": "Names diseases.",
+      "meta_ads_only": false
+    },
+    {
+      "wording": "Prevents osteoporosis or fractures",
+      "reason": "disease",
+      "why": "Names diseases.",
+      "meta_ads_only": false
+    }
+  ],
+  "evidence_strengths": {
+    "strong": "At least two listed sources support it independently at a comparable dose and form, and none disagrees.",
+    "moderate": "One listed source supports it as an evidence-based use at that dose, and no listed source disagrees.",
+    "limited": "The only support is traditional use, the sources disagree, or the source itself calls the evidence weak."
+  },
+  "reasons_to_avoid": {
+    "disease": "names or implies a disease",
+    "drug": "names a drug or presents the product as one",
+    "treatment": "promises to treat, cure or prevent a condition"
+  },
+  "sources": [
+    {
+      "name": "Commission Regulation (EU) No 432/2012, list of permitted health claims",
+      "url": "https://publications.europa.eu/resource/celex/32012R0432"
+    },
+    {
+      "name": "Health Canada monograph: Multi-Vitamin/Mineral Supplements",
+      "url": "https://webprod.hc-sc.gc.ca/nhpid-bdipsn/atReq?atid=multi_vitmin_suppl&lang=eng"
+    }
+  ],
+  "disclaimer": "Not legal advice. This guide shows the wording that published evidence supports at a daily dose, from the sources linked below; it is not a ruling on any claim. Your own product, its form and dose, and your own evidence still need to match the wording you use.",
+  "date_reviewed": "2026-10-15"
+}

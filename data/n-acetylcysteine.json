@@ -1,0 +1,66 @@
+{
+  "slug": "n-acetylcysteine",
+  "ingredient": "N-acetylcysteine (NAC)",
+  "also_called": [
+    "NAC",
+    "N-acetyl-L-cysteine",
+    "N-acetylcysteine",
+    "Acetylcysteine"
+  ],
+  "title": "What can you say about N-acetylcysteine (NAC) in your ads and on your site?",
+  "summary": "The library gives no supported wording for N-acetylcysteine (NAC), because every claim about it is flagged for review. Avoid wording that names or implies a disease, a drug or a treatment, such as \"Treats PCOS, or restores ovulation in PCOS\".",
+  "supported_wordings": [],
+  "wordings_to_avoid": [
+    {
+      "wording": "Treats PCOS, or restores ovulation in PCOS",
+      "reason": "disease",
+      "why": "Names a disease (polycystic ovary syndrome).",
+      "meta_ads_only": false
+    },
+    {
+      "wording": "Detoxes or protects the liver",
+      "reason": "treatment",
+      "why": "Promises to treat or protect an organ from damage.",
+      "meta_ads_only": false
+    },
+    {
+      "wording": "Treats depression, OCD or addiction",
+      "reason": "disease",
+      "why": "Names diseases.",
+      "meta_ads_only": false
+    },
+    {
+      "wording": "Breaks up mucus, or treats bronchitis or COPD",
+      "reason": "disease",
+      "why": "Names diseases and describes a drug action.",
+      "meta_ads_only": false
+    }
+  ],
+  "evidence_gap": "Every NAC claim is flagged for review because of FDA's position on NAC as a dietary ingredient (library decision of 2026-10-15; see review_flag), so the library gives no supported wording for it. Health Canada's antioxidant use is kept as a note.",
+  "review_flag": {
+    "text": "FDA, as of 1 May 2026: NAC is excluded from the definition of dietary supplement under section 201(ff)(3) of the FD&C Act, and FDA's guidance of August 2022 says it will use enforcement discretion for products that would be lawful dietary supplements if NAC were not excluded.",
+    "date": "2026-05-01"
+  },
+  "evidence_strengths": {
+    "strong": "At least two listed sources support it independently at a comparable dose and form, and none disagrees.",
+    "moderate": "One listed source supports it as an evidence-based use at that dose, and no listed source disagrees.",
+    "limited": "The only support is traditional use, the sources disagree, or the source itself calls the evidence weak."
+  },
+  "reasons_to_avoid": {
+    "disease": "names or implies a disease",
+    "drug": "names a drug or presents the product as one",
+    "treatment": "promises to treat, cure or prevent a condition"
+  },
+  "sources": [
+    {
+      "name": "FDA: Information on Select Dietary Supplement Ingredients and Other Substances (NAC: Category 4, excluded under 201(ff)(3))",
+      "url": "https://www.fda.gov/food/dietary-supplements/information-select-dietary-supplement-ingredients-and-other-substances"
+    },
+    {
+      "name": "FDA guidance for industry: Policy Regarding N-acetyl-L-cysteine (August 2022)",
+      "url": "https://www.fda.gov/regulatory-information/search-fda-guidance-documents/guidance-industry-policy-regarding-n-acetyl-l-cysteine"
+    }
+  ],
+  "disclaimer": "Not legal advice. This guide shows the wording that published evidence supports at a daily dose, from the sources linked below; it is not a ruling on any claim. Your own product, its form and dose, and your own evidence still need to match the wording you use.",
+  "date_reviewed": "2026-10-15"
+}

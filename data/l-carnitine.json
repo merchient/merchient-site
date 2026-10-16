@@ -1,0 +1,102 @@
+{
+  "slug": "l-carnitine",
+  "ingredient": "L-carnitine",
+  "also_called": [
+    "Carnitine",
+    "L-carnitine L-tartrate",
+    "L-carnitine tartrate",
+    "L-carnitine fumarate"
+  ],
+  "title": "What can you say about L-carnitine in your ads and on your site?",
+  "summary": "The library supports 4 wordings for L-carnitine; the strongest is \"Provides an antioxidant that helps protect cells against free radical damage\" (moderate, up to 4 g a day). Avoid wording that names or implies a disease, a drug or a treatment, such as \"Treats heart disease or angina\".",
+  "supported_wordings": [
+    {
+      "wording": "Provides an antioxidant that helps protect cells against free radical damage.",
+      "evidence_strength": "moderate",
+      "why": "Health Canada lists it; no other listed source covers it.",
+      "daily_dose": "up to 4 g a day",
+      "dose_details": "Adults 18 and older. Health Canada: not more than 4 g a day; not more than 2 g per dose.",
+      "form": "L-carnitine, L-carnitine tartrate or L-carnitine fumarate, counted as L-carnitine",
+      "sources": [
+        {
+          "name": "Health Canada monograph: Carnitine, L-",
+          "url": "https://webprod.hc-sc.gc.ca/nhpid-bdipsn/atReq?atid=l.carnitine2&lang=eng"
+        }
+      ]
+    },
+    {
+      "wording": "Helps support muscle recovery and muscle tissue repair in people doing resistance training.",
+      "evidence_strength": "moderate",
+      "why": "Health Canada lists it; no other listed source covers it.",
+      "daily_dose": "1-4 g a day",
+      "dose_details": "Adults 18 and older. Health Canada: 1-4 g a day; not more than 2 g per dose. Take 2-4 hours before exercise.",
+      "form": "L-carnitine or L-carnitine tartrate, counted as L-carnitine",
+      "sources": [
+        {
+          "name": "Health Canada monograph: Carnitine, L-",
+          "url": "https://webprod.hc-sc.gc.ca/nhpid-bdipsn/atReq?atid=l.carnitine2&lang=eng"
+        }
+      ]
+    },
+    {
+      "wording": "Helps improve physical performance and delay fatigue during physical activity, with a training regimen.",
+      "evidence_strength": "moderate",
+      "why": "Health Canada lists it; no other listed source covers it.",
+      "daily_dose": "2-4 g a day",
+      "dose_details": "Adults 18 and older. Health Canada: 2-4 g a day; not more than 2 g per dose. Take 2-4 hours before exercise.",
+      "form": "L-carnitine or L-carnitine tartrate, counted as L-carnitine",
+      "sources": [
+        {
+          "name": "Health Canada monograph: Carnitine, L-",
+          "url": "https://webprod.hc-sc.gc.ca/nhpid-bdipsn/atReq?atid=l.carnitine2&lang=eng"
+        }
+      ]
+    },
+    {
+      "wording": "Helps support fat metabolism.",
+      "evidence_strength": "moderate",
+      "why": "Health Canada lists it; no other listed source covers it.",
+      "daily_dose": "3-4 g a day",
+      "dose_details": "Adults 18 and older. Health Canada: 3-4 g a day; not more than 2 g per dose.",
+      "form": "L-carnitine or L-carnitine tartrate, counted as L-carnitine",
+      "sources": [
+        {
+          "name": "Health Canada monograph: Carnitine, L-",
+          "url": "https://webprod.hc-sc.gc.ca/nhpid-bdipsn/atReq?atid=l.carnitine2&lang=eng"
+        }
+      ]
+    }
+  ],
+  "wordings_to_avoid": [
+    {
+      "wording": "Treats heart disease or angina",
+      "reason": "disease",
+      "why": "Names diseases.",
+      "meta_ads_only": false
+    },
+    {
+      "wording": "Treats male infertility",
+      "reason": "disease",
+      "why": "Names a medical condition.",
+      "meta_ads_only": false
+    }
+  ],
+  "evidence_strengths": {
+    "strong": "At least two listed sources support it independently at a comparable dose and form, and none disagrees.",
+    "moderate": "One listed source supports it as an evidence-based use at that dose, and no listed source disagrees.",
+    "limited": "The only support is traditional use, the sources disagree, or the source itself calls the evidence weak."
+  },
+  "reasons_to_avoid": {
+    "disease": "names or implies a disease",
+    "drug": "names a drug or presents the product as one",
+    "treatment": "promises to treat, cure or prevent a condition"
+  },
+  "sources": [
+    {
+      "name": "Health Canada monograph: Carnitine, L-",
+      "url": "https://webprod.hc-sc.gc.ca/nhpid-bdipsn/atReq?atid=l.carnitine2&lang=eng"
+    }
+  ],
+  "disclaimer": "Not legal advice. This guide shows the wording that published evidence supports at a daily dose, from the sources linked below; it is not a ruling on any claim. Your own product, its form and dose, and your own evidence still need to match the wording you use.",
+  "date_reviewed": "2026-10-15"
+}

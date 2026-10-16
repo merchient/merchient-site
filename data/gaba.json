@@ -1,0 +1,64 @@
+{
+  "slug": "gaba",
+  "ingredient": "GABA",
+  "also_called": [
+    "Gamma-aminobutyric acid",
+    "4-Aminobutanoic acid"
+  ],
+  "title": "What can you say about GABA in your ads and on your site?",
+  "summary": "The library supports 1 wording for GABA; the strongest is \"Helps temporarily promote relaxation\" (moderate, 50-3,000 mg a day). Avoid wording that names or implies a disease, a drug or a treatment, such as \"Treats or relieves anxiety or panic attacks\".",
+  "supported_wordings": [
+    {
+      "wording": "Helps temporarily promote relaxation.",
+      "evidence_strength": "moderate",
+      "why": "Health Canada lists it at 50-3,000 mg a day, citing two studies; no other listed source covers GABA.",
+      "daily_dose": "50-3,000 mg a day",
+      "dose_details": "Adults 18 and older; at most 750 mg per single dose. Health Canada lists this use in its cognitive function products monograph, among ingredients with a relaxation action.",
+      "form": "GABA from fermentation, kelp or synthesis, taken by mouth",
+      "sources": [
+        {
+          "name": "Health Canada monograph: Cognitive Function Products",
+          "url": "https://webprod.hc-sc.gc.ca/nhpid-bdipsn/atReq?atid=fonc.cognitive.func&lang=eng"
+        }
+      ]
+    }
+  ],
+  "wordings_to_avoid": [
+    {
+      "wording": "Treats or relieves anxiety or panic attacks",
+      "reason": "disease",
+      "why": "Anxiety and panic disorders are diagnosable conditions; Health Canada's use is a temporary feeling of relaxation.",
+      "meta_ads_only": false
+    },
+    {
+      "wording": "A natural alternative to anti-anxiety medication, or works like benzodiazepines such as Xanax",
+      "reason": "drug",
+      "why": "Compares the product to a drug and implies it does a drug's job.",
+      "meta_ads_only": false
+    },
+    {
+      "wording": "Treats insomnia, or a cure for sleep problems",
+      "reason": "treatment",
+      "why": "Names a sleep disorder and promises to treat it; no listed source supports sleep wording for GABA.",
+      "meta_ads_only": false
+    }
+  ],
+  "evidence_strengths": {
+    "strong": "At least two listed sources support it independently at a comparable dose and form, and none disagrees.",
+    "moderate": "One listed source supports it as an evidence-based use at that dose, and no listed source disagrees.",
+    "limited": "The only support is traditional use, the sources disagree, or the source itself calls the evidence weak."
+  },
+  "reasons_to_avoid": {
+    "disease": "names or implies a disease",
+    "drug": "names a drug or presents the product as one",
+    "treatment": "promises to treat, cure or prevent a condition"
+  },
+  "sources": [
+    {
+      "name": "Health Canada monograph: Cognitive Function Products",
+      "url": "https://webprod.hc-sc.gc.ca/nhpid-bdipsn/atReq?atid=fonc.cognitive.func&lang=eng"
+    }
+  ],
+  "disclaimer": "Not legal advice. This guide shows the wording that published evidence supports at a daily dose, from the sources linked below; it is not a ruling on any claim. Your own product, its form and dose, and your own evidence still need to match the wording you use.",
+  "date_reviewed": "2026-10-15"
+}

@@ -1,0 +1,85 @@
+{
+  "slug": "green-tea-extract",
+  "ingredient": "Green tea extract",
+  "also_called": [
+    "Green tea",
+    "Camellia sinensis",
+    "EGCG",
+    "Epigallocatechin gallate",
+    "Green tea catechins"
+  ],
+  "title": "What can you say about green tea extract in your ads and on your site?",
+  "summary": "The library supports 2 wordings for green tea extract; the strongest is \"Provides antioxidants that help protect cells against free radical damage\" (moderate, up to 690 mg total catechins a day). Avoid wording that names or implies a disease, a drug or a treatment, such as \"Prevents breast or prostate cancer, outside FDA's qualified wording\".",
+  "supported_wordings": [
+    {
+      "wording": "Provides antioxidants that help protect cells against free radical damage.",
+      "evidence_strength": "moderate",
+      "why": "Health Canada lists it at up to 690 mg of total catechins a day; no other listed source covers it.",
+      "daily_dose": "up to 690 mg total catechins a day",
+      "dose_details": "Adults 18 and older. Health Canada: not more than 690 mg of total catechins a day, including at most 300 mg EGCG and at most 150 mg caffeine; take with food; ask a health care practitioner for use beyond 12 weeks.",
+      "form": "Standardized green tea leaf extract (Camellia sinensis), counted as catechins, EGCG and caffeine",
+      "sources": [
+        {
+          "name": "Health Canada monograph: Green Tea Extract",
+          "url": "https://webprod.hc-sc.gc.ca/nhpid-bdipsn/atReq?atid=greentea_thevert2&lang=eng"
+        }
+      ]
+    },
+    {
+      "wording": "Used with a reduced-calorie diet and more physical activity, helps in weight management.",
+      "evidence_strength": "moderate",
+      "why": "Health Canada lists it at 136-300 mg EGCG with 75-150 mg caffeine a day; no other listed source covers it.",
+      "daily_dose": "136-300 mg EGCG a day",
+      "dose_details": "Adults 18 and older. Health Canada: 136-300 mg EGCG and 75-150 mg caffeine a day, at an EGCG to caffeine ratio of 1.8:1 to 4:1, and not more than 690 mg of total catechins; take with food; ask a health care practitioner for use beyond 12 weeks.",
+      "form": "Standardized green tea leaf extract (Camellia sinensis), counted as catechins, EGCG and caffeine",
+      "sources": [
+        {
+          "name": "Health Canada monograph: Green Tea Extract",
+          "url": "https://webprod.hc-sc.gc.ca/nhpid-bdipsn/atReq?atid=greentea_thevert2&lang=eng"
+        }
+      ]
+    }
+  ],
+  "wordings_to_avoid": [
+    {
+      "wording": "Prevents breast or prostate cancer, outside FDA's qualified wording",
+      "reason": "disease",
+      "why": "Names cancer. FDA's qualified claim on green tea and these cancers has set wording (see fda_health_claims).",
+      "meta_ads_only": false
+    },
+    {
+      "wording": "Lowers cholesterol or blood pressure",
+      "reason": "disease",
+      "why": "Names medical conditions.",
+      "meta_ads_only": false
+    },
+    {
+      "wording": "Works like a prescription weight-loss drug",
+      "reason": "drug",
+      "why": "Presents the product as a drug.",
+      "meta_ads_only": false
+    }
+  ],
+  "evidence_strengths": {
+    "strong": "At least two listed sources support it independently at a comparable dose and form, and none disagrees.",
+    "moderate": "One listed source supports it as an evidence-based use at that dose, and no listed source disagrees.",
+    "limited": "The only support is traditional use, the sources disagree, or the source itself calls the evidence weak."
+  },
+  "reasons_to_avoid": {
+    "disease": "names or implies a disease",
+    "drug": "names a drug or presents the product as one",
+    "treatment": "promises to treat, cure or prevent a condition"
+  },
+  "sources": [
+    {
+      "name": "Health Canada monograph: Green Tea Extract",
+      "url": "https://webprod.hc-sc.gc.ca/nhpid-bdipsn/atReq?atid=greentea_thevert2&lang=eng"
+    },
+    {
+      "name": "FDA qualified health claim: Green tea and breast cancer and prostate cancer",
+      "url": "https://www.fda.gov/food/nutrition-food-labeling-and-critical-foods/qualified-health-claims-letters-enforcement-discretion"
+    }
+  ],
+  "disclaimer": "Not legal advice. This guide shows the wording that published evidence supports at a daily dose, from the sources linked below; it is not a ruling on any claim. Your own product, its form and dose, and your own evidence still need to match the wording you use.",
+  "date_reviewed": "2026-10-15"
+}

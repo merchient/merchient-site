@@ -1,0 +1,38 @@
+{
+  "slug": "d-mannose",
+  "ingredient": "D-mannose",
+  "also_called": [
+    "Mannose"
+  ],
+  "title": "What can you say about D-mannose in your ads and on your site?",
+  "summary": "The library gives no supported wording for D-mannose, because no listed source supports one at a dose. Avoid wording that names or implies a disease, a drug or a treatment, such as \"Prevents or treats urinary tract infections (UTIs)\".",
+  "supported_wordings": [],
+  "wordings_to_avoid": [
+    {
+      "wording": "Prevents or treats urinary tract infections (UTIs)",
+      "reason": "disease",
+      "why": "Names a disease.",
+      "meta_ads_only": false
+    },
+    {
+      "wording": "Flushes out E. coli, or treats bladder infections",
+      "reason": "disease",
+      "why": "Names a disease.",
+      "meta_ads_only": false
+    }
+  ],
+  "evidence_gap": "No listed source gives a use with a dose. Health Canada's list of monographs (read on 2026-10-15) has no D-mannose monograph, Regulation (EU) No 432/2012 has no mannose claim, and FDA's list of qualified health claims has none for mannose. ODS was not checked.",
+  "evidence_strengths": {
+    "strong": "At least two listed sources support it independently at a comparable dose and form, and none disagrees.",
+    "moderate": "One listed source supports it as an evidence-based use at that dose, and no listed source disagrees.",
+    "limited": "The only support is traditional use, the sources disagree, or the source itself calls the evidence weak."
+  },
+  "reasons_to_avoid": {
+    "disease": "names or implies a disease",
+    "drug": "names a drug or presents the product as one",
+    "treatment": "promises to treat, cure or prevent a condition"
+  },
+  "sources": [],
+  "disclaimer": "Not legal advice. This guide shows the wording that published evidence supports at a daily dose, from the sources linked below; it is not a ruling on any claim. Your own product, its form and dose, and your own evidence still need to match the wording you use.",
+  "date_reviewed": "2026-10-15"
+}

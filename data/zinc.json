@@ -1,0 +1,152 @@
+{
+  "slug": "zinc",
+  "ingredient": "Zinc",
+  "also_called": [
+    "Zn"
+  ],
+  "title": "What can you say about zinc in your ads and on your site?",
+  "summary": "The library supports 5 wordings for zinc; the strongest is \"Supports normal immune function\" (strong, 0.7-50 mg elemental zinc a day). Avoid wording that names or implies a disease, a drug or a treatment, such as \"Shortens colds, or protects against colds\".",
+  "supported_wordings": [
+    {
+      "wording": "Supports normal immune function.",
+      "evidence_strength": "strong",
+      "why": "Listed by Health Canada and authorized in the EU after EFSA review; ODS describes zinc's role in immune function.",
+      "daily_dose": "0.7-50 mg elemental zinc a day",
+      "dose_details": "Health Canada: 0.7-50 mg a day for adults 19 and older (0.7-25 mg from picolinate; 0.7-34 mg at age 18). ODS sets the adult upper limit at 40 mg a day. The EU claim applies to products that are at least a 'source' of zinc.",
+      "form": "Any zinc form on Health Canada's list, counted as elemental zinc",
+      "sources": [
+        {
+          "name": "Health Canada monograph: Multi-Vitamin/Mineral Supplements",
+          "url": "https://webprod.hc-sc.gc.ca/nhpid-bdipsn/atReq?atid=multi_vitmin_suppl&lang=eng"
+        },
+        {
+          "name": "Commission Regulation (EU) No 432/2012, list of permitted health claims",
+          "url": "https://publications.europa.eu/resource/celex/32012R0432"
+        },
+        {
+          "name": "NIH ODS fact sheet: Zinc (health professional)",
+          "url": "https://ods.od.nih.gov/factsheets/Zinc-HealthProfessional/"
+        }
+      ],
+      "dose_warning": "Above 40 mg a day of zinc is over the ODS upper limit for adults, and 50 mg or more over weeks can lower copper absorption. Health Canada's range runs to 50 mg; the claim's support stands."
+    },
+    {
+      "wording": "Helps maintain healthy skin, hair, nails and bones.",
+      "evidence_strength": "strong",
+      "why": "Health Canada lists healthy bones, hair, nails and skin, and the EU authorizes maintenance of normal skin, hair, nails and bones.",
+      "daily_dose": "0.7-50 mg elemental zinc a day",
+      "dose_details": "Health Canada: 0.7-50 mg a day for adults 19 and older; ODS adult upper limit 40 mg a day.",
+      "form": "Any zinc form on Health Canada's list, counted as elemental zinc",
+      "sources": [
+        {
+          "name": "Health Canada monograph: Multi-Vitamin/Mineral Supplements",
+          "url": "https://webprod.hc-sc.gc.ca/nhpid-bdipsn/atReq?atid=multi_vitmin_suppl&lang=eng"
+        },
+        {
+          "name": "Commission Regulation (EU) No 432/2012, list of permitted health claims",
+          "url": "https://publications.europa.eu/resource/celex/32012R0432"
+        }
+      ],
+      "dose_warning": "Above 40 mg a day of zinc is over the ODS upper limit for adults, and 50 mg or more over weeks can lower copper absorption. Health Canada's range runs to 50 mg; the claim's support stands."
+    },
+    {
+      "wording": "Plays a part in normal energy metabolism.",
+      "evidence_strength": "strong",
+      "why": "Health Canada lists a role in energy metabolism, and the EU authorizes a role in normal macronutrient metabolism.",
+      "daily_dose": "0.7-50 mg elemental zinc a day",
+      "dose_details": "Health Canada: 0.7-50 mg a day for adults 19 and older; ODS adult upper limit 40 mg a day.",
+      "form": "Any zinc form on Health Canada's list, counted as elemental zinc",
+      "sources": [
+        {
+          "name": "Health Canada monograph: Multi-Vitamin/Mineral Supplements",
+          "url": "https://webprod.hc-sc.gc.ca/nhpid-bdipsn/atReq?atid=multi_vitmin_suppl&lang=eng"
+        },
+        {
+          "name": "Commission Regulation (EU) No 432/2012, list of permitted health claims",
+          "url": "https://publications.europa.eu/resource/celex/32012R0432"
+        }
+      ],
+      "dose_warning": "Above 40 mg a day of zinc is over the ODS upper limit for adults, and 50 mg or more over weeks can lower copper absorption. Health Canada's range runs to 50 mg; the claim's support stands."
+    },
+    {
+      "wording": "Helps maintain normal testosterone levels in the blood.",
+      "evidence_strength": "moderate",
+      "why": "Authorized in the EU after EFSA review; Health Canada does not list it.",
+      "daily_dose": "1.5-40 mg elemental zinc a day",
+      "dose_details": "EU: the product must be at least a 'source' of zinc, which is 15% of the 10 mg EU nutrient reference value, or 1.5 mg (Regulation (EU) No 1169/2011, Annex XIII). 40 mg a day is the ODS adult upper limit.",
+      "form": "Zinc, counted as elemental zinc",
+      "sources": [
+        {
+          "name": "Commission Regulation (EU) No 432/2012, list of permitted health claims",
+          "url": "https://publications.europa.eu/resource/celex/32012R0432"
+        }
+      ]
+    },
+    {
+      "wording": "Supports normal cognitive function.",
+      "evidence_strength": "moderate",
+      "why": "Authorized in the EU after EFSA review; Health Canada does not list it.",
+      "daily_dose": "1.5-40 mg elemental zinc a day",
+      "dose_details": "EU: the product must be at least a 'source' of zinc, which is 15% of the 10 mg EU nutrient reference value, or 1.5 mg (Regulation (EU) No 1169/2011, Annex XIII). 40 mg a day is the ODS adult upper limit.",
+      "form": "Zinc, counted as elemental zinc",
+      "sources": [
+        {
+          "name": "Commission Regulation (EU) No 432/2012, list of permitted health claims",
+          "url": "https://publications.europa.eu/resource/celex/32012R0432"
+        }
+      ]
+    }
+  ],
+  "wordings_to_avoid": [
+    {
+      "wording": "Shortens colds, or protects against colds",
+      "reason": "disease",
+      "why": "Names a disease. ODS reports a 2024 Cochrane review finding zinc may cut cold duration by about 2 days once a cold has started, and makes little or no difference in avoiding colds; ODS also notes zinc is sold in over-the-counter cold remedies, which are drugs.",
+      "meta_ads_only": false
+    },
+    {
+      "wording": "Treats acne",
+      "reason": "disease",
+      "why": "Names a skin disease.",
+      "meta_ads_only": false
+    },
+    {
+      "wording": "Treats low testosterone or erectile dysfunction",
+      "reason": "disease",
+      "why": "Names medical conditions; the supported wording is maintaining normal testosterone levels.",
+      "meta_ads_only": false
+    },
+    {
+      "wording": "Fights viruses, or protects against COVID-19",
+      "reason": "disease",
+      "why": "Names infectious disease.",
+      "meta_ads_only": false
+    }
+  ],
+  "evidence_strengths": {
+    "strong": "At least two listed sources support it independently at a comparable dose and form, and none disagrees.",
+    "moderate": "One listed source supports it as an evidence-based use at that dose, and no listed source disagrees.",
+    "limited": "The only support is traditional use, the sources disagree, or the source itself calls the evidence weak."
+  },
+  "reasons_to_avoid": {
+    "disease": "names or implies a disease",
+    "drug": "names a drug or presents the product as one",
+    "treatment": "promises to treat, cure or prevent a condition"
+  },
+  "sources": [
+    {
+      "name": "Health Canada monograph: Multi-Vitamin/Mineral Supplements",
+      "url": "https://webprod.hc-sc.gc.ca/nhpid-bdipsn/atReq?atid=multi_vitmin_suppl&lang=eng"
+    },
+    {
+      "name": "Commission Regulation (EU) No 432/2012, list of permitted health claims",
+      "url": "https://publications.europa.eu/resource/celex/32012R0432"
+    },
+    {
+      "name": "NIH ODS fact sheet: Zinc (health professional)",
+      "url": "https://ods.od.nih.gov/factsheets/Zinc-HealthProfessional/"
+    }
+  ],
+  "disclaimer": "Not legal advice. This guide shows the wording that published evidence supports at a daily dose, from the sources linked below; it is not a ruling on any claim. Your own product, its form and dose, and your own evidence still need to match the wording you use.",
+  "date_reviewed": "2026-10-14"
+}

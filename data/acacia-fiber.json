@@ -1,0 +1,75 @@
+{
+  "slug": "acacia-fiber",
+  "ingredient": "Acacia fiber",
+  "also_called": [
+    "Acacia",
+    "Acacia gum",
+    "Gum arabic",
+    "Senegalia senegal",
+    "Vachellia seyal"
+  ],
+  "title": "What can you say about acacia fiber in your ads and on your site?",
+  "summary": "The library supports 2 wordings for acacia fiber; the strongest is \"A prebiotic fibre that helps feed beneficial gut bacteria such as bifidobacteria\" (moderate, 10-20 g a day). Avoid wording that names or implies a disease, a drug or a treatment, such as \"Relieves IBS\".",
+  "supported_wordings": [
+    {
+      "wording": "A prebiotic fibre that helps feed beneficial gut bacteria such as bifidobacteria.",
+      "evidence_strength": "moderate",
+      "why": "Health Canada lists it at 10-20 g a day, citing human studies; no other listed source covers it.",
+      "daily_dose": "10-20 g a day",
+      "dose_details": "Adults 18 and older.",
+      "form": "Acacia gum",
+      "sources": [
+        {
+          "name": "Health Canada monograph: Prebiotics",
+          "url": "https://webprod.hc-sc.gc.ca/nhpid-bdipsn/atReq?atid=prebio2&lang=eng"
+        }
+      ]
+    },
+    {
+      "wording": "A source of fibre that supports a healthy digestive system and digestive regularity.",
+      "evidence_strength": "moderate",
+      "why": "Health Canada lists it; no other listed source covers it.",
+      "daily_dose": "2.5-20 g a day",
+      "dose_details": "Adults 18 and older, as part of a fibre-containing diet for the regularity wording. Health Canada: at least 4 g of fibre a day may be called a high source and 6 g a very high source.",
+      "form": "Acacia gum",
+      "sources": [
+        {
+          "name": "Health Canada monograph: Prebiotics",
+          "url": "https://webprod.hc-sc.gc.ca/nhpid-bdipsn/atReq?atid=prebio2&lang=eng"
+        }
+      ]
+    }
+  ],
+  "wordings_to_avoid": [
+    {
+      "wording": "Relieves IBS",
+      "reason": "disease",
+      "why": "Names a disease.",
+      "meta_ads_only": false
+    },
+    {
+      "wording": "Relieves constipation",
+      "reason": "treatment",
+      "why": "Health Canada lists no constipation dose for acacia, and FDA's 2000 rule clears only the 'occasional' form.",
+      "meta_ads_only": false
+    }
+  ],
+  "evidence_strengths": {
+    "strong": "At least two listed sources support it independently at a comparable dose and form, and none disagrees.",
+    "moderate": "One listed source supports it as an evidence-based use at that dose, and no listed source disagrees.",
+    "limited": "The only support is traditional use, the sources disagree, or the source itself calls the evidence weak."
+  },
+  "reasons_to_avoid": {
+    "disease": "names or implies a disease",
+    "drug": "names a drug or presents the product as one",
+    "treatment": "promises to treat, cure or prevent a condition"
+  },
+  "sources": [
+    {
+      "name": "Health Canada monograph: Prebiotics",
+      "url": "https://webprod.hc-sc.gc.ca/nhpid-bdipsn/atReq?atid=prebio2&lang=eng"
+    }
+  ],
+  "disclaimer": "Not legal advice. This guide shows the wording that published evidence supports at a daily dose, from the sources linked below; it is not a ruling on any claim. Your own product, its form and dose, and your own evidence still need to match the wording you use.",
+  "date_reviewed": "2026-10-14"
+}

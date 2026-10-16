@@ -1,0 +1,790 @@
+{
+  "generated_on": "2026-10-15",
+  "count": 87,
+  "disclaimer": "Not legal advice. This guide shows the wording that published evidence supports at a daily dose, from the sources linked below; it is not a ruling on any claim. Your own product, its form and dose, and your own evidence still need to match the wording you use.",
+  "guides": [
+    {
+      "slug": "5-htp",
+      "ingredient": "5-HTP",
+      "title": "What can you say about 5-HTP in your ads and on your site?",
+      "path": "guides/5-htp.json",
+      "supported_wordings": 2,
+      "wordings_to_avoid": 5,
+      "date_reviewed": "2026-10-15"
+    },
+    {
+      "slug": "acacia-fiber",
+      "ingredient": "Acacia fiber",
+      "title": "What can you say about acacia fiber in your ads and on your site?",
+      "path": "guides/acacia-fiber.json",
+      "supported_wordings": 2,
+      "wordings_to_avoid": 2,
+      "date_reviewed": "2026-10-14"
+    },
+    {
+      "slug": "acetyl-l-carnitine",
+      "ingredient": "Acetyl-L-carnitine",
+      "title": "What can you say about acetyl-L-carnitine in your ads and on your site?",
+      "path": "guides/acetyl-l-carnitine.json",
+      "supported_wordings": 1,
+      "wordings_to_avoid": 3,
+      "date_reviewed": "2026-10-15"
+    },
+    {
+      "slug": "apigenin",
+      "ingredient": "Apigenin",
+      "title": "What can you say about apigenin in your ads and on your site?",
+      "path": "guides/apigenin.json",
+      "supported_wordings": 1,
+      "wordings_to_avoid": 3,
+      "date_reviewed": "2026-10-15"
+    },
+    {
+      "slug": "apple-cider-vinegar",
+      "ingredient": "Apple cider vinegar",
+      "title": "What can you say about apple cider vinegar in your ads and on your site?",
+      "path": "guides/apple-cider-vinegar.json",
+      "supported_wordings": 0,
+      "wordings_to_avoid": 2,
+      "date_reviewed": "2026-10-14"
+    },
+    {
+      "slug": "ashwagandha",
+      "ingredient": "Ashwagandha",
+      "title": "What can you say about ashwagandha in your ads and on your site?",
+      "path": "guides/ashwagandha.json",
+      "supported_wordings": 3,
+      "wordings_to_avoid": 5,
+      "date_reviewed": "2026-10-14"
+    },
+    {
+      "slug": "bacillus-coagulans",
+      "ingredient": "Bacillus coagulans",
+      "title": "What can you say about Bacillus coagulans in your ads and on your site?",
+      "path": "guides/bacillus-coagulans.json",
+      "supported_wordings": 0,
+      "wordings_to_avoid": 3,
+      "date_reviewed": "2026-10-14"
+    },
+    {
+      "slug": "bacopa",
+      "ingredient": "Bacopa",
+      "title": "What can you say about bacopa in your ads and on your site?",
+      "path": "guides/bacopa.json",
+      "supported_wordings": 2,
+      "wordings_to_avoid": 3,
+      "date_reviewed": "2026-10-15"
+    },
+    {
+      "slug": "berberine",
+      "ingredient": "Berberine",
+      "title": "What can you say about berberine in your ads and on your site?",
+      "path": "guides/berberine.json",
+      "supported_wordings": 0,
+      "wordings_to_avoid": 3,
+      "date_reviewed": "2026-10-14"
+    },
+    {
+      "slug": "biotin",
+      "ingredient": "Biotin",
+      "title": "What can you say about biotin in your ads and on your site?",
+      "path": "guides/biotin.json",
+      "supported_wordings": 3,
+      "wordings_to_avoid": 2,
+      "date_reviewed": "2026-10-14"
+    },
+    {
+      "slug": "black-cohosh",
+      "ingredient": "Black cohosh",
+      "title": "What can you say about black cohosh in your ads and on your site?",
+      "path": "guides/black-cohosh.json",
+      "supported_wordings": 4,
+      "wordings_to_avoid": 3,
+      "date_reviewed": "2026-10-15"
+    },
+    {
+      "slug": "boron",
+      "ingredient": "Boron",
+      "title": "What can you say about boron in your ads and on your site?",
+      "path": "guides/boron.json",
+      "supported_wordings": 0,
+      "wordings_to_avoid": 2,
+      "date_reviewed": "2026-10-14"
+    },
+    {
+      "slug": "bovine-colostrum",
+      "ingredient": "Bovine colostrum",
+      "title": "What can you say about bovine colostrum in your ads and on your site?",
+      "path": "guides/bovine-colostrum.json",
+      "supported_wordings": 2,
+      "wordings_to_avoid": 2,
+      "date_reviewed": "2026-10-14"
+    },
+    {
+      "slug": "caffeine",
+      "ingredient": "Caffeine",
+      "title": "What can you say about caffeine in your ads and on your site?",
+      "path": "guides/caffeine.json",
+      "supported_wordings": 2,
+      "wordings_to_avoid": 2,
+      "date_reviewed": "2026-10-14"
+    },
+    {
+      "slug": "calcium",
+      "ingredient": "Calcium",
+      "title": "What can you say about calcium in your ads and on your site?",
+      "path": "guides/calcium.json",
+      "supported_wordings": 4,
+      "wordings_to_avoid": 3,
+      "date_reviewed": "2026-10-15"
+    },
+    {
+      "slug": "chamomile",
+      "ingredient": "Chamomile (German)",
+      "title": "What can you say about chamomile (German) in your ads and on your site?",
+      "path": "guides/chamomile.json",
+      "supported_wordings": 2,
+      "wordings_to_avoid": 2,
+      "date_reviewed": "2026-10-14"
+    },
+    {
+      "slug": "chasteberry",
+      "ingredient": "Chasteberry (vitex)",
+      "title": "What can you say about chasteberry (vitex) in your ads and on your site?",
+      "path": "guides/chasteberry.json",
+      "supported_wordings": 2,
+      "wordings_to_avoid": 2,
+      "date_reviewed": "2026-10-14"
+    },
+    {
+      "slug": "choline",
+      "ingredient": "Choline",
+      "title": "What can you say about choline in your ads and on your site?",
+      "path": "guides/choline.json",
+      "supported_wordings": 3,
+      "wordings_to_avoid": 3,
+      "date_reviewed": "2026-10-15"
+    },
+    {
+      "slug": "chromium",
+      "ingredient": "Chromium",
+      "title": "What can you say about chromium in your ads and on your site?",
+      "path": "guides/chromium.json",
+      "supported_wordings": 2,
+      "wordings_to_avoid": 4,
+      "date_reviewed": "2026-10-15"
+    },
+    {
+      "slug": "citicoline",
+      "ingredient": "Citicoline",
+      "title": "What can you say about citicoline in your ads and on your site?",
+      "path": "guides/citicoline.json",
+      "supported_wordings": 1,
+      "wordings_to_avoid": 2,
+      "date_reviewed": "2026-10-15"
+    },
+    {
+      "slug": "coenzyme-q10",
+      "ingredient": "Coenzyme Q10",
+      "title": "What can you say about coenzyme Q10 in your ads and on your site?",
+      "path": "guides/coenzyme-q10.json",
+      "supported_wordings": 2,
+      "wordings_to_avoid": 4,
+      "date_reviewed": "2026-10-15"
+    },
+    {
+      "slug": "collagen-peptides",
+      "ingredient": "Collagen peptides",
+      "title": "What can you say about collagen peptides in your ads and on your site?",
+      "path": "guides/collagen-peptides.json",
+      "supported_wordings": 2,
+      "wordings_to_avoid": 4,
+      "date_reviewed": "2026-10-14"
+    },
+    {
+      "slug": "cranberry",
+      "ingredient": "Cranberry",
+      "title": "What can you say about cranberry in your ads and on your site?",
+      "path": "guides/cranberry.json",
+      "supported_wordings": 1,
+      "wordings_to_avoid": 2,
+      "date_reviewed": "2026-10-15"
+    },
+    {
+      "slug": "creatine",
+      "ingredient": "Creatine",
+      "title": "What can you say about creatine in your ads and on your site?",
+      "path": "guides/creatine.json",
+      "supported_wordings": 2,
+      "wordings_to_avoid": 3,
+      "date_reviewed": "2026-10-14"
+    },
+    {
+      "slug": "d-chiro-inositol",
+      "ingredient": "D-chiro-inositol",
+      "title": "What can you say about D-chiro-inositol in your ads and on your site?",
+      "path": "guides/d-chiro-inositol.json",
+      "supported_wordings": 0,
+      "wordings_to_avoid": 3,
+      "date_reviewed": "2026-10-15"
+    },
+    {
+      "slug": "d-mannose",
+      "ingredient": "D-mannose",
+      "title": "What can you say about D-mannose in your ads and on your site?",
+      "path": "guides/d-mannose.json",
+      "supported_wordings": 0,
+      "wordings_to_avoid": 2,
+      "date_reviewed": "2026-10-15"
+    },
+    {
+      "slug": "digestive-enzymes",
+      "ingredient": "Digestive enzymes",
+      "title": "What can you say about digestive enzymes in your ads and on your site?",
+      "path": "guides/digestive-enzymes.json",
+      "supported_wordings": 3,
+      "wordings_to_avoid": 4,
+      "date_reviewed": "2026-10-14"
+    },
+    {
+      "slug": "dim",
+      "ingredient": "DIM",
+      "title": "What can you say about DIM in your ads and on your site?",
+      "path": "guides/dim.json",
+      "supported_wordings": 2,
+      "wordings_to_avoid": 3,
+      "date_reviewed": "2026-10-15"
+    },
+    {
+      "slug": "elderberry",
+      "ingredient": "Elderberry",
+      "title": "What can you say about elderberry in your ads and on your site?",
+      "path": "guides/elderberry.json",
+      "supported_wordings": 1,
+      "wordings_to_avoid": 3,
+      "date_reviewed": "2026-10-14"
+    },
+    {
+      "slug": "evening-primrose-oil",
+      "ingredient": "Evening primrose oil",
+      "title": "What can you say about evening primrose oil in your ads and on your site?",
+      "path": "guides/evening-primrose-oil.json",
+      "supported_wordings": 1,
+      "wordings_to_avoid": 3,
+      "date_reviewed": "2026-10-15"
+    },
+    {
+      "slug": "fenugreek",
+      "ingredient": "Fenugreek",
+      "title": "What can you say about fenugreek in your ads and on your site?",
+      "path": "guides/fenugreek.json",
+      "supported_wordings": 5,
+      "wordings_to_avoid": 4,
+      "date_reviewed": "2026-10-14"
+    },
+    {
+      "slug": "folate",
+      "ingredient": "Folate",
+      "title": "What can you say about folate in your ads and on your site?",
+      "path": "guides/folate.json",
+      "supported_wordings": 7,
+      "wordings_to_avoid": 5,
+      "date_reviewed": "2026-10-15"
+    },
+    {
+      "slug": "gaba",
+      "ingredient": "GABA",
+      "title": "What can you say about GABA in your ads and on your site?",
+      "path": "guides/gaba.json",
+      "supported_wordings": 1,
+      "wordings_to_avoid": 3,
+      "date_reviewed": "2026-10-15"
+    },
+    {
+      "slug": "ginger",
+      "ingredient": "Ginger",
+      "title": "What can you say about ginger in your ads and on your site?",
+      "path": "guides/ginger.json",
+      "supported_wordings": 2,
+      "wordings_to_avoid": 3,
+      "date_reviewed": "2026-10-14"
+    },
+    {
+      "slug": "ginkgo",
+      "ingredient": "Ginkgo",
+      "title": "What can you say about ginkgo in your ads and on your site?",
+      "path": "guides/ginkgo.json",
+      "supported_wordings": 3,
+      "wordings_to_avoid": 3,
+      "date_reviewed": "2026-10-15"
+    },
+    {
+      "slug": "glucomannan",
+      "ingredient": "Glucomannan",
+      "title": "What can you say about glucomannan in your ads and on your site?",
+      "path": "guides/glucomannan.json",
+      "supported_wordings": 3,
+      "wordings_to_avoid": 3,
+      "date_reviewed": "2026-10-14"
+    },
+    {
+      "slug": "glycine",
+      "ingredient": "Glycine",
+      "title": "What can you say about glycine in your ads and on your site?",
+      "path": "guides/glycine.json",
+      "supported_wordings": 1,
+      "wordings_to_avoid": 3,
+      "date_reviewed": "2026-10-15"
+    },
+    {
+      "slug": "green-tea-extract",
+      "ingredient": "Green tea extract",
+      "title": "What can you say about green tea extract in your ads and on your site?",
+      "path": "guides/green-tea-extract.json",
+      "supported_wordings": 2,
+      "wordings_to_avoid": 3,
+      "date_reviewed": "2026-10-15"
+    },
+    {
+      "slug": "hyaluronic-acid",
+      "ingredient": "Hyaluronic acid",
+      "title": "What can you say about hyaluronic acid in your ads and on your site?",
+      "path": "guides/hyaluronic-acid.json",
+      "supported_wordings": 0,
+      "wordings_to_avoid": 2,
+      "date_reviewed": "2026-10-14"
+    },
+    {
+      "slug": "inulin",
+      "ingredient": "Inulin",
+      "title": "What can you say about inulin in your ads and on your site?",
+      "path": "guides/inulin.json",
+      "supported_wordings": 4,
+      "wordings_to_avoid": 3,
+      "date_reviewed": "2026-10-14"
+    },
+    {
+      "slug": "iodine",
+      "ingredient": "Iodine",
+      "title": "What can you say about iodine in your ads and on your site?",
+      "path": "guides/iodine.json",
+      "supported_wordings": 5,
+      "wordings_to_avoid": 2,
+      "date_reviewed": "2026-10-15"
+    },
+    {
+      "slug": "iron",
+      "ingredient": "Iron",
+      "title": "What can you say about iron in your ads and on your site?",
+      "path": "guides/iron.json",
+      "supported_wordings": 4,
+      "wordings_to_avoid": 2,
+      "date_reviewed": "2026-10-14"
+    },
+    {
+      "slug": "l-carnitine",
+      "ingredient": "L-carnitine",
+      "title": "What can you say about L-carnitine in your ads and on your site?",
+      "path": "guides/l-carnitine.json",
+      "supported_wordings": 4,
+      "wordings_to_avoid": 2,
+      "date_reviewed": "2026-10-15"
+    },
+    {
+      "slug": "l-glutamine",
+      "ingredient": "L-glutamine",
+      "title": "What can you say about L-glutamine in your ads and on your site?",
+      "path": "guides/l-glutamine.json",
+      "supported_wordings": 4,
+      "wordings_to_avoid": 2,
+      "date_reviewed": "2026-10-14"
+    },
+    {
+      "slug": "l-theanine",
+      "ingredient": "L-theanine",
+      "title": "What can you say about L-theanine in your ads and on your site?",
+      "path": "guides/l-theanine.json",
+      "supported_wordings": 1,
+      "wordings_to_avoid": 3,
+      "date_reviewed": "2026-10-14"
+    },
+    {
+      "slug": "l-tyrosine",
+      "ingredient": "L-tyrosine",
+      "title": "What can you say about L-tyrosine in your ads and on your site?",
+      "path": "guides/l-tyrosine.json",
+      "supported_wordings": 1,
+      "wordings_to_avoid": 3,
+      "date_reviewed": "2026-10-15"
+    },
+    {
+      "slug": "lemon-balm",
+      "ingredient": "Lemon balm",
+      "title": "What can you say about lemon balm in your ads and on your site?",
+      "path": "guides/lemon-balm.json",
+      "supported_wordings": 2,
+      "wordings_to_avoid": 3,
+      "date_reviewed": "2026-10-15"
+    },
+    {
+      "slug": "lions-mane",
+      "ingredient": "Lion's mane",
+      "title": "What can you say about lion's mane in your ads and on your site?",
+      "path": "guides/lions-mane.json",
+      "supported_wordings": 1,
+      "wordings_to_avoid": 3,
+      "date_reviewed": "2026-10-14"
+    },
+    {
+      "slug": "maca",
+      "ingredient": "Maca",
+      "title": "What can you say about maca in your ads and on your site?",
+      "path": "guides/maca.json",
+      "supported_wordings": 3,
+      "wordings_to_avoid": 2,
+      "date_reviewed": "2026-10-14"
+    },
+    {
+      "slug": "magnesium",
+      "ingredient": "Magnesium",
+      "title": "What can you say about magnesium in your ads and on your site?",
+      "path": "guides/magnesium.json",
+      "supported_wordings": 6,
+      "wordings_to_avoid": 5,
+      "date_reviewed": "2026-10-14"
+    },
+    {
+      "slug": "melatonin",
+      "ingredient": "Melatonin",
+      "title": "What can you say about melatonin in your ads and on your site?",
+      "path": "guides/melatonin.json",
+      "supported_wordings": 5,
+      "wordings_to_avoid": 5,
+      "date_reviewed": "2026-10-14"
+    },
+    {
+      "slug": "myo-inositol",
+      "ingredient": "Myo-inositol",
+      "title": "What can you say about myo-inositol in your ads and on your site?",
+      "path": "guides/myo-inositol.json",
+      "supported_wordings": 0,
+      "wordings_to_avoid": 3,
+      "date_reviewed": "2026-10-14"
+    },
+    {
+      "slug": "n-acetylcysteine",
+      "ingredient": "N-acetylcysteine (NAC)",
+      "title": "What can you say about N-acetylcysteine (NAC) in your ads and on your site?",
+      "path": "guides/n-acetylcysteine.json",
+      "supported_wordings": 0,
+      "wordings_to_avoid": 4,
+      "date_reviewed": "2026-10-15"
+    },
+    {
+      "slug": "niacin",
+      "ingredient": "Niacin (vitamin B3)",
+      "title": "What can you say about niacin (vitamin B3) in your ads and on your site?",
+      "path": "guides/niacin.json",
+      "supported_wordings": 5,
+      "wordings_to_avoid": 2,
+      "date_reviewed": "2026-10-15"
+    },
+    {
+      "slug": "oat-beta-glucan",
+      "ingredient": "Oat beta-glucan",
+      "title": "What can you say about oat beta-glucan in your ads and on your site?",
+      "path": "guides/oat-beta-glucan.json",
+      "supported_wordings": 3,
+      "wordings_to_avoid": 3,
+      "date_reviewed": "2026-10-14"
+    },
+    {
+      "slug": "omega-3-fish-oil",
+      "ingredient": "Omega-3 fish oil (EPA and DHA)",
+      "title": "What can you say about omega-3 fish oil (EPA and DHA) in your ads and on your site?",
+      "path": "guides/omega-3-fish-oil.json",
+      "supported_wordings": 6,
+      "wordings_to_avoid": 6,
+      "date_reviewed": "2026-10-14"
+    },
+    {
+      "slug": "panax-ginseng",
+      "ingredient": "Panax ginseng",
+      "title": "What can you say about Panax ginseng in your ads and on your site?",
+      "path": "guides/panax-ginseng.json",
+      "supported_wordings": 3,
+      "wordings_to_avoid": 3,
+      "date_reviewed": "2026-10-15"
+    },
+    {
+      "slug": "pantothenic-acid",
+      "ingredient": "Pantothenic acid (vitamin B5)",
+      "title": "What can you say about pantothenic acid (vitamin B5) in your ads and on your site?",
+      "path": "guides/pantothenic-acid.json",
+      "supported_wordings": 4,
+      "wordings_to_avoid": 2,
+      "date_reviewed": "2026-10-15"
+    },
+    {
+      "slug": "partially-hydrolyzed-guar-gum",
+      "ingredient": "Partially hydrolyzed guar gum",
+      "title": "What can you say about partially hydrolyzed guar gum in your ads and on your site?",
+      "path": "guides/partially-hydrolyzed-guar-gum.json",
+      "supported_wordings": 0,
+      "wordings_to_avoid": 2,
+      "date_reviewed": "2026-10-14"
+    },
+    {
+      "slug": "passionflower",
+      "ingredient": "Passionflower",
+      "title": "What can you say about passionflower in your ads and on your site?",
+      "path": "guides/passionflower.json",
+      "supported_wordings": 2,
+      "wordings_to_avoid": 4,
+      "date_reviewed": "2026-10-15"
+    },
+    {
+      "slug": "pectin",
+      "ingredient": "Pectin",
+      "title": "What can you say about pectin in your ads and on your site?",
+      "path": "guides/pectin.json",
+      "supported_wordings": 2,
+      "wordings_to_avoid": 4,
+      "date_reviewed": "2026-10-14"
+    },
+    {
+      "slug": "peppermint-oil",
+      "ingredient": "Peppermint oil",
+      "title": "What can you say about peppermint oil in your ads and on your site?",
+      "path": "guides/peppermint-oil.json",
+      "supported_wordings": 3,
+      "wordings_to_avoid": 2,
+      "date_reviewed": "2026-10-14"
+    },
+    {
+      "slug": "phosphatidylserine",
+      "ingredient": "Phosphatidylserine",
+      "title": "What can you say about phosphatidylserine in your ads and on your site?",
+      "path": "guides/phosphatidylserine.json",
+      "supported_wordings": 1,
+      "wordings_to_avoid": 2,
+      "date_reviewed": "2026-10-15"
+    },
+    {
+      "slug": "polydextrose",
+      "ingredient": "Polydextrose",
+      "title": "What can you say about polydextrose in your ads and on your site?",
+      "path": "guides/polydextrose.json",
+      "supported_wordings": 0,
+      "wordings_to_avoid": 3,
+      "date_reviewed": "2026-10-14"
+    },
+    {
+      "slug": "potassium",
+      "ingredient": "Potassium",
+      "title": "What can you say about potassium in your ads and on your site?",
+      "path": "guides/potassium.json",
+      "supported_wordings": 4,
+      "wordings_to_avoid": 4,
+      "date_reviewed": "2026-10-15"
+    },
+    {
+      "slug": "probiotics",
+      "ingredient": "Probiotics",
+      "title": "What can you say about probiotics in your ads and on your site?",
+      "path": "guides/probiotics.json",
+      "supported_wordings": 2,
+      "wordings_to_avoid": 6,
+      "date_reviewed": "2026-10-14"
+    },
+    {
+      "slug": "psyllium-husk",
+      "ingredient": "Psyllium husk",
+      "title": "What can you say about psyllium husk in your ads and on your site?",
+      "path": "guides/psyllium-husk.json",
+      "supported_wordings": 3,
+      "wordings_to_avoid": 4,
+      "date_reviewed": "2026-10-14"
+    },
+    {
+      "slug": "resistant-maltodextrin",
+      "ingredient": "Resistant maltodextrin (soluble corn fiber)",
+      "title": "What can you say about resistant maltodextrin (soluble corn fiber) in your ads and on your site?",
+      "path": "guides/resistant-maltodextrin.json",
+      "supported_wordings": 0,
+      "wordings_to_avoid": 3,
+      "date_reviewed": "2026-10-14"
+    },
+    {
+      "slug": "rhodiola",
+      "ingredient": "Rhodiola",
+      "title": "What can you say about rhodiola in your ads and on your site?",
+      "path": "guides/rhodiola.json",
+      "supported_wordings": 4,
+      "wordings_to_avoid": 3,
+      "date_reviewed": "2026-10-15"
+    },
+    {
+      "slug": "riboflavin",
+      "ingredient": "Riboflavin (vitamin B2)",
+      "title": "What can you say about riboflavin (vitamin B2) in your ads and on your site?",
+      "path": "guides/riboflavin.json",
+      "supported_wordings": 7,
+      "wordings_to_avoid": 2,
+      "date_reviewed": "2026-10-15"
+    },
+    {
+      "slug": "saffron",
+      "ingredient": "Saffron",
+      "title": "What can you say about saffron in your ads and on your site?",
+      "path": "guides/saffron.json",
+      "supported_wordings": 0,
+      "wordings_to_avoid": 3,
+      "date_reviewed": "2026-10-15"
+    },
+    {
+      "slug": "saw-palmetto",
+      "ingredient": "Saw palmetto",
+      "title": "What can you say about saw palmetto in your ads and on your site?",
+      "path": "guides/saw-palmetto.json",
+      "supported_wordings": 0,
+      "wordings_to_avoid": 3,
+      "date_reviewed": "2026-10-14"
+    },
+    {
+      "slug": "selenium",
+      "ingredient": "Selenium",
+      "title": "What can you say about selenium in your ads and on your site?",
+      "path": "guides/selenium.json",
+      "supported_wordings": 5,
+      "wordings_to_avoid": 3,
+      "date_reviewed": "2026-10-15"
+    },
+    {
+      "slug": "shilajit",
+      "ingredient": "Shilajit",
+      "title": "What can you say about shilajit in your ads and on your site?",
+      "path": "guides/shilajit.json",
+      "supported_wordings": 0,
+      "wordings_to_avoid": 2,
+      "date_reviewed": "2026-10-14"
+    },
+    {
+      "slug": "sodium",
+      "ingredient": "Sodium",
+      "title": "What can you say about sodium in your ads and on your site?",
+      "path": "guides/sodium.json",
+      "supported_wordings": 2,
+      "wordings_to_avoid": 3,
+      "date_reviewed": "2026-10-15"
+    },
+    {
+      "slug": "thiamine",
+      "ingredient": "Thiamine (vitamin B1)",
+      "title": "What can you say about thiamine (vitamin B1) in your ads and on your site?",
+      "path": "guides/thiamine.json",
+      "supported_wordings": 4,
+      "wordings_to_avoid": 2,
+      "date_reviewed": "2026-10-15"
+    },
+    {
+      "slug": "tongkat-ali",
+      "ingredient": "Tongkat ali",
+      "title": "What can you say about tongkat ali in your ads and on your site?",
+      "path": "guides/tongkat-ali.json",
+      "supported_wordings": 0,
+      "wordings_to_avoid": 4,
+      "date_reviewed": "2026-10-14"
+    },
+    {
+      "slug": "turmeric",
+      "ingredient": "Turmeric (curcumin)",
+      "title": "What can you say about turmeric (curcumin) in your ads and on your site?",
+      "path": "guides/turmeric.json",
+      "supported_wordings": 3,
+      "wordings_to_avoid": 3,
+      "date_reviewed": "2026-10-14"
+    },
+    {
+      "slug": "valerian",
+      "ingredient": "Valerian",
+      "title": "What can you say about valerian in your ads and on your site?",
+      "path": "guides/valerian.json",
+      "supported_wordings": 2,
+      "wordings_to_avoid": 4,
+      "date_reviewed": "2026-10-14"
+    },
+    {
+      "slug": "vitamin-a",
+      "ingredient": "Vitamin A",
+      "title": "What can you say about vitamin A in your ads and on your site?",
+      "path": "guides/vitamin-a.json",
+      "supported_wordings": 4,
+      "wordings_to_avoid": 3,
+      "date_reviewed": "2026-10-15"
+    },
+    {
+      "slug": "vitamin-b12",
+      "ingredient": "Vitamin B12",
+      "title": "What can you say about vitamin B12 in your ads and on your site?",
+      "path": "guides/vitamin-b12.json",
+      "supported_wordings": 5,
+      "wordings_to_avoid": 2,
+      "date_reviewed": "2026-10-14"
+    },
+    {
+      "slug": "vitamin-b6",
+      "ingredient": "Vitamin B6",
+      "title": "What can you say about vitamin B6 in your ads and on your site?",
+      "path": "guides/vitamin-b6.json",
+      "supported_wordings": 8,
+      "wordings_to_avoid": 5,
+      "date_reviewed": "2026-10-15"
+    },
+    {
+      "slug": "vitamin-c",
+      "ingredient": "Vitamin C",
+      "title": "What can you say about vitamin C in your ads and on your site?",
+      "path": "guides/vitamin-c.json",
+      "supported_wordings": 8,
+      "wordings_to_avoid": 4,
+      "date_reviewed": "2026-10-15"
+    },
+    {
+      "slug": "vitamin-d",
+      "ingredient": "Vitamin D",
+      "title": "What can you say about vitamin D in your ads and on your site?",
+      "path": "guides/vitamin-d.json",
+      "supported_wordings": 4,
+      "wordings_to_avoid": 4,
+      "date_reviewed": "2026-10-14"
+    },
+    {
+      "slug": "vitamin-e",
+      "ingredient": "Vitamin E",
+      "title": "What can you say about vitamin E in your ads and on your site?",
+      "path": "guides/vitamin-e.json",
+      "supported_wordings": 1,
+      "wordings_to_avoid": 2,
+      "date_reviewed": "2026-10-15"
+    },
+    {
+      "slug": "vitamin-k",
+      "ingredient": "Vitamin K",
+      "title": "What can you say about vitamin K in your ads and on your site?",
+      "path": "guides/vitamin-k.json",
+      "supported_wordings": 2,
+      "wordings_to_avoid": 2,
+      "date_reviewed": "2026-10-15"
+    },
+    {
+      "slug": "zinc",
+      "ingredient": "Zinc",
+      "title": "What can you say about zinc in your ads and on your site?",
+      "path": "guides/zinc.json",
+      "supported_wordings": 5,
+      "wordings_to_avoid": 4,
+      "date_reviewed": "2026-10-14"
+    }
+  ]
+}

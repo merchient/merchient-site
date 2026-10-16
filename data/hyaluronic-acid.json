@@ -1,0 +1,39 @@
+{
+  "slug": "hyaluronic-acid",
+  "ingredient": "Hyaluronic acid",
+  "also_called": [
+    "Sodium hyaluronate",
+    "Hyaluronan"
+  ],
+  "title": "What can you say about hyaluronic acid in your ads and on your site?",
+  "summary": "The library gives no supported wording for hyaluronic acid, because no listed source supports one at a dose. Avoid wording that names or implies a disease, a drug or a treatment, such as \"Relieves osteoarthritis or arthritis knee pain\".",
+  "supported_wordings": [],
+  "wordings_to_avoid": [
+    {
+      "wording": "Relieves osteoarthritis or arthritis knee pain",
+      "reason": "disease",
+      "why": "Names a disease; FDA's 2000 rule (page 1016) treats joint pain as characteristic of arthritis.",
+      "meta_ads_only": false
+    },
+    {
+      "wording": "Lubricates arthritic joints",
+      "reason": "disease",
+      "why": "Implies treating arthritis.",
+      "meta_ads_only": false
+    }
+  ],
+  "evidence_gap": "No listed source gives a use or dose for oral hyaluronic acid. Health Canada's monograph list (checked 2026-10-14) has no monograph for it, no ODS fact sheet among those read covers it, FDA's lists show no health claim for it, and Regulation (EU) No 432/2012 has no claim for it. Until a listed source covers it, the library supports no wording for it.",
+  "evidence_strengths": {
+    "strong": "At least two listed sources support it independently at a comparable dose and form, and none disagrees.",
+    "moderate": "One listed source supports it as an evidence-based use at that dose, and no listed source disagrees.",
+    "limited": "The only support is traditional use, the sources disagree, or the source itself calls the evidence weak."
+  },
+  "reasons_to_avoid": {
+    "disease": "names or implies a disease",
+    "drug": "names a drug or presents the product as one",
+    "treatment": "promises to treat, cure or prevent a condition"
+  },
+  "sources": [],
+  "disclaimer": "Not legal advice. This guide shows the wording that published evidence supports at a daily dose, from the sources linked below; it is not a ruling on any claim. Your own product, its form and dose, and your own evidence still need to match the wording you use.",
+  "date_reviewed": "2026-10-14"
+}

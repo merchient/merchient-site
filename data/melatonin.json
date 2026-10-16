@@ -1,0 +1,148 @@
+{
+  "slug": "melatonin",
+  "ingredient": "Melatonin",
+  "also_called": [
+    "N-acetyl-5-methoxytryptamine",
+    "Pineal hormone"
+  ],
+  "title": "What can you say about melatonin in your ads and on your site?",
+  "summary": "The library supports 5 wordings for melatonin; the strongest is \"Helps you fall asleep faster when sleeplessness is occasional\" (strong, 0.1-10 mg a day). Avoid wording that names or implies a disease, a drug or a treatment, such as \"Treats insomnia\".",
+  "supported_wordings": [
+    {
+      "wording": "Helps you fall asleep faster when sleeplessness is occasional.",
+      "evidence_strength": "strong",
+      "why": "Authorized in the EU after EFSA review at 1 mg, and listed by Health Canada at a range that includes 1 mg.",
+      "daily_dose": "0.1-10 mg a day",
+      "dose_details": "EU: 1 mg taken close to bedtime, and the consumer is told so. Health Canada: 0.1-10 mg a day, taken 30-60 minutes before bedtime, for adults 18 and older who fall asleep slowly. The two sources agree at about 1 mg.",
+      "form": "Melatonin taken by mouth",
+      "sources": [
+        {
+          "name": "Commission Regulation (EU) No 432/2012, list of permitted health claims",
+          "url": "https://publications.europa.eu/resource/celex/32012R0432"
+        },
+        {
+          "name": "Health Canada monograph: Melatonin - Oral",
+          "url": "https://webprod.hc-sc.gc.ca/nhpid-bdipsn/atReq?atid=melatonin.oral2&lang=eng"
+        }
+      ]
+    },
+    {
+      "wording": "Helps ease jet lag, such as daytime tiredness and disturbed sleep.",
+      "evidence_strength": "strong",
+      "why": "Authorized in the EU after EFSA review and listed by Health Canada at overlapping doses.",
+      "daily_dose": "0.5-10 mg a day",
+      "dose_details": "EU: at least 0.5 mg taken close to bedtime on the first day of travel and the following few days. Health Canada: 0.5-10 mg a day, 30-60 minutes before bedtime, adults 18 and older.",
+      "form": "Melatonin taken by mouth",
+      "sources": [
+        {
+          "name": "Commission Regulation (EU) No 432/2012, list of permitted health claims",
+          "url": "https://publications.europa.eu/resource/celex/32012R0432"
+        },
+        {
+          "name": "Health Canada monograph: Melatonin - Oral",
+          "url": "https://webprod.hc-sc.gc.ca/nhpid-bdipsn/atReq?atid=melatonin.oral2&lang=eng"
+        }
+      ]
+    },
+    {
+      "wording": "Helps reset the body's sleep-wake cycle.",
+      "evidence_strength": "moderate",
+      "why": "Health Canada lists it; no other listed source covers this wording.",
+      "daily_dose": "0.1-10 mg a day",
+      "dose_details": "Adults 18 and older, 30-60 minutes before bedtime.",
+      "form": "Melatonin taken by mouth",
+      "sources": [
+        {
+          "name": "Health Canada monograph: Melatonin - Oral",
+          "url": "https://webprod.hc-sc.gc.ca/nhpid-bdipsn/atReq?atid=melatonin.oral2&lang=eng"
+        }
+      ]
+    },
+    {
+      "wording": "Helps increase total sleep time when sleep is cut short or the sleep schedule shifts, as with shift work or jet lag.",
+      "evidence_strength": "moderate",
+      "why": "Health Canada lists it; no other listed source covers this wording.",
+      "daily_dose": "0.1-10 mg a day",
+      "dose_details": "Adults 18 and older, 30-60 minutes before bedtime.",
+      "form": "Melatonin taken by mouth",
+      "sources": [
+        {
+          "name": "Health Canada monograph: Melatonin - Oral",
+          "url": "https://webprod.hc-sc.gc.ca/nhpid-bdipsn/atReq?atid=melatonin.oral2&lang=eng"
+        }
+      ]
+    },
+    {
+      "wording": "Helps relieve occasional sleeplessness.",
+      "evidence_strength": "moderate",
+      "why": "Health Canada lists it; the EU's narrower claim covers falling asleep faster, not sleep in general.",
+      "daily_dose": "0.1-10 mg a day",
+      "dose_details": "Adults 18 and older, taken as needed 30-60 minutes before bedtime.",
+      "form": "Melatonin taken by mouth",
+      "sources": [
+        {
+          "name": "Health Canada monograph: Melatonin - Oral",
+          "url": "https://webprod.hc-sc.gc.ca/nhpid-bdipsn/atReq?atid=melatonin.oral2&lang=eng"
+        }
+      ]
+    }
+  ],
+  "wordings_to_avoid": [
+    {
+      "wording": "Treats insomnia",
+      "reason": "disease",
+      "why": "Insomnia is a diagnosable sleep disorder; the supported wording is about falling asleep faster and the sleep-wake cycle.",
+      "meta_ads_only": false
+    },
+    {
+      "wording": "Treats delayed sleep phase disorder, or other sleep disorders",
+      "reason": "disease",
+      "why": "Names a disorder. Health Canada's own wording mentions people with delayed sleep phase disorder, but in a disease-claim review that names a disease.",
+      "meta_ads_only": false
+    },
+    {
+      "wording": "A drug-free sleeping pill, or works like a prescription sleep medicine",
+      "reason": "drug",
+      "why": "Compares the product to a drug.",
+      "meta_ads_only": false
+    },
+    {
+      "wording": "Helps you fall asleep if you have difficulty falling asleep",
+      "reason": "disease",
+      "why": "FDA's 2000 rule (page 1031) says this implies treating insomnia unless the context makes clear the product is only for occasional sleeplessness.",
+      "meta_ads_only": false
+    },
+    {
+      "wording": "Helps you fall asleep, without 'occasional'",
+      "reason": "disease",
+      "why": "FDA's 2000 rule (page 1031) says help falling asleep implies treating insomnia unless the context makes clear the product is only for occasional sleeplessness.",
+      "meta_ads_only": false
+    }
+  ],
+  "evidence_strengths": {
+    "strong": "At least two listed sources support it independently at a comparable dose and form, and none disagrees.",
+    "moderate": "One listed source supports it as an evidence-based use at that dose, and no listed source disagrees.",
+    "limited": "The only support is traditional use, the sources disagree, or the source itself calls the evidence weak."
+  },
+  "reasons_to_avoid": {
+    "disease": "names or implies a disease",
+    "drug": "names a drug or presents the product as one",
+    "treatment": "promises to treat, cure or prevent a condition"
+  },
+  "sources": [
+    {
+      "name": "Commission Regulation (EU) No 432/2012, list of permitted health claims",
+      "url": "https://publications.europa.eu/resource/celex/32012R0432"
+    },
+    {
+      "name": "Health Canada monograph: Melatonin - Oral",
+      "url": "https://webprod.hc-sc.gc.ca/nhpid-bdipsn/atReq?atid=melatonin.oral2&lang=eng"
+    },
+    {
+      "name": "FDA final rule on structure/function statements, 65 FR 1000 (6 January 2000), page 1031",
+      "url": "https://www.federalregister.gov/documents/full_text/text/2000/01/06/00-53.txt"
+    }
+  ],
+  "disclaimer": "Not legal advice. This guide shows the wording that published evidence supports at a daily dose, from the sources linked below; it is not a ruling on any claim. Your own product, its form and dose, and your own evidence still need to match the wording you use.",
+  "date_reviewed": "2026-10-14"
+}

@@ -1,0 +1,44 @@
+{
+  "slug": "saffron",
+  "ingredient": "Saffron",
+  "also_called": [
+    "Crocus sativus"
+  ],
+  "title": "What can you say about saffron in your ads and on your site?",
+  "summary": "The library gives no supported wording for saffron, because no listed source supports one at a dose. Avoid wording that names or implies a disease, a drug or a treatment, such as \"Treats depression or anxiety\".",
+  "supported_wordings": [],
+  "wordings_to_avoid": [
+    {
+      "wording": "Treats depression or anxiety",
+      "reason": "disease",
+      "why": "Names mental health disorders; no listed source supports mood wording for saffron.",
+      "meta_ads_only": false
+    },
+    {
+      "wording": "A natural antidepressant, or works like Prozac",
+      "reason": "drug",
+      "why": "Compares the product to a drug. FDA's 2000 rule (page 1027) cites 'Herbal Prozac' as wording that ties a product to an approved drug.",
+      "meta_ads_only": false
+    },
+    {
+      "wording": "Treats macular degeneration or other eye disease",
+      "reason": "disease",
+      "why": "Names a disease; no listed source supports it.",
+      "meta_ads_only": false
+    }
+  ],
+  "evidence_gap": "None of the four listed sources gives a use or a dose for saffron. Health Canada's monograph list (checked 2026-10-15) has no saffron or Crocus sativus monograph, and saffron is not an ingredient of its antioxidants or cognitive function products monographs. ODS's fact-sheet index (Internet Archive copy of 2026-10-12) lists no saffron fact sheet. Regulation (EU) No 432/2012 lists no saffron claim, and FDA's lists show no health claim for it. EFSA's opinions were not read.",
+  "evidence_strengths": {
+    "strong": "At least two listed sources support it independently at a comparable dose and form, and none disagrees.",
+    "moderate": "One listed source supports it as an evidence-based use at that dose, and no listed source disagrees.",
+    "limited": "The only support is traditional use, the sources disagree, or the source itself calls the evidence weak."
+  },
+  "reasons_to_avoid": {
+    "disease": "names or implies a disease",
+    "drug": "names a drug or presents the product as one",
+    "treatment": "promises to treat, cure or prevent a condition"
+  },
+  "sources": [],
+  "disclaimer": "Not legal advice. This guide shows the wording that published evidence supports at a daily dose, from the sources linked below; it is not a ruling on any claim. Your own product, its form and dose, and your own evidence still need to match the wording you use.",
+  "date_reviewed": "2026-10-15"
+}

@@ -1,0 +1,94 @@
+{
+  "slug": "panax-ginseng",
+  "ingredient": "Panax ginseng",
+  "also_called": [
+    "Korean ginseng",
+    "Korean red ginseng",
+    "Asian ginseng",
+    "Red ginseng"
+  ],
+  "title": "What can you say about Panax ginseng in your ads and on your site?",
+  "summary": "The library supports 3 wordings for Panax ginseng; the strongest is \"Used in herbal medicine to help support cognitive function and reduce mental fatigue\" (moderate, 200-600 mg standardized extract a day). Avoid wording that names or implies a disease, a drug or a treatment, such as \"Treats erectile dysfunction\".",
+  "supported_wordings": [
+    {
+      "wording": "Used in herbal medicine to help support cognitive function and reduce mental fatigue.",
+      "evidence_strength": "moderate",
+      "why": "Health Canada lists it as a herbal medicine use at 200-600 mg of standardized extract a day; no other listed source covers it.",
+      "daily_dose": "200-600 mg standardized extract a day",
+      "dose_details": "Adults 18 and older. Health Canada: 200-600 mg of extract a day standardized to 4-7% ginsenosides, or 0.5-9 g of dried root a day.",
+      "form": "Root extract, standardized to 4-7% total ginsenosides",
+      "sources": [
+        {
+          "name": "Health Canada monograph: Panax ginseng",
+          "url": "https://webprod.hc-sc.gc.ca/nhpid-bdipsn/atReq?atid=ginseng.panax2&lang=eng"
+        }
+      ]
+    },
+    {
+      "wording": "Used in herbal medicine to help enhance physical capacity and performance.",
+      "evidence_strength": "moderate",
+      "why": "Health Canada lists it as a herbal medicine use at 200-600 mg of standardized extract a day; no other listed source covers it.",
+      "daily_dose": "200-600 mg standardized extract a day",
+      "dose_details": "Adults 18 and older. Health Canada: 200-600 mg of extract a day standardized to 4-7% ginsenosides, or 0.5-9 g of dried root a day.",
+      "form": "Root extract, standardized to 4-7% total ginsenosides",
+      "sources": [
+        {
+          "name": "Health Canada monograph: Panax ginseng",
+          "url": "https://webprod.hc-sc.gc.ca/nhpid-bdipsn/atReq?atid=ginseng.panax2&lang=eng"
+        }
+      ]
+    },
+    {
+      "wording": "Used in herbal medicine as an adaptogen to help increase energy and resistance to stress over time.",
+      "evidence_strength": "moderate",
+      "why": "Health Canada lists it as a herbal medicine use at 200-600 mg of standardized extract a day; no other listed source covers it.",
+      "daily_dose": "200-600 mg standardized extract a day",
+      "dose_details": "Adults 18 and older. Health Canada: 200-600 mg of extract a day standardized to 4-7% ginsenosides, or 0.5-9 g of dried root a day.",
+      "form": "Root extract, standardized to 4-7% total ginsenosides",
+      "sources": [
+        {
+          "name": "Health Canada monograph: Panax ginseng",
+          "url": "https://webprod.hc-sc.gc.ca/nhpid-bdipsn/atReq?atid=ginseng.panax2&lang=eng"
+        }
+      ]
+    }
+  ],
+  "wordings_to_avoid": [
+    {
+      "wording": "Treats erectile dysfunction",
+      "reason": "disease",
+      "why": "Names a disease.",
+      "meta_ads_only": false
+    },
+    {
+      "wording": "Controls blood sugar in diabetes",
+      "reason": "disease",
+      "why": "Names a disease.",
+      "meta_ads_only": false
+    },
+    {
+      "wording": "Works like an antidepressant",
+      "reason": "drug",
+      "why": "Presents the product as a drug.",
+      "meta_ads_only": false
+    }
+  ],
+  "evidence_strengths": {
+    "strong": "At least two listed sources support it independently at a comparable dose and form, and none disagrees.",
+    "moderate": "One listed source supports it as an evidence-based use at that dose, and no listed source disagrees.",
+    "limited": "The only support is traditional use, the sources disagree, or the source itself calls the evidence weak."
+  },
+  "reasons_to_avoid": {
+    "disease": "names or implies a disease",
+    "drug": "names a drug or presents the product as one",
+    "treatment": "promises to treat, cure or prevent a condition"
+  },
+  "sources": [
+    {
+      "name": "Health Canada monograph: Panax ginseng",
+      "url": "https://webprod.hc-sc.gc.ca/nhpid-bdipsn/atReq?atid=ginseng.panax2&lang=eng"
+    }
+  ],
+  "disclaimer": "Not legal advice. This guide shows the wording that published evidence supports at a daily dose, from the sources linked below; it is not a ruling on any claim. Your own product, its form and dose, and your own evidence still need to match the wording you use.",
+  "date_reviewed": "2026-10-15"
+}

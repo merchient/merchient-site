@@ -1,0 +1,111 @@
+{
+  "slug": "iron",
+  "ingredient": "Iron",
+  "also_called": [
+    "Fe"
+  ],
+  "title": "What can you say about iron in your ads and on your site?",
+  "summary": "The library supports 4 wordings for iron; the strongest is \"Helps form red blood cells and haemoglobin\" (strong, 1.4-45 mg elemental iron a day). Avoid wording that names or implies a disease, a drug or a treatment, such as \"Treats anemia or iron deficiency anemia\".",
+  "supported_wordings": [
+    {
+      "wording": "Helps form red blood cells and haemoglobin.",
+      "evidence_strength": "strong",
+      "why": "Health Canada lists red blood cell formation and the EU authorizes normal red blood cell and haemoglobin formation.",
+      "daily_dose": "1.4-45 mg elemental iron a day",
+      "dose_details": "Health Canada: 1.4-45 mg elemental iron a day for adults 19 and older. EU: at least 2.1 mg, 15% of the 14 mg EU reference value (Regulation (EU) No 1169/2011, Annex XIII).",
+      "form": "Any iron form, counted as elemental iron",
+      "sources": [
+        {
+          "name": "Health Canada monograph: Multi-Vitamin/Mineral Supplements",
+          "url": "https://webprod.hc-sc.gc.ca/nhpid-bdipsn/atReq?atid=multi_vitmin_suppl&lang=eng"
+        },
+        {
+          "name": "Commission Regulation (EU) No 432/2012, list of permitted health claims",
+          "url": "https://publications.europa.eu/resource/celex/32012R0432"
+        }
+      ]
+    },
+    {
+      "wording": "Supports normal oxygen transport in the body.",
+      "evidence_strength": "moderate",
+      "why": "Authorized in the EU after EFSA review; Health Canada does not list it.",
+      "daily_dose": "2.1-45 mg elemental iron a day",
+      "dose_details": "Health Canada: 1.4-45 mg elemental iron a day for adults 19 and older. EU: at least 2.1 mg, 15% of the 14 mg EU reference value (Regulation (EU) No 1169/2011, Annex XIII).",
+      "form": "Any iron form, counted as elemental iron",
+      "sources": [
+        {
+          "name": "Commission Regulation (EU) No 432/2012, list of permitted health claims",
+          "url": "https://publications.europa.eu/resource/celex/32012R0432"
+        }
+      ]
+    },
+    {
+      "wording": "Helps reduce tiredness and fatigue.",
+      "evidence_strength": "moderate",
+      "why": "Authorized in the EU after EFSA review; Health Canada words this only around iron deficiency anemia.",
+      "daily_dose": "2.1-45 mg elemental iron a day",
+      "dose_details": "Health Canada: 1.4-45 mg elemental iron a day for adults 19 and older. EU: at least 2.1 mg, 15% of the 14 mg EU reference value (Regulation (EU) No 1169/2011, Annex XIII).",
+      "form": "Any iron form, counted as elemental iron",
+      "sources": [
+        {
+          "name": "Commission Regulation (EU) No 432/2012, list of permitted health claims",
+          "url": "https://publications.europa.eu/resource/celex/32012R0432"
+        }
+      ]
+    },
+    {
+      "wording": "Supports normal immune function.",
+      "evidence_strength": "moderate",
+      "why": "Authorized in the EU after EFSA review; Health Canada does not list it.",
+      "daily_dose": "2.1-45 mg elemental iron a day",
+      "dose_details": "Health Canada: 1.4-45 mg elemental iron a day for adults 19 and older. EU: at least 2.1 mg, 15% of the 14 mg EU reference value (Regulation (EU) No 1169/2011, Annex XIII).",
+      "form": "Any iron form, counted as elemental iron",
+      "sources": [
+        {
+          "name": "Commission Regulation (EU) No 432/2012, list of permitted health claims",
+          "url": "https://publications.europa.eu/resource/celex/32012R0432"
+        }
+      ]
+    }
+  ],
+  "wordings_to_avoid": [
+    {
+      "wording": "Treats anemia or iron deficiency anemia",
+      "reason": "disease",
+      "why": "Names a disease.",
+      "meta_ads_only": false
+    },
+    {
+      "wording": "Cures fatigue",
+      "reason": "treatment",
+      "why": "Promises a cure; the supported wording is less tiredness and fatigue.",
+      "meta_ads_only": false
+    }
+  ],
+  "evidence_strengths": {
+    "strong": "At least two listed sources support it independently at a comparable dose and form, and none disagrees.",
+    "moderate": "One listed source supports it as an evidence-based use at that dose, and no listed source disagrees.",
+    "limited": "The only support is traditional use, the sources disagree, or the source itself calls the evidence weak."
+  },
+  "reasons_to_avoid": {
+    "disease": "names or implies a disease",
+    "drug": "names a drug or presents the product as one",
+    "treatment": "promises to treat, cure or prevent a condition"
+  },
+  "sources": [
+    {
+      "name": "Health Canada monograph: Multi-Vitamin/Mineral Supplements",
+      "url": "https://webprod.hc-sc.gc.ca/nhpid-bdipsn/atReq?atid=multi_vitmin_suppl&lang=eng"
+    },
+    {
+      "name": "Commission Regulation (EU) No 432/2012, list of permitted health claims",
+      "url": "https://publications.europa.eu/resource/celex/32012R0432"
+    },
+    {
+      "name": "NIH ODS fact sheet: Iron (health professional)",
+      "url": "https://ods.od.nih.gov/factsheets/Iron-HealthProfessional/"
+    }
+  ],
+  "disclaimer": "Not legal advice. This guide shows the wording that published evidence supports at a daily dose, from the sources linked below; it is not a ruling on any claim. Your own product, its form and dose, and your own evidence still need to match the wording you use.",
+  "date_reviewed": "2026-10-14"
+}

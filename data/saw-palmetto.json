@@ -1,0 +1,45 @@
+{
+  "slug": "saw-palmetto",
+  "ingredient": "Saw palmetto",
+  "also_called": [
+    "Serenoa repens",
+    "Sabal"
+  ],
+  "title": "What can you say about saw palmetto in your ads and on your site?",
+  "summary": "The library gives no supported wording for saw palmetto, because no listed source supports one at a dose. Avoid wording that names or implies a disease, a drug or a treatment, such as \"Improves urine flow in men over 50\".",
+  "supported_wordings": [],
+  "wordings_to_avoid": [
+    {
+      "wording": "Improves urine flow in men over 50",
+      "reason": "disease",
+      "why": "FDA's 2000 rule (page 1015) gives this exact phrase as an example of a disease claim.",
+      "meta_ads_only": false
+    },
+    {
+      "wording": "Treats an enlarged prostate (BPH) or reduces night-time urination",
+      "reason": "disease",
+      "why": "Names a disease and its symptoms.",
+      "meta_ads_only": false
+    },
+    {
+      "wording": "Relieves urinary tract infection symptoms",
+      "reason": "disease",
+      "why": "Names an infection.",
+      "meta_ads_only": false
+    }
+  ],
+  "evidence_gap": "Health Canada's monograph lists only condition uses (urinary tract infection symptoms and benign prostatic hyperplasia), which are disease wording in a US review. No other listed source gives a use or dose. The library therefore supports no US wording for saw palmetto.",
+  "evidence_strengths": {
+    "strong": "At least two listed sources support it independently at a comparable dose and form, and none disagrees.",
+    "moderate": "One listed source supports it as an evidence-based use at that dose, and no listed source disagrees.",
+    "limited": "The only support is traditional use, the sources disagree, or the source itself calls the evidence weak."
+  },
+  "reasons_to_avoid": {
+    "disease": "names or implies a disease",
+    "drug": "names a drug or presents the product as one",
+    "treatment": "promises to treat, cure or prevent a condition"
+  },
+  "sources": [],
+  "disclaimer": "Not legal advice. This guide shows the wording that published evidence supports at a daily dose, from the sources linked below; it is not a ruling on any claim. Your own product, its form and dose, and your own evidence still need to match the wording you use.",
+  "date_reviewed": "2026-10-14"
+}

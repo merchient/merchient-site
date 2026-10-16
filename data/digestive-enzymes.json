@@ -1,0 +1,113 @@
+{
+  "slug": "digestive-enzymes",
+  "ingredient": "Digestive enzymes",
+  "also_called": [
+    "Lactase",
+    "Alpha-galactosidase",
+    "Protease",
+    "Amylase",
+    "Lipase",
+    "Pancreatin",
+    "Pancreatic enzymes",
+    "Bromelain",
+    "Papain"
+  ],
+  "title": "What can you say about digestive enzymes in your ads and on your site?",
+  "summary": "The library supports 3 wordings for digestive enzymes; the strongest is \"Helps digest lactose, the sugar in milk and dairy foods\" (strong, 3,000-54,000 FCC ALU lactase activity a day). Avoid wording that names or implies a disease, a drug or a treatment, such as \"Prevents or treats lactose intolerance\".",
+  "supported_wordings": [
+    {
+      "wording": "Helps digest lactose, the sugar in milk and dairy foods.",
+      "evidence_strength": "strong",
+      "why": "Authorized in the EU after EFSA review and listed by Health Canada at overlapping doses.",
+      "daily_dose": "3,000-54,000 FCC ALU lactase activity a day",
+      "dose_details": "Health Canada: 3,000-54,000 FCC ALU a day, at most 18,000 per dose, adults 18 and older. EU: at least 4,500 FCC units with each lactose-containing meal, for people who have difficulty digesting lactose.",
+      "form": "Lactase enzyme",
+      "sources": [
+        {
+          "name": "Commission Regulation (EU) No 432/2012, list of permitted health claims",
+          "url": "https://publications.europa.eu/resource/celex/32012R0432"
+        },
+        {
+          "name": "Health Canada monograph: Digestive Enzymes",
+          "url": "https://webprod.hc-sc.gc.ca/nhpid-bdipsn/atReq?atid=enzyme.multi&lang=eng"
+        }
+      ]
+    },
+    {
+      "wording": "Helps reduce gas after meals rich in beans, vegetables or whole grains.",
+      "evidence_strength": "moderate",
+      "why": "Health Canada lists it at 260-3,000 FCC GalU a day; no other listed source covers it.",
+      "daily_dose": "260-3,000 FCC GalU alpha-galactosidase activity a day",
+      "dose_details": "Adults 18 and older.",
+      "form": "Alpha-galactosidase enzyme",
+      "sources": [
+        {
+          "name": "Health Canada monograph: Digestive Enzymes",
+          "url": "https://webprod.hc-sc.gc.ca/nhpid-bdipsn/atReq?atid=enzyme.multi&lang=eng"
+        }
+      ]
+    },
+    {
+      "wording": "Helps reduce bloating after large, high-fat meals.",
+      "evidence_strength": "moderate",
+      "why": "Health Canada lists it for pancreatic enzymes; no other listed source covers it.",
+      "daily_dose": "5,000-40,000 USP lipase units a day",
+      "dose_details": "Health Canada, pancreatic enzymes, adults 18 and older: lipase 5,000-40,000 USP units a day (at most 20,000 per dose), amylase 17,000-149,000 (at most 37,000 per dose) and protease 16,000-125,000 (at most 38,000 per dose).",
+      "form": "Pancreatic enzymes (pancreatin or pancreatic extract)",
+      "sources": [
+        {
+          "name": "Health Canada monograph: Digestive Enzymes",
+          "url": "https://webprod.hc-sc.gc.ca/nhpid-bdipsn/atReq?atid=enzyme.multi&lang=eng"
+        }
+      ]
+    }
+  ],
+  "wordings_to_avoid": [
+    {
+      "wording": "Prevents or treats lactose intolerance",
+      "reason": "disease",
+      "why": "Names a diagnosable condition. Both the EU and Health Canada support wording about digesting lactose, which is the safer framing.",
+      "meta_ads_only": false
+    },
+    {
+      "wording": "Treats IBS or chronic bloating",
+      "reason": "disease",
+      "why": "Names a disease or a symptom of one.",
+      "meta_ads_only": false
+    },
+    {
+      "wording": "Replaces prescription pancreatic enzymes, or helps with pancreatic insufficiency",
+      "reason": "drug",
+      "why": "Presents the product as a substitute for a prescription drug and names a disease.",
+      "meta_ads_only": false
+    },
+    {
+      "wording": "Reduces inflammation and pain (bromelain)",
+      "reason": "treatment",
+      "why": "Promises to relieve a medical problem. Health Canada lists bromelain for minor pain, swelling and inflammation, but that is treatment wording.",
+      "meta_ads_only": false
+    }
+  ],
+  "evidence_strengths": {
+    "strong": "At least two listed sources support it independently at a comparable dose and form, and none disagrees.",
+    "moderate": "One listed source supports it as an evidence-based use at that dose, and no listed source disagrees.",
+    "limited": "The only support is traditional use, the sources disagree, or the source itself calls the evidence weak."
+  },
+  "reasons_to_avoid": {
+    "disease": "names or implies a disease",
+    "drug": "names a drug or presents the product as one",
+    "treatment": "promises to treat, cure or prevent a condition"
+  },
+  "sources": [
+    {
+      "name": "Commission Regulation (EU) No 432/2012, list of permitted health claims",
+      "url": "https://publications.europa.eu/resource/celex/32012R0432"
+    },
+    {
+      "name": "Health Canada monograph: Digestive Enzymes",
+      "url": "https://webprod.hc-sc.gc.ca/nhpid-bdipsn/atReq?atid=enzyme.multi&lang=eng"
+    }
+  ],
+  "disclaimer": "Not legal advice. This guide shows the wording that published evidence supports at a daily dose, from the sources linked below; it is not a ruling on any claim. Your own product, its form and dose, and your own evidence still need to match the wording you use.",
+  "date_reviewed": "2026-10-14"
+}

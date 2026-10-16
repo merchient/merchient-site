@@ -1,0 +1,99 @@
+{
+  "slug": "l-glutamine",
+  "ingredient": "L-glutamine",
+  "also_called": [
+    "Glutamine"
+  ],
+  "title": "What can you say about L-glutamine in your ads and on your site?",
+  "summary": "The library supports 4 wordings for L-glutamine; the strongest is \"Helps restore blood glutamine levels that drop after hard physical stress, such as long, exhausting exercise\" (moderate, 5-9 g a day). Avoid wording that names or implies a disease, a drug or a treatment, such as \"Heals IBS, Crohn's disease or ulcerative colitis\".",
+  "supported_wordings": [
+    {
+      "wording": "Helps restore blood glutamine levels that drop after hard physical stress, such as long, exhausting exercise.",
+      "evidence_strength": "moderate",
+      "why": "Health Canada lists it at 5-9 g a day; no other listed source covers it.",
+      "daily_dose": "5-9 g a day",
+      "dose_details": "Adults 18 and older. Health Canada ties these uses to periods of physical stress such as prolonged, exhausting exercise.",
+      "form": "L-glutamine",
+      "sources": [
+        {
+          "name": "Health Canada monograph: L-Glutamine",
+          "url": "https://webprod.hc-sc.gc.ca/nhpid-bdipsn/atReq?atid=l.glutamine2&lang=eng"
+        }
+      ]
+    },
+    {
+      "wording": "Helps support immune health after periods of physical stress.",
+      "evidence_strength": "moderate",
+      "why": "Health Canada lists it at 5-9 g a day; no other listed source covers it.",
+      "daily_dose": "5-9 g a day",
+      "dose_details": "Adults 18 and older. Health Canada ties these uses to periods of physical stress such as prolonged, exhausting exercise.",
+      "form": "L-glutamine",
+      "sources": [
+        {
+          "name": "Health Canada monograph: L-Glutamine",
+          "url": "https://webprod.hc-sc.gc.ca/nhpid-bdipsn/atReq?atid=l.glutamine2&lang=eng"
+        }
+      ]
+    },
+    {
+      "wording": "Helps support digestive health after periods of physical stress.",
+      "evidence_strength": "moderate",
+      "why": "Health Canada lists it at 5-9 g a day; no other listed source covers it.",
+      "daily_dose": "5-9 g a day",
+      "dose_details": "Adults 18 and older. Health Canada ties these uses to periods of physical stress such as prolonged, exhausting exercise.",
+      "form": "L-glutamine",
+      "sources": [
+        {
+          "name": "Health Canada monograph: L-Glutamine",
+          "url": "https://webprod.hc-sc.gc.ca/nhpid-bdipsn/atReq?atid=l.glutamine2&lang=eng"
+        }
+      ]
+    },
+    {
+      "wording": "Helps muscle cells repair after exercise.",
+      "evidence_strength": "moderate",
+      "why": "Health Canada lists it at 5-9 g a day; no other listed source covers it.",
+      "daily_dose": "5-9 g a day",
+      "dose_details": "Adults 18 and older. Health Canada ties these uses to periods of physical stress such as prolonged, exhausting exercise.",
+      "form": "L-glutamine",
+      "sources": [
+        {
+          "name": "Health Canada monograph: L-Glutamine",
+          "url": "https://webprod.hc-sc.gc.ca/nhpid-bdipsn/atReq?atid=l.glutamine2&lang=eng"
+        }
+      ]
+    }
+  ],
+  "wordings_to_avoid": [
+    {
+      "wording": "Heals IBS, Crohn's disease or ulcerative colitis",
+      "reason": "disease",
+      "why": "Names diseases; Health Canada's wording is about digestive health after physical stress.",
+      "meta_ads_only": false
+    },
+    {
+      "wording": "Protects you from getting sick after training",
+      "reason": "disease",
+      "why": "Implies protection against infection; the supported wording is immune health after physical stress.",
+      "meta_ads_only": false
+    }
+  ],
+  "evidence_strengths": {
+    "strong": "At least two listed sources support it independently at a comparable dose and form, and none disagrees.",
+    "moderate": "One listed source supports it as an evidence-based use at that dose, and no listed source disagrees.",
+    "limited": "The only support is traditional use, the sources disagree, or the source itself calls the evidence weak."
+  },
+  "reasons_to_avoid": {
+    "disease": "names or implies a disease",
+    "drug": "names a drug or presents the product as one",
+    "treatment": "promises to treat, cure or prevent a condition"
+  },
+  "sources": [
+    {
+      "name": "Health Canada monograph: L-Glutamine",
+      "url": "https://webprod.hc-sc.gc.ca/nhpid-bdipsn/atReq?atid=l.glutamine2&lang=eng"
+    }
+  ],
+  "disclaimer": "Not legal advice. This guide shows the wording that published evidence supports at a daily dose, from the sources linked below; it is not a ruling on any claim. Your own product, its form and dose, and your own evidence still need to match the wording you use.",
+  "date_reviewed": "2026-10-14"
+}

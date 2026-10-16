@@ -1,0 +1,78 @@
+{
+  "slug": "vitamin-e",
+  "ingredient": "Vitamin E",
+  "also_called": [
+    "Alpha-tocopherol",
+    "d-alpha-tocopherol",
+    "dl-alpha-tocopherol",
+    "d-alpha-tocopheryl acetate",
+    "dl-alpha-tocopheryl acetate",
+    "d-alpha-tocopheryl succinate"
+  ],
+  "title": "What can you say about vitamin E in your ads and on your site?",
+  "summary": "The library supports 1 wording for vitamin E; the strongest is \"Helps protect cells from oxidative stress\" (strong, 1.8-1,000 mg AT a day). Avoid wording that names or implies a disease, a drug or a treatment, such as \"Prevents heart disease or cancer, outside FDA's qualified wording\".",
+  "supported_wordings": [
+    {
+      "wording": "Helps protect cells from oxidative stress.",
+      "evidence_strength": "strong",
+      "why": "Listed by Health Canada and authorized in the EU after EFSA review.",
+      "daily_dose": "1.8-1,000 mg AT a day",
+      "dose_details": "Adults 19 and older. Health Canada: 1.0 mg AT up to 500 mg AT a day as dl-alpha-tocopherol, or up to 1,000 mg AT as d-alpha-tocopherol. EU: at least 1.8 mg, 15% of the 12 mg EU reference value (Regulation (EU) No 1169/2011, Annex XIII).",
+      "form": "Alpha-tocopherol (d- or dl-) or its esters, counted as mg alpha-tocopherol (AT)",
+      "sources": [
+        {
+          "name": "Health Canada monograph: Multi-Vitamin/Mineral Supplements",
+          "url": "https://webprod.hc-sc.gc.ca/nhpid-bdipsn/atReq?atid=multi_vitmin_suppl&lang=eng"
+        },
+        {
+          "name": "Commission Regulation (EU) No 432/2012, list of permitted health claims",
+          "url": "https://publications.europa.eu/resource/celex/32012R0432"
+        }
+      ]
+    }
+  ],
+  "wordings_to_avoid": [
+    {
+      "wording": "Prevents heart disease or cancer, outside FDA's qualified wording",
+      "reason": "disease",
+      "why": "Names diseases. FDA's qualified claims on antioxidant vitamins and cancer have set wording (see fda_health_claims).",
+      "meta_ads_only": false
+    },
+    {
+      "wording": "Treats fatty liver disease (NASH)",
+      "reason": "disease",
+      "why": "Names a disease.",
+      "meta_ads_only": false
+    }
+  ],
+  "evidence_strengths": {
+    "strong": "At least two listed sources support it independently at a comparable dose and form, and none disagrees.",
+    "moderate": "One listed source supports it as an evidence-based use at that dose, and no listed source disagrees.",
+    "limited": "The only support is traditional use, the sources disagree, or the source itself calls the evidence weak."
+  },
+  "reasons_to_avoid": {
+    "disease": "names or implies a disease",
+    "drug": "names a drug or presents the product as one",
+    "treatment": "promises to treat, cure or prevent a condition"
+  },
+  "sources": [
+    {
+      "name": "Health Canada monograph: Multi-Vitamin/Mineral Supplements",
+      "url": "https://webprod.hc-sc.gc.ca/nhpid-bdipsn/atReq?atid=multi_vitmin_suppl&lang=eng"
+    },
+    {
+      "name": "Commission Regulation (EU) No 432/2012, list of permitted health claims",
+      "url": "https://publications.europa.eu/resource/celex/32012R0432"
+    },
+    {
+      "name": "FDA qualified health claim: Antioxidant vitamins and risk of certain cancers",
+      "url": "https://www.fda.gov/Food/IngredientsPackagingLabeling/LabelingNutrition/ucm072789.htm"
+    },
+    {
+      "name": "FDA qualified health claim: Vitamins C and E and site-specific cancers",
+      "url": "https://www.fda.gov/Food/IngredientsPackagingLabeling/LabelingNutrition/ucm166913.htm"
+    }
+  ],
+  "disclaimer": "Not legal advice. This guide shows the wording that published evidence supports at a daily dose, from the sources linked below; it is not a ruling on any claim. Your own product, its form and dose, and your own evidence still need to match the wording you use.",
+  "date_reviewed": "2026-10-15"
+}

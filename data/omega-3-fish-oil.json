@@ -1,0 +1,191 @@
+{
+  "slug": "omega-3-fish-oil",
+  "ingredient": "Omega-3 fish oil (EPA and DHA)",
+  "also_called": [
+    "Fish oil",
+    "Omega-3",
+    "Omega-3 fatty acids",
+    "EPA",
+    "DHA",
+    "Eicosapentaenoic acid",
+    "Docosahexaenoic acid",
+    "EPA and DHA"
+  ],
+  "title": "What can you say about omega-3 fish oil (EPA and DHA) in your ads and on your site?",
+  "summary": "The library supports 6 wordings for omega-3 fish oil (EPA and DHA); the strongest is \"Supports normal heart function and heart health\" (strong, 250-5,000 mg EPA + DHA a day). Avoid wording that names or implies a disease, a drug or a treatment, such as \"Lowers high triglycerides, or treats hypertriglyceridemia\".",
+  "supported_wordings": [
+    {
+      "wording": "Supports normal heart function and heart health.",
+      "evidence_strength": "strong",
+      "why": "Authorized in the EU after EFSA review at 250 mg a day, and listed by Health Canada from 200 mg a day.",
+      "daily_dose": "250-5,000 mg EPA + DHA a day",
+      "dose_details": "EU: 250 mg EPA + DHA a day, and the consumer is told so. Health Canada: 200-5,000 mg a day. Adult maximum 5,000 mg a day.",
+      "form": "Fish oil providing EPA + DHA",
+      "sources": [
+        {
+          "name": "Commission Regulation (EU) No 432/2012, list of permitted health claims",
+          "url": "https://publications.europa.eu/resource/celex/32012R0432"
+        },
+        {
+          "name": "Health Canada monograph: Fish Oil",
+          "url": "https://webprod.hc-sc.gc.ca/nhpid-bdipsn/atReq?atid=fish.oil.huile.poisson&lang=eng"
+        }
+      ]
+    },
+    {
+      "wording": "Helps maintain normal blood triglyceride levels.",
+      "evidence_strength": "strong",
+      "why": "Health Canada lists it at 1,000-5,000 mg a day, and ODS reports a large Cochrane review showing lower triglycerides.",
+      "daily_dose": "1,000-5,000 mg EPA + DHA a day",
+      "dose_details": "Health Canada: 1,000-5,000 mg a day. ODS reports a 2020 Cochrane review in which 0.5 g to more than 5 g a day lowered triglycerides by about 15%.",
+      "form": "Fish oil providing EPA + DHA",
+      "sources": [
+        {
+          "name": "Health Canada monograph: Fish Oil",
+          "url": "https://webprod.hc-sc.gc.ca/nhpid-bdipsn/atReq?atid=fish.oil.huile.poisson&lang=eng"
+        },
+        {
+          "name": "NIH ODS fact sheet: Omega-3 Fatty Acids (health professional)",
+          "url": "https://ods.od.nih.gov/factsheets/Omega3FattyAcids-HealthProfessional/"
+        }
+      ]
+    },
+    {
+      "wording": "Supports normal brain function.",
+      "evidence_strength": "limited",
+      "why": "Health Canada and the EU accept maintenance wording, but ODS reports a trial in healthy older adults in which EPA + DHA did not change cognitive function.",
+      "daily_dose": "150-5,000 mg EPA + DHA a day",
+      "dose_details": "Health Canada: 150-5,000 mg EPA + DHA a day including at least 100 mg DHA. EU: 250 mg DHA a day.",
+      "form": "Fish oil providing DHA",
+      "sources": [
+        {
+          "name": "Health Canada monograph: Fish Oil",
+          "url": "https://webprod.hc-sc.gc.ca/nhpid-bdipsn/atReq?atid=fish.oil.huile.poisson&lang=eng"
+        },
+        {
+          "name": "Commission Regulation (EU) No 432/2012, list of permitted health claims",
+          "url": "https://publications.europa.eu/resource/celex/32012R0432"
+        },
+        {
+          "name": "NIH ODS fact sheet: Omega-3 Fatty Acids (health professional)",
+          "url": "https://ods.od.nih.gov/factsheets/Omega3FattyAcids-HealthProfessional/"
+        }
+      ],
+      "where_sources_disagree": "Health Canada (cognitive health and brain function) and the EU (maintenance of normal brain function) support the wording. ODS describes a 24-month trial in cognitively healthy adults aged 70-79 in which 500 mg DHA plus 200 mg EPA a day made no significant difference to cognitive function compared with placebo. Maintenance wording may hold; wording that promises better memory or thinking does not."
+    },
+    {
+      "wording": "DHA supports normal vision.",
+      "evidence_strength": "moderate",
+      "why": "Authorized in the EU after EFSA review; Health Canada lists eye development only for children.",
+      "daily_dose": "at least 250 mg DHA a day",
+      "dose_details": "EU: 250 mg DHA a day, and the consumer is told so. Adult maximum for EPA + DHA is 5,000 mg a day (Health Canada).",
+      "form": "Fish oil providing DHA",
+      "sources": [
+        {
+          "name": "Commission Regulation (EU) No 432/2012, list of permitted health claims",
+          "url": "https://publications.europa.eu/resource/celex/32012R0432"
+        }
+      ]
+    },
+    {
+      "wording": "Supports a healthy mood balance.",
+      "evidence_strength": "moderate",
+      "why": "Health Canada lists it at EPA-rich doses; no other listed source covers this wording.",
+      "daily_dose": "1,500-5,000 mg EPA + DHA a day",
+      "dose_details": "Health Canada: 1,500-5,000 mg EPA + DHA a day including at least 1,000 mg EPA.",
+      "form": "Fish oil providing EPA-rich EPA + DHA",
+      "sources": [
+        {
+          "name": "Health Canada monograph: Fish Oil",
+          "url": "https://webprod.hc-sc.gc.ca/nhpid-bdipsn/atReq?atid=fish.oil.huile.poisson&lang=eng"
+        }
+      ]
+    },
+    {
+      "wording": "Supports healthy development of the brain, eyes and nerves in children up to 12.",
+      "evidence_strength": "moderate",
+      "why": "Health Canada lists it for children; no other listed source covers this wording.",
+      "daily_dose": "200-2,000 mg EPA + DHA a day",
+      "dose_details": "Health Canada: 200-2,000 mg EPA + DHA a day including at least 150 mg DHA, within the age-based maximums (1,500 mg a day at ages 1-8; 2,000 mg at ages 9-11).",
+      "form": "Fish oil providing EPA + DHA",
+      "sources": [
+        {
+          "name": "Health Canada monograph: Fish Oil",
+          "url": "https://webprod.hc-sc.gc.ca/nhpid-bdipsn/atReq?atid=fish.oil.huile.poisson&lang=eng"
+        }
+      ]
+    }
+  ],
+  "wordings_to_avoid": [
+    {
+      "wording": "Lowers high triglycerides, or treats hypertriglyceridemia",
+      "reason": "disease",
+      "why": "Names a disease (raised blood fats); the supported wording is maintaining normal levels.",
+      "meta_ads_only": false
+    },
+    {
+      "wording": "Reduces the risk of heart disease or heart attack, outside FDA's qualified wording",
+      "reason": "disease",
+      "why": "Names a disease. The supported route is FDA's qualified claims, with their wording and conditions (see fda_health_claims).",
+      "meta_ads_only": false
+    },
+    {
+      "wording": "Lowers blood pressure, or helps with hypertension, outside FDA's qualified wording",
+      "reason": "disease",
+      "why": "Names a disease. FDA's 2019 qualified claims set the wording and conditions.",
+      "meta_ads_only": false
+    },
+    {
+      "wording": "Treats depression",
+      "reason": "disease",
+      "why": "Names a mental health disorder; the supported wording is healthy mood balance.",
+      "meta_ads_only": false
+    },
+    {
+      "wording": "Relieves rheumatoid arthritis pain",
+      "reason": "disease",
+      "why": "Names a disease. Health Canada lists this only alongside conventional therapy, at 2,800-5,000 mg a day.",
+      "meta_ads_only": false
+    },
+    {
+      "wording": "Protects against dementia or Alzheimer's disease",
+      "reason": "disease",
+      "why": "Names diseases; ODS reports no cognitive benefit in a trial in healthy older adults.",
+      "meta_ads_only": false
+    }
+  ],
+  "evidence_strengths": {
+    "strong": "At least two listed sources support it independently at a comparable dose and form, and none disagrees.",
+    "moderate": "One listed source supports it as an evidence-based use at that dose, and no listed source disagrees.",
+    "limited": "The only support is traditional use, the sources disagree, or the source itself calls the evidence weak."
+  },
+  "reasons_to_avoid": {
+    "disease": "names or implies a disease",
+    "drug": "names a drug or presents the product as one",
+    "treatment": "promises to treat, cure or prevent a condition"
+  },
+  "sources": [
+    {
+      "name": "Commission Regulation (EU) No 432/2012, list of permitted health claims",
+      "url": "https://publications.europa.eu/resource/celex/32012R0432"
+    },
+    {
+      "name": "Health Canada monograph: Fish Oil",
+      "url": "https://webprod.hc-sc.gc.ca/nhpid-bdipsn/atReq?atid=fish.oil.huile.poisson&lang=eng"
+    },
+    {
+      "name": "NIH ODS fact sheet: Omega-3 Fatty Acids (health professional)",
+      "url": "https://ods.od.nih.gov/factsheets/Omega3FattyAcids-HealthProfessional/"
+    },
+    {
+      "name": "FDA qualified health claim: EPA and DHA, blood pressure, hypertension and coronary heart disease",
+      "url": "https://www.fda.gov/media/128043/download"
+    },
+    {
+      "name": "FDA qualified health claim: Omega-3 fatty acids (EPA and DHA) and reduced risk of coronary heart disease",
+      "url": "https://www.fda.gov/food/nutrition-food-labeling-and-critical-foods/qualified-health-claims-letters-enforcement-discretion"
+    }
+  ],
+  "disclaimer": "Not legal advice. This guide shows the wording that published evidence supports at a daily dose, from the sources linked below; it is not a ruling on any claim. Your own product, its form and dose, and your own evidence still need to match the wording you use.",
+  "date_reviewed": "2026-10-14"
+}

@@ -1,0 +1,114 @@
+{
+  "slug": "potassium",
+  "ingredient": "Potassium",
+  "also_called": [],
+  "title": "What can you say about potassium in your ads and on your site?",
+  "summary": "The library supports 4 wordings for potassium; the strongest is \"A source of electrolytes\" (moderate, 100-200 mg a day). Avoid wording that names or implies a disease, a drug or a treatment, such as \"Lowers blood pressure, or treats hypertension\", and keep \"Helps maintain normal blood pressure\" off Meta ads.",
+  "supported_wordings": [
+    {
+      "wording": "A source of electrolytes.",
+      "evidence_strength": "moderate",
+      "why": "Health Canada lists it at 100-200 mg a day; no other listed source covers this wording.",
+      "daily_dose": "100-200 mg a day",
+      "dose_details": "Adults 18 and older. Health Canada: at least 100 mg a day is needed for this use, below 100 mg only general wording applies, and the maximum is 200 mg a day. ODS: most US potassium supplements give at most 99 mg.",
+      "form": "Potassium from a salt on Health Canada's list (such as citrate, chloride or gluconate), counted as potassium",
+      "sources": [
+        {
+          "name": "Health Canada monograph: Multi-Vitamin/Mineral Supplements",
+          "url": "https://webprod.hc-sc.gc.ca/nhpid-bdipsn/atReq?atid=multi_vitmin_suppl&lang=eng"
+        }
+      ]
+    },
+    {
+      "wording": "Supports normal muscle function.",
+      "evidence_strength": "moderate",
+      "why": "Authorized in the EU after EFSA review; Health Canada does not list it.",
+      "daily_dose": "at least 300 mg a day",
+      "dose_details": "EU: at least 300 mg, 15% of the 2,000 mg EU reference value (Regulation (EU) No 1169/2011, Annex XIII). Health Canada's multi-vitamin/mineral monograph allows at most 200 mg a day, below this threshold. ODS: no upper limit was set.",
+      "form": "Potassium from a salt on Health Canada's list (such as citrate, chloride or gluconate), counted as potassium",
+      "sources": [
+        {
+          "name": "Commission Regulation (EU) No 432/2012, list of permitted health claims",
+          "url": "https://publications.europa.eu/resource/celex/32012R0432"
+        }
+      ]
+    },
+    {
+      "wording": "Supports normal function of the nervous system.",
+      "evidence_strength": "moderate",
+      "why": "Authorized in the EU after EFSA review; Health Canada does not list it.",
+      "daily_dose": "at least 300 mg a day",
+      "dose_details": "EU: at least 300 mg, 15% of the 2,000 mg EU reference value (Regulation (EU) No 1169/2011, Annex XIII). Health Canada's multi-vitamin/mineral monograph allows at most 200 mg a day, below this threshold. ODS: no upper limit was set.",
+      "form": "Potassium from a salt on Health Canada's list (such as citrate, chloride or gluconate), counted as potassium",
+      "sources": [
+        {
+          "name": "Commission Regulation (EU) No 432/2012, list of permitted health claims",
+          "url": "https://publications.europa.eu/resource/celex/32012R0432"
+        }
+      ]
+    },
+    {
+      "wording": "Helps maintain normal blood pressure.",
+      "evidence_strength": "moderate",
+      "why": "Authorized in the EU after EFSA review; Health Canada does not list it.",
+      "daily_dose": "at least 300 mg a day",
+      "dose_details": "EU: at least 300 mg, 15% of the 2,000 mg EU reference value (Regulation (EU) No 1169/2011, Annex XIII). Health Canada does not list this use; its multi-vitamin/mineral monograph allows at most 200 mg a day. ODS: no upper limit was set.",
+      "form": "Potassium from a salt on Health Canada's list (such as citrate, chloride or gluconate), counted as potassium",
+      "sources": [
+        {
+          "name": "Commission Regulation (EU) No 432/2012, list of permitted health claims",
+          "url": "https://publications.europa.eu/resource/celex/32012R0432"
+        }
+      ],
+      "meta_ads": "Wording to avoid in Meta ads. On your site it is supported wording."
+    }
+  ],
+  "wordings_to_avoid": [
+    {
+      "wording": "Lowers blood pressure, or treats hypertension",
+      "reason": "disease",
+      "why": "Names a disease. FDA's 2000 rule (page 1006) counts a claim that a product promotes low blood pressure as a disease claim.",
+      "meta_ads_only": false
+    },
+    {
+      "wording": "Reduces the risk of stroke or heart disease",
+      "reason": "disease",
+      "why": "Names diseases.",
+      "meta_ads_only": false
+    },
+    {
+      "wording": "Treats hypokalemia",
+      "reason": "disease",
+      "why": "Names a medical condition. ODS says abnormal blood potassium levels are rare in healthy people with normal kidney function.",
+      "meta_ads_only": false
+    },
+    {
+      "wording": "Helps maintain normal blood pressure.",
+      "reason": "disease",
+      "why": "Blood pressure is a health-condition claim on Meta, so this wording stays off Meta ads (library decision of 2026-10-15; Meta's ad policies were not read). It is supported wording for pages.",
+      "meta_ads_only": true
+    }
+  ],
+  "evidence_strengths": {
+    "strong": "At least two listed sources support it independently at a comparable dose and form, and none disagrees.",
+    "moderate": "One listed source supports it as an evidence-based use at that dose, and no listed source disagrees.",
+    "limited": "The only support is traditional use, the sources disagree, or the source itself calls the evidence weak."
+  },
+  "reasons_to_avoid": {
+    "disease": "names or implies a disease",
+    "drug": "names a drug or presents the product as one",
+    "treatment": "promises to treat, cure or prevent a condition"
+  },
+  "sources": [
+    {
+      "name": "Health Canada monograph: Multi-Vitamin/Mineral Supplements",
+      "url": "https://webprod.hc-sc.gc.ca/nhpid-bdipsn/atReq?atid=multi_vitmin_suppl&lang=eng"
+    },
+    {
+      "name": "Commission Regulation (EU) No 432/2012, list of permitted health claims",
+      "url": "https://publications.europa.eu/resource/celex/32012R0432"
+    }
+  ],
+  "disclaimer": "Not legal advice. This guide shows the wording that published evidence supports at a daily dose, from the sources linked below; it is not a ruling on any claim. Your own product, its form and dose, and your own evidence still need to match the wording you use.",
+  "date_reviewed": "2026-10-15"
+}

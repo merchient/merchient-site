@@ -1,0 +1,123 @@
+{
+  "slug": "iodine",
+  "ingredient": "Iodine",
+  "also_called": [],
+  "title": "What can you say about iodine in your ads and on your site?",
+  "summary": "The library supports 5 wordings for iodine; the strongest is \"Supports normal thyroid function\" (strong, 22.5-800 µg a day). Avoid wording that names or implies a disease, a drug or a treatment, such as \"Treats hypothyroidism, goiter or other thyroid disease\".",
+  "supported_wordings": [
+    {
+      "wording": "Supports normal thyroid function.",
+      "evidence_strength": "strong",
+      "why": "Listed by Health Canada and authorized in the EU after EFSA review.",
+      "daily_dose": "22.5-800 µg a day",
+      "dose_details": "Adults 19 and older. Health Canada: 14-800 µg a day. EU: at least 22.5 µg, 15% of the 150 µg EU reference value (Regulation (EU) No 1169/2011, Annex XIII); its wording is normal production of thyroid hormones and normal thyroid function. ODS upper limit: 1,100 µg.",
+      "form": "Iodine from a salt on Health Canada's list (such as potassium iodide), counted as iodine",
+      "sources": [
+        {
+          "name": "Health Canada monograph: Multi-Vitamin/Mineral Supplements",
+          "url": "https://webprod.hc-sc.gc.ca/nhpid-bdipsn/atReq?atid=multi_vitmin_suppl&lang=eng"
+        },
+        {
+          "name": "Commission Regulation (EU) No 432/2012, list of permitted health claims",
+          "url": "https://publications.europa.eu/resource/celex/32012R0432"
+        }
+      ]
+    },
+    {
+      "wording": "Supports normal cognitive function.",
+      "evidence_strength": "moderate",
+      "why": "Authorized in the EU after EFSA review; Health Canada does not list it.",
+      "daily_dose": "at least 22.5 µg a day",
+      "dose_details": "EU: at least 22.5 µg, 15% of the 150 µg EU reference value (Regulation (EU) No 1169/2011, Annex XIII). Health Canada does not list this use; its monograph allows at most 800 µg a day for adults. ODS upper limit: 1,100 µg.",
+      "form": "Iodine from a salt on Health Canada's list (such as potassium iodide), counted as iodine",
+      "sources": [
+        {
+          "name": "Commission Regulation (EU) No 432/2012, list of permitted health claims",
+          "url": "https://publications.europa.eu/resource/celex/32012R0432"
+        }
+      ]
+    },
+    {
+      "wording": "Supports normal energy-yielding metabolism.",
+      "evidence_strength": "moderate",
+      "why": "Authorized in the EU after EFSA review; Health Canada does not list it.",
+      "daily_dose": "at least 22.5 µg a day",
+      "dose_details": "EU: at least 22.5 µg, 15% of the 150 µg EU reference value (Regulation (EU) No 1169/2011, Annex XIII). Health Canada does not list this use; its monograph allows at most 800 µg a day for adults. ODS upper limit: 1,100 µg.",
+      "form": "Iodine from a salt on Health Canada's list (such as potassium iodide), counted as iodine",
+      "sources": [
+        {
+          "name": "Commission Regulation (EU) No 432/2012, list of permitted health claims",
+          "url": "https://publications.europa.eu/resource/celex/32012R0432"
+        }
+      ]
+    },
+    {
+      "wording": "Supports normal function of the nervous system.",
+      "evidence_strength": "moderate",
+      "why": "Authorized in the EU after EFSA review; Health Canada does not list it.",
+      "daily_dose": "at least 22.5 µg a day",
+      "dose_details": "EU: at least 22.5 µg, 15% of the 150 µg EU reference value (Regulation (EU) No 1169/2011, Annex XIII). Health Canada does not list this use; its monograph allows at most 800 µg a day for adults. ODS upper limit: 1,100 µg.",
+      "form": "Iodine from a salt on Health Canada's list (such as potassium iodide), counted as iodine",
+      "sources": [
+        {
+          "name": "Commission Regulation (EU) No 432/2012, list of permitted health claims",
+          "url": "https://publications.europa.eu/resource/celex/32012R0432"
+        }
+      ]
+    },
+    {
+      "wording": "Helps maintain normal skin.",
+      "evidence_strength": "moderate",
+      "why": "Authorized in the EU after EFSA review; Health Canada does not list it.",
+      "daily_dose": "at least 22.5 µg a day",
+      "dose_details": "EU: at least 22.5 µg, 15% of the 150 µg EU reference value (Regulation (EU) No 1169/2011, Annex XIII). Health Canada does not list this use; its monograph allows at most 800 µg a day for adults. ODS upper limit: 1,100 µg.",
+      "form": "Iodine from a salt on Health Canada's list (such as potassium iodide), counted as iodine",
+      "sources": [
+        {
+          "name": "Commission Regulation (EU) No 432/2012, list of permitted health claims",
+          "url": "https://publications.europa.eu/resource/celex/32012R0432"
+        }
+      ]
+    }
+  ],
+  "wordings_to_avoid": [
+    {
+      "wording": "Treats hypothyroidism, goiter or other thyroid disease",
+      "reason": "disease",
+      "why": "Names diseases.",
+      "meta_ads_only": false
+    },
+    {
+      "wording": "Fixes a slow or sluggish thyroid",
+      "reason": "disease",
+      "why": "Implies hypothyroidism, a disease.",
+      "meta_ads_only": false
+    }
+  ],
+  "evidence_strengths": {
+    "strong": "At least two listed sources support it independently at a comparable dose and form, and none disagrees.",
+    "moderate": "One listed source supports it as an evidence-based use at that dose, and no listed source disagrees.",
+    "limited": "The only support is traditional use, the sources disagree, or the source itself calls the evidence weak."
+  },
+  "reasons_to_avoid": {
+    "disease": "names or implies a disease",
+    "drug": "names a drug or presents the product as one",
+    "treatment": "promises to treat, cure or prevent a condition"
+  },
+  "sources": [
+    {
+      "name": "Health Canada monograph: Multi-Vitamin/Mineral Supplements",
+      "url": "https://webprod.hc-sc.gc.ca/nhpid-bdipsn/atReq?atid=multi_vitmin_suppl&lang=eng"
+    },
+    {
+      "name": "Commission Regulation (EU) No 432/2012, list of permitted health claims",
+      "url": "https://publications.europa.eu/resource/celex/32012R0432"
+    },
+    {
+      "name": "NIH ODS fact sheet: Iodine (health professional)",
+      "url": "https://ods.od.nih.gov/factsheets/Iodine-HealthProfessional/"
+    }
+  ],
+  "disclaimer": "Not legal advice. This guide shows the wording that published evidence supports at a daily dose, from the sources linked below; it is not a ruling on any claim. Your own product, its form and dose, and your own evidence still need to match the wording you use.",
+  "date_reviewed": "2026-10-15"
+}

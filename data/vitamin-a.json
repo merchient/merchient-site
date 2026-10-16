@@ -1,0 +1,129 @@
+{
+  "slug": "vitamin-a",
+  "ingredient": "Vitamin A",
+  "also_called": [
+    "Retinol"
+  ],
+  "title": "What can you say about vitamin A in your ads and on your site?",
+  "summary": "The library supports 4 wordings for vitamin A; the strongest is \"Supports normal vision\" (strong, 120-3,000 µg RAE a day). Avoid wording that names or implies a disease, a drug or a treatment, such as \"Clears acne, or works like isotretinoin (Accutane)\".",
+  "supported_wordings": [
+    {
+      "wording": "Supports normal vision.",
+      "evidence_strength": "strong",
+      "why": "Listed by Health Canada and authorized in the EU after EFSA review.",
+      "daily_dose": "120-3,000 µg RAE a day",
+      "dose_details": "Adults 19 and older. Health Canada: 65 µg RAE up to about 3,000 µg RAE a day (the maximum differs slightly by source ingredient). EU: at least 120 µg, 15% of the 800 µg EU reference value (Regulation (EU) No 1169/2011, Annex XIII). ODS upper limit for preformed vitamin A: 3,000 µg RAE.",
+      "form": "Preformed vitamin A (retinol or its esters), counted in µg RAE",
+      "sources": [
+        {
+          "name": "Health Canada monograph: Multi-Vitamin/Mineral Supplements",
+          "url": "https://webprod.hc-sc.gc.ca/nhpid-bdipsn/atReq?atid=multi_vitmin_suppl&lang=eng"
+        },
+        {
+          "name": "Commission Regulation (EU) No 432/2012, list of permitted health claims",
+          "url": "https://publications.europa.eu/resource/celex/32012R0432"
+        }
+      ]
+    },
+    {
+      "wording": "Helps maintain normal skin and mucous membranes.",
+      "evidence_strength": "strong",
+      "why": "Listed by Health Canada and authorized in the EU after EFSA review.",
+      "daily_dose": "120-3,000 µg RAE a day",
+      "dose_details": "Adults 19 and older. Health Canada: 65 µg RAE up to about 3,000 µg RAE a day (the maximum differs slightly by source ingredient). EU: at least 120 µg, 15% of the 800 µg EU reference value (Regulation (EU) No 1169/2011, Annex XIII). ODS upper limit for preformed vitamin A: 3,000 µg RAE.",
+      "form": "Preformed vitamin A (retinol or its esters), counted in µg RAE",
+      "sources": [
+        {
+          "name": "Health Canada monograph: Multi-Vitamin/Mineral Supplements",
+          "url": "https://webprod.hc-sc.gc.ca/nhpid-bdipsn/atReq?atid=multi_vitmin_suppl&lang=eng"
+        },
+        {
+          "name": "Commission Regulation (EU) No 432/2012, list of permitted health claims",
+          "url": "https://publications.europa.eu/resource/celex/32012R0432"
+        }
+      ]
+    },
+    {
+      "wording": "Supports normal immune function.",
+      "evidence_strength": "strong",
+      "why": "Listed by Health Canada and authorized in the EU after EFSA review.",
+      "daily_dose": "120-3,000 µg RAE a day",
+      "dose_details": "Adults 19 and older. Health Canada: 65 µg RAE up to about 3,000 µg RAE a day (the maximum differs slightly by source ingredient). EU: at least 120 µg, 15% of the 800 µg EU reference value (Regulation (EU) No 1169/2011, Annex XIII). ODS upper limit for preformed vitamin A: 3,000 µg RAE.",
+      "form": "Preformed vitamin A (retinol or its esters), counted in µg RAE",
+      "sources": [
+        {
+          "name": "Health Canada monograph: Multi-Vitamin/Mineral Supplements",
+          "url": "https://webprod.hc-sc.gc.ca/nhpid-bdipsn/atReq?atid=multi_vitmin_suppl&lang=eng"
+        },
+        {
+          "name": "Commission Regulation (EU) No 432/2012, list of permitted health claims",
+          "url": "https://publications.europa.eu/resource/celex/32012R0432"
+        }
+      ]
+    },
+    {
+      "wording": "Supports normal iron metabolism.",
+      "evidence_strength": "strong",
+      "why": "Listed by Health Canada and authorized in the EU after EFSA review.",
+      "daily_dose": "120-3,000 µg RAE a day",
+      "dose_details": "Adults 19 and older. Health Canada: 65 µg RAE up to about 3,000 µg RAE a day (the maximum differs slightly by source ingredient). EU: at least 120 µg, 15% of the 800 µg EU reference value (Regulation (EU) No 1169/2011, Annex XIII). ODS upper limit for preformed vitamin A: 3,000 µg RAE.",
+      "form": "Preformed vitamin A (retinol or its esters), counted in µg RAE",
+      "sources": [
+        {
+          "name": "Health Canada monograph: Multi-Vitamin/Mineral Supplements",
+          "url": "https://webprod.hc-sc.gc.ca/nhpid-bdipsn/atReq?atid=multi_vitmin_suppl&lang=eng"
+        },
+        {
+          "name": "Commission Regulation (EU) No 432/2012, list of permitted health claims",
+          "url": "https://publications.europa.eu/resource/celex/32012R0432"
+        }
+      ]
+    }
+  ],
+  "wordings_to_avoid": [
+    {
+      "wording": "Clears acne, or works like isotretinoin (Accutane)",
+      "reason": "drug",
+      "why": "Names a drug, and acne is a disease.",
+      "meta_ads_only": false
+    },
+    {
+      "wording": "Treats macular degeneration or other eye disease",
+      "reason": "disease",
+      "why": "Names diseases.",
+      "meta_ads_only": false
+    },
+    {
+      "wording": "Fights infections",
+      "reason": "disease",
+      "why": "Implies treating infections, which are diseases.",
+      "meta_ads_only": false
+    }
+  ],
+  "evidence_strengths": {
+    "strong": "At least two listed sources support it independently at a comparable dose and form, and none disagrees.",
+    "moderate": "One listed source supports it as an evidence-based use at that dose, and no listed source disagrees.",
+    "limited": "The only support is traditional use, the sources disagree, or the source itself calls the evidence weak."
+  },
+  "reasons_to_avoid": {
+    "disease": "names or implies a disease",
+    "drug": "names a drug or presents the product as one",
+    "treatment": "promises to treat, cure or prevent a condition"
+  },
+  "sources": [
+    {
+      "name": "Health Canada monograph: Multi-Vitamin/Mineral Supplements",
+      "url": "https://webprod.hc-sc.gc.ca/nhpid-bdipsn/atReq?atid=multi_vitmin_suppl&lang=eng"
+    },
+    {
+      "name": "Commission Regulation (EU) No 432/2012, list of permitted health claims",
+      "url": "https://publications.europa.eu/resource/celex/32012R0432"
+    },
+    {
+      "name": "NIH ODS fact sheet: Vitamin A and Carotenoids (health professional)",
+      "url": "https://ods.od.nih.gov/factsheets/VitaminA-HealthProfessional/"
+    }
+  ],
+  "disclaimer": "Not legal advice. This guide shows the wording that published evidence supports at a daily dose, from the sources linked below; it is not a ruling on any claim. Your own product, its form and dose, and your own evidence still need to match the wording you use.",
+  "date_reviewed": "2026-10-15"
+}

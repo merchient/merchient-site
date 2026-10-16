@@ -1,0 +1,191 @@
+{
+  "slug": "folate",
+  "ingredient": "Folate",
+  "also_called": [
+    "Folic acid",
+    "Vitamin B9",
+    "Folacin",
+    "Methylfolate",
+    "L-methylfolate",
+    "5-MTHF",
+    "L-5-MTHF",
+    "5-Methyltetrahydrofolate",
+    "L-5-Methyltetrahydrofolate"
+  ],
+  "title": "What can you say about folate in your ads and on your site?",
+  "summary": "The library supports 7 wordings for folate; the strongest is \"Helps form red blood cells\" (strong, 30-1,000 µg folic acid a day). Avoid wording that names or implies a disease, a drug or a treatment, such as \"Prevents birth defects, or reduces the risk of neural tube defects or spina bifida\".",
+  "supported_wordings": [
+    {
+      "wording": "Helps form red blood cells.",
+      "evidence_strength": "strong",
+      "why": "Listed by Health Canada and authorized in the EU (normal blood formation) after EFSA review.",
+      "daily_dose": "30-1,000 µg folic acid a day",
+      "dose_details": "Health Canada: 30-1,000 µg a day for adults 19 and older (30-800 µg at 14 to 18), counted as micrograms of folic acid, not dietary folate equivalents (DFE). EU: at least 30 µg, 15% of the 200 µg EU reference value (Regulation (EU) No 1169/2011, Annex XIII). 1,000 µg a day is the ODS upper limit for folic acid from supplements and fortified foods.",
+      "form": "Folic acid or L-5-methyltetrahydrofolate (or its calcium or glucosamine salt)",
+      "sources": [
+        {
+          "name": "Health Canada monograph: Multi-Vitamin/Mineral Supplements",
+          "url": "https://webprod.hc-sc.gc.ca/nhpid-bdipsn/atReq?atid=multi_vitmin_suppl&lang=eng"
+        },
+        {
+          "name": "Commission Regulation (EU) No 432/2012, list of permitted health claims",
+          "url": "https://publications.europa.eu/resource/celex/32012R0432"
+        }
+      ]
+    },
+    {
+      "wording": "Supports normal immune function.",
+      "evidence_strength": "moderate",
+      "why": "Authorized in the EU after EFSA review; Health Canada does not list it.",
+      "daily_dose": "30-1,000 µg folic acid a day",
+      "dose_details": "EU: at least 30 µg, 15% of the 200 µg EU reference value (Regulation (EU) No 1169/2011, Annex XIII). 1,000 µg a day is the ODS upper limit for folic acid from supplements and fortified foods.",
+      "form": "Folic acid or L-5-methyltetrahydrofolate (or its calcium or glucosamine salt)",
+      "sources": [
+        {
+          "name": "Commission Regulation (EU) No 432/2012, list of permitted health claims",
+          "url": "https://publications.europa.eu/resource/celex/32012R0432"
+        }
+      ]
+    },
+    {
+      "wording": "Helps reduce tiredness and fatigue.",
+      "evidence_strength": "moderate",
+      "why": "Authorized in the EU after EFSA review; Health Canada does not list it.",
+      "daily_dose": "30-1,000 µg folic acid a day",
+      "dose_details": "EU: at least 30 µg, 15% of the 200 µg EU reference value (Regulation (EU) No 1169/2011, Annex XIII). 1,000 µg a day is the ODS upper limit for folic acid from supplements and fortified foods.",
+      "form": "Folic acid or L-5-methyltetrahydrofolate (or its calcium or glucosamine salt)",
+      "sources": [
+        {
+          "name": "Commission Regulation (EU) No 432/2012, list of permitted health claims",
+          "url": "https://publications.europa.eu/resource/celex/32012R0432"
+        }
+      ]
+    },
+    {
+      "wording": "Has a role in the normal process of cell division.",
+      "evidence_strength": "moderate",
+      "why": "Authorized in the EU after EFSA review; Health Canada does not list it.",
+      "daily_dose": "30-1,000 µg folic acid a day",
+      "dose_details": "EU: at least 30 µg, 15% of the 200 µg EU reference value (Regulation (EU) No 1169/2011, Annex XIII). 1,000 µg a day is the ODS upper limit for folic acid from supplements and fortified foods.",
+      "form": "Folic acid or L-5-methyltetrahydrofolate (or its calcium or glucosamine salt)",
+      "sources": [
+        {
+          "name": "Commission Regulation (EU) No 432/2012, list of permitted health claims",
+          "url": "https://publications.europa.eu/resource/celex/32012R0432"
+        }
+      ]
+    },
+    {
+      "wording": "Supports normal homocysteine metabolism.",
+      "evidence_strength": "moderate",
+      "why": "Authorized in the EU after EFSA review; Health Canada does not list it.",
+      "daily_dose": "30-1,000 µg folic acid a day",
+      "dose_details": "EU: at least 30 µg, 15% of the 200 µg EU reference value (Regulation (EU) No 1169/2011, Annex XIII). 1,000 µg a day is the ODS upper limit for folic acid from supplements and fortified foods.",
+      "form": "Folic acid or L-5-methyltetrahydrofolate (or its calcium or glucosamine salt)",
+      "sources": [
+        {
+          "name": "Commission Regulation (EU) No 432/2012, list of permitted health claims",
+          "url": "https://publications.europa.eu/resource/celex/32012R0432"
+        }
+      ]
+    },
+    {
+      "wording": "Supports normal psychological function.",
+      "evidence_strength": "moderate",
+      "why": "Authorized in the EU after EFSA review; Health Canada does not list it.",
+      "daily_dose": "30-1,000 µg folic acid a day",
+      "dose_details": "EU: at least 30 µg, 15% of the 200 µg EU reference value (Regulation (EU) No 1169/2011, Annex XIII). 1,000 µg a day is the ODS upper limit for folic acid from supplements and fortified foods.",
+      "form": "Folic acid or L-5-methyltetrahydrofolate (or its calcium or glucosamine salt)",
+      "sources": [
+        {
+          "name": "Commission Regulation (EU) No 432/2012, list of permitted health claims",
+          "url": "https://publications.europa.eu/resource/celex/32012R0432"
+        }
+      ]
+    },
+    {
+      "wording": "Supports normal maternal tissue growth during pregnancy.",
+      "evidence_strength": "moderate",
+      "why": "Authorized in the EU after EFSA review; Health Canada does not list this wording.",
+      "daily_dose": "30-1,000 µg folic acid a day",
+      "dose_details": "EU: at least 30 µg, 15% of the 200 µg EU reference value (Regulation (EU) No 1169/2011, Annex XIII). 1,000 µg a day is the ODS upper limit for folic acid from supplements and fortified foods. Health Canada says a prenatal supplement must give at least 400 µg of folate a day.",
+      "form": "Folic acid or L-5-methyltetrahydrofolate (or its calcium or glucosamine salt)",
+      "sources": [
+        {
+          "name": "Commission Regulation (EU) No 432/2012, list of permitted health claims",
+          "url": "https://publications.europa.eu/resource/celex/32012R0432"
+        }
+      ]
+    }
+  ],
+  "wordings_to_avoid": [
+    {
+      "wording": "Prevents birth defects, or reduces the risk of neural tube defects or spina bifida",
+      "reason": "disease",
+      "why": "Names birth defects. In the US this is FDA's authorized health claim (21 CFR 101.79), with set wording and conditions (see fda_health_claims); Health Canada's version is a Canada only note.",
+      "meta_ads_only": false
+    },
+    {
+      "wording": "Supports healthy brain and spinal cord development in the baby",
+      "reason": "disease",
+      "why": "FDA's folate health claim names 'birth defects of the brain or spinal cord' (21 CFR 101.79(c)(2)(i)(C)), so this wording reads as that claim without its required conditions.",
+      "meta_ads_only": false
+    },
+    {
+      "wording": "Treats anemia, or folate-deficiency anemia",
+      "reason": "disease",
+      "why": "Names a disease.",
+      "meta_ads_only": false
+    },
+    {
+      "wording": "Lowers homocysteine to protect the heart, or reduces the risk of heart disease or stroke",
+      "reason": "disease",
+      "why": "Names diseases. FDA's qualified claim on folic acid, vitamin B6 and vitamin B12 and vascular disease has set wording (see fda_health_claims).",
+      "meta_ads_only": false
+    },
+    {
+      "wording": "Treats depression",
+      "reason": "disease",
+      "why": "Names a mental health disorder; the supported EU wording is normal psychological function.",
+      "meta_ads_only": false
+    }
+  ],
+  "evidence_strengths": {
+    "strong": "At least two listed sources support it independently at a comparable dose and form, and none disagrees.",
+    "moderate": "One listed source supports it as an evidence-based use at that dose, and no listed source disagrees.",
+    "limited": "The only support is traditional use, the sources disagree, or the source itself calls the evidence weak."
+  },
+  "reasons_to_avoid": {
+    "disease": "names or implies a disease",
+    "drug": "names a drug or presents the product as one",
+    "treatment": "promises to treat, cure or prevent a condition"
+  },
+  "sources": [
+    {
+      "name": "Health Canada monograph: Multi-Vitamin/Mineral Supplements",
+      "url": "https://webprod.hc-sc.gc.ca/nhpid-bdipsn/atReq?atid=multi_vitmin_suppl&lang=eng"
+    },
+    {
+      "name": "Commission Regulation (EU) No 432/2012, list of permitted health claims",
+      "url": "https://publications.europa.eu/resource/celex/32012R0432"
+    },
+    {
+      "name": "NIH ODS fact sheet: Folate (health professional)",
+      "url": "https://ods.od.nih.gov/factsheets/Folate-HealthProfessional/"
+    },
+    {
+      "name": "FDA authorized health claim: Folate and neural tube defects",
+      "url": "https://www.ecfr.gov/current/title-21/chapter-I/subchapter-B/part-101/subpart-E/section-101.79"
+    },
+    {
+      "name": "FDA qualified health claim: 0.8 mg folic acid and neural tube defects",
+      "url": "https://www.fda.gov/Food/IngredientsPackagingLabeling/LabelingNutrition/ucm073042.htm"
+    },
+    {
+      "name": "FDA qualified health claim: Folic acid, vitamin B6 and vitamin B12 and vascular disease",
+      "url": "https://www.fda.gov/Food/IngredientsPackagingLabeling/LabelingNutrition/ucm072865.htm"
+    }
+  ],
+  "disclaimer": "Not legal advice. This guide shows the wording that published evidence supports at a daily dose, from the sources linked below; it is not a ruling on any claim. Your own product, its form and dose, and your own evidence still need to match the wording you use.",
+  "date_reviewed": "2026-10-15"
+}

@@ -1,0 +1,97 @@
+{
+  "slug": "chromium",
+  "ingredient": "Chromium",
+  "also_called": [
+    "Trivalent chromium",
+    "Chromium(III)"
+  ],
+  "title": "What can you say about chromium in your ads and on your site?",
+  "summary": "The library supports 2 wordings for chromium; the strongest is \"Helps maintain normal blood glucose levels\" (strong, 6-500 µg a day). Avoid wording that names or implies a disease, a drug or a treatment, such as \"Lowers blood sugar, or helps manage diabetes\", and keep \"Helps maintain normal blood glucose levels\" off Meta ads.",
+  "supported_wordings": [
+    {
+      "wording": "Helps maintain normal blood glucose levels.",
+      "evidence_strength": "strong",
+      "why": "Listed by Health Canada and authorized in the EU after EFSA review.",
+      "daily_dose": "6-500 µg a day",
+      "dose_details": "Adults 19 and older. Health Canada: 2.2-500 µg a day. EU: at least 6 µg, 15% of the 40 µg EU reference value (Regulation (EU) No 1169/2011, Annex XIII). ODS: no upper limit was set.",
+      "form": "Trivalent chromium from a salt on Health Canada's list (such as picolinate or chloride), counted as chromium",
+      "sources": [
+        {
+          "name": "Health Canada monograph: Multi-Vitamin/Mineral Supplements",
+          "url": "https://webprod.hc-sc.gc.ca/nhpid-bdipsn/atReq?atid=multi_vitmin_suppl&lang=eng"
+        },
+        {
+          "name": "Commission Regulation (EU) No 432/2012, list of permitted health claims",
+          "url": "https://publications.europa.eu/resource/celex/32012R0432"
+        }
+      ],
+      "meta_ads": "Wording to avoid in Meta ads. On your site it is supported wording."
+    },
+    {
+      "wording": "Supports normal macronutrient metabolism.",
+      "evidence_strength": "moderate",
+      "why": "Authorized in the EU after EFSA review; Health Canada does not list it.",
+      "daily_dose": "at least 6 µg a day",
+      "dose_details": "EU: at least 6 µg, 15% of the 40 µg EU reference value (Regulation (EU) No 1169/2011, Annex XIII). Health Canada does not list this wording on its own; its monograph gives chromium at 2.2-500 µg a day for adults.",
+      "form": "Trivalent chromium from a salt on Health Canada's list (such as picolinate or chloride), counted as chromium",
+      "sources": [
+        {
+          "name": "Commission Regulation (EU) No 432/2012, list of permitted health claims",
+          "url": "https://publications.europa.eu/resource/celex/32012R0432"
+        }
+      ]
+    }
+  ],
+  "wordings_to_avoid": [
+    {
+      "wording": "Lowers blood sugar, or helps manage diabetes",
+      "reason": "disease",
+      "why": "Names a disease. Maintaining normal blood glucose is structure-and-function wording; lowering blood sugar or managing diabetes is not.",
+      "meta_ads_only": false
+    },
+    {
+      "wording": "Reverses insulin resistance or prediabetes",
+      "reason": "disease",
+      "why": "Names medical conditions. FDA's only qualified claim here is for chromium picolinate, with set wording (see fda_health_claims).",
+      "meta_ads_only": false
+    },
+    {
+      "wording": "Treats PCOS",
+      "reason": "disease",
+      "why": "Names a disease (polycystic ovary syndrome).",
+      "meta_ads_only": false
+    },
+    {
+      "wording": "Helps maintain normal blood glucose levels.",
+      "reason": "disease",
+      "why": "Blood sugar is a health-condition claim on Meta, so this wording stays off Meta ads, as potassium's blood pressure wording does (library decision of 2026-10-15; Meta's ad policies were not read). It stays supported wording for pages.",
+      "meta_ads_only": true
+    }
+  ],
+  "evidence_strengths": {
+    "strong": "At least two listed sources support it independently at a comparable dose and form, and none disagrees.",
+    "moderate": "One listed source supports it as an evidence-based use at that dose, and no listed source disagrees.",
+    "limited": "The only support is traditional use, the sources disagree, or the source itself calls the evidence weak."
+  },
+  "reasons_to_avoid": {
+    "disease": "names or implies a disease",
+    "drug": "names a drug or presents the product as one",
+    "treatment": "promises to treat, cure or prevent a condition"
+  },
+  "sources": [
+    {
+      "name": "Health Canada monograph: Multi-Vitamin/Mineral Supplements",
+      "url": "https://webprod.hc-sc.gc.ca/nhpid-bdipsn/atReq?atid=multi_vitmin_suppl&lang=eng"
+    },
+    {
+      "name": "Commission Regulation (EU) No 432/2012, list of permitted health claims",
+      "url": "https://publications.europa.eu/resource/celex/32012R0432"
+    },
+    {
+      "name": "FDA qualified health claim: Chromium picolinate and insulin resistance and type 2 diabetes",
+      "url": "https://www.fda.gov/food/nutrition-food-labeling-and-critical-foods/qualified-health-claims-letters-enforcement-discretion"
+    }
+  ],
+  "disclaimer": "Not legal advice. This guide shows the wording that published evidence supports at a daily dose, from the sources linked below; it is not a ruling on any claim. Your own product, its form and dose, and your own evidence still need to match the wording you use.",
+  "date_reviewed": "2026-10-15"
+}

@@ -1,0 +1,81 @@
+{
+  "slug": "ginger",
+  "ingredient": "Ginger",
+  "also_called": [
+    "Zingiber officinale"
+  ],
+  "title": "What can you say about ginger in your ads and on your site?",
+  "summary": "The library supports 2 wordings for ginger; the strongest is \"Helps reduce nausea and vomiting from motion sickness or seasickness\" (moderate, 0.5-3 g dried rhizome (or extract equivalent) a day). Avoid wording that names or implies a disease, a drug or a treatment, such as \"Relieves bronchitis, coughs and colds\".",
+  "supported_wordings": [
+    {
+      "wording": "Helps reduce nausea and vomiting from motion sickness or seasickness.",
+      "evidence_strength": "moderate",
+      "why": "Health Canada lists it as a non-traditional use with travel directions; no other listed source covers it.",
+      "daily_dose": "0.5-3 g dried rhizome (or extract equivalent) a day",
+      "dose_details": "Children 6-11, adolescents and adults. Take one dose 30 minutes before travel, then every 4 hours as needed. Aqueous extracts: 0.7-3 g.",
+      "form": "Dried rhizome, powder or extracts",
+      "sources": [
+        {
+          "name": "Health Canada monograph: Ginger",
+          "url": "https://webprod.hc-sc.gc.ca/nhpid-bdipsn/atReq?atid=ginger.gingembre2&lang=eng"
+        }
+      ]
+    },
+    {
+      "wording": "Traditionally used in herbal medicine to help relieve occasional digestive upset, such as indigestion, nausea, gas or lack of appetite.",
+      "evidence_strength": "limited",
+      "why": "Traditional use in Health Canada's monograph; no other listed source covers it.",
+      "daily_dose": "0.3-3 g dried rhizome (or extract equivalent) a day",
+      "dose_details": "Children 6-11, adolescents and adults. Aqueous extracts: 0.7-3 g.",
+      "form": "Dried rhizome, powder or extracts",
+      "sources": [
+        {
+          "name": "Health Canada monograph: Ginger",
+          "url": "https://webprod.hc-sc.gc.ca/nhpid-bdipsn/atReq?atid=ginger.gingembre2&lang=eng"
+        }
+      ]
+    }
+  ],
+  "wordings_to_avoid": [
+    {
+      "wording": "Relieves bronchitis, coughs and colds",
+      "reason": "disease",
+      "why": "Names diseases.",
+      "meta_ads_only": false
+    },
+    {
+      "wording": "Relieves arthritis pain or inflammation",
+      "reason": "disease",
+      "why": "Names a disease; no listed source supports it.",
+      "meta_ads_only": false
+    },
+    {
+      "wording": "Reduces nausea from chemotherapy",
+      "reason": "disease",
+      "why": "FDA's 2000 rule (page 1029) gives 'reduces nausea associated with chemotherapy' as a disease claim.",
+      "meta_ads_only": false
+    }
+  ],
+  "evidence_strengths": {
+    "strong": "At least two listed sources support it independently at a comparable dose and form, and none disagrees.",
+    "moderate": "One listed source supports it as an evidence-based use at that dose, and no listed source disagrees.",
+    "limited": "The only support is traditional use, the sources disagree, or the source itself calls the evidence weak."
+  },
+  "reasons_to_avoid": {
+    "disease": "names or implies a disease",
+    "drug": "names a drug or presents the product as one",
+    "treatment": "promises to treat, cure or prevent a condition"
+  },
+  "sources": [
+    {
+      "name": "Health Canada monograph: Ginger",
+      "url": "https://webprod.hc-sc.gc.ca/nhpid-bdipsn/atReq?atid=ginger.gingembre2&lang=eng"
+    },
+    {
+      "name": "FDA final rule on structure/function statements, 65 FR 1000 (6 January 2000), page 1031 (the OTC antiemetic monograph's motion-sickness claim)",
+      "url": "https://www.federalregister.gov/documents/full_text/text/2000/01/06/00-53.txt"
+    }
+  ],
+  "disclaimer": "Not legal advice. This guide shows the wording that published evidence supports at a daily dose, from the sources linked below; it is not a ruling on any claim. Your own product, its form and dose, and your own evidence still need to match the wording you use.",
+  "date_reviewed": "2026-10-14"
+}

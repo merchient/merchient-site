@@ -1,0 +1,66 @@
+{
+  "slug": "acetyl-l-carnitine",
+  "ingredient": "Acetyl-L-carnitine",
+  "also_called": [
+    "Acetylcarnitine",
+    "ALCAR",
+    "Acetyl L-carnitine hydrochloride",
+    "Acetyl-L-carnitine HCl"
+  ],
+  "title": "What can you say about acetyl-L-carnitine in your ads and on your site?",
+  "summary": "The library supports 1 wording for acetyl-L-carnitine; the strongest is \"Helps support cognitive health and brain function\" (moderate, 1.5-4 g a day). Avoid wording that names or implies a disease, a drug or a treatment, such as \"Treats dementia or Alzheimer's disease\".",
+  "supported_wordings": [
+    {
+      "wording": "Helps support cognitive health and brain function.",
+      "evidence_strength": "moderate",
+      "why": "Health Canada lists it at 1.5-4 g a day; no other listed source covers it.",
+      "daily_dose": "1.5-4 g a day",
+      "dose_details": "Health Canada: 1.5-4 g of acetylcarnitine a day.",
+      "form": "Acetylcarnitine from a source on Health Canada's list (such as acetyl L-carnitine hydrochloride), counted as acetylcarnitine",
+      "sources": [
+        {
+          "name": "Health Canada monograph: Cognitive Function Products",
+          "url": "https://webprod.hc-sc.gc.ca/nhpid-bdipsn/atReq?atid=fonc.cognitive.func&lang=eng"
+        }
+      ]
+    }
+  ],
+  "wordings_to_avoid": [
+    {
+      "wording": "Treats dementia or Alzheimer's disease",
+      "reason": "disease",
+      "why": "Names diseases.",
+      "meta_ads_only": false
+    },
+    {
+      "wording": "Treats depression",
+      "reason": "disease",
+      "why": "Names a disease.",
+      "meta_ads_only": false
+    },
+    {
+      "wording": "Treats nerve pain (neuropathy)",
+      "reason": "disease",
+      "why": "Names a disease.",
+      "meta_ads_only": false
+    }
+  ],
+  "evidence_strengths": {
+    "strong": "At least two listed sources support it independently at a comparable dose and form, and none disagrees.",
+    "moderate": "One listed source supports it as an evidence-based use at that dose, and no listed source disagrees.",
+    "limited": "The only support is traditional use, the sources disagree, or the source itself calls the evidence weak."
+  },
+  "reasons_to_avoid": {
+    "disease": "names or implies a disease",
+    "drug": "names a drug or presents the product as one",
+    "treatment": "promises to treat, cure or prevent a condition"
+  },
+  "sources": [
+    {
+      "name": "Health Canada monograph: Cognitive Function Products",
+      "url": "https://webprod.hc-sc.gc.ca/nhpid-bdipsn/atReq?atid=fonc.cognitive.func&lang=eng"
+    }
+  ],
+  "disclaimer": "Not legal advice. This guide shows the wording that published evidence supports at a daily dose, from the sources linked below; it is not a ruling on any claim. Your own product, its form and dose, and your own evidence still need to match the wording you use.",
+  "date_reviewed": "2026-10-15"
+}

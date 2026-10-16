@@ -1,0 +1,121 @@
+{
+  "slug": "inulin",
+  "ingredient": "Inulin",
+  "also_called": [
+    "Chicory inulin",
+    "Native chicory inulin",
+    "Agave inulin",
+    "Jerusalem artichoke inulin",
+    "Inulin-type fructans"
+  ],
+  "title": "What can you say about inulin in your ads and on your site?",
+  "summary": "The library supports 4 wordings for inulin; the strongest is \"Supports normal bowel function by increasing how often stools are passed\" (strong, 12-15 g a day). Avoid wording that names or implies a disease, a drug or a treatment, such as \"Relieves or treats constipation, without 'occasional'\".",
+  "supported_wordings": [
+    {
+      "wording": "Supports normal bowel function by increasing how often stools are passed.",
+      "evidence_strength": "strong",
+      "why": "Authorized in the EU after EFSA found a cause-and-effect relationship at 12 g a day, and Health Canada lists bowel regularity uses at overlapping doses.",
+      "daily_dose": "12-15 g a day",
+      "dose_details": "EU: 12 g native chicory inulin a day, and the consumer is told so. Health Canada: 10-15 g a day of chicory or Jerusalem artichoke inulin for gentle relief of constipation or irregularity, and 2-15 g a day for digestive regularity as part of a fibre-containing diet. Adults 18 and older.",
+      "form": "Native chicory inulin (EU); chicory or Jerusalem artichoke inulin (Health Canada)",
+      "sources": [
+        {
+          "name": "Commission Regulation (EU) 2015/2314 (chicory inulin claim)",
+          "url": "https://publications.europa.eu/resource/celex/32015R2314"
+        },
+        {
+          "name": "Health Canada monograph: Prebiotics",
+          "url": "https://webprod.hc-sc.gc.ca/nhpid-bdipsn/atReq?atid=prebio2&lang=eng"
+        }
+      ]
+    },
+    {
+      "wording": "Helps relieve occasional constipation.",
+      "evidence_strength": "moderate",
+      "why": "Health Canada lists constipation relief at these doses, and FDA's 2000 rule counts the 'occasional' form as structure-and-function wording.",
+      "daily_dose": "10-15 g a day",
+      "dose_details": "Chicory or Jerusalem artichoke inulin: 10-15 g a day; agave inulin: 7.5-15 g a day. Adults 18 and older. Labeling should make clear the product is not meant for chronic constipation.",
+      "form": "Inulin from chicory, Jerusalem artichoke or agave",
+      "sources": [
+        {
+          "name": "Health Canada monograph: Prebiotics",
+          "url": "https://webprod.hc-sc.gc.ca/nhpid-bdipsn/atReq?atid=prebio2&lang=eng"
+        }
+      ]
+    },
+    {
+      "wording": "A prebiotic fibre that helps feed beneficial gut bacteria such as bifidobacteria.",
+      "evidence_strength": "moderate",
+      "why": "Health Canada lists it at 5-15 g a day, citing human studies; no other listed source covers it.",
+      "daily_dose": "5-15 g a day",
+      "dose_details": "Adults 18 and older.",
+      "form": "Inulin from chicory, Jerusalem artichoke or agave",
+      "sources": [
+        {
+          "name": "Health Canada monograph: Prebiotics",
+          "url": "https://webprod.hc-sc.gc.ca/nhpid-bdipsn/atReq?atid=prebio2&lang=eng"
+        }
+      ]
+    },
+    {
+      "wording": "A source of fibre that supports a healthy digestive system.",
+      "evidence_strength": "moderate",
+      "why": "Health Canada lists it; no other listed source covers this wording.",
+      "daily_dose": "2-15 g a day",
+      "dose_details": "Adults 18 and older. Health Canada: at least 4 g a day may be called a high source of fibre, at least 6 g a day a very high source.",
+      "form": "Inulin from chicory, Jerusalem artichoke or agave",
+      "sources": [
+        {
+          "name": "Health Canada monograph: Prebiotics",
+          "url": "https://webprod.hc-sc.gc.ca/nhpid-bdipsn/atReq?atid=prebio2&lang=eng"
+        }
+      ]
+    }
+  ],
+  "wordings_to_avoid": [
+    {
+      "wording": "Relieves or treats constipation, without 'occasional'",
+      "reason": "treatment",
+      "why": "FDA's 2000 rule clears only the 'occasional constipation' form.",
+      "meta_ads_only": false
+    },
+    {
+      "wording": "Relieves IBS",
+      "reason": "disease",
+      "why": "Names a disease.",
+      "meta_ads_only": false
+    },
+    {
+      "wording": "Lowers blood sugar in diabetes",
+      "reason": "disease",
+      "why": "Names a disease; no listed source supports it.",
+      "meta_ads_only": false
+    }
+  ],
+  "evidence_strengths": {
+    "strong": "At least two listed sources support it independently at a comparable dose and form, and none disagrees.",
+    "moderate": "One listed source supports it as an evidence-based use at that dose, and no listed source disagrees.",
+    "limited": "The only support is traditional use, the sources disagree, or the source itself calls the evidence weak."
+  },
+  "reasons_to_avoid": {
+    "disease": "names or implies a disease",
+    "drug": "names a drug or presents the product as one",
+    "treatment": "promises to treat, cure or prevent a condition"
+  },
+  "sources": [
+    {
+      "name": "Commission Regulation (EU) 2015/2314 (chicory inulin claim)",
+      "url": "https://publications.europa.eu/resource/celex/32015R2314"
+    },
+    {
+      "name": "Health Canada monograph: Prebiotics",
+      "url": "https://webprod.hc-sc.gc.ca/nhpid-bdipsn/atReq?atid=prebio2&lang=eng"
+    },
+    {
+      "name": "FDA final rule on structure/function statements, 65 FR 1000 (6 January 2000), page 1015",
+      "url": "https://www.federalregister.gov/documents/full_text/text/2000/01/06/00-53.txt"
+    }
+  ],
+  "disclaimer": "Not legal advice. This guide shows the wording that published evidence supports at a daily dose, from the sources linked below; it is not a ruling on any claim. Your own product, its form and dose, and your own evidence still need to match the wording you use.",
+  "date_reviewed": "2026-10-14"
+}

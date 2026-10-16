@@ -1,0 +1,201 @@
+{
+  "slug": "vitamin-b6",
+  "ingredient": "Vitamin B6",
+  "also_called": [
+    "Vitamin B-6",
+    "Pyridoxine",
+    "Pyridoxine HCl",
+    "Pyridoxal 5'-phosphate",
+    "P-5-P"
+  ],
+  "title": "What can you say about vitamin B6 in your ads and on your site?",
+  "summary": "The library supports 8 wordings for vitamin B6; the strongest is \"Supports normal energy-yielding metabolism\" (strong, 0.21-100 mg a day). Avoid wording that names or implies a disease, a drug or a treatment, such as \"Treats PCOS, or balances hormones in PCOS\".",
+  "supported_wordings": [
+    {
+      "wording": "Supports normal energy-yielding metabolism.",
+      "evidence_strength": "strong",
+      "why": "Listed by Health Canada and authorized in the EU after EFSA review.",
+      "daily_dose": "0.21-100 mg a day",
+      "dose_details": "Adults 19 and older. Health Canada: 0.1-100 mg a day (80 mg at 18). EU: at least 0.21 mg, 15% of the 1.4 mg EU reference value (Regulation (EU) No 1169/2011, Annex XIII). ODS upper limit: 100 mg.",
+      "form": "Pyridoxine hydrochloride or pyridoxal 5'-phosphate, counted as vitamin B6",
+      "sources": [
+        {
+          "name": "Health Canada monograph: Multi-Vitamin/Mineral Supplements",
+          "url": "https://webprod.hc-sc.gc.ca/nhpid-bdipsn/atReq?atid=multi_vitmin_suppl&lang=eng"
+        },
+        {
+          "name": "Commission Regulation (EU) No 432/2012, list of permitted health claims",
+          "url": "https://publications.europa.eu/resource/celex/32012R0432"
+        }
+      ]
+    },
+    {
+      "wording": "Helps form red blood cells.",
+      "evidence_strength": "strong",
+      "why": "Listed by Health Canada and authorized in the EU after EFSA review.",
+      "daily_dose": "0.21-100 mg a day",
+      "dose_details": "Adults 19 and older. Health Canada: 0.1-100 mg a day (80 mg at 18). EU: at least 0.21 mg, 15% of the 1.4 mg EU reference value (Regulation (EU) No 1169/2011, Annex XIII). ODS upper limit: 100 mg.",
+      "form": "Pyridoxine hydrochloride or pyridoxal 5'-phosphate, counted as vitamin B6",
+      "sources": [
+        {
+          "name": "Health Canada monograph: Multi-Vitamin/Mineral Supplements",
+          "url": "https://webprod.hc-sc.gc.ca/nhpid-bdipsn/atReq?atid=multi_vitmin_suppl&lang=eng"
+        },
+        {
+          "name": "Commission Regulation (EU) No 432/2012, list of permitted health claims",
+          "url": "https://publications.europa.eu/resource/celex/32012R0432"
+        }
+      ]
+    },
+    {
+      "wording": "Supports normal function of the nervous system.",
+      "evidence_strength": "strong",
+      "why": "Listed by Health Canada and authorized in the EU after EFSA review.",
+      "daily_dose": "0.21-100 mg a day",
+      "dose_details": "Adults 19 and older. Health Canada: 0.1-100 mg a day (80 mg at 18). EU: at least 0.21 mg, 15% of the 1.4 mg EU reference value (Regulation (EU) No 1169/2011, Annex XIII). ODS upper limit: 100 mg.",
+      "form": "Pyridoxine hydrochloride or pyridoxal 5'-phosphate, counted as vitamin B6",
+      "sources": [
+        {
+          "name": "Health Canada monograph: Multi-Vitamin/Mineral Supplements",
+          "url": "https://webprod.hc-sc.gc.ca/nhpid-bdipsn/atReq?atid=multi_vitmin_suppl&lang=eng"
+        },
+        {
+          "name": "Commission Regulation (EU) No 432/2012, list of permitted health claims",
+          "url": "https://publications.europa.eu/resource/celex/32012R0432"
+        }
+      ]
+    },
+    {
+      "wording": "Helps regulate hormonal activity.",
+      "evidence_strength": "moderate",
+      "why": "Authorized in the EU after EFSA review; Health Canada does not list it.",
+      "daily_dose": "at least 0.21 mg a day",
+      "dose_details": "EU: at least 0.21 mg, 15% of the 1.4 mg EU reference value (Regulation (EU) No 1169/2011, Annex XIII). Health Canada does not list this use; its multi-vitamin/mineral monograph gives vitamin B6 at 0.1-100 mg a day for adults. ODS upper limit: 100 mg.",
+      "form": "Pyridoxine hydrochloride or pyridoxal 5'-phosphate, counted as vitamin B6",
+      "sources": [
+        {
+          "name": "Commission Regulation (EU) No 432/2012, list of permitted health claims",
+          "url": "https://publications.europa.eu/resource/celex/32012R0432"
+        }
+      ]
+    },
+    {
+      "wording": "Helps reduce tiredness and fatigue.",
+      "evidence_strength": "moderate",
+      "why": "Authorized in the EU after EFSA review; Health Canada does not list it.",
+      "daily_dose": "at least 0.21 mg a day",
+      "dose_details": "EU: at least 0.21 mg, 15% of the 1.4 mg EU reference value (Regulation (EU) No 1169/2011, Annex XIII). Health Canada does not list this use; its multi-vitamin/mineral monograph gives vitamin B6 at 0.1-100 mg a day for adults. ODS upper limit: 100 mg.",
+      "form": "Pyridoxine hydrochloride or pyridoxal 5'-phosphate, counted as vitamin B6",
+      "sources": [
+        {
+          "name": "Commission Regulation (EU) No 432/2012, list of permitted health claims",
+          "url": "https://publications.europa.eu/resource/celex/32012R0432"
+        }
+      ]
+    },
+    {
+      "wording": "Supports normal psychological function.",
+      "evidence_strength": "moderate",
+      "why": "Authorized in the EU after EFSA review; Health Canada does not list it.",
+      "daily_dose": "at least 0.21 mg a day",
+      "dose_details": "EU: at least 0.21 mg, 15% of the 1.4 mg EU reference value (Regulation (EU) No 1169/2011, Annex XIII). Health Canada does not list this use; its multi-vitamin/mineral monograph gives vitamin B6 at 0.1-100 mg a day for adults. ODS upper limit: 100 mg.",
+      "form": "Pyridoxine hydrochloride or pyridoxal 5'-phosphate, counted as vitamin B6",
+      "sources": [
+        {
+          "name": "Commission Regulation (EU) No 432/2012, list of permitted health claims",
+          "url": "https://publications.europa.eu/resource/celex/32012R0432"
+        }
+      ]
+    },
+    {
+      "wording": "Supports normal immune function.",
+      "evidence_strength": "moderate",
+      "why": "Authorized in the EU after EFSA review; Health Canada does not list it.",
+      "daily_dose": "at least 0.21 mg a day",
+      "dose_details": "EU: at least 0.21 mg, 15% of the 1.4 mg EU reference value (Regulation (EU) No 1169/2011, Annex XIII). Health Canada does not list this use; its multi-vitamin/mineral monograph gives vitamin B6 at 0.1-100 mg a day for adults. ODS upper limit: 100 mg.",
+      "form": "Pyridoxine hydrochloride or pyridoxal 5'-phosphate, counted as vitamin B6",
+      "sources": [
+        {
+          "name": "Commission Regulation (EU) No 432/2012, list of permitted health claims",
+          "url": "https://publications.europa.eu/resource/celex/32012R0432"
+        }
+      ]
+    },
+    {
+      "wording": "Supports normal homocysteine metabolism.",
+      "evidence_strength": "moderate",
+      "why": "Authorized in the EU after EFSA review; Health Canada does not list it.",
+      "daily_dose": "at least 0.21 mg a day",
+      "dose_details": "EU: at least 0.21 mg, 15% of the 1.4 mg EU reference value (Regulation (EU) No 1169/2011, Annex XIII). Health Canada does not list this use; its multi-vitamin/mineral monograph gives vitamin B6 at 0.1-100 mg a day for adults. ODS upper limit: 100 mg.",
+      "form": "Pyridoxine hydrochloride or pyridoxal 5'-phosphate, counted as vitamin B6",
+      "sources": [
+        {
+          "name": "Commission Regulation (EU) No 432/2012, list of permitted health claims",
+          "url": "https://publications.europa.eu/resource/celex/32012R0432"
+        }
+      ]
+    }
+  ],
+  "wordings_to_avoid": [
+    {
+      "wording": "Treats PCOS, or balances hormones in PCOS",
+      "reason": "disease",
+      "why": "Names a disease (polycystic ovary syndrome).",
+      "meta_ads_only": false
+    },
+    {
+      "wording": "Treats PMDD or premenstrual depression",
+      "reason": "disease",
+      "why": "Names medical conditions: premenstrual dysphoric disorder and depression.",
+      "meta_ads_only": false
+    },
+    {
+      "wording": "Treats depression or anxiety",
+      "reason": "disease",
+      "why": "Names diseases.",
+      "meta_ads_only": false
+    },
+    {
+      "wording": "Lowers homocysteine to protect the heart, or reduces the risk of heart disease",
+      "reason": "disease",
+      "why": "Names a disease. FDA's qualified claim on B vitamins and vascular disease has set wording (see fda_health_claims).",
+      "meta_ads_only": false
+    },
+    {
+      "wording": "Treats carpal tunnel syndrome or nerve damage (neuropathy)",
+      "reason": "disease",
+      "why": "Names diseases.",
+      "meta_ads_only": false
+    }
+  ],
+  "evidence_strengths": {
+    "strong": "At least two listed sources support it independently at a comparable dose and form, and none disagrees.",
+    "moderate": "One listed source supports it as an evidence-based use at that dose, and no listed source disagrees.",
+    "limited": "The only support is traditional use, the sources disagree, or the source itself calls the evidence weak."
+  },
+  "reasons_to_avoid": {
+    "disease": "names or implies a disease",
+    "drug": "names a drug or presents the product as one",
+    "treatment": "promises to treat, cure or prevent a condition"
+  },
+  "sources": [
+    {
+      "name": "Health Canada monograph: Multi-Vitamin/Mineral Supplements",
+      "url": "https://webprod.hc-sc.gc.ca/nhpid-bdipsn/atReq?atid=multi_vitmin_suppl&lang=eng"
+    },
+    {
+      "name": "Commission Regulation (EU) No 432/2012, list of permitted health claims",
+      "url": "https://publications.europa.eu/resource/celex/32012R0432"
+    },
+    {
+      "name": "NIH ODS fact sheet: Vitamin B6 (health professional)",
+      "url": "https://ods.od.nih.gov/factsheets/VitaminB6-HealthProfessional/"
+    },
+    {
+      "name": "FDA qualified health claim: Folic acid, vitamin B6 and vitamin B12 and vascular disease",
+      "url": "https://www.fda.gov/Food/IngredientsPackagingLabeling/LabelingNutrition/ucm072865.htm"
+    }
+  ],
+  "disclaimer": "Not legal advice. This guide shows the wording that published evidence supports at a daily dose, from the sources linked below; it is not a ruling on any claim. Your own product, its form and dose, and your own evidence still need to match the wording you use.",
+  "date_reviewed": "2026-10-15"
+}

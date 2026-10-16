@@ -1,0 +1,132 @@
+{
+  "slug": "probiotics",
+  "ingredient": "Probiotics",
+  "also_called": [
+    "Probiotic",
+    "Live microorganisms",
+    "Lactobacillus",
+    "Lacticaseibacillus",
+    "Bifidobacterium",
+    "Saccharomyces boulardii",
+    "Lacticaseibacillus rhamnosus GG",
+    "Lactobacillus rhamnosus GG",
+    "LGG",
+    "Bacillus",
+    "Streptococcus",
+    "Lactococcus",
+    "Lactiplantibacillus",
+    "Limosilactobacillus",
+    "Ligilactobacillus",
+    "Levilactobacillus",
+    "Latilactobacillus",
+    "Lentilactobacillus",
+    "Pediococcus",
+    "Leuconostoc",
+    "Propionibacterium",
+    "Clostridium",
+    "Enterococcus",
+    "Saccharomyces"
+  ],
+  "title": "What can you say about probiotics in your ads and on your site?",
+  "summary": "The library supports 2 wordings for probiotics; the strongest is \"Supports digestive (gut) health\" (limited, at least 10,000,000 CFU a day). Avoid wording that names or implies a disease, a drug or a treatment, such as \"Prevents or stops antibiotic-associated diarrhea\".",
+  "supported_wordings": [
+    {
+      "wording": "Supports digestive (gut) health.",
+      "evidence_strength": "limited",
+      "why": "Health Canada accepts this general wording for any listed species at a low total dose, but ODS says effects depend on the strain and are hard to verify across products.",
+      "daily_dose": "at least 10,000,000 CFU a day",
+      "dose_details": "At least 1 x 10^7 CFU a day in total from all live organisms in the product, not per strain. Applies to children 1 to 11, adolescents and adults. Bacteria are taken 2-3 hours apart from antibiotics.",
+      "form": "Live organisms of species listed in Health Canada's monograph, except Lactobacillus crispatus and Lactobacillus gallinarum",
+      "sources": [
+        {
+          "name": "Health Canada monograph: Probiotics",
+          "url": "https://webprod.hc-sc.gc.ca/nhpid-bdipsn/atReq?atid=probio&lang=eng"
+        },
+        {
+          "name": "NIH ODS fact sheet: Probiotics (health professional)",
+          "url": "https://ods.od.nih.gov/factsheets/Probiotics-HealthProfessional/"
+        }
+      ],
+      "where_sources_disagree": "Health Canada accepts general gut-health wording for any listed species at 10^7 CFU a day or more. ODS stresses that probiotics are identified, and work, by strain, and that the many strains and doses on the market make it hard to tell which products have verifiable benefits."
+    },
+    {
+      "wording": "Helps maintain a favourable balance of gut bacteria.",
+      "evidence_strength": "limited",
+      "why": "Health Canada words this cautiously (it 'could promote' a favourable flora), and ODS says benefits are strain-specific.",
+      "daily_dose": "at least 10,000,000 CFU a day",
+      "dose_details": "At least 1 x 10^7 CFU a day in total, as for the gut-health wording.",
+      "form": "Live organisms of species listed in Health Canada's monograph, except Lactobacillus crispatus and Lactobacillus gallinarum",
+      "sources": [
+        {
+          "name": "Health Canada monograph: Probiotics",
+          "url": "https://webprod.hc-sc.gc.ca/nhpid-bdipsn/atReq?atid=probio&lang=eng"
+        },
+        {
+          "name": "NIH ODS fact sheet: Probiotics (health professional)",
+          "url": "https://ods.od.nih.gov/factsheets/Probiotics-HealthProfessional/"
+        }
+      ],
+      "where_sources_disagree": "Health Canada applies this wording to all listed species at the same low total dose; ODS says benefits differ by strain and dose."
+    }
+  ],
+  "wordings_to_avoid": [
+    {
+      "wording": "Prevents or stops antibiotic-associated diarrhea",
+      "reason": "disease",
+      "why": "Names a disease condition. Health Canada lists this use only for specific strains at specific doses (see notes), and even then it is disease wording.",
+      "meta_ads_only": false
+    },
+    {
+      "wording": "Treats diarrhea",
+      "reason": "disease",
+      "why": "Names a disease condition and promises treatment.",
+      "meta_ads_only": false
+    },
+    {
+      "wording": "Treats IBS (irritable bowel syndrome)",
+      "reason": "disease",
+      "why": "Names a disease.",
+      "meta_ads_only": false
+    },
+    {
+      "wording": "Helps clear H. pylori infection",
+      "reason": "disease",
+      "why": "Names an infection. Health Canada lists one strain group only as an add-on to physician-supervised antibiotic therapy.",
+      "meta_ads_only": false
+    },
+    {
+      "wording": "A natural antibiotic, or replaces antibiotics",
+      "reason": "drug",
+      "why": "Presents the product as a drug substitute.",
+      "meta_ads_only": false
+    },
+    {
+      "wording": "Protects you from colds and flu",
+      "reason": "disease",
+      "why": "Names infectious diseases; no listed source supports it.",
+      "meta_ads_only": false
+    }
+  ],
+  "evidence_strengths": {
+    "strong": "At least two listed sources support it independently at a comparable dose and form, and none disagrees.",
+    "moderate": "One listed source supports it as an evidence-based use at that dose, and no listed source disagrees.",
+    "limited": "The only support is traditional use, the sources disagree, or the source itself calls the evidence weak."
+  },
+  "reasons_to_avoid": {
+    "disease": "names or implies a disease",
+    "drug": "names a drug or presents the product as one",
+    "treatment": "promises to treat, cure or prevent a condition"
+  },
+  "sources": [
+    {
+      "name": "Health Canada monograph: Probiotics",
+      "url": "https://webprod.hc-sc.gc.ca/nhpid-bdipsn/atReq?atid=probio&lang=eng"
+    },
+    {
+      "name": "NIH ODS fact sheet: Probiotics (health professional)",
+      "url": "https://ods.od.nih.gov/factsheets/Probiotics-HealthProfessional/"
+    }
+  ],
+  "disclaimer": "Not legal advice. This guide shows the wording that published evidence supports at a daily dose, from the sources linked below; it is not a ruling on any claim. Your own product, its form and dose, and your own evidence still need to match the wording you use.",
+  "date_reviewed": "2026-10-14"
+}

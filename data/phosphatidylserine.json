@@ -1,0 +1,64 @@
+{
+  "slug": "phosphatidylserine",
+  "ingredient": "Phosphatidylserine",
+  "also_called": [],
+  "title": "What can you say about phosphatidylserine in your ads and on your site?",
+  "summary": "The library supports 1 wording for phosphatidylserine; the strongest is \"Helps support cognitive function\" (limited, 300 mg a day). Avoid wording that names or implies a disease, a drug or a treatment, such as \"Prevents or treats dementia or Alzheimer's disease\".",
+  "supported_wordings": [
+    {
+      "wording": "Helps support cognitive function.",
+      "evidence_strength": "limited",
+      "why": "Health Canada lists it at 300 mg a day, but FDA calls closely related evidence very limited and preliminary.",
+      "daily_dose": "300 mg a day",
+      "dose_details": "Adults 18 and older; Health Canada gives a single daily amount of 300 mg.",
+      "form": "Phosphatidylserine from sunflower seed or soy lecithin, or synthetic",
+      "sources": [
+        {
+          "name": "Health Canada monograph: Phosphatidylserine",
+          "url": "https://webprod.hc-sc.gc.ca/nhpid-bdipsn/atReq?atid=phosphatidylserine2&lang=eng"
+        }
+      ],
+      "where_sources_disagree": "Health Canada accepts cognitive wording at 300 mg a day for phosphatidylserine from sunflower, soy lecithin or synthetic sources. FDA, reviewing claims that phosphatidylserine lowers the risk of cognitive dysfunction and dementia in the elderly, called the research 'very limited and preliminary' and found 'little scientific evidence' (2003), and its 2004 letter notes that soy-lecithin and bovine brain-cortex phosphatidylserine may not be the same substance."
+    }
+  ],
+  "wordings_to_avoid": [
+    {
+      "wording": "Prevents or treats dementia or Alzheimer's disease",
+      "reason": "disease",
+      "why": "Names diseases. FDA allows only qualified risk-reduction wording with its disclaimer (see fda_health_claims).",
+      "meta_ads_only": false
+    },
+    {
+      "wording": "Treats ADHD",
+      "reason": "disease",
+      "why": "Names a disorder; no listed source supports it.",
+      "meta_ads_only": false
+    }
+  ],
+  "evidence_strengths": {
+    "strong": "At least two listed sources support it independently at a comparable dose and form, and none disagrees.",
+    "moderate": "One listed source supports it as an evidence-based use at that dose, and no listed source disagrees.",
+    "limited": "The only support is traditional use, the sources disagree, or the source itself calls the evidence weak."
+  },
+  "reasons_to_avoid": {
+    "disease": "names or implies a disease",
+    "drug": "names a drug or presents the product as one",
+    "treatment": "promises to treat, cure or prevent a condition"
+  },
+  "sources": [
+    {
+      "name": "Health Canada monograph: Phosphatidylserine",
+      "url": "https://webprod.hc-sc.gc.ca/nhpid-bdipsn/atReq?atid=phosphatidylserine2&lang=eng"
+    },
+    {
+      "name": "FDA final rule on structure/function statements, 65 FR 1000 (6 January 2000), page 1006",
+      "url": "https://www.federalregister.gov/documents/full_text/text/2000/01/06/00-53.txt"
+    },
+    {
+      "name": "FDA qualified health claim: Phosphatidylserine and cognitive dysfunction and dementia",
+      "url": "https://www.fda.gov/Food/IngredientsPackagingLabeling/LabelingNutrition/ucm072999.htm"
+    }
+  ],
+  "disclaimer": "Not legal advice. This guide shows the wording that published evidence supports at a daily dose, from the sources linked below; it is not a ruling on any claim. Your own product, its form and dose, and your own evidence still need to match the wording you use.",
+  "date_reviewed": "2026-10-15"
+}

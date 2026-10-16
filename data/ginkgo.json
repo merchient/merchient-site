@@ -1,0 +1,91 @@
+{
+  "slug": "ginkgo",
+  "ingredient": "Ginkgo",
+  "also_called": [
+    "Ginkgo biloba"
+  ],
+  "title": "What can you say about ginkgo in your ads and on your site?",
+  "summary": "The library supports 3 wordings for ginkgo; the strongest is \"Helps support cognitive function in adults\" (moderate, 80-240 mg standardized extract a day). Avoid wording that names or implies a disease, a drug or a treatment, such as \"Treats dementia or Alzheimer's disease\".",
+  "supported_wordings": [
+    {
+      "wording": "Helps support cognitive function in adults.",
+      "evidence_strength": "moderate",
+      "why": "Health Canada lists it at 80-240 mg of standardized extract a day; no other listed source covers it.",
+      "daily_dose": "80-240 mg standardized extract a day",
+      "dose_details": "Adults 18 and older. Health Canada: 80-240 mg of standardized extract a day (4-12 g dried leaf), at least 80 mg per dose. Ask a health care practitioner for use beyond 8 months (80 to under 120 mg a day), 6 weeks (120-180 mg) or 4 weeks (over 180 mg).",
+      "form": "Leaf extract, standardized to 22-27% flavonoid glycosides and 5-7% terpene lactones",
+      "sources": [
+        {
+          "name": "Health Canada monograph: Ginkgo Biloba",
+          "url": "https://webprod.hc-sc.gc.ca/nhpid-bdipsn/atReq?atid=ginkgo.biloba2&lang=eng"
+        }
+      ]
+    },
+    {
+      "wording": "Helps support memory in adults.",
+      "evidence_strength": "moderate",
+      "why": "Health Canada lists it at 80-240 mg of standardized extract a day; no other listed source covers it.",
+      "daily_dose": "80-240 mg standardized extract a day",
+      "dose_details": "Adults 18 and older. Health Canada: 80-240 mg of standardized extract a day (4-12 g dried leaf), at least 80 mg per dose. Ask a health care practitioner for use beyond 8 months (80 to under 120 mg a day), 6 weeks (120-180 mg) or 4 weeks (over 180 mg).",
+      "form": "Leaf extract, standardized to 22-27% flavonoid glycosides and 5-7% terpene lactones",
+      "sources": [
+        {
+          "name": "Health Canada monograph: Ginkgo Biloba",
+          "url": "https://webprod.hc-sc.gc.ca/nhpid-bdipsn/atReq?atid=ginkgo.biloba2&lang=eng"
+        }
+      ]
+    },
+    {
+      "wording": "Helps support peripheral circulation.",
+      "evidence_strength": "moderate",
+      "why": "Health Canada lists it at 80-240 mg of standardized extract a day; no other listed source covers it.",
+      "daily_dose": "80-240 mg standardized extract a day",
+      "dose_details": "Adults 18 and older. Health Canada: 80-240 mg of standardized extract a day (4-12 g dried leaf), at least 80 mg per dose. Ask a health care practitioner for use beyond 8 months (80 to under 120 mg a day), 6 weeks (120-180 mg) or 4 weeks (over 180 mg).",
+      "form": "Leaf extract, standardized to 22-27% flavonoid glycosides and 5-7% terpene lactones",
+      "sources": [
+        {
+          "name": "Health Canada monograph: Ginkgo Biloba",
+          "url": "https://webprod.hc-sc.gc.ca/nhpid-bdipsn/atReq?atid=ginkgo.biloba2&lang=eng"
+        }
+      ]
+    }
+  ],
+  "wordings_to_avoid": [
+    {
+      "wording": "Treats dementia or Alzheimer's disease",
+      "reason": "disease",
+      "why": "Names diseases.",
+      "meta_ads_only": false
+    },
+    {
+      "wording": "Thins the blood, or works like a blood thinner",
+      "reason": "drug",
+      "why": "Describes a drug action. Health Canada says not to use ginkgo with blood thinners.",
+      "meta_ads_only": false
+    },
+    {
+      "wording": "Treats ADHD",
+      "reason": "disease",
+      "why": "Names a disease.",
+      "meta_ads_only": false
+    }
+  ],
+  "evidence_strengths": {
+    "strong": "At least two listed sources support it independently at a comparable dose and form, and none disagrees.",
+    "moderate": "One listed source supports it as an evidence-based use at that dose, and no listed source disagrees.",
+    "limited": "The only support is traditional use, the sources disagree, or the source itself calls the evidence weak."
+  },
+  "reasons_to_avoid": {
+    "disease": "names or implies a disease",
+    "drug": "names a drug or presents the product as one",
+    "treatment": "promises to treat, cure or prevent a condition"
+  },
+  "sources": [
+    {
+      "name": "Health Canada monograph: Ginkgo Biloba",
+      "url": "https://webprod.hc-sc.gc.ca/nhpid-bdipsn/atReq?atid=ginkgo.biloba2&lang=eng"
+    }
+  ],
+  "disclaimer": "Not legal advice. This guide shows the wording that published evidence supports at a daily dose, from the sources linked below; it is not a ruling on any claim. Your own product, its form and dose, and your own evidence still need to match the wording you use.",
+  "date_reviewed": "2026-10-15"
+}

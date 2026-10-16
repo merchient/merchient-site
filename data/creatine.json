@@ -1,0 +1,94 @@
+{
+  "slug": "creatine",
+  "ingredient": "Creatine",
+  "also_called": [
+    "Creatine monohydrate",
+    "N-(aminoiminomethyl)-N-methylglycine monohydrate"
+  ],
+  "title": "What can you say about creatine in your ads and on your site?",
+  "summary": "The library supports 2 wordings for creatine; the strongest is \"Improves performance in repeated short bursts of high-intensity exercise, such as sprints, jumps or lifting\" (strong, 3-5 g a day). Avoid wording that names or implies a disease, a drug or a treatment, such as \"Reverses muscle wasting or sarcopenia\".",
+  "supported_wordings": [
+    {
+      "wording": "Improves performance in repeated short bursts of high-intensity exercise, such as sprints, jumps or lifting.",
+      "evidence_strength": "strong",
+      "why": "Authorized in the EU after EFSA review, listed by Health Canada, and ODS says creatine improves performance in repeated short bursts of high-intensity activity.",
+      "daily_dose": "3-5 g a day",
+      "dose_details": "EU: 3 g a day, for adults doing high-intensity exercise, and the consumer is told so. Health Canada gives three options for adults 18 and older: 3-5 g a day for at least 4 weeks with no loading phase; 15-20 g a day for 5-7 days (at most 5 g per dose) followed by 2-5 g a day; or 3-5 g a day for at least 4 weeks followed by a maintenance dose.",
+      "form": "Creatine monohydrate",
+      "sources": [
+        {
+          "name": "Commission Regulation (EU) No 432/2012, list of permitted health claims",
+          "url": "https://publications.europa.eu/resource/celex/32012R0432"
+        },
+        {
+          "name": "Health Canada monograph: Creatine monohydrate",
+          "url": "https://webprod.hc-sc.gc.ca/nhpid-bdipsn/atReq?atid=creatine.mono&lang=eng"
+        },
+        {
+          "name": "NIH ODS fact sheet: Dietary Supplements for Exercise and Athletic Performance (health professional)",
+          "url": "https://ods.od.nih.gov/factsheets/ExerciseAndAthleticPerformance-HealthProfessional/"
+        }
+      ]
+    },
+    {
+      "wording": "Helps increase lean muscle mass and size when combined with resistance training.",
+      "evidence_strength": "moderate",
+      "why": "Health Canada lists it; no other listed source was read on muscle mass.",
+      "daily_dose": "3-5 g a day",
+      "dose_details": "Health Canada: the same dose options as above. Adults 18 and older, alongside a resistance training programme.",
+      "form": "Creatine monohydrate",
+      "sources": [
+        {
+          "name": "Health Canada monograph: Creatine monohydrate",
+          "url": "https://webprod.hc-sc.gc.ca/nhpid-bdipsn/atReq?atid=creatine.mono&lang=eng"
+        }
+      ]
+    }
+  ],
+  "wordings_to_avoid": [
+    {
+      "wording": "Reverses muscle wasting or sarcopenia",
+      "reason": "disease",
+      "why": "Names a disease state; the supported wording is about training performance and muscle mass with resistance training.",
+      "meta_ads_only": false
+    },
+    {
+      "wording": "A natural alternative to anabolic steroids",
+      "reason": "drug",
+      "why": "Compares the product to a drug class.",
+      "meta_ads_only": false
+    },
+    {
+      "wording": "Helps with muscular dystrophy or other muscle diseases",
+      "reason": "disease",
+      "why": "Names diseases.",
+      "meta_ads_only": false
+    }
+  ],
+  "evidence_strengths": {
+    "strong": "At least two listed sources support it independently at a comparable dose and form, and none disagrees.",
+    "moderate": "One listed source supports it as an evidence-based use at that dose, and no listed source disagrees.",
+    "limited": "The only support is traditional use, the sources disagree, or the source itself calls the evidence weak."
+  },
+  "reasons_to_avoid": {
+    "disease": "names or implies a disease",
+    "drug": "names a drug or presents the product as one",
+    "treatment": "promises to treat, cure or prevent a condition"
+  },
+  "sources": [
+    {
+      "name": "Commission Regulation (EU) No 432/2012, list of permitted health claims",
+      "url": "https://publications.europa.eu/resource/celex/32012R0432"
+    },
+    {
+      "name": "Health Canada monograph: Creatine monohydrate",
+      "url": "https://webprod.hc-sc.gc.ca/nhpid-bdipsn/atReq?atid=creatine.mono&lang=eng"
+    },
+    {
+      "name": "NIH ODS fact sheet: Dietary Supplements for Exercise and Athletic Performance (health professional)",
+      "url": "https://ods.od.nih.gov/factsheets/ExerciseAndAthleticPerformance-HealthProfessional/"
+    }
+  ],
+  "disclaimer": "Not legal advice. This guide shows the wording that published evidence supports at a daily dose, from the sources linked below; it is not a ruling on any claim. Your own product, its form and dose, and your own evidence still need to match the wording you use.",
+  "date_reviewed": "2026-10-14"
+}

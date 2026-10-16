@@ -1,0 +1,64 @@
+{
+  "slug": "l-theanine",
+  "ingredient": "L-theanine",
+  "also_called": [
+    "Theanine",
+    "N-ethyl-L-glutamine"
+  ],
+  "title": "What can you say about L-theanine in your ads and on your site?",
+  "summary": "The library supports 1 wording for L-theanine; the strongest is \"Supports a temporary feeling of relaxation\" (moderate, 200-250 mg a day). Avoid wording that names or implies a disease, a drug or a treatment, such as \"Treats or relieves anxiety\".",
+  "supported_wordings": [
+    {
+      "wording": "Supports a temporary feeling of relaxation.",
+      "evidence_strength": "moderate",
+      "why": "Health Canada lists this use at 200-250 mg a day, citing a few small human studies; no other listed source covers L-theanine.",
+      "daily_dose": "200-250 mg a day",
+      "dose_details": "Adults 18 and older, total per day. Health Canada sets no timing or duration statement.",
+      "form": "L-theanine from tea leaf or synthetic, taken by mouth",
+      "sources": [
+        {
+          "name": "Health Canada monograph: L-Theanine",
+          "url": "https://webprod.hc-sc.gc.ca/nhpid-bdipsn/atReq?atid=l.theanine2&lang=eng"
+        }
+      ]
+    }
+  ],
+  "wordings_to_avoid": [
+    {
+      "wording": "Treats or relieves anxiety",
+      "reason": "disease",
+      "why": "Anxiety disorders are diagnosable conditions; the evidence covers a temporary feeling of relaxation, not an effect on a disorder.",
+      "meta_ads_only": false
+    },
+    {
+      "wording": "A natural alternative to anti-anxiety medication, or naming a drug such as alprazolam (Xanax)",
+      "reason": "drug",
+      "why": "Compares the product to a drug and implies it does a drug's job.",
+      "meta_ads_only": false
+    },
+    {
+      "wording": "Cures stress",
+      "reason": "treatment",
+      "why": "Promises a cure; the supported effect is short-term relaxation.",
+      "meta_ads_only": false
+    }
+  ],
+  "evidence_strengths": {
+    "strong": "At least two listed sources support it independently at a comparable dose and form, and none disagrees.",
+    "moderate": "One listed source supports it as an evidence-based use at that dose, and no listed source disagrees.",
+    "limited": "The only support is traditional use, the sources disagree, or the source itself calls the evidence weak."
+  },
+  "reasons_to_avoid": {
+    "disease": "names or implies a disease",
+    "drug": "names a drug or presents the product as one",
+    "treatment": "promises to treat, cure or prevent a condition"
+  },
+  "sources": [
+    {
+      "name": "Health Canada monograph: L-Theanine",
+      "url": "https://webprod.hc-sc.gc.ca/nhpid-bdipsn/atReq?atid=l.theanine2&lang=eng"
+    }
+  ],
+  "disclaimer": "Not legal advice. This guide shows the wording that published evidence supports at a daily dose, from the sources linked below; it is not a ruling on any claim. Your own product, its form and dose, and your own evidence still need to match the wording you use.",
+  "date_reviewed": "2026-10-14"
+}

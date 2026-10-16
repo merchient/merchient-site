@@ -1,0 +1,119 @@
+{
+  "slug": "ashwagandha",
+  "ingredient": "Ashwagandha",
+  "also_called": [
+    "Withania somnifera",
+    "Withania",
+    "Asgandh",
+    "Asvagandha",
+    "Winter cherry"
+  ],
+  "title": "What can you say about ashwagandha in your ads and on your site?",
+  "summary": "The library supports 3 wordings for ashwagandha; the strongest is \"Used in herbal medicine as an adaptogen: helps the body build resistance to stress and supports energy over time, for example when stress leaves you mentally and physically tired\" (moderate, 2.5-6.5 g dried root or whole plant (or extract equivalent) a day). Avoid wording that names or implies a disease, a drug or a treatment, such as \"Treats anxiety or depression\".",
+  "supported_wordings": [
+    {
+      "wording": "Used in herbal medicine as an adaptogen: helps the body build resistance to stress and supports energy over time, for example when stress leaves you mentally and physically tired.",
+      "evidence_strength": "moderate",
+      "why": "Health Canada lists it, and ODS reports trials in which ashwagandha lowered stress and anxiety scores, but the two describe different forms and doses.",
+      "daily_dose": "2.5-6.5 g dried root or whole plant (or extract equivalent) a day",
+      "dose_details": "Adults 18 and older, per Health Canada. The trials ODS describes used 240-1,250 mg of extract a day, a different measure.",
+      "form": "Dried, powdered or ethanolic extract of root or whole plant",
+      "sources": [
+        {
+          "name": "Health Canada monograph: Ashwagandha",
+          "url": "https://webprod.hc-sc.gc.ca/nhpid-bdipsn/atReq?atid=ashwagandha2&lang=eng"
+        },
+        {
+          "name": "NIH ODS fact sheet: Ashwagandha (health professional)",
+          "url": "https://ods.od.nih.gov/factsheets/Ashwagandha-HealthProfessional/"
+        }
+      ]
+    },
+    {
+      "wording": "Traditionally used in Ayurveda to ease restlessness and nervousness, which helps support sleep.",
+      "evidence_strength": "limited",
+      "why": "Traditional use only in Health Canada's monograph; ODS reports some trials with better sleep quality in stressed adults, using different extracts and doses.",
+      "daily_dose": "2-6 g dried root (or extract equivalent) a day",
+      "dose_details": "Adults 18 and older. The claim names the tradition (Ayurveda).",
+      "form": "Dried or powdered root, or ethanol and/or water extracts",
+      "sources": [
+        {
+          "name": "Health Canada monograph: Ashwagandha",
+          "url": "https://webprod.hc-sc.gc.ca/nhpid-bdipsn/atReq?atid=ashwagandha2&lang=eng"
+        },
+        {
+          "name": "NIH ODS fact sheet: Ashwagandha (health professional)",
+          "url": "https://ods.od.nih.gov/factsheets/Ashwagandha-HealthProfessional/"
+        }
+      ]
+    },
+    {
+      "wording": "Traditionally used in Ayurveda as a rejuvenating tonic and to support memory.",
+      "evidence_strength": "limited",
+      "why": "Traditional use only, per Health Canada.",
+      "daily_dose": "2-6 g dried root (or extract equivalent) a day",
+      "dose_details": "Adults 18 and older. The claim names the tradition (Ayurveda).",
+      "form": "Dried or powdered root, or ethanol and/or water extracts",
+      "sources": [
+        {
+          "name": "Health Canada monograph: Ashwagandha",
+          "url": "https://webprod.hc-sc.gc.ca/nhpid-bdipsn/atReq?atid=ashwagandha2&lang=eng"
+        }
+      ]
+    }
+  ],
+  "wordings_to_avoid": [
+    {
+      "wording": "Treats anxiety or depression",
+      "reason": "disease",
+      "why": "Names mental health disorders; the supported wording is about resistance to everyday stress.",
+      "meta_ads_only": false
+    },
+    {
+      "wording": "Cures insomnia",
+      "reason": "treatment",
+      "why": "Names a sleep disorder and promises a cure.",
+      "meta_ads_only": false
+    },
+    {
+      "wording": "Works like an antidepressant or anti-anxiety drug",
+      "reason": "drug",
+      "why": "Compares the product to a drug class.",
+      "meta_ads_only": false
+    },
+    {
+      "wording": "Raises low testosterone, or treats low T",
+      "reason": "disease",
+      "why": "Low testosterone as a diagnosis is a medical condition; no listed source supports a testosterone claim.",
+      "meta_ads_only": false
+    },
+    {
+      "wording": "Supports thyroid health in hypothyroidism",
+      "reason": "disease",
+      "why": "Names a disease; ODS flags thyroid effects as a safety concern, not a benefit.",
+      "meta_ads_only": false
+    }
+  ],
+  "evidence_strengths": {
+    "strong": "At least two listed sources support it independently at a comparable dose and form, and none disagrees.",
+    "moderate": "One listed source supports it as an evidence-based use at that dose, and no listed source disagrees.",
+    "limited": "The only support is traditional use, the sources disagree, or the source itself calls the evidence weak."
+  },
+  "reasons_to_avoid": {
+    "disease": "names or implies a disease",
+    "drug": "names a drug or presents the product as one",
+    "treatment": "promises to treat, cure or prevent a condition"
+  },
+  "sources": [
+    {
+      "name": "Health Canada monograph: Ashwagandha",
+      "url": "https://webprod.hc-sc.gc.ca/nhpid-bdipsn/atReq?atid=ashwagandha2&lang=eng"
+    },
+    {
+      "name": "NIH ODS fact sheet: Ashwagandha (health professional)",
+      "url": "https://ods.od.nih.gov/factsheets/Ashwagandha-HealthProfessional/"
+    }
+  ],
+  "disclaimer": "Not legal advice. This guide shows the wording that published evidence supports at a daily dose, from the sources linked below; it is not a ruling on any claim. Your own product, its form and dose, and your own evidence still need to match the wording you use.",
+  "date_reviewed": "2026-10-14"
+}

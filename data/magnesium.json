@@ -1,0 +1,182 @@
+{
+  "slug": "magnesium",
+  "ingredient": "Magnesium",
+  "also_called": [
+    "Mg"
+  ],
+  "title": "What can you say about magnesium in your ads and on your site?",
+  "summary": "The library supports 6 wordings for magnesium; the strongest is \"Supports normal muscle function\" (strong, 20-500 mg elemental magnesium a day). Avoid wording that names or implies a disease, a drug or a treatment, such as \"Lowers blood pressure, or helps with hypertension\".",
+  "supported_wordings": [
+    {
+      "wording": "Supports normal muscle function.",
+      "evidence_strength": "strong",
+      "why": "Listed by Health Canada and authorized in the EU after EFSA review.",
+      "daily_dose": "20-500 mg elemental magnesium a day",
+      "dose_details": "Health Canada: 20-500 mg a day for adults 19 and older, 20-350 mg at age 18. ODS sets the upper limit for magnesium from supplements at 350 mg a day for adults. The EU claim applies to products that are at least a 'source' of magnesium.",
+      "form": "Any magnesium form on Health Canada's list, counted as elemental magnesium",
+      "sources": [
+        {
+          "name": "Health Canada monograph: Multi-Vitamin/Mineral Supplements",
+          "url": "https://webprod.hc-sc.gc.ca/nhpid-bdipsn/atReq?atid=multi_vitmin_suppl&lang=eng"
+        },
+        {
+          "name": "Commission Regulation (EU) No 432/2012, list of permitted health claims",
+          "url": "https://publications.europa.eu/resource/celex/32012R0432"
+        }
+      ],
+      "dose_warning": "Above 350 mg a day of magnesium from supplements is over the ODS upper limit for adults. Health Canada's range runs to 500 mg; the claim's support stands."
+    },
+    {
+      "wording": "Supports normal function of the nervous system.",
+      "evidence_strength": "strong",
+      "why": "Listed by Health Canada and authorized in the EU after EFSA review.",
+      "daily_dose": "20-500 mg elemental magnesium a day",
+      "dose_details": "As for muscle function: Health Canada 20-500 mg a day for adults 19 and older; ODS upper limit from supplements 350 mg a day.",
+      "form": "Any magnesium form on Health Canada's list, counted as elemental magnesium",
+      "sources": [
+        {
+          "name": "Health Canada monograph: Multi-Vitamin/Mineral Supplements",
+          "url": "https://webprod.hc-sc.gc.ca/nhpid-bdipsn/atReq?atid=multi_vitmin_suppl&lang=eng"
+        },
+        {
+          "name": "Commission Regulation (EU) No 432/2012, list of permitted health claims",
+          "url": "https://publications.europa.eu/resource/celex/32012R0432"
+        }
+      ],
+      "dose_warning": "Above 350 mg a day of magnesium from supplements is over the ODS upper limit for adults. Health Canada's range runs to 500 mg; the claim's support stands."
+    },
+    {
+      "wording": "Plays a part in energy metabolism.",
+      "evidence_strength": "strong",
+      "why": "Health Canada lists a role in energy metabolism and the EU authorizes a role in normal energy-yielding metabolism.",
+      "daily_dose": "20-500 mg elemental magnesium a day",
+      "dose_details": "Health Canada 20-500 mg a day for adults 19 and older; ODS upper limit from supplements 350 mg a day.",
+      "form": "Any magnesium form on Health Canada's list, counted as elemental magnesium",
+      "sources": [
+        {
+          "name": "Health Canada monograph: Multi-Vitamin/Mineral Supplements",
+          "url": "https://webprod.hc-sc.gc.ca/nhpid-bdipsn/atReq?atid=multi_vitmin_suppl&lang=eng"
+        },
+        {
+          "name": "Commission Regulation (EU) No 432/2012, list of permitted health claims",
+          "url": "https://publications.europa.eu/resource/celex/32012R0432"
+        }
+      ],
+      "dose_warning": "Above 350 mg a day of magnesium from supplements is over the ODS upper limit for adults. Health Canada's range runs to 500 mg; the claim's support stands."
+    },
+    {
+      "wording": "Helps build and maintain healthy bones and teeth.",
+      "evidence_strength": "strong",
+      "why": "Health Canada lists bone and tooth development and maintenance; the EU authorizes maintenance of normal bones and teeth.",
+      "daily_dose": "20-500 mg elemental magnesium a day",
+      "dose_details": "Health Canada 20-500 mg a day for adults 19 and older; ODS upper limit from supplements 350 mg a day.",
+      "form": "Any magnesium form on Health Canada's list, counted as elemental magnesium",
+      "sources": [
+        {
+          "name": "Health Canada monograph: Multi-Vitamin/Mineral Supplements",
+          "url": "https://webprod.hc-sc.gc.ca/nhpid-bdipsn/atReq?atid=multi_vitmin_suppl&lang=eng"
+        },
+        {
+          "name": "Commission Regulation (EU) No 432/2012, list of permitted health claims",
+          "url": "https://publications.europa.eu/resource/celex/32012R0432"
+        }
+      ],
+      "dose_warning": "Above 350 mg a day of magnesium from supplements is over the ODS upper limit for adults. Health Canada's range runs to 500 mg; the claim's support stands."
+    },
+    {
+      "wording": "Helps maintain normal electrolyte balance.",
+      "evidence_strength": "strong",
+      "why": "Listed by Health Canada and authorized in the EU after EFSA review.",
+      "daily_dose": "20-500 mg elemental magnesium a day",
+      "dose_details": "Health Canada 20-500 mg a day for adults 19 and older; ODS upper limit from supplements 350 mg a day.",
+      "form": "Any magnesium form on Health Canada's list, counted as elemental magnesium",
+      "sources": [
+        {
+          "name": "Health Canada monograph: Multi-Vitamin/Mineral Supplements",
+          "url": "https://webprod.hc-sc.gc.ca/nhpid-bdipsn/atReq?atid=multi_vitmin_suppl&lang=eng"
+        },
+        {
+          "name": "Commission Regulation (EU) No 432/2012, list of permitted health claims",
+          "url": "https://publications.europa.eu/resource/celex/32012R0432"
+        }
+      ],
+      "dose_warning": "Above 350 mg a day of magnesium from supplements is over the ODS upper limit for adults. Health Canada's range runs to 500 mg; the claim's support stands."
+    },
+    {
+      "wording": "Helps reduce tiredness and fatigue.",
+      "evidence_strength": "moderate",
+      "why": "Authorized in the EU after EFSA review; Health Canada does not list it and ODS does not address it.",
+      "daily_dose": "56.25-350 mg elemental magnesium a day",
+      "dose_details": "EU: the product must be at least a 'source' of magnesium, which is 15% of the 375 mg EU nutrient reference value, or 56.25 mg (Regulation (EU) No 1169/2011, Annex XIII). 350 mg a day is the ODS upper limit for magnesium from supplements.",
+      "form": "Magnesium, counted as elemental magnesium",
+      "sources": [
+        {
+          "name": "Commission Regulation (EU) No 432/2012, list of permitted health claims",
+          "url": "https://publications.europa.eu/resource/celex/32012R0432"
+        }
+      ]
+    }
+  ],
+  "wordings_to_avoid": [
+    {
+      "wording": "Lowers blood pressure, or helps with hypertension",
+      "reason": "disease",
+      "why": "Names a disease. The only supported route is FDA's qualified health claim, with its set wording and conditions (see fda_health_claims).",
+      "meta_ads_only": false
+    },
+    {
+      "wording": "Relieves migraines",
+      "reason": "disease",
+      "why": "Names a disease.",
+      "meta_ads_only": false
+    },
+    {
+      "wording": "Treats insomnia, or a cure for sleep problems",
+      "reason": "treatment",
+      "why": "Names a sleep disorder and promises to treat it; no listed source supports sleep wording for magnesium.",
+      "meta_ads_only": false
+    },
+    {
+      "wording": "Controls blood sugar in diabetes",
+      "reason": "disease",
+      "why": "Names a disease.",
+      "meta_ads_only": false
+    },
+    {
+      "wording": "Calms anxiety or depression",
+      "reason": "disease",
+      "why": "Names mental health disorders; no listed source supports mood wording beyond the EU's normal psychological function claim.",
+      "meta_ads_only": false
+    }
+  ],
+  "evidence_strengths": {
+    "strong": "At least two listed sources support it independently at a comparable dose and form, and none disagrees.",
+    "moderate": "One listed source supports it as an evidence-based use at that dose, and no listed source disagrees.",
+    "limited": "The only support is traditional use, the sources disagree, or the source itself calls the evidence weak."
+  },
+  "reasons_to_avoid": {
+    "disease": "names or implies a disease",
+    "drug": "names a drug or presents the product as one",
+    "treatment": "promises to treat, cure or prevent a condition"
+  },
+  "sources": [
+    {
+      "name": "Health Canada monograph: Multi-Vitamin/Mineral Supplements",
+      "url": "https://webprod.hc-sc.gc.ca/nhpid-bdipsn/atReq?atid=multi_vitmin_suppl&lang=eng"
+    },
+    {
+      "name": "Commission Regulation (EU) No 432/2012, list of permitted health claims",
+      "url": "https://publications.europa.eu/resource/celex/32012R0432"
+    },
+    {
+      "name": "NIH ODS fact sheet: Magnesium (health professional)",
+      "url": "https://ods.od.nih.gov/factsheets/Magnesium-HealthProfessional/"
+    },
+    {
+      "name": "FDA qualified health claim: Magnesium and reduced risk of high blood pressure (hypertension)",
+      "url": "https://www.fda.gov/media/155304/download"
+    }
+  ],
+  "disclaimer": "Not legal advice. This guide shows the wording that published evidence supports at a daily dose, from the sources linked below; it is not a ruling on any claim. Your own product, its form and dose, and your own evidence still need to match the wording you use.",
+  "date_reviewed": "2026-10-14"
+}

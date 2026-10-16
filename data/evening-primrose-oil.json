@@ -1,0 +1,63 @@
+{
+  "slug": "evening-primrose-oil",
+  "ingredient": "Evening primrose oil",
+  "also_called": [
+    "Oenothera biennis"
+  ],
+  "title": "What can you say about evening primrose oil in your ads and on your site?",
+  "summary": "The library supports 1 wording for evening primrose oil; the strongest is \"Provides omega-6 fatty acids, including linoleic acid, for the maintenance of good health\" (moderate, 1.3-6 g a day). Avoid wording that names or implies a disease, a drug or a treatment, such as \"Treats eczema (atopic dermatitis)\".",
+  "supported_wordings": [
+    {
+      "wording": "Provides omega-6 fatty acids, including linoleic acid, for the maintenance of good health.",
+      "evidence_strength": "moderate",
+      "why": "Health Canada lists it at 1.3-6 g a day; no other listed source covers it.",
+      "daily_dose": "1.3-6 g a day",
+      "dose_details": "Adults 18 and older. Health Canada: 1.3-6 g of evening primrose oil a day.",
+      "form": "Evening primrose seed oil",
+      "sources": [
+        {
+          "name": "Health Canada monograph: Evening Primrose Oil",
+          "url": "https://webprod.hc-sc.gc.ca/nhpid-bdipsn/atReq?atid=primrose.onagre2&lang=eng"
+        }
+      ]
+    }
+  ],
+  "wordings_to_avoid": [
+    {
+      "wording": "Treats eczema (atopic dermatitis)",
+      "reason": "disease",
+      "why": "Names a disease.",
+      "meta_ads_only": false
+    },
+    {
+      "wording": "Relieves breast pain (mastalgia) or PMS symptoms",
+      "reason": "disease",
+      "why": "Names a medical condition.",
+      "meta_ads_only": false
+    },
+    {
+      "wording": "Ripens the cervix or brings on labor",
+      "reason": "drug",
+      "why": "Describes a drug action in pregnancy.",
+      "meta_ads_only": false
+    }
+  ],
+  "evidence_strengths": {
+    "strong": "At least two listed sources support it independently at a comparable dose and form, and none disagrees.",
+    "moderate": "One listed source supports it as an evidence-based use at that dose, and no listed source disagrees.",
+    "limited": "The only support is traditional use, the sources disagree, or the source itself calls the evidence weak."
+  },
+  "reasons_to_avoid": {
+    "disease": "names or implies a disease",
+    "drug": "names a drug or presents the product as one",
+    "treatment": "promises to treat, cure or prevent a condition"
+  },
+  "sources": [
+    {
+      "name": "Health Canada monograph: Evening Primrose Oil",
+      "url": "https://webprod.hc-sc.gc.ca/nhpid-bdipsn/atReq?atid=primrose.onagre2&lang=eng"
+    }
+  ],
+  "disclaimer": "Not legal advice. This guide shows the wording that published evidence supports at a daily dose, from the sources linked below; it is not a ruling on any claim. Your own product, its form and dose, and your own evidence still need to match the wording you use.",
+  "date_reviewed": "2026-10-15"
+}
