@@ -2,10 +2,10 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'self'; font-src 'self'; img-src 'self'; base-uri 'none'; form-action 'none'">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'self'; font-src 'self'; img-src 'self'; base-uri 'none'; form-action mailto:">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Merchient · Claims review for supplement ads on Meta</title>
-<meta name="description" content="Vera, Merchient’s AI employee, reads a US supplement brand’s Meta ads, landing pages and reviews, checks every claim she reads against Meta’s ad policies and FTC and FDA guidance, and drafts a safe rewrite. Akhil reviews findings before the first report and spot-checks every brief.">
+<meta name="description" content="Vera 360, Merchient’s AI employee, protects every surface a US supplement brand speaks on. She checks every claim she reads against Meta’s ad policies and FTC and FDA guidance, and drafts a safe rewrite. Akhil reviews findings before the first report and spot-checks every brief.">
 <link rel="canonical" href="https://merchient.com/">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Merchient">
@@ -50,47 +50,87 @@
   <section class="hero">
     <div class="wrap hero-grid">
       <div>
-        <p class="kicker">For US supplement brands on Meta</p>
-        <h1>Keep the hook. Lose the <span class="hit">claim</span> that gets your best ad rejected.</h1>
-        <p class="lede">Your best ad pulled. Your ad account restricted mid-launch. Vera, Merchient’s AI employee, reads your ads, landing pages and reviews, checks every claim she reads against Meta’s ad policies and FTC and FDA guidance, and drafts a rewrite that keeps the hook.</p>
+        <p class="kicker">Vera 360 · for US supplement brands</p>
+        <h1>Keep the hook. Lose the <span class="hit">claim</span>. Everywhere you speak.</h1>
+        <p class="lede">Vera 360, Merchient’s AI employee, protects every surface a supplement brand speaks on. She checks every claim she reads against Meta’s ad policies and FTC and FDA guidance, and drafts a rewrite that keeps the hook.</p>
         <div class="cta-row">
-          <a class="btn" href="mailto:hello@merchient.com?subject=Free%20scan%20request&amp;body=Brand%20name%3A%20%0D%0AWebsite%3A%20%0D%0A">Get your free scan</a>
           <a class="secondary-link" href="https://calendar.google.com/calendar/appointments/schedules/AcZssZ0OC3aykWqaXz8QQ8TZ6hiOhituHjqaoqzefFYIUnyb4OZb6Bv5aZZUh2n_WvxcSyDtiHJmdkrZ" target="_blank" rel="noopener">Book a 20-minute call</a>
           <a class="sample-link" href="sample-report.html">See a sample report</a>
         </div>
-        <p class="cta-line">Vera reads your site and emails you the riskiest line, why, a safer rewrite and how many more like it she found. Reply, and you get the free first report.</p>
       </div>
 
-      <figure class="mail" aria-label="Fictional example of a morning brief from Vera">
-        <p class="fic">Fictional example</p>
-        <div class="mail-card">
-          <p class="mail-title">Morning brief</p>
-          <p class="mail-meta">From Vera, AI employee at Merchient · to you · 6:04 AM</p>
-          <div class="bar-xl" aria-hidden="true"></div>
-          <p class="mail-subject">1 new risk, 1 change, the rest all clear</p>
-          <div class="bar-m" aria-hidden="true"></div>
-          <div class="mail-item">
-            <p><span class="tag tag-risk">New risk</span></p>
-            <p class="where">Ad “Spring reset, video 3”</p>
-            <p>“Finally, a probiotic that ends bloating <span class="hit">for good</span>.”</p>
-            <p><b>FTC:</b> “for good” promises a permanent result, which needs strong evidence.</p>
-            <p><b>Rewrite:</b> “Finally, a probiotic for everyday digestive comfort.*”</p>
-          </div>
-          <div class="hair" aria-hidden="true"></div>
-          <div class="mail-item">
-            <p><span class="tag tag-change">Changed</span></p>
-            <p class="where">Landing page /sleep</p>
-            <p>The headline now says “<span class="hit">clinically proven</span>”. <b>FTC:</b> that needs trials on this formula. A rewrite is ready if you have none.</p>
-          </div>
-          <div class="hair" aria-hidden="true"></div>
-          <div class="mail-item">
-            <p><span class="tag tag-clear">All clear</span></p>
-            <p>Your other live ads, landing pages and new reviews.</p>
-          </div>
-          <div class="bar-m" aria-hidden="true"></div>
-          <p class="mail-sign">Send me any new ad before launch and you will have a verdict today. Vera, AI employee at Merchient</p>
-        </div>
-      </figure>
+      <aside class="panel scan-panel" aria-labelledby="scan-title">
+        <p class="panel-title" id="scan-title">Free scan</p>
+        <div class="bar-xl" aria-hidden="true"></div>
+        <!--scan-->
+          <form class="scan" action="mailto:hello@merchient.com" method="get">
+            <input type="hidden" name="subject" value="Free&nbsp;scan&nbsp;request">
+            <label for="scan-website">Your website</label>
+            <input id="scan-website" name="body" type="text" inputmode="url" autocomplete="url" placeholder="yourbrand.com" required>
+            <button class="btn" type="submit">Get your free scan</button>
+            <p class="scan-note">Your email app opens with the request ready to send.</p>
+          </form>
+          <!--/scan-->
+        <p class="cta-line">Vera reads your site and emails you the riskiest line, why, a safer rewrite and how many more like it she found. Reply, and you get the free first report.</p>
+      </aside>
+    </div>
+  </section>
+
+  <section class="section" id="surfaces">
+    <div class="wrap">
+      <p class="kicker">Vera 360</p>
+      <h2>One AI employee. Every surface you speak on.</h2>
+      <p class="section-lede">One rule book, applied wherever your brand makes a claim. Connect the surfaces you use.</p>
+      <ul class="surfaces">
+        <li class="panel surface" id="surface-website">
+          <h3>Website</h3>
+          <p class="s-watch">Vera reads your public pages line by line.</p>
+          <p class="s-connect"><b>Connect</b>Send your website address. Nothing to log in to.</p>
+        </li>
+        <li class="panel surface" id="surface-meta">
+          <h3>Meta ads</h3>
+          <p class="s-watch">Vera reads your live ads and their review status.</p>
+          <p class="s-connect"><b>Connect</b>Share your ad account, view-only. It takes two minutes.</p>
+        </li>
+        <li class="panel surface" id="surface-email-sms">
+          <h3>Email and SMS</h3>
+          <p class="status">Available this weekend</p>
+          <p class="s-watch">Vera reads the emails and texts you send.</p>
+          <p class="s-connect"><b>Connect</b>Reply to Vera with a read-only Klaviyo API key; she confirms within an hour.</p>
+        </li>
+        <li class="panel surface" id="surface-reviews">
+          <h3>Reviews</h3>
+          <p class="s-watch">Vera reads the reviews you show, because they can make claims for you.</p>
+          <p class="s-connect"><b>Connect</b>Nothing to connect: she reads the reviews on your public pages.</p>
+        </li>
+        <li class="panel surface" id="surface-amazon">
+          <h3>Amazon listing</h3>
+          <p class="status">Available in week 2</p>
+          <p class="s-watch">Vera reads your listing’s claims.</p>
+          <p class="s-connect"><b>Connect</b>Send Vera your listing’s link; she reads it as any shopper does.</p>
+        </li>
+        <li class="panel surface" id="surface-label">
+          <h3>Label</h3>
+          <p class="s-watch">Vera reads the claims on your label and Supplement Facts panel.</p>
+          <p class="s-connect"><b>Connect</b>Email Vera a photo of the Supplement Facts panel, or she reads it from your product page.</p>
+        </li>
+        <li class="panel surface" id="surface-creators">
+          <h3>Creators’ posts</h3>
+          <p class="s-watch">Vera reads the scripts and captions creators write for you.</p>
+          <p class="s-connect"><b>Connect</b>Email Vera the script or caption before it goes out; she answers within minutes.</p>
+        </li>
+        <li class="panel surface" id="surface-support">
+          <h3>Support replies</h3>
+          <p class="s-watch">Vera reads the replies your support team sends.</p>
+          <p class="s-connect"><b>Connect</b>Coming in week 3.</p>
+        </li>
+        <li class="panel surface" id="surface-google">
+          <h3>Google Ads and Shopping</h3>
+          <p class="status">Coming in week 2</p>
+          <p class="s-watch">Google reads your landing page as part of the ad; Vera checks both.</p>
+        </li>
+      </ul>
+      <p class="more-link"><a class="sample-link" href="connect.html">The steps for each surface</a></p>
     </div>
   </section>
 
@@ -129,10 +169,81 @@
       </figure>
       <p class="kicker strip-kicker" id="how-it-works">How it works</p>
       <ol class="strip">
-        <li><p>Vera reads your ads, pages and reviews every morning.</p></li>
-        <li><p>She flags the lines Meta, the FTC or the FDA act on.</p></li>
+        <li><p>Vera reads every surface you connect, every morning.</p></li>
+        <li><p>She checks each claim against Meta’s ad policies and FTC and FDA guidance.</p></li>
         <li><p>You get the fix in your inbox.</p></li>
       </ol>
+    </div>
+  </section>
+
+  <section class="section" id="claim-graph">
+    <div class="wrap">
+      <p class="kicker">The claim graph</p>
+      <h2>One claim. Every surface it lands on.</h2>
+      <figure class="graph">
+        <p class="fic">Illustration, not a real brand</p>
+        <svg class="cg" viewBox="0 0 360 290" role="img" aria-labelledby="cg-title cg-desc">
+          <title id="cg-title">The claim graph</title>
+          <desc id="cg-desc">The same claim appears in an ad, a page, an email and a review. Meta rejects the ad, and Vera flags the same claim on the page, in the email and in the review.</desc>
+          <rect class="cg-box" x="100" y="10" width="160" height="84"/>
+          <text class="cg-t" x="112" y="34">Ad</text>
+          <rect class="cg-hit" x="112" y="44" width="136" height="14"/><rect class="cg-under" x="112" y="58" width="136" height="3"/>
+          <rect class="cg-flag" x="112" y="68" width="78" height="18"/><text class="cg-t cg-on" x="151" y="81" text-anchor="middle">Rejected</text>
+          <path class="cg-line" d="M180 94 V140 M60 140 H300 M60 140 V182 M180 140 V182 M300 140 V182"/>
+          <path class="cg-head" d="M54 180 L60 190 L66 180 Z M174 180 L180 190 L186 180 Z M294 180 L300 190 L306 180 Z"/>
+          <rect class="cg-box" x="8" y="190" width="104" height="84"/>
+          <text class="cg-t" x="18" y="214">Page</text>
+          <rect class="cg-hit" x="18" y="224" width="84" height="14"/><rect class="cg-under" x="18" y="238" width="84" height="3"/>
+          <rect class="cg-flag" x="18" y="248" width="66" height="18"/><text class="cg-t cg-on" x="51" y="261" text-anchor="middle">Flagged</text>
+          <rect class="cg-box" x="128" y="190" width="104" height="84"/>
+          <text class="cg-t" x="138" y="214">Email</text>
+          <rect class="cg-hit" x="138" y="224" width="84" height="14"/><rect class="cg-under" x="138" y="238" width="84" height="3"/>
+          <rect class="cg-flag" x="138" y="248" width="66" height="18"/><text class="cg-t cg-on" x="171" y="261" text-anchor="middle">Flagged</text>
+          <rect class="cg-box" x="248" y="190" width="104" height="84"/>
+          <text class="cg-t" x="258" y="214">Review</text>
+          <rect class="cg-hit" x="258" y="224" width="84" height="14"/><rect class="cg-under" x="258" y="238" width="84" height="3"/>
+          <rect class="cg-flag" x="258" y="248" width="66" height="18"/><text class="cg-t cg-on" x="291" y="261" text-anchor="middle">Flagged</text>
+        </svg>
+        <figcaption>When Meta rejects the ad, Vera flags the same claim in every other place it appears.</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="section" id="morning">
+    <div class="wrap">
+      <p class="kicker">A morning with Vera</p>
+      <h2>Your 6:04 AM note.</h2>
+      <p class="section-lede">A fictional brand’s morning note, as Vera writes it. Akhil reviews findings before the first report and spot-checks every brief.</p>
+      <figure class="mail" aria-label="Fictional example of a morning note from Vera">
+        <p class="fic">Fictional example</p>
+        <div class="mail-card">
+          <p class="mail-title">Morning brief</p>
+          <p class="mail-meta">From Vera, AI employee at Merchient · to the Larkmoor Fiber team · 6:04 AM</p>
+          <div class="bar-xl" aria-hidden="true"></div>
+          <p class="mail-subject">1 new risk, 1 change, the rest all clear</p>
+          <div class="bar-m" aria-hidden="true"></div>
+          <div class="mail-item">
+            <p><span class="tag tag-risk">New risk</span></p>
+            <p class="where">Email “Sunday restock”</p>
+            <p>“Finally, a fiber that ends bloating <span class="hit">for good</span>.”</p>
+            <p><b>FTC:</b> “for good” promises a permanent result, which needs strong evidence. The same line is on your Daily Fiber page, so it is flagged there too.</p>
+            <p><b>Rewrite:</b> “Finally, a fiber for everyday digestive comfort.*”</p>
+          </div>
+          <div class="hair" aria-hidden="true"></div>
+          <div class="mail-item">
+            <p><span class="tag tag-change">Changed</span></p>
+            <p class="where">Reviews on your Daily Fiber page</p>
+            <p>A new review says the fiber “<span class="hit">cured my IBS</span>”. <b>FDA:</b> a customer’s words on your page can still make a disease claim.</p>
+          </div>
+          <div class="hair" aria-hidden="true"></div>
+          <div class="mail-item">
+            <p><span class="tag tag-clear">All clear</span></p>
+            <p>Everything else Vera read this morning.</p>
+          </div>
+          <div class="bar-m" aria-hidden="true"></div>
+          <p class="mail-sign">Send me any new ad before launch and you will have a verdict today. Vera, AI employee at Merchient</p>
+        </div>
+      </figure>
     </div>
   </section>
 

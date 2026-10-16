@@ -2,12 +2,13 @@
 
 The website of Merchient, a trade name of Orbline LLC: claims review for US supplement brands running Meta ads. Contact: hello@merchient.com.
 
-It is a static site: plain HTML pages and one stylesheet, with no JavaScript, no cookies and no tracking. One small script, `build.py`, generates some of the pages before they are committed.
+It is a static site: plain HTML pages and one stylesheet, with no cookies and no tracking, and no JavaScript unless the scan flag in `build.py` is switched on. One small script, `build.py`, generates some of the pages before they are committed.
 
 ## Pages
 
 - `index.html`: the main page
-- `connect.html`: how to share a Meta ad account with Merchient, view-only
+- `connect.html`: what to do to connect each surface Vera 360 reads, including sharing a Meta ad account view-only
+- `pricing.html`: a skeleton with the guarantees and billing questions and no prices yet (not indexed, not linked)
 - `sample-report.html`: a fictional brand's free first report, as Vera writes one
 - `vera-month.html`: a fictional training brand's month with Vera
 - `findings.html`: example findings, on lines invented in the style of supplement product pages (not real brands)
@@ -26,7 +27,7 @@ It is a static site: plain HTML pages and one stylesheet, with no JavaScript, no
 
 ## How it is built
 
-`build.py` writes the number of founding places left (`FOUNDING_PLACES_LEFT`, at the top of the file) into the pages that show it, generates `ingredients/` from the JSON in `data/`, and lists the guides in `sitemap.xml`. After changing either, run `python3 build.py` and commit what it writes. `python3 build.py --check` changes nothing and fails if a page is out of date.
+`build.py` also switches the home page’s scan box between opening the "Free scan request" email and posting to the scan service (`SCAN_API_ON`), and writes `scan.js` only while that is on. It writes the number of founding places left (`FOUNDING_PLACES_LEFT`, at the top of the file) into the pages that show it, generates `ingredients/` from the JSON in `data/`, and lists the guides in `sitemap.xml`. After changing either, run `python3 build.py` and commit what it writes. `python3 build.py --check` changes nothing and fails if a page is out of date.
 
 ## How it is published
 

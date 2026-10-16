@@ -25,6 +25,15 @@ in the library, copy the JSON into data/ again and run the build.
 # by one, run python3 build.py, then commit and push.
 FOUNDING_PLACES_LEFT = 5
 
+# The scan box in the home page's hero. False: the box opens the "Free scan request"
+# email, and the site runs no JavaScript. True: the box posts the website and work
+# email as JSON to SCAN_API_URL with scan.js, and falls back to that email if the
+# service does not answer. Switching it on also loosens the home page's content
+# security policy (script-src 'self', connect-src for the service) and means the
+# privacy and security pages must say where the scan data goes. Then run build.py.
+SCAN_API_ON = False
+SCAN_API_URL = 'https://api.merchient.com/api/scan'
+
 import html
 import json
 import os
@@ -234,6 +243,78 @@ FINAL = '''
 </body>
 </html>
 '''
+
+
+CSP_BASE = "default-src 'none'; style-src 'self'; font-src 'self'; img-src 'self'; base-uri 'none'; "
+CSP_META = re.compile(r'<meta http-equiv="Content-Security-Policy" content="[^"]*">')
+SCAN_BLOCK = re.compile(r'<!--scan-->.*?<!--/scan-->', re.S)
+SCAN_OFF = '''<!--scan-->
+          <form class="scan" action="mailto:hello@merchient.com" method="get">
+            <input type="hidden" name="subject" value="Free&nbsp;scan&nbsp;request">
+            <label for="scan-website">Your website</label>
+            <input id="scan-website" name="body" type="text" inputmode="url" autocomplete="url" placeholder="yourbrand.com" required>
+            <button class="btn" type="submit">Get your free scan</button>
+            <p class="scan-note">Your email app opens with the request ready to send.</p>
+          </form>
+          <!--/scan-->'''
+SCAN_ON = '''<!--scan-->
+          <form class="scan" action="mailto:hello@merchient.com" method="get" data-api="%s">
+            <input type="hidden" name="subject" value="Free&nbsp;scan&nbsp;request">
+            <label for="scan-website">Your website</label>
+            <input id="scan-website" name="website" type="text" inputmode="url" autocomplete="url" placeholder="yourbrand.com" required>
+            <label for="scan-email">Your work email</label>
+            <input id="scan-email" name="email" type="email" autocomplete="email" placeholder="you@yourbrand.com" required>
+            <button class="btn" type="submit">Get your free scan</button>
+            <p class="scan-note">We send your website and work email to Merchient\u2019s scan service to start your scan. If it does not answer, your email app opens with the request ready.</p>
+            <p class="scan-msg" role="status"></p>
+          </form>
+          <script src="scan.js"></script>
+          <!--/scan-->'''
+SCAN_JS = '''// Posts the home page's scan form to Merchient's scan service. If the service does not answer, opens the "Free scan request" email instead.
+(function () {
+  var form = document.querySelector('form.scan[data-api]');
+  if (!form) { return; }
+  var msg = form.querySelector('.scan-msg');
+  var button = form.querySelector('button');
+  form.addEventListener('submit', function (event) {
+    event.preventDefault();
+    var website = form.elements.website.value.trim();
+    var email = form.elements.email.value.trim();
+    var mailto = 'mailto:hello@merchient.com?subject=Free%20scan%20request&body=' + encodeURIComponent('Website: ' + website + '\\r\\nWork email: ' + email + '\\r\\n');
+    var controller = new AbortController();
+    var timer = setTimeout(function () { controller.abort(); }, 10000);
+    button.disabled = true;
+    msg.textContent = 'Sending\u2026';
+    fetch(form.getAttribute('data-api'), {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ website: website, email: email }),
+      signal: controller.signal
+    }).then(function (response) {
+      clearTimeout(timer);
+      if (!response.ok) { throw new Error('status ' + response.status); }
+      msg.textContent = 'Thank you. Vera is reading your site, and your scan will be emailed to ' + email + '.';
+    }).catch(function () {
+      clearTimeout(timer);
+      button.disabled = false;
+      msg.textContent = 'Opening your email app instead.';
+      window.location.href = mailto;
+    });
+  });
+}());
+'''
+
+
+def scan_apply(page):
+    """Writes the scan box, and the home page's content security policy, for SCAN_API_ON."""
+    csp = CSP_BASE + ("script-src 'self'; connect-src %s; form-action mailto:" % SCAN_API_URL.rsplit('/', 2)[0]
+                      if SCAN_API_ON else 'form-action mailto:')
+    box = SCAN_ON % html.escape(SCAN_API_URL, quote=True) if SCAN_API_ON else SCAN_OFF
+    page, n = SCAN_BLOCK.subn(lambda m: box, page)
+    page, c = CSP_META.subn(lambda m: '<meta http-equiv="Content-Security-Policy" content="%s">' % csp, page)
+    if n != 1 or c != 1:
+        fail('index.html: the scan box markers or the content security policy meta are missing')
+    return page
 
 
 def fail(message):
@@ -473,6 +554,8 @@ def main():
     for p in pages():
         with open(os.path.join(ROOT, p), encoding='utf-8') as f:
             new, n = PLACES.subn(lambda m: m.group(1) + str(FOUNDING_PLACES_LEFT) + m.group(2), f.read())
+        if p == 'index.html':
+            new = scan_apply(new)
         if n:
             want[p], shown = new, shown + n
     if not shown:
@@ -481,10 +564,14 @@ def main():
         want[os.path.join('ingredients', g['slug'] + '.html')] = guide_page(g)
     want[os.path.join('ingredients', 'index.html')] = index_page(index, guides)
     want['sitemap.xml'] = sitemap(guides)
+    if SCAN_API_ON:
+        want['scan.js'] = SCAN_JS
 
     folder = os.path.join(ROOT, 'ingredients')
     stale = sorted(os.path.join('ingredients', f) for f in (os.listdir(folder) if os.path.isdir(folder) else [])
                    if f.endswith('.html') and os.path.join('ingredients', f) not in want)
+    if not SCAN_API_ON and os.path.exists(os.path.join(ROOT, 'scan.js')):
+        stale.append('scan.js')
     changed = []
     for p, content in sorted(want.items()):
         try:
@@ -502,8 +589,8 @@ def main():
         if changed or stale:
             print('build.py --check: out of date: ' + ', '.join(changed + stale))
             sys.exit(1)
-        print('build.py --check: up to date (%d guides; %d founding places left, shown %d times)' % (
-            len(guides), FOUNDING_PLACES_LEFT, shown))
+        print('build.py --check: up to date (%d guides; %d founding places left, shown %d times; scan box %s)' % (
+            len(guides), FOUNDING_PLACES_LEFT, shown, 'posts to the scan service' if SCAN_API_ON else 'opens the email'))
         return
     os.makedirs(folder, exist_ok=True)
     for p in changed:
