@@ -7,6 +7,7 @@ It is a static site: plain HTML pages and one stylesheet, with no cookies and no
 ## Pages
 
 - `index.html`: the main page
+- `rescue.html`: send us a rejected ad: what to send, what comes back and when
 - `connect.html`: what to do to connect each surface Vera 360 reads, including sharing a Meta ad account view-only
 - `pricing.html`: a skeleton with the guarantees and billing questions and no prices yet (not indexed, not linked)
 - `sample-report.html`: a fictional brand's free first report, as Vera writes one
