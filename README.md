@@ -2,12 +2,13 @@
 
 The website of Merchient, a trade name of Orbline LLC: claims review for US supplement brands running Meta ads. Contact: hello@merchient.com.
 
-It is a static site: plain HTML pages and one stylesheet, with no cookies and no tracking, and no JavaScript unless the scan flag in `build.py` is switched on. One small script, `build.py`, generates some of the pages before they are committed.
+It is a static site: plain HTML pages and one stylesheet, with no cookies and no tracking. The only JavaScript is `rescue.js` on the rescue page, and `scan.js` while the scan flag in `build.py` is switched on. One small script, `build.py`, generates some of the pages before they are committed.
 
 ## Pages
 
 - `index.html`: the main page
-- `rescue.html`: send us a rejected ad: what to send, what comes back and when
+- `rescue.html`, served at /rescue: the free rescue form for a rejected ad or a pulled listing, its limits, and a free account checklist. `rescue.js` asks the rescue service at api.merchient.com for a form token and posts the form there; if the service does not answer, or the browser runs no JavaScript, the form opens an email to akhil@merchient.com with the subject "Rescue" instead
+- `claims-watch.html`, served at /claims-watch: public enforcement and policy items on supplement claims, each with its date, who acted, what it means and the source
 - `connect.html`: what to do to connect each surface Vera 360 reads, including sharing a Meta ad account view-only
 - `pricing.html`: a skeleton with the guarantees and billing questions and no prices yet (not indexed, not linked)
 - `sample-report.html`: a fictional brand's free first report, as Vera writes one

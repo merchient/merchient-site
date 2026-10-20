@@ -106,6 +106,7 @@ HEAD = '''<!doctype html>
       <a href="../#how-it-works">How it works</a>
       <a href="../#pricing">Price</a>
       <a href="../#faq">FAQ</a>
+      <a href="../rescue">Send a rejected ad</a>
       <a class="btn btn-small" href="''' + SCAN + '''">Get your free scan</a>
     </nav>
   </div>
@@ -234,6 +235,7 @@ FINAL = '''
   <div class="wrap footer-inner">
     <p>Merchient is a trade name of Orbline LLC, 30 N Gould St, STE R, Sheridan, WY 82801, USA.</p>
     <p><a href="mailto:hello@merchient.com">hello@merchient.com</a></p>
+    <p class="footer-more"><a href="../rescue">Send a rejected ad</a> · <a href="../claims-watch">Claims Watch</a></p>
     <nav class="footer-links" aria-label="Legal">
       <a href="../privacy.html">Privacy</a>
       <a href="../terms.html">Terms</a>

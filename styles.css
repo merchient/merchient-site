@@ -421,6 +421,30 @@ p, ul, ol, dl, table, figure { margin: 0 0 1em; }
 
 /* Motion, only for people who have not asked for less. Each animation runs once, and nothing starts hidden. */
 
+/* The rescue form, its checklist, Claims Watch, and the footer's page links */
+.rescue-form { display: grid; gap: 10px; max-width: 46em; margin: 26px 0 0; }
+.rescue-form label { margin-top: 6px; font: 700 var(--t-xs)/1.3 var(--narrow); letter-spacing: .06em; text-transform: uppercase; }
+.rescue-form input[type="text"], .rescue-form input[type="email"], .rescue-form select, .rescue-form textarea { width: 100%; min-height: 50px; padding: 10px 14px; background: var(--paper); color: var(--ink); border: 2px solid var(--ink); border-radius: 0; font: 700 1rem/1.4 var(--sans); }
+.rescue-form textarea { font-weight: 400; resize: vertical; }
+.rescue-form input[type="file"] { font: 400 var(--t-s)/1.4 var(--sans); }
+.rescue-form input::placeholder { color: var(--muted); opacity: 1; }
+.rescue-form .check { display: flex; gap: 10px; align-items: flex-start; font: 400 var(--t-m)/1.4 var(--sans); letter-spacing: 0; text-transform: none; }
+.rescue-form .check input { flex: none; width: 20px; height: 20px; margin: 2px 0 0; accent-color: var(--accent); }
+.rescue-form .btn { width: 100%; margin-top: 6px; cursor: pointer; }
+.rescue-form .btn:disabled { opacity: .6; cursor: progress; }
+.form-note { margin: 0; color: var(--muted); font-size: var(--t-s); }
+.form-msg { margin: 0; font-weight: 700; }
+.form-msg:empty { display: none; }
+.hp { position: absolute; left: -10000px; width: 1px; height: 1px; overflow: hidden; }
+.legal .checklist li + li { margin-top: 12px; }
+.watch { display: grid; gap: 16px; margin: 26px 0 0; padding: 0; list-style: none; }
+.legal .watch li + li { margin-top: 0; }
+.watch-head { margin: 0 0 6px; font: 700 var(--t-xs)/1.3 var(--narrow); letter-spacing: .06em; text-transform: uppercase; }
+.legal .watch h2 { margin: 0 0 8px; padding: 0; border: 0; font-size: var(--t-l); line-height: 1.25; letter-spacing: -.01em; }
+.watch p { margin: 0 0 6px; }
+.watch .watch-src { margin: 8px 0 0; font-size: var(--t-s); }
+.footer-more { margin-top: 10px; }
+
 @media (prefers-reduced-motion: no-preference) {
   .bar-xl { transform-origin: left; animation: fill .7s cubic-bezier(.3, .7, .2, 1) .2s both; }
   .rw-label { animation: stamp .45s cubic-bezier(.2, .9, .3, 1.4) .9s both; }
