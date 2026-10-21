@@ -64,7 +64,7 @@
       <li><strong>Your public pages and reviews.</strong></li>
       <li><strong>The emails you send us,</strong> including photos of your label and creators’ scripts and captions.</li>
       <li><strong>A read-only Klaviyo API key,</strong> if you connect email and SMS, and the emails and texts it lets Vera read. This surface is coming soon.</li>
-      <li><strong>Read-only access to your Shopify store,</strong> through an install you approve in Shopify: products, pages, inventory and discounts.</li>
+      <li><strong>Read-only access to your Shopify store,</strong> through an install you approve in Shopify: products, pages, inventory and discounts, and, only if you turn on fixes, permission to change product and page text when you tap Apply (see <a href="#shopify">Your Shopify store</a>).</li>
       <li><strong>A review-app key,</strong> if you give us one, and the reviews it lets Vera read. Connecting a review app is coming soon.</li>
     </ul>
     <h3>From prospects</h3>
@@ -85,6 +85,45 @@
       <li><strong>Up to 3 screenshots.</strong></li>
     </ul>
 
+    <h2 id="shopify">Your Shopify store</h2>
+    <h3>What we read</h3>
+    <p>When you install Merchient in Shopify, you approve read-only access to four things in your store:</p>
+    <ul>
+      <li><strong>Products:</strong> each product’s title, description, SEO description and details such as its label text, and your collections.</li>
+      <li><strong>Pages:</strong> your store’s pages.</li>
+      <li><strong>Inventory:</strong> which products are stocked.</li>
+      <li><strong>Discounts:</strong> the discount codes your store runs, so we can check the codes your pages and emails promise.</li>
+    </ul>
+    <p>We do not ask Shopify for your customers or your orders, and we never receive them. We never ask for your password.</p>
+    <h3>“Check with Vera”</h3>
+    <p>When someone on your team checks a product with “Check with Vera” in the product editor, we read that product’s title, description and SEO description, and keep the check: the text as checked, the lines found and the rewrites. Shopify tells us which staff account asked, so the check can be shown to your store only.</p>
+    <h3>Fixes, only if you turn them on</h3>
+    <p>Fixes are off until you turn them on. When you do, Shopify asks you to approve two more permissions: to change product and page text. Vera uses them only when someone taps Apply on one fix. Each tap changes one field, only if the text on your store is still the text shown, and Undo puts it back.</p>
+    <p>For each fix we keep the old and the new text, and a record of each tap: when, who tapped (a staff account ID or the link’s label), and whether it changed anything. The record holds no page text.</p>
+    <p>Turning fixes off gives the two permissions back to Shopify. Reading continues until you uninstall.</p>
+    <h3>When you uninstall</h3>
+    <ul>
+      <li><strong>At once:</strong> Shopify tells us the app was uninstalled, and we stop reading your store.</li>
+      <li><strong>After 48 hours:</strong> Shopify sends us a request to delete your store’s data. We then delete your store’s access tokens, your checks, your fix records, and our record of the install and of any billing through Shopify.</li>
+      <li>If another Merchient connection is still installed on the same store, only the uninstalled app’s access is deleted, and the rest stays until that one is removed too.</li>
+    </ul>
+    <p>If you connected your store through a link from Merchient rather than from the Shopify App Store, uninstalling does not send us that request. Email <a href="mailto:hello@merchient.com">hello@merchient.com</a> with your brand name, and your data is deleted within 30 days.</p>
+    <h3>Shopify’s privacy requests</h3>
+    <p>Shopify sends every app three privacy requests, and we answer each one:</p>
+    <ul>
+      <li><strong>A customer asks for their data:</strong> we hold no customer data from Shopify. We write that down, and a person sends it to you, the store owner, within 30 days.</li>
+      <li><strong>A customer asks to be deleted:</strong> we hold nothing about them from Shopify, so there is nothing to delete. We record that the request came.</li>
+      <li><strong>Your store’s data is to be deleted</strong> (48 hours after you uninstall): as above.</li>
+    </ul>
+    <p>We act on a request only when it is signed by Shopify for one of our apps, and once per request. Our record of each request holds no customer’s name, email or phone, and no store address.</p>
+    <h3>How long we keep it</h3>
+    <ul>
+      <li><strong>While the app is installed:</strong> what we read, your checks and your fix records, so you can see what changed and undo it.</li>
+      <li><strong>After you uninstall:</strong> deleted as above.</li>
+      <li><strong>Kept after deletion:</strong> a count of what we did for your brand (for example, the number of checks in a month), for billing. It holds no text from your store. Our record of each privacy request is kept too, as above.</li>
+    </ul>
+    <p>Your data is kept encrypted, in the US. We never sell it.</p>
+
     <h2 id="use">What we use it for</h2>
     <p>We use this data only for these things:</p>
     <ul>
@@ -99,7 +138,7 @@
     <h2 id="providers">Who processes it for us</h2>
     <p>These providers process data for us. Each handles it under its own terms and privacy policy, linked below. We make no promise about whether they use data for training, or how long they keep it, beyond what their own terms say.</p>
     <ul class="providers">
-      <li><strong>Anthropic</strong> provides Claude, the AI model Vera runs on. The content Vera checks is sent to Claude so she can read it and draft reports. <a href="https://www.anthropic.com/legal/privacy">Anthropic privacy policy</a></li>
+      <li><strong>Anthropic</strong> provides Claude, the AI model Vera runs on. The content Vera checks is sent to Claude so she can read it and draft reports. Label files you upload are read by an AI model provider (Anthropic) to record your Supplement Facts, and are not kept longer than the record needs. <a href="https://www.anthropic.com/legal/privacy">Anthropic privacy policy</a></li>
       <li><strong>Google Cloud</strong> hosts the server Vera runs on, in the United States, where what you send us is kept encrypted. <a href="https://cloud.google.com/terms/cloud-privacy-notice">Google Cloud Privacy Notice</a></li>
       <li><strong>Google Workspace</strong> runs our email, including hello@merchient.com. <a href="https://cloud.google.com/terms/cloud-privacy-notice">Google Cloud Privacy Notice (it covers Google Workspace)</a></li>
       <li><strong>Stripe</strong> takes payments and handles billing. <a href="https://stripe.com/privacy">Stripe privacy policy</a></li>
@@ -119,10 +158,10 @@
     <p>You can ask us to delete your data sooner at any time.</p>
 
     <h2 id="copy">Getting a copy, or deletion</h2>
-    <p>To ask for a copy of your data, or for its deletion, email <a href="mailto:hello@merchient.com">hello@merchient.com</a> with your brand name. We send the copy, or delete the data, within 30 days. To have a rescue deleted at once, email <a href="mailto:akhil@merchient.com?subject=Delete%20my%20rescue">akhil@merchient.com</a> with the subject “Delete my rescue”. Revoking a Klaviyo key, a review-app key or the Shopify install in that service stops us reading from it; it does not delete what we already hold. The <a href="data-deletion.html">data deletion page</a> also explains how to remove Merchient’s access in Meta.</p>
+    <p>To ask for a copy of your data, or for its deletion, email <a href="mailto:hello@merchient.com">hello@merchient.com</a> with your brand name. We send the copy, or delete the data, within 30 days. To have a rescue deleted at once, email <a href="mailto:akhil@merchient.com?subject=Delete%20my%20rescue">akhil@merchient.com</a> with the subject “Delete my rescue”. Revoking a Klaviyo key, a review-app key or the Shopify install in that service stops us reading from it; it does not delete what we already hold, except that uninstalling from Shopify starts the deletion described in <a href="#shopify">Your Shopify store</a>. The <a href="data-deletion.html">data deletion page</a> also explains how to remove Merchient’s access in Meta.</p>
 
     <h2 id="changes">Changes to this policy</h2>
-    <p>If we change this policy, we will post the new version on this page with a new date. On 16 October 2026 we added how we use prospects’ public pages and business email addresses for outreach, and what we receive on each Vera 360 surface, where it is kept and who processes it. On 21 October 2026 we added the rescue form: what it collects, what we use it for, how long we keep it and how to have it deleted.</p>
+    <p>If we change this policy, we will post the new version on this page with a new date. On 16 October 2026 we added how we use prospects’ public pages and business email addresses for outreach, and what we receive on each Vera 360 surface, where it is kept and who processes it. On 21 October 2026 we added the rescue form: what it collects, what we use it for, how long we keep it and how to have it deleted. Later that day we added your Shopify store: what we read, “Check with Vera”, fixes only if you turn them on, what happens when you uninstall, Shopify’s privacy requests and how long we keep it; and that label files are read by Anthropic.</p>
 
     <h2 id="contact">Contact</h2>
     <p><a href="mailto:hello@merchient.com">hello@merchient.com</a><br>Orbline LLC, 30 N Gould St, STE R, Sheridan, WY 82801, USA</p>
