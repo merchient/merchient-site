@@ -26,14 +26,15 @@ in the library, copy the JSON into data/ again and run the build.
 FOUNDING_PLACES_LEFT = 5
 
 # The scan box in the home page's hero. False: the box opens the "Free scan request"
-# email, and the site runs no JavaScript. True: the box posts the website and work
-# email as JSON to SCAN_API_URL with scan.js, and falls back to that email if the
-# service does not answer. Switching it on also loosens the home page's content
-# security policy (script-src 'self', connect-src for the service) and means the
-# privacy and security pages must say where the scan data goes. Then run build.py.
-# (Off, Chrome logs one console notice on https: a form that targets "mailto:" is
-# not a secure endpoint. It changes nothing for the visitor.)
-SCAN_API_ON = False
+# email, and the home page runs no JavaScript. True: the box posts the website and work
+# email as JSON to SCAN_API_URL with scan.js, shows the service's answer, and falls
+# back to that email if the service does not answer (and without JavaScript). Switching
+# it on also loosens the home page's content security policy (script-src 'self',
+# connect-src for the service) and means the privacy and security pages must say where
+# the scan data goes. Then run build.py.
+# (Chrome logs one console notice on https: a form that targets "mailto:" is not a
+# secure endpoint. It changes nothing for the visitor.)
+SCAN_API_ON = True       # site 30 (27 Oct 2026): the app's POST /api/scan is live (app paste 21)
 SCAN_API_URL = 'https://api.merchient.com/api/scan'
 
 import html
@@ -262,46 +263,64 @@ SCAN_OFF = '''<!--scan-->
           </form>
           <!--/scan-->'''
 SCAN_ON = '''<!--scan-->
-          <form class="scan" method="get" data-api="%s">
+          <form class="scan" action="mailto:hello@merchient.com" method="get" data-api="%s">
+            <input type="hidden" name="subject" value="Free&nbsp;scan&nbsp;request">
             <label for="scan-website">Your website</label>
-            <input id="scan-website" name="website" type="text" inputmode="url" autocomplete="url" placeholder="yourbrand.com" required>
+            <input id="scan-website" name="body" type="text" inputmode="url" autocomplete="url" placeholder="yourbrand.com" required>
             <label for="scan-email">Your work email</label>
-            <input id="scan-email" name="email" type="email" autocomplete="email" placeholder="you@yourbrand.com" required>
+            <input id="scan-email" name="email" type="email" autocomplete="email" required>
             <button class="btn" type="submit">Get your free scan</button>
-            <p class="scan-note">We send your website and work email to Merchient\u2019s scan service to start your scan. If it does not answer, your email app opens with the request ready.</p>
+            <p class="scan-note">We send your website and work email to Merchient\u2019s scan service (api.merchient.com), which emails you a link to confirm. If it does not answer, your email app opens with the request ready.</p>
             <p class="scan-msg" role="status"></p>
           </form>
           <script src="scan.js"></script>
           <!--/scan-->'''
-SCAN_JS = '''// Posts the home page's scan form to Merchient's scan service. If the service does not answer, opens the "Free scan request" email instead.
+SCAN_JS = '''// The scan box on the home page. Without this script the form opens the "Free scan request" email. With it, the
+// box posts the website and work email as JSON to Merchient's scan service and shows the service's answer, word for
+// word. When the service does not answer, the email opens instead, with the answers filled in.
 (function () {
   var form = document.querySelector('form.scan[data-api]');
-  if (!form) { return; }
+  if (!form || !window.fetch || !window.AbortController) { return; }
   var msg = form.querySelector('.scan-msg');
-  var button = form.querySelector('button');
+  var button = form.querySelector('button[type="submit"]');
+  var website = document.getElementById('scan-website');
+  var email = document.getElementById('scan-email');
+
+  function mail(note) {
+    msg.textContent = note;
+    window.location.href = 'mailto:hello@merchient.com?subject=Free%20scan%20request&body=' +
+      encodeURIComponent('Website: ' + website.value.trim() + '\\r\\nWork email: ' + email.value.trim() + '\\r\\n');
+  }
+
   form.addEventListener('submit', function (event) {
     event.preventDefault();
-    var website = form.elements.website.value.trim();
-    var email = form.elements.email.value.trim();
-    var mailto = 'mailto:hello@merchient.com?subject=Free%20scan%20request&body=' + encodeURIComponent('Website: ' + website + '\\r\\nWork email: ' + email + '\\r\\n');
     var controller = new AbortController();
     var timer = setTimeout(function () { controller.abort(); }, 10000);
     button.disabled = true;
     msg.textContent = 'Sending\u2026';
     fetch(form.getAttribute('data-api'), {
       method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ website: website, email: email }),
+      headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+      body: JSON.stringify({ website: website.value.trim(), email: email.value.trim() }),
+      credentials: 'omit',
       signal: controller.signal
-    }).then(function (response) {
+    }).then(function (r) {
       clearTimeout(timer);
-      if (!response.ok) { throw new Error('status ' + response.status); }
-      msg.textContent = 'Thank you. Vera is reading your site, and your scan will be emailed to ' + email + '.';
+      return r.json().catch(function () { return {}; }).then(function (b) { return { status: r.status, ok: r.ok, body: b }; });
+    }).then(function (x) {
+      button.disabled = false;
+      var error = x.body.error || {};
+      if (x.ok) {
+        msg.textContent = x.body.message || 'Check your inbox: open the link we sent to start the scan.';
+      } else if (x.status < 500 && error.message) {
+        msg.textContent = error.message;
+      } else {
+        throw new Error('status ' + x.status);
+      }
     }).catch(function () {
       clearTimeout(timer);
       button.disabled = false;
-      msg.textContent = 'Opening your email app instead.';
-      window.location.href = mailto;
+      mail('The scan service did not answer, so your email app is opening instead.');
     });
   });
 }());
@@ -310,7 +329,7 @@ SCAN_JS = '''// Posts the home page's scan form to Merchient's scan service. If 
 
 def scan_apply(page):
     """Writes the scan box, and the home page's content security policy, for SCAN_API_ON."""
-    csp = CSP_BASE + ("script-src 'self'; connect-src %s; form-action 'none'" % SCAN_API_URL.rsplit('/', 2)[0]
+    csp = CSP_BASE + ("script-src 'self'; connect-src %s; form-action mailto:" % SCAN_API_URL.rsplit('/', 2)[0]
                       if SCAN_API_ON else 'form-action mailto:')
     box = SCAN_ON % html.escape(SCAN_API_URL, quote=True) if SCAN_API_ON else SCAN_OFF
     page, n = SCAN_BLOCK.subn(lambda m: box, page)

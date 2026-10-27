@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="facebook-domain-verification" content="uygup61t0d1zj08zdpt8xgb076v40h" />
-<meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'self'; font-src 'self'; img-src 'self'; base-uri 'none'; form-action mailto:">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'self'; font-src 'self'; img-src 'self'; base-uri 'none'; script-src 'self'; connect-src https://api.merchient.com; form-action mailto:">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Merchient · Claims review for supplement ads on Meta</title>
 <meta name="description" content="Vera 360, Merchient’s AI employee, checks a US supplement brand’s claims against Meta’s ad policies and FTC and FDA guidance before launch, drafts a safer rewrite and shows the stronger claims the brand is allowed to make. Send us a rejected ad and we fix it free. Akhil reviews the findings before every first report.">
@@ -63,17 +63,21 @@
         <p class="cta-line">Free for up to 3 rejected ads in your first month, each fixed the same day, on US business days.</p>
       </div>
 
-      <aside class="panel scan-panel" aria-labelledby="scan-title">
+      <aside class="panel scan-panel" id="scan" aria-labelledby="scan-title">
         <p class="panel-title" id="scan-title">Free scan</p>
         <div class="bar-xl" aria-hidden="true"></div>
         <!--scan-->
-          <form class="scan" action="mailto:hello@merchient.com" method="get">
+          <form class="scan" action="mailto:hello@merchient.com" method="get" data-api="https://api.merchient.com/api/scan">
             <input type="hidden" name="subject" value="Free&nbsp;scan&nbsp;request">
             <label for="scan-website">Your website</label>
             <input id="scan-website" name="body" type="text" inputmode="url" autocomplete="url" placeholder="yourbrand.com" required>
+            <label for="scan-email">Your work email</label>
+            <input id="scan-email" name="email" type="email" autocomplete="email" required>
             <button class="btn" type="submit">Get your free scan</button>
-            <p class="scan-note">Your email app opens with the request ready to send.</p>
+            <p class="scan-note">We send your website and work email to Merchient’s scan service (api.merchient.com), which emails you a link to confirm. If it does not answer, your email app opens with the request ready.</p>
+            <p class="scan-msg" role="status"></p>
           </form>
+          <script src="scan.js"></script>
           <!--/scan-->
         <p class="cta-line">Vera reads your site and emails you the riskiest line, why, a safer rewrite and how many more like it she found. Reply, and you get the free first report.</p>
       </aside>

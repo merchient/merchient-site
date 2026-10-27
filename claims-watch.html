@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'self'; font-src 'self'; img-src 'self'; base-uri 'none'; form-action mailto:">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'self'; font-src 'self'; img-src 'self'; script-src 'self'; connect-src https://api.merchient.com; base-uri 'none'; form-action mailto:">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Claims Watch: supplement claims in the public record · Merchient</title>
 <meta name="description" content="Public FDA, FTC, NAD, Meta and Amazon actions on supplement claims: the date, who acted, what it means for an ad, a listing or a page, and the source.">
@@ -56,14 +56,15 @@
     <aside class="panel scan-panel" id="signup" aria-labelledby="signup-title">
       <p class="panel-title" id="signup-title">Claims Watch by email</p>
       <div class="bar-xl" aria-hidden="true"></div>
-      <form class="scan" action="mailto:hello@merchient.com" method="get">
+      <form class="scan" id="watch-form" action="mailto:hello@merchient.com" method="get" data-api="https://api.merchient.com/api/watch">
         <input type="hidden" name="subject" value="Claims&nbsp;Watch">
         <label for="cw-email">Your email</label>
         <input id="cw-email" name="body" type="email" autocomplete="email" required>
         <button class="btn" type="submit">Send me Claims Watch</button>
-        <p class="scan-note">Your email app opens with the request ready to send. Nothing is sent until you press send.</p>
+        <p class="scan-note">We send your address to Merchient’s list service (api.merchient.com), which emails you one link to confirm. If it does not answer, your email app opens with the request ready.</p>
+        <p class="scan-msg" role="status"></p>
       </form>
-      <p class="cta-line">What you get: one email when regulators or platforms act on supplement claims, about once a month, with the source for each item. We reply once to confirm; you are on the list only after you answer that reply, so an address typed by someone else is never added. Reply “stop” to any issue to leave.</p>
+      <p class="cta-line">What you get: one email when regulators or platforms act on supplement claims, about once a month, with the source for each item. We send one confirmation email; you are on the list only after you open its link, which works once, for 72 hours, so an address typed by someone else is never added. Every issue has a one-click link to leave, and “stop” in a reply works too.</p>
       <p class="cta-line">Privacy: we use your address only to send Claims Watch, never sell it, and remove it when you leave. The <a href="privacy.html#collect">privacy policy</a> has the rest.</p>
     </aside>
 
@@ -166,5 +167,6 @@
     </nav>
   </div>
 </footer>
+<script src="watch.js"></script>
 </body>
 </html>
