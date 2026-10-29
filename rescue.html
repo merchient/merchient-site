@@ -4,21 +4,21 @@
 <meta charset="utf-8">
 <meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'self'; font-src 'self'; img-src 'self'; script-src 'self'; connect-src https://api.merchient.com; base-uri 'none'; form-action mailto:">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Send a rejected ad · Free rescue · Merchient</title>
-<meta name="description" content="Meta rejected your ad? Amazon pulled a listing? Send it. We’ll tell you the real reason and send back a fixed version and an appeal draft the same day. Free for up to 3 ads in your first month.">
+<title>Send a rejected ad, a restricted account or a pulled listing · Free rescue · Merchient</title>
+<meta name="description" content="Has Meta rejected one of your ads or restricted your ad account lately, or has Amazon pulled a listing? Send it: the real reason and the corrected wording, the same day, free.">
 <link rel="canonical" href="https://merchient.com/rescue">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Merchient">
-<meta property="og:title" content="Send a rejected ad · Free rescue · Merchient">
-<meta property="og:description" content="Meta rejected your ad? Amazon pulled a listing? Send it. We’ll tell you the real reason and send back a fixed version and an appeal draft the same day. Free for up to 3 ads in your first month.">
+<meta property="og:title" content="Send a rejected ad, a restricted account or a pulled listing · Free rescue · Merchient">
+<meta property="og:description" content="Has Meta rejected one of your ads or restricted your ad account lately, or has Amazon pulled a listing? Send it: the real reason and the corrected wording, the same day, free.">
 <meta property="og:url" content="https://merchient.com/rescue">
 <meta property="og:image" content="https://merchient.com/og-image.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="Merchient. Keep the hook. Lose the claim.">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Send a rejected ad · Free rescue · Merchient">
-<meta name="twitter:description" content="Meta rejected your ad? Amazon pulled a listing? Send it. We’ll tell you the real reason and send back a fixed version and an appeal draft the same day. Free for up to 3 ads in your first month.">
+<meta name="twitter:title" content="Send a rejected ad, a restricted account or a pulled listing · Free rescue · Merchient">
+<meta name="twitter:description" content="Has Meta rejected one of your ads or restricted your ad account lately, or has Amazon pulled a listing? Send it: the real reason and the corrected wording, the same day, free.">
 <meta name="twitter:image" content="https://merchient.com/og-image.png">
 <meta name="twitter:image:alt" content="Merchient. Keep the hook. Lose the claim.">
 <meta name="color-scheme" content="light dark">
@@ -38,7 +38,8 @@
     <a class="brand" href="./">Merchient</a>
     <nav class="site-nav" aria-label="Main">
       <a href="./#how-it-works">How it works</a>
-      <a href="./#pricing">Price</a>
+      <a href="pricing">Price</a>
+      <a href="agencies">Agencies</a>
       <a href="./#faq">FAQ</a>
       <a href="rescue" aria-current="page">Send a rejected ad</a>
       <a class="btn btn-small" href="mailto:hello@merchient.com?subject=Free%20scan%20request&amp;body=Brand%20name%3A%20%0D%0AWebsite%3A%20%0D%0A">Get your free scan</a>
@@ -49,69 +50,70 @@
 <main id="main" class="legal">
   <div class="wrap narrow">
     <p class="kicker">Free rescue</p>
-    <h1>Meta rejected your ad? Amazon pulled a listing? Send it.</h1>
-    <p class="section-lede">We’ll tell you the real reason and send back a fixed version and an appeal draft the same day. Free for up to 3 ads in your first month.</p>
+    <h1>Has Meta rejected one of your ads or restricted your ad account lately, or has Amazon pulled a listing?</h1>
+    <p class="section-lede">Send it to me: the real reason and the corrected wording, the same day, free.</p>
 
     <form class="panel rescue-form" id="rescue-form" action="mailto:akhil@merchient.com?subject=Rescue" method="post" enctype="text/plain" data-api="https://api.merchient.com">
       <p class="panel-title">Send it</p>
       <div class="bar-xl" aria-hidden="true"></div>
       <div class="hp" aria-hidden="true"><label for="r-hp">Leave this empty</label><input id="r-hp" name="company_url" tabindex="-1" autocomplete="off" disabled></div>
-      <label for="r-name">Your first name</label>
-      <input id="r-name" name="name" type="text" autocomplete="given-name" maxlength="100">
+      <fieldset class="kinds" id="what-happened">
+        <legend>What happened?</legend>
+        <label class="check"><input type="radio" id="k-ad" name="kind" value="ad_rejected" data-platform="meta" required> An ad was rejected</label>
+        <label class="check"><input type="radio" id="k-account" name="kind" value="ad_account_restricted" data-platform="meta"> My ad account was restricted</label>
+        <label class="check"><input type="radio" id="k-listing" name="kind" value="listing_pulled" data-platform="amazon"> An Amazon listing was pulled</label>
+        <label class="check"><input type="radio" id="k-seller" name="kind" value="amazon_account_notice" data-platform="amazon"> My Amazon account got a notice</label>
+      </fieldset>
+      <p class="form-note">Don’t delete the ad, set the listing to out of stock or answer the notice yet. Each of those can close a way back.</p>
       <label for="r-email">Your email</label>
       <input id="r-email" name="email" type="email" autocomplete="email" maxlength="254" required>
-      <label for="r-brand">Your brand</label>
-      <input id="r-brand" name="brand" type="text" autocomplete="organization" maxlength="120" required>
-      <label for="r-store">Your store’s address</label>
+      <label for="r-store">Your brand’s website</label>
       <input id="r-store" name="store_url" type="text" inputmode="url" autocomplete="url" maxlength="300" placeholder="yourbrand.com" required>
-      <label for="r-platform">Where it was rejected</label>
-      <select id="r-platform" name="platform" required>
-        <option value="">Choose one</option>
-        <option value="meta">Meta (Facebook, Instagram)</option>
-        <option value="amazon">Amazon</option>
-        <option value="other">Somewhere else</option>
-      </select>
-      <label for="r-text">The ad’s text, or the listing’s title and bullets</label>
+      <label for="r-text">The ad, the listing or the account: paste the text, attach the image or video, or send the link (for a listing, the ASIN)</label>
       <textarea id="r-text" name="text" rows="7" maxlength="6000"></textarea>
-      <label for="r-notice">The platform’s notice, as it was sent to you</label>
-      <textarea id="r-notice" name="notice" rows="5" maxlength="4000"></textarea>
       <label for="r-files">Screenshots: up to 3, PNG, JPG or PDF, 5 MB or less each</label>
       <input id="r-files" name="screenshots" type="file" accept=".png,.jpg,.jpeg,.pdf,image/png,image/jpeg,application/pdf" multiple>
-      <label class="check"><input type="checkbox" name="consent" value="yes"> You may use this rejection, anonymised, to improve Vera.</label>
+      <label for="r-notice">The notice: paste or attach what Meta or Amazon told you, word for word if you can</label>
+      <textarea id="r-notice" name="notice" rows="5" maxlength="4000"></textarea>
+      <label for="r-landing">The page the ad sends people to, if there is one</label>
+      <input id="r-landing" name="landing_url" type="text" inputmode="url" autocomplete="url" maxlength="300">
       <button class="btn" type="submit">Send it</button>
+      <p class="form-note">What you send is used to write your reply and the corrected wording and, only if you agree on the form, anonymised to improve Vera.</p>
+      <label class="check"><input type="checkbox" name="consent" value="yes"> You may use this case, with my brand’s name and any detail that could identify it removed, to improve the checks and in public examples of what gets rejected.</label>
       <p class="form-note" id="rescue-how">Sending opens your email app, addressed to akhil@merchient.com with the subject “Rescue” and your answers filled in. Attach your screenshots there before you send.</p>
       <p class="form-msg" role="status"></p>
     </form>
-    <p class="more-link">Or email the ad, the notice and your screenshots to <a href="mailto:akhil@merchient.com?subject=Rescue">akhil@merchient.com</a> with the subject “Rescue”.</p>
+    <p class="more-link">Or email <a href="mailto:akhil@merchient.com?subject=Rescue">akhil@merchient.com</a> with the subject “Rescue” and the same things attached.</p>
+    <p class="count" id="rescue-count" hidden>Rescues answered: <span data-count="answered"></span> · Approved after the fix: <span data-count="approved"></span></p>
 
-    <!-- site 29: words improved in place; the content lane's copy (content 17, part 4) replaces this section when it exists -->
-    <h2 id="next">What happens after you send it.</h2>
+    <h2 id="cost">What it costs, by what happened.</h2>
+    <ul class="checklist">
+      <li class="cost-line c-ad"><b>An ad was rejected:</b> Your first ad rescue is free: the real reason, a fixed version and an appeal draft. After that, $250 a rescue, and you pay only if the fixed wording is approved.</li>
+      <li class="cost-line c-listing"><b>An Amazon listing was pulled:</b> The reason and the corrected listing are free. The Plan of Action, written and followed until the listing is back: $500, and you pay only if it’s reinstated.</li>
+      <li class="cost-line c-account"><b>My ad account was restricted, or my Amazon account got a notice:</b> The reason and the fixes are free. The full account review and the review request, followed until the account is back: $1,000, and you pay only if it comes back.</li>
+    </ul>
+    <p>What that means in practice:</p>
+    <ul class="checklist">
+      <li>Nothing is asked for when you send it: no card, no call.</li>
+      <li>A paid step is invoiced only once Meta or Amazon has approved the fixed wording, reinstated the listing or restored the account.</li>
+    </ul>
+
+    <h2 id="not-fixed">What Vera doesn’t fix.</h2>
+    <p>Payment or identity problems, hacked accounts, counterfeit or intellectual-property complaints, and anything that isn’t about what the ad or listing says. No charge for those. When the cause is one of these, we say so the same day and point you to the page Meta or Amazon has for it.</p>
+    <p class="more-link"><a class="sample-link" href="#checklist">Not about claims? The free account checklist</a></p>
+
+    <h2 id="next">What happens next.</h2>
     <ol class="checklist">
-      <li><b>Your form goes to Merchient’s rescue intake</b> at api.merchient.com, screenshots included. Nothing is posted to Meta or Amazon, and nothing is sent to anyone else. If that service does not answer, your email app opens with your answers filled in, and you send the email yourself.</li>
-      <li><b>Akhil reads it the same day.</b> Vera checks the words against the written rules (the FDA’s, the FTC’s, Meta’s and Amazon’s) and the notice against what each platform actually acts on. A person reads every rescue before anything goes back.</li>
-      <li><b>You get one email back,</b> the same day on US business days: the real reason in plain words, with the rule quoted; a fixed version that keeps the hook; and a draft of your appeal in the platform’s own terms.</li>
-      <li><b>You decide, and you submit.</b> We never act in your accounts. You paste the fixed ad or listing and send the appeal yourself; Meta or Amazon makes the final call, and we make no promise about it.</li>
-      <li><b>If the notice isn’t about claims,</b> we say so in that email and point you to the <a href="#checklist">free account checklist</a> below. Payments, tools, account security and Meta’s limits on tracking data are outside what a rescue can fix.</li>
+      <li>You get a note straight away that it arrived.</li>
+      <li>The same day, you get the real reason, quoting the rule it broke, and the corrected wording that keeps your hook. For an ad, an appeal draft too.</li>
+      <li>You resubmit, appeal or send the Plan of Action or review request yourself. You stay in charge of your accounts: nobody else touches your ads or listings.</li>
+      <li>Tell us the outcome with one reply: approved, or still rejected. If it is still rejected, send the new notice and we look again the same day.</li>
     </ol>
+    <p>If it’s approved, we’ll ask for one sentence we may quote, if you’re happy to. If your rescue was free, the quote says so next to it.</p>
 
-    <h2 id="limits">What comes back, and the limits.</h2>
-    <div class="panel rescue">
-      <p class="panel-title">Free rescue</p>
-      <div class="bar-xl" aria-hidden="true"></div>
-      <table class="terms-table">
-        <tbody>
-          <tr><th scope="row">What comes back</th><td>The real reason it was rejected, in plain words; a fixed version that keeps the hook; and a draft of your appeal.</td></tr>
-          <tr><th scope="row">When</th><td>The same day, on US business days.</td></tr>
-          <tr><th scope="row">Cost</th><td>Free for up to 3 ads in your first month. You do not need to join.</td></tr>
-          <tr><th scope="row">What we cover</th><td>Rejections and restrictions caused by the claims in your words. A rejection that comes from payments, tools, account security or Meta’s limits on tracking data is outside what we fix; if that is what your notice says, we tell you, and the <a href="#checklist">free account checklist</a> is the place to start.</td></tr>
-          <tr><th scope="row">No promise of approval</th><td>Meta or Amazon decides whether the fixed version or the appeal goes through, and either can reject, restrict or ban for reasons beyond claims. We make no promise that they won’t.</td></tr>
-          <tr><th scope="row">After that</th><td>We never act in your accounts. You submit the fixed ad and the appeal yourself.</td></tr>
-          <tr><th scope="row">Never send</th><td>Passwords or logins; we never need them.</td></tr>
-          <tr><th scope="row">Private</th><td>What you send is used to fix your ad and write your reply and, only if you tick the box, anonymised to improve Vera. We do not sell it, and we do not show your ad or name your brand anywhere without your permission. It is kept for 180 days after the rescue closes, and never more than 365 days after it arrived. To have it deleted at once, email <a href="mailto:akhil@merchient.com?subject=Delete%20my%20rescue">akhil@merchient.com</a> with the subject “Delete my rescue”. Our <a href="privacy.html#rescue">privacy policy</a> lists the providers that process it.</td></tr>
-        </tbody>
-      </table>
-    </div>
-    <p class="warnings"><b>Warnings:</b> Risk review, not legal advice.</p>
+    <h2 id="private">Private.</h2>
+    <p>Never send passwords or logins; we never need them. We do not sell what you send, and we do not show your ad or name your brand anywhere without your permission. It is kept for 180 days after the rescue closes, and never more than 365 days after it arrived. To have it deleted at once, email <a href="mailto:akhil@merchient.com?subject=Delete%20my%20rescue">akhil@merchient.com</a> with the subject “Delete my rescue”. Our <a href="privacy.html#rescue">privacy policy</a> lists the providers that process it.</p>
+    <p class="warnings"><b>Small print:</b> Risk review, not a lawyer’s opinion. No promise that Meta or Amazon will approve an ad, reinstate a listing or restore an account: they decide, and they act for reasons beyond claims.</p>
 
     <h2 id="checklist">Not about claims? The free account checklist.</h2>
     <p>Meta stops ads for reasons that have nothing to do with the words. Check these first. Each line quotes Meta’s own page, as Merchient’s library read it on 19 October 2026; Meta changes its pages often, so follow the link.</p>
@@ -136,7 +138,7 @@
   <div class="wrap footer-inner">
     <p>Merchient is a trade name of Orbline LLC, 30 N Gould St, STE R, Sheridan, WY 82801, USA.</p>
     <p><a href="mailto:hello@merchient.com">hello@merchient.com</a></p>
-    <p class="footer-more"><a href="rescue">Send a rejected ad</a> · <a href="claims-watch">Claims Watch</a></p>
+    <p class="footer-more"><a href="rescue">Send a rejected ad</a> · <a href="claims-watch">Claims Watch</a> · <a href="pricing">Price</a> · <a href="agencies">Agencies</a></p>
     <nav class="footer-links" aria-label="Legal">
       <a href="privacy.html">Privacy</a>
       <a href="terms.html">Terms</a>

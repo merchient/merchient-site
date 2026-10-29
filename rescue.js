@@ -1,3 +1,20 @@
+// The live count on the home and rescue pages: it stays hidden until Merchient's rescue service answers with its
+// numbers (GET /rescue/count, {answered, approved}), and shows only once at least one rescue has been answered.
+(function () {
+  var line = document.getElementById('rescue-count');
+  if (!line || !window.fetch) { return; }
+  fetch('https://api.merchient.com/rescue/count', { credentials: 'omit' })
+    .then(function (r) { return r.ok ? r.json() : null; })
+    .then(function (c) {
+      var whole = function (n) { return typeof n === 'number' && n >= 0 && Math.floor(n) === n; };
+      if (!c || !whole(c.answered) || !whole(c.approved) || c.answered < 1) { return; }
+      line.querySelector('[data-count="answered"]').textContent = String(c.answered);
+      line.querySelector('[data-count="approved"]').textContent = String(c.approved);
+      line.hidden = false;
+    })
+    .catch(function () {});
+}());
+
 // The rescue form on rescue.html. Without this script the form opens an email to akhil@merchient.com with the subject
 // "Rescue". With it: when Merchient's rescue service hands out a form token, the form posts there, screenshots included;
 // when the service does not answer, the email opens instead, with the answers filled in.
@@ -12,6 +29,8 @@
   var token = null;
 
   function value(id) { return document.getElementById(id).value.trim(); }
+
+  function kind() { return form.querySelector('input[name="kind"]:checked'); }
 
   function within(ms) {
     var controller = new AbortController();
@@ -35,12 +54,13 @@
   }
 
   function mail(note) {
-    var platform = document.getElementById('r-platform');
-    var body = 'Name: ' + value('r-name') + '\r\nEmail: ' + value('r-email') + '\r\nBrand: ' + value('r-brand') +
-      '\r\nStore: ' + value('r-store') + '\r\nWhere it was rejected: ' + platform.options[platform.selectedIndex].text +
-      '\r\n\r\nThe ad’s text, or the listing’s title and bullets:\r\n' + value('r-text') +
-      '\r\n\r\nThe platform’s notice:\r\n' + value('r-notice') +
-      '\r\n\r\nYou may use this rejection, anonymised, to improve Vera: ' + (form.elements.consent.checked ? 'yes' : 'no') +
+    var k = kind();
+    var body = 'What happened: ' + (k ? k.parentNode.textContent.trim() : '') + '\r\nEmail: ' + value('r-email') +
+      '\r\nWebsite: ' + value('r-store') +
+      '\r\n\r\nThe ad, the listing or the account:\r\n' + value('r-text') +
+      '\r\n\r\nThe notice:\r\n' + value('r-notice') +
+      '\r\n\r\nThe page the ad sends people to: ' + value('r-landing') +
+      '\r\n\r\nYou may use this case, anonymised: ' + (form.elements.consent.checked ? 'yes' : 'no') +
       '\r\n\r\n(Attach your screenshots to this email.)\r\n';
     msg.textContent = note;
     window.location.href = 'mailto:akhil@merchient.com?subject=Rescue&body=' + encodeURIComponent(body);
@@ -64,6 +84,10 @@
     if (!value('r-text') && !files.length) { msg.textContent = 'Paste the ad or listing text, or add a screenshot of it.'; return; }
     var data = new FormData(form);
     data.append('form_token', token);
+    // The rescue service asks for the platform and the brand: the platform follows "What happened?", and the
+    // brand is the website given.
+    data.append('platform', kind().getAttribute('data-platform'));
+    data.append('brand', value('r-store'));
     button.disabled = true;
     msg.textContent = 'Sending…';
     fetch(api + '/rescue', { method: 'POST', body: data, headers: { Accept: 'application/json' }, credentials: 'omit', signal: within(60000) })

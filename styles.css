@@ -445,6 +445,19 @@ p, ul, ol, dl, table, figure { margin: 0 0 1em; }
 .watch .watch-src { margin: 8px 0 0; font-size: var(--t-s); }
 .footer-more { margin-top: 10px; }
 
+/* The rescue lead, what happened, the cost by kind, the steps and the live count */
+.hero h1.ask { max-width: 22ch; font-size: clamp(2rem, 1.4rem + 2.6vw, 3.4rem); line-height: 1.04; }
+.plan h3 { margin: 6px 0 8px; font-size: var(--t-l); }
+.plan p { margin: 0 0 10px; }
+.plan .btn { margin-top: 6px; }
+.kinds { display: grid; gap: 6px; margin: 6px 0 0; padding: 0; border: 0; }
+.kinds legend { margin-bottom: 4px; padding: 0; font: 700 var(--t-xs)/1.3 var(--narrow); letter-spacing: .06em; text-transform: uppercase; }
+main:has(#k-ad:checked) .cost-line:not(.c-ad),
+main:has(#k-listing:checked) .cost-line:not(.c-listing),
+main:has(#k-account:checked) .cost-line:not(.c-account),
+main:has(#k-seller:checked) .cost-line:not(.c-account) { display: none; }
+.count { margin: 18px 0 0; font-weight: 700; }
+
 @media (prefers-reduced-motion: no-preference) {
   .bar-xl { transform-origin: left; animation: fill .7s cubic-bezier(.3, .7, .2, 1) .2s both; }
   .rw-label { animation: stamp .45s cubic-bezier(.2, .9, .3, 1.4) .9s both; }

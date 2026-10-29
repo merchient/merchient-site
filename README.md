@@ -2,7 +2,7 @@
 
 The website of Merchient, a trade name of Orbline LLC: claims review for US supplement brands running Meta ads. Contact: hello@merchient.com.
 
-It is a static site: plain HTML pages and one stylesheet, with no cookies and no tracking. The only JavaScript is `rescue.js` on the rescue page, and `scan.js` while the scan flag in `build.py` is switched on. One small script, `build.py`, generates some of the pages before they are committed.
+It is a static site: plain HTML pages and one stylesheet, with no cookies and no tracking. The only JavaScript is `rescue.js` on the rescue page and the home page (the form, and the live rescue count from api.merchient.com), and `scan.js` while the scan flag in `build.py` is switched on. One small script, `build.py`, generates some of the pages before they are committed.
 
 ## Pages
 
@@ -11,7 +11,8 @@ It is a static site: plain HTML pages and one stylesheet, with no cookies and no
 - `claims-watch.html`, served at /claims-watch: public enforcement and policy items on supplement claims, each with its date, who acted, what it means and the source
 - `connect.html`: what to do to connect each surface Vera 360 reads, including sharing a Meta ad account view-only
 - `start.html`, served at /start: what happens after a brand pays, in order, what Vera checks today and what is coming soon, and the limits
-- `pricing.html`: a skeleton with the guarantees and billing questions and no prices yet (not indexed, not linked)
+- `pricing.html`, served at /pricing: the three steps (rescue, launch clearance, every day), the guarantees and the billing questions
+- `agencies.html`, served at /agencies: the rescue desk for agencies
 - `sample-report.html`: a fictional brand's free first report, as Vera writes one
 - `vera-month.html`: a fictional training brand's month with Vera
 - `findings.html`: example findings, on lines invented in the style of supplement product pages (not real brands)
