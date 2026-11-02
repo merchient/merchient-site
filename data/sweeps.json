@@ -1,0 +1,7 @@
+{
+  "week": "2026-11-02",
+  "ads_read": 170,
+  "flagged": 122,
+  "high": 64,
+  "source": "content 25 (2 Nov 2026): scripts/weekly_rules_counts.py on the three sweep lines files; ads_read is the rows with fit = yes (170 distinct library IDs); flagged is Red 64 + Yellow 58 (FDA 54, FTC 37, Meta 31); high is Red. The sweep files are dated 30 Oct to 2 Nov 2026, so the page says 'in the past week'. Counts only, no brand."
+}

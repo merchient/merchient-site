@@ -340,6 +340,26 @@ def scan_apply(page):
     return page
 
 
+SWEEPS_BLOCK = re.compile(r'<!--sweeps-->.*?<!--/sweeps-->', re.S)
+
+
+def sweeps_apply(page):
+    """Writes the proof line under the home page's hero from data/sweeps.json (kept by the content lane): the ads read
+    this week and how many carried a line an authority can act on. Counts only, never a percentage or a brand."""
+    with open(os.path.join(ROOT, 'data', 'sweeps.json'), encoding='utf-8') as f:
+        s = json.load(f)
+    n, x, h = s.get('ads_read'), s.get('flagged'), s.get('high')
+    if any(type(v) is not int for v in (n, x, h)) or not 0 <= h <= x <= n or not n:
+        fail('data/sweeps.json: ads_read, flagged and high must be whole numbers, high <= flagged <= ads_read')
+    line = ('<!--sweeps--><p class="proof-line">%d supplement ads in Meta’s public ad library read in the past '
+            'week; %d carried a line Vera flagged under Meta’s health rules or FTC or FDA guidance, %d of them '
+            'high risk.</p><!--/sweeps-->' % (n, x, h))
+    page, k = SWEEPS_BLOCK.subn(lambda m: line, page)
+    if k != 1:
+        fail('index.html: the sweeps markers are missing')
+    return page
+
+
 def fail(message):
     sys.exit('build.py: ' + message)
 
@@ -435,7 +455,7 @@ def load():
             if not s['url'].startswith('https://'):
                 fail(where + ': a source is not an https link')
         guides.append(g)
-    names = sorted(f[:-5] for f in os.listdir(data) if f.endswith('.json') and f != 'index.json')
+    names = sorted(f[:-5] for f in os.listdir(data) if f.endswith('.json') and f not in ('index.json', 'sweeps.json'))
     if names != sorted(g['slug'] for g in guides) or index['count'] != len(guides):
         fail('data/ and data/index.json list different guides')
     return index, guides
@@ -578,8 +598,8 @@ def main():
         with open(os.path.join(ROOT, p), encoding='utf-8') as f:
             new, n = PLACES.subn(lambda m: m.group(1) + str(FOUNDING_PLACES_LEFT) + m.group(2), f.read())
         if p == 'index.html':
-            new = scan_apply(new)
-        if n:
+            new = sweeps_apply(scan_apply(new))
+        if n or p == 'index.html':
             want[p], shown = new, shown + n
     if not shown:
         fail('no page shows the founding places left (<strong class="places-left">)')

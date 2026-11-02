@@ -2,11 +2,12 @@
 
 The website of Merchient, a trade name of Orbline LLC: claims review for US supplement brands running Meta ads. Contact: hello@merchient.com.
 
-It is a static site: plain HTML pages and one stylesheet, with no cookies and no tracking. The only JavaScript is `rescue.js` on the rescue page and the home page (the form, and the live rescue count from api.merchient.com), and `scan.js` while the scan flag in `build.py` is switched on. One small script, `build.py`, generates some of the pages before they are committed.
+It is a static site: plain HTML pages and one stylesheet, with no cookies and no tracking. The only JavaScript is `rescue.js` on the rescue page and the home page (the form, and the live rescue count from api.merchient.com), `hero.js` on the home page (the Claims Facts panel from api.merchient.com), and `scan.js` while the scan flag in `build.py` is switched on. One small script, `build.py`, generates some of the pages before they are committed.
 
 ## Pages
 
-- `index.html`: the main page
+- `index.html`: the main page. `hero.js` turns its hero box into "Your website": it asks api.merchient.com for that website's Claims Facts panel (queued and polled when it is not read yet) and draws it in the page; when the service is busy or does not answer, or without JavaScript, the scan form shows instead
+- `cases/`: the case file of pre-cleared ads, each with its timestamps (empty until the first one; not indexed)
 - `rescue.html`, served at /rescue: the free rescue form for a rejected ad or a pulled listing, its limits, and a free account checklist. `rescue.js` asks the rescue service at api.merchient.com for a form token and posts the form there; if the service does not answer, or the browser runs no JavaScript, the form opens an email to akhil@merchient.com with the subject "Rescue" instead
 - `claims-watch.html`, served at /claims-watch: public enforcement and policy items on supplement claims, each with its date, who acted, what it means and the source
 - `connect.html`: what to do to connect each surface Vera 360 reads, including sharing a Meta ad account view-only
@@ -26,7 +27,7 @@ It is a static site: plain HTML pages and one stylesheet, with no cookies and no
 - `404.html`: shown for addresses that do not exist
 - `fonts/`: Archivo and Archivo Narrow, self-hosted, with their SIL Open Font License files
 - `og-image.png`: the image shown when a page is shared
-- `data/`: the ingredient guides, as JSON
+- `data/`: the ingredient guides, as JSON, and `sweeps.json`, this week's count of supplement ads read in Meta's ad library, which `build.py` writes into the line under the home page's hero
 - `build.py`: builds the ingredient guides and the sitemap, and writes the number of founding places left into the pages
 
 ## How it is built
