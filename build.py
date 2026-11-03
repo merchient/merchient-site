@@ -647,7 +647,7 @@ def index_issue_page(month, d):
 
     <h2>Method</h2>
     <p>We read supplement ads in Meta’s public Ad Library: %(filters)s, found by search words such as the ones grouped above%(one_per)s. Vera, an AI, read each ad’s words against Meta’s published ad rules and the FTC and FDA guidance. A tier and a rule show what Vera flagged. We do not know what Meta decided about any of these ads. Vera read each ad’s headline and the start of its text, not its picture or video or the page it leads to, so a Green ad had nothing to flag in those words and may still have a problem elsewhere. Start dates are the ones the library shows.</p>
-    <p>Want to know where your own ads fall? Put your website in the box on the home page and <a href="%(up)sscan">see your own panel</a>.</p>
+    %(winning)s<p>Want to know where your own ads fall? Put your website in the box on the home page and <a href="%(up)sscan">see your own panel</a>.</p>
     <p class="warnings">Risk review, not legal advice.</p>
     <p class="more-link"><a class="sample-link" href="../">All issues</a> · <a class="sample-link" href="../../weekly/">Weekly</a> · <a class="sample-link" href="../../">Back to the home page</a></p>
 ''' % {
@@ -665,6 +665,9 @@ def index_issue_page(month, d):
 'med_red': median_text(run['Red']['median_days']),
         'med_green': median_text(run['Green']['median_days']), 'order_text': order_text, 'filters': filters,
         'one_per': one_per, 'up': '../../', 'small': small_text,
+        'winning': ('<p>Which lines ran longest, each with Vera’s tier and rule: %s.</p>\n    ' % '; '.join(
+            '<a href="../../winning-lines/%s/">%s</a>' % (slug, text(winning_lines_title(w))) for slug, w in winning_lines())
+            if winning_lines() else ''),
     }
     return index_frame('../../', title + ' · Merchient', desc, SITE + 'index/%s/' % month, body)
 
@@ -691,6 +694,148 @@ def index_list_page(issues):
     return index_frame('../', 'Supplement ad index · Merchient',
                        'Supplement ads read in Meta’s public Ad Library: the rules their lines meet, by category, and how long the ads had been running.',
                        SITE + 'index/', body)
+
+
+# Winning lines (site 42, 3 Nov 2026): /winning-lines/ lists the categories, /winning-lines/<slug>/ is one category's page,
+# each built from data/winning-lines-<slug>.json. reports/tools/sync_winning42.py copies that file from the mining lane's
+# public file and refuses anything that is not public. The page shows rows 1 to 3 as the data says (quoted or described),
+# every later row as a locked row (rank, days running, tier, rule; the line hidden). No price on these pages.
+WL_TOP = {'category', 'generated', 'ads_in_category', 'judged_first', 'judged_last', 'median_age_days', 'rows', 'restraint'}
+WL_SHOWN_FIRST = 3
+WL_TIERS = ('Red', 'Yellow', 'Green')
+WL_RULES = ('FTC', 'FDA', 'Meta')
+
+
+def winning_lines():
+    """The categories in data/, in file-name order: (slug, the data)."""
+    out = []
+    for name in sorted(os.listdir(os.path.join(ROOT, 'data'))):
+        m = re.fullmatch(r'winning-lines-([a-z0-9-]+)\.json', name)
+        if m:
+            with open(os.path.join(ROOT, 'data', name), encoding='utf-8') as f:
+                out.append((m.group(1), json.load(f)))
+    return out
+
+
+def winning_lines_title(d):
+    return 'What runs longest: %s supplement ads' % d['category']
+
+
+def winning_lines_check(slug, d):
+    where = 'data/winning-lines-%s.json' % slug
+    if set(d) != WL_TOP:
+        fail(where + ': fields outside the public set (%s)' % sorted(set(d) ^ WL_TOP))
+    rows = d['rows']
+    if len(rows) != d['ads_in_category'] or not rows:
+        fail(where + ': ads_in_category is %s but there are %d rows' % (d['ads_in_category'], len(rows)))
+    for i, r in enumerate(rows, 1):
+        if r['rank'] != i or (i > 1 and r['age_days'] > rows[i - 2]['age_days']):
+            fail(where + ': row %d is out of order (rank, then longest-running first)' % i)
+        if r['tier'] not in WL_TIERS or r['rule'] not in WL_RULES + (None,) or (r['tier'] == 'Green') != (r['rule'] is None):
+            fail(where + ': row %d has a tier or rule the page does not know' % i)
+        if (r['shown'] != 'locked') != (i <= WL_SHOWN_FIRST):
+            fail(where + ': row %d must be %s' % (i, 'shown (quoted or described)' if i <= WL_SHOWN_FIRST else 'locked'))
+        if r['shown'] == 'locked' and set(r) != {'rank', 'shown', 'age_days', 'tier', 'rule'}:
+            fail(where + ': locked row %d carries more than rank, age, tier and rule' % i)
+    if set(d['median_age_days']) != set(WL_TIERS) or d['judged_first'] > d['judged_last']:
+        fail(where + ': the medians or the dates are wrong')
+    for t in WL_TIERS:
+        ages = sorted(r['age_days'] for r in rows if r['tier'] == t)
+        if not ages:
+            fail(where + ': no %s row, so the median by tier cannot be shown' % t)
+        mid = len(ages) // 2
+        median = ages[mid] if len(ages) % 2 else (ages[mid - 1] + ages[mid]) / 2
+        if abs(median - d['median_age_days'][t]) > 1e-9:
+            fail(where + ': the %s median is %s in the file but %s from the rows' % (t, d['median_age_days'][t], median))
+    if len(d['restraint']) != 2 or not all(isinstance(x, str) and x for x in d['restraint']):
+        fail(where + ': the two restraint lines are missing')
+
+
+def winning_lines_page(slug, d):
+    winning_lines_check(slug, d)
+    title, rows = winning_lines_title(d), d['rows']
+    judged = days([d['judged_first'], d['judged_last']])
+    desc = ('Lines from ads in Meta’s public Ad Library for %s supplements, longest-running first, each with Vera’s '
+            'tier and rule.' % d['category'])
+    table = ''
+    for r in rows:
+        if r['shown'] == 'described':
+            line = text(r['described'])
+        elif r['shown'] == 'quoted':
+            line = '“%s”' % text(r['quote'])
+        else:
+            line = 'Locked'
+        table += '          <tr><th scope="row">%d</th><td>%d</td><td>%s</td><td>%s</td><td>%s</td></tr>\n' % (
+            r['rank'], r['age_days'], r['tier'], r['rule'] or 'None: nothing to flag', line)
+    medians = ''.join('          <tr><th scope="row">%s</th><td>%d</td><td>%s</td></tr>\n' % (
+        t, sum(1 for r in rows if r['tier'] == t), median_text(d['median_age_days'][t])) for t in WL_TIERS)
+    body = '''    <p class="kicker"><a href="../">Winning lines</a></p>
+    <h1>%(title)s</h1>
+    <p class="section-lede">Lines from ads in Meta’s public Ad Library, longest-running first, each with Vera’s tier and rule.</p>
+    <p class="warnings">%(r1)s</p>
+    <p class="warnings">%(r2)s</p>
+
+    <h2>Longest-running first</h2>
+    <p>%(n)d ads in this category, read by Vera from %(judged)s. Days running is how long each ad had been running when we read it, from the start date the library shows. The first %(shown)s lines are shown; the rest are locked, with the rank, the days running, the tier and the rule in view and the line hidden.</p>
+    <p>Tiers: Red is wording Vera expects a regulator or a platform to act on, Yellow is any other finding, Green is nothing to flag. The rule is where the finding comes from: the FTC, the FDA or Meta’s ad rules.</p>
+    <div class="table-wrap">
+      <table class="value-table">
+        <thead>
+          <tr><th scope="col">Rank</th><th scope="col">Days running</th><th scope="col">Tier</th><th scope="col">Rule</th><th scope="col">The line</th></tr>
+        </thead>
+        <tbody>
+%(table)s        </tbody>
+      </table>
+    </div>
+    <p>The full list, with every line and its safer rewrite, is for members.</p>
+    <p>Want your own page read the same way? <a href="../../scan">Get your free scan</a>.</p>
+
+    <h2>Median days running, by tier</h2>
+    <div class="table-wrap">
+      <table class="value-table">
+        <thead>
+          <tr><th scope="col">Tier</th><th scope="col">Ads</th><th scope="col">Median days running</th></tr>
+        </thead>
+        <tbody>
+%(medians)s        </tbody>
+      </table>
+    </div>
+
+    <h2>Method</h2>
+    <p>We read ads in Meta’s public Ad Library. Vera, an AI, read each ad’s words against Meta’s published ad rules and the FTC and FDA guidance, and gave each a tier and the rule it rests on. A tier and a rule show what Vera flagged; we do not know what Meta decided about any of these ads. Vera read each ad’s headline and the start of its text, not its picture or video or the page it leads to.</p>
+    <p class="warnings">Risk review, not legal advice.</p>
+    <p class="more-link"><a class="sample-link" href="../">All categories</a> · <a class="sample-link" href="../../index/">Ad index</a> · <a class="sample-link" href="../../weekly/">Weekly</a> · <a class="sample-link" href="../../">Back to the home page</a></p>
+''' % {
+        'title': text(title), 'r1': text(d['restraint'][0]), 'r2': text(d['restraint'][1]), 'n': len(rows), 'judged': judged,
+        'shown': number_text(sum(1 for r in rows if r['shown'] != 'locked')), 'table': table, 'medians': medians,
+    }
+    return index_frame('../../', title + ' · Merchient', desc, SITE + 'winning-lines/%s/' % slug, body)
+
+
+def winning_lines_list_page(cats):
+    items = ''.join('      <li><a href="%s/">%s</a> · %d ads, read %s</li>\n' % (
+        slug, text(winning_lines_title(d)), d['ads_in_category'], days([d['judged_first'], d['judged_last']])) for slug, d in cats)
+    lines = []
+    for _, d in cats:
+        lines += [x for x in d['restraint'] if x not in lines]
+    restraint = ''.join('    <p class="warnings">%s</p>\n' % text(x) for x in lines)
+    body = '''    <p class="kicker">Winning lines</p>
+    <h1>Winning lines.</h1>
+    <p class="section-lede">By category: lines from ads in Meta’s public Ad Library, longest-running first, with Vera’s tier and rule for each ad on the category page.</p>
+%(restraint)s
+    <h2>The categories</h2>
+    <ul class="checklist">
+%(items)s    </ul>
+
+    <p>Every ad we read, by category and rule: <a href="../index/">the supplement ad index</a>.</p>
+    <p>Want your own page read the same way? <a href="../scan">Get your free scan</a>.</p>
+
+    <p class="warnings">Risk review, not legal advice.</p>
+    <p class="more-link"><a class="sample-link" href="../index/">Ad index</a> · <a class="sample-link" href="../weekly/">Weekly</a> · <a class="sample-link" href="../">Back to the home page</a></p>
+''' % {'items': items, 'restraint': restraint}
+    return index_frame('../', 'Winning lines · Merchient',
+                       'Lines from ads in Meta’s public Ad Library, longest-running first, by category, each with Vera’s tier and rule.',
+                       SITE + 'winning-lines/', body)
 
 
 def smart(s):
@@ -785,7 +930,7 @@ def load():
                 fail(where + ': a source is not an https link')
         guides.append(g)
     names = sorted(f[:-5] for f in os.listdir(data) if f.endswith('.json') and f not in ('index.json', 'sweeps.json')
-                   and not re.fullmatch(r'index-\d{4}-\d\d\.json', f))
+                   and not re.fullmatch(r'index-\d{4}-\d\d\.json', f) and not f.startswith('winning-lines-'))
     if names != sorted(g['slug'] for g in guides) or index['count'] != len(guides):
         fail('data/ and data/index.json list different guides')
     return index, guides
@@ -897,10 +1042,12 @@ def index_page(index, guides):
             + FINAL)
 
 
-def sitemap(guides):
+def sitemap(guides, winning):
     with open(os.path.join(ROOT, 'sitemap.xml'), encoding='utf-8') as f:
         listed = re.findall(r'<loc>([^<]+)</loc>', f.read())
-    urls = [u for u in listed if not u.startswith(SITE + 'ingredients/')]
+    urls = [u for u in listed if not u.startswith((SITE + 'ingredients/', SITE + 'winning-lines/'))]
+    if winning:
+        urls += [SITE + 'winning-lines/'] + [SITE + 'winning-lines/%s/' % slug for slug, _ in winning]
     urls += [SITE + 'ingredients/'] + [SITE + 'ingredients/%s.html' % g['slug'] for g in guides]
     return ('<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
             + ''.join('  <url><loc>%s</loc></url>\n' % u for u in urls) + '</urlset>\n')
@@ -938,11 +1085,16 @@ def main():
     for g in guides:
         want[os.path.join('ingredients', g['slug'] + '.html')] = guide_page(g)
     want[os.path.join('ingredients', 'index.html')] = index_page(index, guides)
-    want['sitemap.xml'] = sitemap(guides)
+    winning = winning_lines()
+    want['sitemap.xml'] = sitemap(guides, winning)
     issues = index_issues()
     for month, d in issues:
         want[os.path.join('index', month, 'index.html')] = index_issue_page(month, d)
     want[os.path.join('index', 'index.html')] = index_list_page(issues)
+    for slug, d in winning:
+        want[os.path.join('winning-lines', slug, 'index.html')] = winning_lines_page(slug, d)
+    if winning:
+        want[os.path.join('winning-lines', 'index.html')] = winning_lines_list_page(winning)
     if SCAN_API_ON:
         want['scan.js'] = SCAN_JS
 
