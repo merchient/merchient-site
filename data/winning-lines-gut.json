@@ -1,0 +1,252 @@
+{
+  "category": "Gut",
+  "generated": "2026-11-03",
+  "ads_in_category": 33,
+  "judged_first": "2026-10-30",
+  "judged_last": "2026-11-02",
+  "median_age_days": {
+    "Red": 181,
+    "Yellow": 118,
+    "Green": 107
+  },
+  "restraint": [
+    "Running longest is not proof a line sells: a brand keeps an ad running for its own reasons. Correlation only.",
+    "No brand, product or ad is named. Flagged lines are described, not quoted."
+  ],
+  "rows": [
+    {
+      "rank": 1,
+      "shown": "described",
+      "age_days": 1049,
+      "tier": "Red",
+      "rule": "FDA",
+      "described": "A line that tells shoppers the product gets rid of a parasite infestation, which reads as a cure."
+    },
+    {
+      "rank": 2,
+      "shown": "described",
+      "age_days": 997,
+      "tier": "Red",
+      "rule": "FDA",
+      "described": "A line that promises an end to bloating, which reads as a cure for a symptom."
+    },
+    {
+      "rank": 3,
+      "shown": "described",
+      "age_days": 464,
+      "tier": "Red",
+      "rule": "FDA",
+      "described": "A line that offers a natural cleanse for parasites, which reads as a claim to treat a condition."
+    },
+    {
+      "rank": 4,
+      "shown": "locked",
+      "age_days": 368,
+      "tier": "Green",
+      "rule": null
+    },
+    {
+      "rank": 5,
+      "shown": "locked",
+      "age_days": 336,
+      "tier": "Red",
+      "rule": "Meta"
+    },
+    {
+      "rank": 6,
+      "shown": "locked",
+      "age_days": 308,
+      "tier": "Red",
+      "rule": "Meta"
+    },
+    {
+      "rank": 7,
+      "shown": "locked",
+      "age_days": 255,
+      "tier": "Red",
+      "rule": "FDA"
+    },
+    {
+      "rank": 8,
+      "shown": "locked",
+      "age_days": 251,
+      "tier": "Yellow",
+      "rule": "FTC"
+    },
+    {
+      "rank": 9,
+      "shown": "locked",
+      "age_days": 220,
+      "tier": "Red",
+      "rule": "FDA"
+    },
+    {
+      "rank": 10,
+      "shown": "locked",
+      "age_days": 189,
+      "tier": "Yellow",
+      "rule": "FTC"
+    },
+    {
+      "rank": 11,
+      "shown": "locked",
+      "age_days": 184,
+      "tier": "Yellow",
+      "rule": "Meta"
+    },
+    {
+      "rank": 12,
+      "shown": "locked",
+      "age_days": 181,
+      "tier": "Red",
+      "rule": "Meta"
+    },
+    {
+      "rank": 13,
+      "shown": "locked",
+      "age_days": 177,
+      "tier": "Red",
+      "rule": "Meta"
+    },
+    {
+      "rank": 14,
+      "shown": "locked",
+      "age_days": 167,
+      "tier": "Red",
+      "rule": "FDA"
+    },
+    {
+      "rank": 15,
+      "shown": "locked",
+      "age_days": 158,
+      "tier": "Green",
+      "rule": null
+    },
+    {
+      "rank": 16,
+      "shown": "locked",
+      "age_days": 158,
+      "tier": "Yellow",
+      "rule": "Meta"
+    },
+    {
+      "rank": 17,
+      "shown": "locked",
+      "age_days": 157,
+      "tier": "Yellow",
+      "rule": "FTC"
+    },
+    {
+      "rank": 18,
+      "shown": "locked",
+      "age_days": 129,
+      "tier": "Green",
+      "rule": null
+    },
+    {
+      "rank": 19,
+      "shown": "locked",
+      "age_days": 126,
+      "tier": "Yellow",
+      "rule": "FDA"
+    },
+    {
+      "rank": 20,
+      "shown": "locked",
+      "age_days": 112,
+      "tier": "Red",
+      "rule": "FTC"
+    },
+    {
+      "rank": 21,
+      "shown": "locked",
+      "age_days": 110,
+      "tier": "Yellow",
+      "rule": "FTC"
+    },
+    {
+      "rank": 22,
+      "shown": "locked",
+      "age_days": 99,
+      "tier": "Yellow",
+      "rule": "FDA"
+    },
+    {
+      "rank": 23,
+      "shown": "locked",
+      "age_days": 94,
+      "tier": "Red",
+      "rule": "FDA"
+    },
+    {
+      "rank": 24,
+      "shown": "locked",
+      "age_days": 85,
+      "tier": "Green",
+      "rule": null
+    },
+    {
+      "rank": 25,
+      "shown": "locked",
+      "age_days": 68,
+      "tier": "Red",
+      "rule": "FDA"
+    },
+    {
+      "rank": 26,
+      "shown": "locked",
+      "age_days": 48,
+      "tier": "Red",
+      "rule": "Meta"
+    },
+    {
+      "rank": 27,
+      "shown": "locked",
+      "age_days": 47,
+      "tier": "Yellow",
+      "rule": "FTC"
+    },
+    {
+      "rank": 28,
+      "shown": "locked",
+      "age_days": 33,
+      "tier": "Red",
+      "rule": "FDA"
+    },
+    {
+      "rank": 29,
+      "shown": "locked",
+      "age_days": 28,
+      "tier": "Green",
+      "rule": null
+    },
+    {
+      "rank": 30,
+      "shown": "locked",
+      "age_days": 23,
+      "tier": "Yellow",
+      "rule": "Meta"
+    },
+    {
+      "rank": 31,
+      "shown": "locked",
+      "age_days": 22,
+      "tier": "Yellow",
+      "rule": "FDA"
+    },
+    {
+      "rank": 32,
+      "shown": "locked",
+      "age_days": 17,
+      "tier": "Green",
+      "rule": null
+    },
+    {
+      "rank": 33,
+      "shown": "locked",
+      "age_days": 7,
+      "tier": "Yellow",
+      "rule": "FTC"
+    }
+  ]
+}

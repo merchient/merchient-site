@@ -1,0 +1,392 @@
+{
+  "category": "Hormones",
+  "generated": "2026-11-03",
+  "ads_in_category": 53,
+  "judged_first": "2026-10-30",
+  "judged_last": "2026-11-02",
+  "median_age_days": {
+    "Red": 101,
+    "Yellow": 71,
+    "Green": 57.5
+  },
+  "restraint": [
+    "Running longest is not proof a line sells: a brand keeps an ad running for its own reasons. Correlation only.",
+    "No brand, product or ad is named. Flagged lines are described, not quoted."
+  ],
+  "rows": [
+    {
+      "rank": 1,
+      "shown": "described",
+      "age_days": 344,
+      "tier": "Yellow",
+      "rule": "FTC",
+      "described": "A line that gives the share of people with a common symptom and shows no source for the figure."
+    },
+    {
+      "rank": 2,
+      "shown": "described",
+      "age_days": 304,
+      "tier": "Yellow",
+      "rule": "FTC",
+      "described": "A line that calls a brand the only one that takes health seriously and shows no basis for it."
+    },
+    {
+      "rank": 3,
+      "shown": "described",
+      "age_days": 202,
+      "tier": "Red",
+      "rule": "FDA",
+      "described": "A line that promises to fix a named gland by natural means."
+    },
+    {
+      "rank": 4,
+      "shown": "locked",
+      "age_days": 195,
+      "tier": "Red",
+      "rule": "FDA"
+    },
+    {
+      "rank": 5,
+      "shown": "locked",
+      "age_days": 193,
+      "tier": "Yellow",
+      "rule": "FTC"
+    },
+    {
+      "rank": 6,
+      "shown": "locked",
+      "age_days": 191,
+      "tier": "Green",
+      "rule": null
+    },
+    {
+      "rank": 7,
+      "shown": "locked",
+      "age_days": 167,
+      "tier": "Green",
+      "rule": null
+    },
+    {
+      "rank": 8,
+      "shown": "locked",
+      "age_days": 165,
+      "tier": "Yellow",
+      "rule": "FDA"
+    },
+    {
+      "rank": 9,
+      "shown": "locked",
+      "age_days": 158,
+      "tier": "Red",
+      "rule": "FDA"
+    },
+    {
+      "rank": 10,
+      "shown": "locked",
+      "age_days": 154,
+      "tier": "Red",
+      "rule": "Meta"
+    },
+    {
+      "rank": 11,
+      "shown": "locked",
+      "age_days": 151,
+      "tier": "Red",
+      "rule": "FDA"
+    },
+    {
+      "rank": 12,
+      "shown": "locked",
+      "age_days": 141,
+      "tier": "Green",
+      "rule": null
+    },
+    {
+      "rank": 13,
+      "shown": "locked",
+      "age_days": 132,
+      "tier": "Red",
+      "rule": "Meta"
+    },
+    {
+      "rank": 14,
+      "shown": "locked",
+      "age_days": 128,
+      "tier": "Green",
+      "rule": null
+    },
+    {
+      "rank": 15,
+      "shown": "locked",
+      "age_days": 128,
+      "tier": "Green",
+      "rule": null
+    },
+    {
+      "rank": 16,
+      "shown": "locked",
+      "age_days": 122,
+      "tier": "Red",
+      "rule": "FDA"
+    },
+    {
+      "rank": 17,
+      "shown": "locked",
+      "age_days": 117,
+      "tier": "Red",
+      "rule": "FDA"
+    },
+    {
+      "rank": 18,
+      "shown": "locked",
+      "age_days": 115,
+      "tier": "Yellow",
+      "rule": "FTC"
+    },
+    {
+      "rank": 19,
+      "shown": "locked",
+      "age_days": 108,
+      "tier": "Red",
+      "rule": "Meta"
+    },
+    {
+      "rank": 20,
+      "shown": "locked",
+      "age_days": 103,
+      "tier": "Red",
+      "rule": "Meta"
+    },
+    {
+      "rank": 21,
+      "shown": "locked",
+      "age_days": 103,
+      "tier": "Red",
+      "rule": "FDA"
+    },
+    {
+      "rank": 22,
+      "shown": "locked",
+      "age_days": 102,
+      "tier": "Red",
+      "rule": "FDA"
+    },
+    {
+      "rank": 23,
+      "shown": "locked",
+      "age_days": 101,
+      "tier": "Red",
+      "rule": "FDA"
+    },
+    {
+      "rank": 24,
+      "shown": "locked",
+      "age_days": 98,
+      "tier": "Red",
+      "rule": "FDA"
+    },
+    {
+      "rank": 25,
+      "shown": "locked",
+      "age_days": 96,
+      "tier": "Red",
+      "rule": "FDA"
+    },
+    {
+      "rank": 26,
+      "shown": "locked",
+      "age_days": 96,
+      "tier": "Yellow",
+      "rule": "FTC"
+    },
+    {
+      "rank": 27,
+      "shown": "locked",
+      "age_days": 92,
+      "tier": "Yellow",
+      "rule": "FDA"
+    },
+    {
+      "rank": 28,
+      "shown": "locked",
+      "age_days": 84,
+      "tier": "Green",
+      "rule": null
+    },
+    {
+      "rank": 29,
+      "shown": "locked",
+      "age_days": 83,
+      "tier": "Red",
+      "rule": "FDA"
+    },
+    {
+      "rank": 30,
+      "shown": "locked",
+      "age_days": 81,
+      "tier": "Yellow",
+      "rule": "FTC"
+    },
+    {
+      "rank": 31,
+      "shown": "locked",
+      "age_days": 61,
+      "tier": "Yellow",
+      "rule": "FDA"
+    },
+    {
+      "rank": 32,
+      "shown": "locked",
+      "age_days": 47,
+      "tier": "Yellow",
+      "rule": "FTC"
+    },
+    {
+      "rank": 33,
+      "shown": "locked",
+      "age_days": 46,
+      "tier": "Red",
+      "rule": "FDA"
+    },
+    {
+      "rank": 34,
+      "shown": "locked",
+      "age_days": 43,
+      "tier": "Red",
+      "rule": "FDA"
+    },
+    {
+      "rank": 35,
+      "shown": "locked",
+      "age_days": 41,
+      "tier": "Yellow",
+      "rule": "Meta"
+    },
+    {
+      "rank": 36,
+      "shown": "locked",
+      "age_days": 39,
+      "tier": "Red",
+      "rule": "Meta"
+    },
+    {
+      "rank": 37,
+      "shown": "locked",
+      "age_days": 38,
+      "tier": "Yellow",
+      "rule": "FDA"
+    },
+    {
+      "rank": 38,
+      "shown": "locked",
+      "age_days": 37,
+      "tier": "Red",
+      "rule": "FDA"
+    },
+    {
+      "rank": 39,
+      "shown": "locked",
+      "age_days": 33,
+      "tier": "Red",
+      "rule": "FDA"
+    },
+    {
+      "rank": 40,
+      "shown": "locked",
+      "age_days": 31,
+      "tier": "Green",
+      "rule": null
+    },
+    {
+      "rank": 41,
+      "shown": "locked",
+      "age_days": 30,
+      "tier": "Yellow",
+      "rule": "FDA"
+    },
+    {
+      "rank": 42,
+      "shown": "locked",
+      "age_days": 30,
+      "tier": "Green",
+      "rule": null
+    },
+    {
+      "rank": 43,
+      "shown": "locked",
+      "age_days": 28,
+      "tier": "Red",
+      "rule": "FTC"
+    },
+    {
+      "rank": 44,
+      "shown": "locked",
+      "age_days": 21,
+      "tier": "Green",
+      "rule": null
+    },
+    {
+      "rank": 45,
+      "shown": "locked",
+      "age_days": 20,
+      "tier": "Red",
+      "rule": "Meta"
+    },
+    {
+      "rank": 46,
+      "shown": "locked",
+      "age_days": 17,
+      "tier": "Green",
+      "rule": null
+    },
+    {
+      "rank": 47,
+      "shown": "locked",
+      "age_days": 16,
+      "tier": "Green",
+      "rule": null
+    },
+    {
+      "rank": 48,
+      "shown": "locked",
+      "age_days": 16,
+      "tier": "Yellow",
+      "rule": "FDA"
+    },
+    {
+      "rank": 49,
+      "shown": "locked",
+      "age_days": 14,
+      "tier": "Yellow",
+      "rule": "FTC"
+    },
+    {
+      "rank": 50,
+      "shown": "locked",
+      "age_days": 12,
+      "tier": "Green",
+      "rule": null
+    },
+    {
+      "rank": 51,
+      "shown": "locked",
+      "age_days": 11,
+      "tier": "Red",
+      "rule": "FDA"
+    },
+    {
+      "rank": 52,
+      "shown": "locked",
+      "age_days": 10,
+      "tier": "Yellow",
+      "rule": "FTC"
+    },
+    {
+      "rank": 53,
+      "shown": "locked",
+      "age_days": 7,
+      "tier": "Red",
+      "rule": "FDA"
+    }
+  ]
+}

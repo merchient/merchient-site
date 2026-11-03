@@ -1,0 +1,162 @@
+{
+  "generated": "2026-11-03",
+  "restraint": "Correlation only: how long ads ran, not whether they sold or were reviewed.",
+  "unit": "days running when read",
+  "method": "median and quartiles of the days each ad had been running, quartiles by linear interpolation between ranks",
+  "min_n": 8,
+  "cells_shown": 10,
+  "cells": [
+    {
+      "category": "GLP-1 and weight",
+      "tier": "Red",
+      "n": 13,
+      "median": 69,
+      "q1": 38,
+      "q3": 146
+    },
+    {
+      "category": "GLP-1 and weight",
+      "tier": "Yellow",
+      "n": 10,
+      "median": 155.5,
+      "q1": 80.3,
+      "q3": 269.8
+    },
+    {
+      "category": "GLP-1 and weight",
+      "tier": "Green",
+      "n": 8,
+      "median": 124.5,
+      "q1": 31.5,
+      "q3": 191.3
+    },
+    {
+      "category": "Gut",
+      "tier": "Red",
+      "n": 15,
+      "median": 181,
+      "q1": 103,
+      "q3": 322
+    },
+    {
+      "category": "Gut",
+      "tier": "Yellow",
+      "n": 12,
+      "median": 118,
+      "q1": 41,
+      "q3": 164.5
+    },
+    {
+      "category": "Brain",
+      "tier": "Green",
+      "n": 9,
+      "median": 161,
+      "q1": 85,
+      "q3": 246
+    },
+    {
+      "category": "Hormones",
+      "tier": "Red",
+      "n": 25,
+      "median": 101,
+      "q1": 39,
+      "q3": 122
+    },
+    {
+      "category": "Hormones",
+      "tier": "Yellow",
+      "n": 16,
+      "median": 71,
+      "q1": 36,
+      "q3": 127.5
+    },
+    {
+      "category": "Hormones",
+      "tier": "Green",
+      "n": 12,
+      "median": 57.5,
+      "q1": 20,
+      "q3": 131.3
+    },
+    {
+      "category": "Joints",
+      "tier": "Red",
+      "n": 10,
+      "median": 33.5,
+      "q1": 8.3,
+      "q3": 34.8
+    }
+  ],
+  "too_few": [
+    {
+      "category": "Sleep",
+      "tier": "Red",
+      "n": 5
+    },
+    {
+      "category": "Sleep",
+      "tier": "Yellow",
+      "n": 0
+    },
+    {
+      "category": "Sleep",
+      "tier": "Green",
+      "n": 3
+    },
+    {
+      "category": "Gut",
+      "tier": "Green",
+      "n": 6
+    },
+    {
+      "category": "Immunity",
+      "tier": "Red",
+      "n": 2
+    },
+    {
+      "category": "Immunity",
+      "tier": "Yellow",
+      "n": 7
+    },
+    {
+      "category": "Immunity",
+      "tier": "Green",
+      "n": 2
+    },
+    {
+      "category": "Brain",
+      "tier": "Red",
+      "n": 4
+    },
+    {
+      "category": "Brain",
+      "tier": "Yellow",
+      "n": 7
+    },
+    {
+      "category": "Joints",
+      "tier": "Yellow",
+      "n": 2
+    },
+    {
+      "category": "Joints",
+      "tier": "Green",
+      "n": 0
+    },
+    {
+      "category": "Skin and hair",
+      "tier": "Red",
+      "n": 6
+    },
+    {
+      "category": "Skin and hair",
+      "tier": "Yellow",
+      "n": 4
+    },
+    {
+      "category": "Skin and hair",
+      "tier": "Green",
+      "n": 2
+    }
+  ]
+}

@@ -554,6 +554,44 @@ def number_text(n):
     return words[n] if 0 <= n < len(words) else str(n)
 
 
+def index_bands_section(issue_ads):
+    """Site 45: "How long lines run, by category and tier", from data/survival-bands.json. Every number is read from that
+    file (or counted from it or from the category files); the restraint line is the file's own, word for word."""
+    b = survival_bands()
+    mn, cells, few = b['min_n'], b['cells'], b['too_few']
+    total = sum(c['n'] for c in cells + few)
+    pages = winning_lines()
+    on_pages = sum(w['ads_in_category'] for _, w in pages)
+    from_pages = sum(c['n'] for c in cells + few if c['category'] in [w['category'] for _, w in pages])
+    if on_pages != from_pages:
+        fail('data/survival-bands.json counts %d ads in the categories that have a page, and the pages count %d' % (from_pages, on_pages))
+    rows = ''.join('            <tr><th scope="row">%s</th><td>%s</td><td>%d</td><td>%s</td><td>%s</td><td>%s</td></tr>\n' % (
+        text(c['category']), c['tier'], c['n'], median_text(c['median']), median_text(c['q1']), median_text(c['q3'])) for c in cells)
+    groups = []
+    for c in few:
+        if not groups or groups[-1][0] != c['category']:
+            groups.append((c['category'], []))
+        groups[-1][1].append('%s %d' % (c['tier'], c['n']))
+    few_text = '; '.join('%s: %s' % (text(cat), ', '.join(parts)) for cat, parts in groups)
+    judged = days([x for _, w in pages for x in (w['judged_first'], w['judged_last'])]) if pages else ''
+    return '''    <h2>How long lines run, by category and tier</h2>
+    <p>For each category and tier: the median number of days the ads had been running when we read them, and the first and third quartiles (a quarter of the ads had run less than the first quartile, a quarter more than the third). Quartiles are found by linear interpolation between ranks. A figure is shown only for a category and tier with at least %(mn)d ads.</p>
+    <p class="warnings">%(restraint)s</p>
+    <div class="table-wrap">
+      <table class="value-table">
+        <thead>
+          <tr><th scope="col">Category</th><th scope="col">Tier</th><th scope="col">Ads</th><th scope="col">Median days running</th><th scope="col">First quartile</th><th scope="col">Third quartile</th></tr>
+        </thead>
+        <tbody>
+%(rows)s        </tbody>
+      </table>
+    </div>
+    <p><b>Too few ads to show a figure</b> (fewer than %(mn)d; the number of ads is after each tier). %(few)s.</p>
+    <p>This table counts %(total)d ads by category and tier, computed %(generated)s. %(on_pages)d of them are the ads on the Winning lines pages, read %(judged)s. Its counts are not the counts in the tables above, which are for the %(issue_ads)d ads of this issue.</p>
+''' % {'mn': mn, 'restraint': text(b['restraint']), 'rows': rows, 'few': few_text, 'total': total,
+       'generated': day(b['generated']), 'on_pages': on_pages, 'judged': judged, 'issue_ads': issue_ads}
+
+
 def index_issue_page(month, d):
     where = 'data/index-%s.json' % month
     n, t, flagged, brands = d['ads_read'], d['tiers'], d['flagged'], d['brands']
@@ -707,6 +745,7 @@ def index_issue_page(month, d):
     %(age_missing_text)s<p><b>What it shows.</b> Of the %(n_red)d Red lines we read%(red_with_row)s, the median ad had been running %(med_red)s days; Green: %(med_green)s days. Correlation only. Running 90 days or longer: %(older)s.</p>
     <p><b>What it does not show.</b> These ads were running when we read them, so this cannot say how many flagged ads were stopped, by the brand or by Meta: an ad that had stopped before a sweep is not in these numbers. A recheck of the same ads would show that; this issue does not. It does not say whether Meta has reviewed any of these ads or what it decided. %(order_text)s, so the ads lean towards those that reach many people. These ads are not a random sample of supplement ads.</p>
 
+%(bands)s
     <h2>What changed since last issue</h2>
     <p>This is the first issue, so there is nothing to compare with yet.</p>
 
@@ -732,7 +771,7 @@ def index_issue_page(month, d):
         'red_with_row': ' that have a days-running row' if run['Red']['no_age'] else '',    # evidence reviewer: 81 of 83, not "the 81 read"
 'med_red': median_text(run['Red']['median_days']),
         'med_green': median_text(run['Green']['median_days']), 'order_text': order_text, 'filters': filters,
-        'one_per': one_per, 'up': '../../', 'small': small_text,
+        'one_per': one_per, 'up': '../../', 'small': small_text, 'bands': index_bands_section(n),
         'winning': ('<p>Which lines ran longest, each with Vera’s tier and rule: %s.</p>\n    ' % '; '.join(
             '<a href="../../winning-lines/%s/">%s</a>' % (slug, text(winning_lines_title(w))) for slug, w in winning_lines())
             if winning_lines() else ''),
@@ -773,6 +812,49 @@ WL_SHOWN_FIRST = 3
 WL_TIERS = ('Red', 'Yellow', 'Green')
 WL_RULES = ('FTC', 'FDA', 'Meta')
 
+# The band table (site 45): data/survival-bands.json is the mining lane's public file, copied by the same script. It gives
+# the median and quartiles of days running for each category and tier with at least min_n ads, and names the cells with too
+# few. The November issue shows it; a category page shows a tier's median only where the table has a cell for it.
+BANDS_TOP = {'generated', 'restraint', 'unit', 'method', 'min_n', 'cells_shown', 'cells', 'too_few'}
+BANDS_CELL = {'category', 'tier', 'n', 'median', 'q1', 'q3'}
+BANDS_FEW = {'category', 'tier', 'n'}
+_bands = None
+
+
+def survival_bands():
+    """data/survival-bands.json, checked: {min_n, restraint, generated, cells, too_few, by: {(category, tier): entry}}."""
+    global _bands
+    if _bands is not None:
+        return _bands
+    where = 'data/survival-bands.json'
+    try:
+        with open(os.path.join(ROOT, 'data', 'survival-bands.json'), encoding='utf-8') as f:
+            b = json.load(f)
+    except FileNotFoundError:
+        fail(where + ' is missing (python3 -I reports/tools/sync_winning42.py copies it)')
+    if set(b) != BANDS_TOP:
+        fail(where + ': fields outside the public set (%s)' % sorted(set(b) ^ BANDS_TOP))
+    mn, by = b['min_n'], {}
+    if not isinstance(mn, int) or mn < 1 or not isinstance(b['restraint'], str) or not b['restraint'] or not b['cells']:
+        fail(where + ': min_n, the restraint line or the cells are wrong')
+    if b['cells_shown'] != len(b['cells']):
+        fail(where + ': cells_shown is %s but there are %d cells' % (b['cells_shown'], len(b['cells'])))
+    for kind, items, fields in (('cell', b['cells'], BANDS_CELL), ('too_few', b['too_few'], BANDS_FEW)):
+        for c in items:
+            if set(c) != fields or c['tier'] not in WL_TIERS or not isinstance(c['n'], int) or c['n'] < 0:
+                fail(where + ': a %s entry has fields or values outside the public set: %s' % (kind, c))
+            if (c['category'], c['tier']) in by:
+                fail(where + ': %s %s appears twice' % (c['category'], c['tier']))
+            if (kind == 'cell') != (c['n'] >= mn):
+                fail(where + ': %s %s has %d ads, which is %s min_n %d' % (
+                    c['category'], c['tier'], c['n'], 'below' if kind == 'cell' else 'not below', mn))
+            if kind == 'cell' and not c['q1'] <= c['median'] <= c['q3']:
+                fail(where + ': %s %s: the quartiles and the median are out of order' % (c['category'], c['tier']))
+            by[(c['category'], c['tier'])] = dict(c, shown=(kind == 'cell'))
+    b['by'] = by
+    _bands = b
+    return b
+
 
 def winning_lines():
     """The categories in data/, in file-name order: (slug, the data)."""
@@ -801,10 +883,13 @@ def winning_lines_check(slug, d):
             fail(where + ': row %d is out of order (rank, then longest-running first)' % i)
         if r['tier'] not in WL_TIERS or r['rule'] not in WL_RULES + (None,) or (r['tier'] == 'Green') != (r['rule'] is None):
             fail(where + ': row %d has a tier or rule the page does not know' % i)
-        if (r['shown'] != 'locked') != (i <= WL_SHOWN_FIRST):
-            fail(where + ': row %d must be %s' % (i, 'shown (quoted or described)' if i <= WL_SHOWN_FIRST else 'locked'))
+        # site 45: a shown row is one of the first three; the file may lock some of them (Brain locks ranks 1 and 2)
+        if r['shown'] != 'locked' and i > WL_SHOWN_FIRST:
+            fail(where + ': row %d must be locked (only rows 1 to %d may be shown)' % (i, WL_SHOWN_FIRST))
         if r['shown'] == 'locked' and set(r) != {'rank', 'shown', 'age_days', 'tier', 'rule'}:
             fail(where + ': locked row %d carries more than rank, age, tier and rule' % i)
+    if all(r['shown'] == 'locked' for r in rows):
+        fail(where + ': no row is shown')
     if set(d['median_age_days']) != set(WL_TIERS) or d['judged_first'] > d['judged_last']:
         fail(where + ': the medians or the dates are wrong')
     for t in WL_TIERS:
@@ -815,6 +900,14 @@ def winning_lines_check(slug, d):
         median = ages[mid] if len(ages) % 2 else (ages[mid - 1] + ages[mid]) / 2
         if abs(median - d['median_age_days'][t]) > 1e-9:
             fail(where + ': the %s median is %s in the file but %s from the rows' % (t, d['median_age_days'][t], median))
+        # site 45: the band table must agree with the rows: same ads in the tier, and the same median where it shows one
+        cell = survival_bands()['by'].get((d['category'], t))
+        if not cell:
+            fail(where + ': data/survival-bands.json has no %s %s entry' % (d['category'], t))
+        if cell['n'] != len(ages):
+            fail(where + ': %s has %d ads in the rows but %d in the band table' % (t, len(ages), cell['n']))
+        if cell['shown'] and abs(cell['median'] - median) > 1e-9:
+            fail(where + ': the %s median is %s from the rows but %s in the band table' % (t, median, cell['median']))
     if len(d['restraint']) != 2 or not all(isinstance(x, str) and x for x in d['restraint']):
         fail(where + ': the two restraint lines are missing')
 
@@ -835,8 +928,21 @@ def winning_lines_page(slug, d):
             line = 'Locked'
         table += '          <tr><th scope="row">%d</th><td>%d</td><td>%s</td><td>%s</td><td>%s</td></tr>\n' % (
             r['rank'], r['age_days'], r['tier'], r['rule'] or 'None: nothing to flag', line)
+    bands = survival_bands()
+    few = [t for t in WL_TIERS if not bands['by'][(d['category'], t)]['shown']]
     medians = ''.join('          <tr><th scope="row">%s</th><td>%d</td><td>%s</td></tr>\n' % (
-        t, sum(1 for r in rows if r['tier'] == t), median_text(d['median_age_days'][t])) for t in WL_TIERS)
+        t, sum(1 for r in rows if r['tier'] == t),
+        'Too few ads for a median' if t in few else median_text(d['median_age_days'][t])) for t in WL_TIERS)
+    few_text = ('    <p>A median is shown only for a tier with at least %d ads. %s %s fewer, so no median is shown for %s.</p>\n' % (
+        bands['min_n'], ' and '.join(few), 'has' if len(few) == 1 else 'have', 'it' if len(few) == 1 else 'them')) if few else ''
+    if [r['rank'] for r in rows if r['shown'] != 'locked'] == list(range(1, WL_SHOWN_FIRST + 1)):
+        shown_text = 'The first %s lines are shown' % number_text(WL_SHOWN_FIRST)
+    else:
+        sr = [r['rank'] for r in rows if r['shown'] != 'locked']
+        shown_text = 'The %s at %s %s %s shown' % (
+            'line' if len(sr) == 1 else 'lines', 'rank' if len(sr) == 1 else 'ranks',
+            (', '.join(str(x) for x in sr[:-1]) + ' and ' + str(sr[-1])) if len(sr) > 1 else str(sr[0]),
+            'is' if len(sr) == 1 else 'are')
     body = '''    <p class="kicker"><a href="../">Winning lines</a></p>
     <h1>%(title)s</h1>
     <p class="section-lede">Lines from ads in Meta’s public Ad Library, longest-running first, each with Vera’s tier and rule.</p>
@@ -844,7 +950,7 @@ def winning_lines_page(slug, d):
     <p class="warnings">%(r2)s</p>
 
     <h2>Longest-running first</h2>
-    <p>%(n)d ads in this category, read by Vera from %(judged)s. Days running is how long each ad had been running when we read it, from the start date the library shows. The first %(shown)s lines are shown; the rest are locked, with the rank, the days running, the tier and the rule in view and the line hidden.</p>
+    <p>%(n)d ads in this category, read by Vera from %(judged)s. Days running is how long each ad had been running when we read it, from the start date the library shows. %(shown)s; the rest are locked, with the rank, the days running, the tier and the rule in view and the line hidden.</p>
     <p>Tiers: Red is wording Vera expects a regulator or a platform to act on, Yellow is any other finding, Green is nothing to flag. The rule is where the finding comes from: the FTC, the FDA or Meta’s ad rules.</p>
     <div class="table-wrap">
       <table class="value-table">
@@ -855,7 +961,6 @@ def winning_lines_page(slug, d):
 %(table)s        </tbody>
       </table>
     </div>
-    <p>The full list, with every line and its safer rewrite, is for members.</p>
     <p>Want your own page read the same way? <a href="../../scan">Get your free scan</a>.</p>
 
     <h2>Median days running, by tier</h2>
@@ -868,14 +973,14 @@ def winning_lines_page(slug, d):
 %(medians)s        </tbody>
       </table>
     </div>
-
+%(few_text)s
     <h2>Method</h2>
     <p>We read ads in Meta’s public Ad Library. Vera, an AI, read each ad’s words against Meta’s published ad rules and the FTC and FDA guidance, and gave each a tier and the rule it rests on. A tier and a rule show what Vera flagged; we do not know what Meta decided about any of these ads. Vera read each ad’s headline and the start of its text, not its picture or video or the page it leads to.</p>
     <p class="warnings">Risk review, not legal advice.</p>
     <p class="more-link"><a class="sample-link" href="../">All categories</a> · <a class="sample-link" href="../../index/">Ad index</a> · <a class="sample-link" href="../../weekly/">Weekly</a> · <a class="sample-link" href="../../">Back to the home page</a></p>
 ''' % {
         'title': text(title), 'r1': text(d['restraint'][0]), 'r2': text(d['restraint'][1]), 'n': len(rows), 'judged': judged,
-        'shown': number_text(sum(1 for r in rows if r['shown'] != 'locked')), 'table': table, 'medians': medians,
+        'shown': shown_text, 'table': table, 'medians': medians, 'few_text': few_text,
     }
     return index_frame('../../', title + ' · Merchient', desc, SITE + 'winning-lines/%s/' % slug, body)
 
@@ -997,7 +1102,7 @@ def load():
             if not s['url'].startswith('https://'):
                 fail(where + ': a source is not an https link')
         guides.append(g)
-    names = sorted(f[:-5] for f in os.listdir(data) if f.endswith('.json') and f not in ('index.json', 'sweeps.json')
+    names = sorted(f[:-5] for f in os.listdir(data) if f.endswith('.json') and f not in ('index.json', 'sweeps.json', 'survival-bands.json')
                    and not re.fullmatch(r'index-\d{4}-\d\d\.json', f) and not f.startswith('winning-lines-'))
     if names != sorted(g['slug'] for g in guides) or index['count'] != len(guides):
         fail('data/ and data/index.json list different guides')

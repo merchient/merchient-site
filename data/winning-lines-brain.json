@@ -1,0 +1,159 @@
+{
+  "category": "Brain",
+  "generated": "2026-11-03",
+  "ads_in_category": 20,
+  "judged_first": "2026-10-30",
+  "judged_last": "2026-11-02",
+  "median_age_days": {
+    "Red": 132.5,
+    "Yellow": 75,
+    "Green": 161
+  },
+  "restraint": [
+    "Running longest is not proof a line sells: a brand keeps an ad running for its own reasons. Correlation only.",
+    "No brand, product or ad is named. Flagged lines are described, not quoted."
+  ],
+  "rows": [
+    {
+      "rank": 1,
+      "shown": "locked",
+      "age_days": 1318,
+      "tier": "Green",
+      "rule": null
+    },
+    {
+      "rank": 2,
+      "shown": "locked",
+      "age_days": 542,
+      "tier": "Green",
+      "rule": null
+    },
+    {
+      "rank": 3,
+      "shown": "described",
+      "age_days": 494,
+      "tier": "Yellow",
+      "rule": "FTC",
+      "described": "A line that says a bundle of supplements is scientifically proven to help focus and names no study."
+    },
+    {
+      "rank": 4,
+      "shown": "locked",
+      "age_days": 253,
+      "tier": "Red",
+      "rule": "FDA"
+    },
+    {
+      "rank": 5,
+      "shown": "locked",
+      "age_days": 246,
+      "tier": "Green",
+      "rule": null
+    },
+    {
+      "rank": 6,
+      "shown": "locked",
+      "age_days": 239,
+      "tier": "Yellow",
+      "rule": "FTC"
+    },
+    {
+      "rank": 7,
+      "shown": "locked",
+      "age_days": 175,
+      "tier": "Green",
+      "rule": null
+    },
+    {
+      "rank": 8,
+      "shown": "locked",
+      "age_days": 161,
+      "tier": "Green",
+      "rule": null
+    },
+    {
+      "rank": 9,
+      "shown": "locked",
+      "age_days": 149,
+      "tier": "Yellow",
+      "rule": "FDA"
+    },
+    {
+      "rank": 10,
+      "shown": "locked",
+      "age_days": 146,
+      "tier": "Red",
+      "rule": "Meta"
+    },
+    {
+      "rank": 11,
+      "shown": "locked",
+      "age_days": 124,
+      "tier": "Green",
+      "rule": null
+    },
+    {
+      "rank": 12,
+      "shown": "locked",
+      "age_days": 119,
+      "tier": "Red",
+      "rule": "FDA"
+    },
+    {
+      "rank": 13,
+      "shown": "locked",
+      "age_days": 109,
+      "tier": "Red",
+      "rule": "FDA"
+    },
+    {
+      "rank": 14,
+      "shown": "locked",
+      "age_days": 85,
+      "tier": "Green",
+      "rule": null
+    },
+    {
+      "rank": 15,
+      "shown": "locked",
+      "age_days": 75,
+      "tier": "Yellow",
+      "rule": "Meta"
+    },
+    {
+      "rank": 16,
+      "shown": "locked",
+      "age_days": 49,
+      "tier": "Green",
+      "rule": null
+    },
+    {
+      "rank": 17,
+      "shown": "locked",
+      "age_days": 37,
+      "tier": "Yellow",
+      "rule": "FDA"
+    },
+    {
+      "rank": 18,
+      "shown": "locked",
+      "age_days": 33,
+      "tier": "Green",
+      "rule": null
+    },
+    {
+      "rank": 19,
+      "shown": "locked",
+      "age_days": 26,
+      "tier": "Yellow",
+      "rule": "Meta"
+    },
+    {
+      "rank": 20,
+      "shown": "locked",
+      "age_days": 20,
+      "tier": "Yellow",
+      "rule": "FTC"
+    }
+  ]
+}
