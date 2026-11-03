@@ -6,12 +6,12 @@
 <meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'self'; font-src 'self'; img-src 'self'; base-uri 'none'; script-src 'self'; connect-src https://api.merchient.com; form-action 'self' mailto:">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Merchient · See which lines on your site Vera flags</title>
-<meta name="description" content="See which lines on your site Vera flags, and what the longest-running ads in your category say. Type your website. The counts come back in about two minutes, with the rules behind them.">
+<meta name="description" content="See which lines on your site Vera flags, and what the longest-running ads in your category say. Type your website to see how many lines Vera flags on it, and the rules behind them.">
 <link rel="canonical" href="https://merchient.com/">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Merchient">
 <meta property="og:title" content="See which lines on your site Vera flags · Merchient">
-<meta property="og:description" content="Type your website. The counts come back in about two minutes, with the rules behind them. Free. No card.">
+<meta property="og:description" content="Type your website to see how many lines Vera flags on it, and the rules behind them. Free. No card.">
 <meta property="og:url" content="https://merchient.com/">
 <meta property="og:image" content="https://merchient.com/og-image.png">
 <meta property="og:image:width" content="1200">
@@ -19,7 +19,7 @@
 <meta property="og:image:alt" content="Merchient. Keep the hook. Lose the claim.">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="See which lines on your site Vera flags · Merchient">
-<meta name="twitter:description" content="Type your website. The counts come back in about two minutes, with the rules behind them. Free. No card.">
+<meta name="twitter:description" content="Type your website to see how many lines Vera flags on it, and the rules behind them. Free. No card.">
 <meta name="twitter:image" content="https://merchient.com/og-image.png">
 <meta name="twitter:image:alt" content="Merchient. Keep the hook. Lose the claim.">
 <meta name="color-scheme" content="light dark">
@@ -43,7 +43,7 @@
       <a href="agencies">Agencies</a>
       <a href="#faq">FAQ</a>
       <a href="rescue">Send a rejected ad</a>
-      <a class="btn btn-small" href="#scan">See my ads’ risk</a>
+      <a class="btn btn-small" href="#scan">Check my claims</a>
     </nav>
   </div>
 </header>
@@ -54,7 +54,7 @@
     <div class="wrap hero-grid">
       <div>
         <h1 class="ask" data-b="Which lines on my site would get flagged? And what do the ads that run for months say?">See which lines on your site Vera flags, and what the longest-running ads in your category say.</h1>
-        <p class="lede" data-b="Your website is all it takes. The counts come back in about two minutes.">Type your website. The counts come back in about two minutes, with the rules behind them.</p>
+        <p class="lede" data-b="Your website is all it takes to see the counts.">Type your website to see how many lines Vera flags on it, and the rules behind them.</p>
       </div>
 
       <aside class="panel scan-panel" id="scan" aria-labelledby="scan-title">
@@ -63,18 +63,18 @@
         <form class="scan hero-form" id="hero-form" data-panel="https://api.merchient.com" hidden>
           <label for="hero-website">Your website</label>
           <input id="hero-website" name="website" type="text" inputmode="url" autocomplete="url" placeholder="yourbrand.com" required>
-          <button class="btn" type="submit">See my ads’ risk</button>
+          <button class="btn" type="submit">Check my claims</button>
           <p class="scan-note">Free. No card. Your website only.</p>
           <p class="scan-msg" role="status"></p>
           <progress class="cf-progress" id="hero-progress" max="240" value="0" hidden>Reading</progress>
         </form>
         <div class="cf" id="hero-panel" aria-live="polite" hidden></div>
         <form class="scan hero-email" id="hero-email" hidden>
-          <p class="cf-next">See the lines, each with a safer rewrite.</p>
+          <p class="cf-next">Get the riskiest line by email, with a safer rewrite.</p>
           <label for="hero-work-email">Your work email</label>
           <input id="hero-work-email" name="email" type="email" autocomplete="email" required>
-          <button class="btn" type="submit">Show me the lines</button>
-          <p class="scan-note">We send the website and your work email to Merchient’s scan service (api.merchient.com), which emails you a link to confirm.</p>
+          <button class="btn" type="submit">Email me the line</button>
+          <p class="scan-note">We send the website and your work email to Merchient’s scan service (api.merchient.com). It emails you a link to confirm. Once you click it, Vera emails you the riskiest line, why, a safer rewrite and how many more like it she found.</p>
           <p class="scan-msg" role="status"></p>
         </form>
         <div id="scan-fallback">
@@ -92,7 +92,7 @@
           </form>
           <script src="scan.js"></script>
           <!--/scan-->
-        <p class="cta-line">Vera reads your site and emails you the riskiest line, why, a safer rewrite and how many more like it she found. Reply, and you get the free first report.</p>
+        <p class="cta-line">Here the scan comes by email. We email you a link to confirm your work email; once you click it, Vera emails you the riskiest line on your site, why, a safer rewrite and how many more like it she found.</p>
         </div>
       </aside>
       <script src="hero.js"></script>
@@ -118,7 +118,7 @@
       <h2>What you get in the first minute</h2>
       <ol class="faq first-minute">
         <li><strong>The panel.</strong> How many lines carry a risk, and the top rules. No email needed.</li>
-        <li><strong>The lines.</strong> Each one with a safer rewrite. Add a work email to see them.</li>
+        <li><strong>The riskiest line.</strong> Add a work email and click the confirm link we send. Vera emails you the line, a safer rewrite and how many more like it she found.</li>
         <li><strong>Winning Lines.</strong> What the longest-running ads in your category say.</li>
         <li><strong>The 14-day trial.</strong> Your ads and pages read each morning. No card. If you do nothing, the emails end after day 14.</li>
       </ol>
@@ -145,7 +145,7 @@
           <p class="panel-title">Free</p>
           <div class="bar-xl" aria-hidden="true"></div>
           <p>The panel, and your first rescue.</p>
-          <a class="btn" href="#scan">See my ads’ risk</a>
+          <a class="btn" href="#scan">Check my claims</a>
         </article>
         <article class="panel plan" id="starter">
           <p class="panel-title">Starter <small>· launch price</small></p>
@@ -184,7 +184,7 @@
     <div class="wrap">
       <h2>Questions</h2>
       <dl class="faq">
-        <div><dt>What do you need from me?</dt><dd>Your website, for the counts. A work email, to see the lines. No login and no card.</dd></div>
+        <div><dt>What do you need from me?</dt><dd>Your website, for the counts. A work email you confirm, to get the riskiest line by email. No login and no card.</dd></div>
         <div><dt>Do you change my ads?</dt><dd>No. Vera only reads. You choose what to change, and you make the change.</dd></div>
         <div><dt>Where do the rules come from?</dt><dd>Meta’s ad policies, and FTC and FDA guidance. Each flagged line names its rule, or says a person should read it.</dd></div>
         <div><dt>Who checks the lines?</dt><dd>Each line says if a person checked it. Akhil reviews the findings before every first report.</dd></div>
@@ -200,7 +200,7 @@
       <form class="scan closing-form" action="./" method="get">
         <label for="closing-website">Your website</label>
         <input id="closing-website" name="site" type="text" inputmode="url" autocomplete="url" placeholder="yourbrand.com" required>
-        <button class="btn" type="submit">See my ads’ risk</button>
+        <button class="btn" type="submit">Check my claims</button>
         <p class="alt">Free. No card. Your website only.</p>
       </form>
     </div>

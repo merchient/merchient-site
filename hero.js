@@ -174,7 +174,7 @@
       var id = x.body && x.body.id;
       if (p) { render(p); return; }
       if (!x.ok || !id || x.body.state !== 'queued') { busyForm(x); return; }
-      msg.textContent = 'Reading your page: about two minutes';
+      msg.textContent = 'Reading your page';
       progress.value = 0;
       progress.hidden = false;
       poll(api + '/api/panel/status/' + encodeURIComponent(id) + vOnly, Date.now());
