@@ -332,7 +332,8 @@ SCAN_JS = '''// The scan box on the home page. Without this script the form open
 
 def scan_apply(page):
     """Writes the scan box, and the home page's content security policy, for SCAN_API_ON."""
-    csp = CSP_BASE + ("script-src 'self'; connect-src %s; form-action mailto:" % SCAN_API_URL.rsplit('/', 2)[0]
+    # form-action 'self' (site 47): the closing input on the home page is a GET form back to the page (/?site=...).
+    csp = CSP_BASE + ("script-src 'self'; connect-src %s; form-action 'self' mailto:" % SCAN_API_URL.rsplit('/', 2)[0]
                       if SCAN_API_ON else 'form-action mailto:')
     box = SCAN_ON % html.escape(SCAN_API_URL, quote=True) if SCAN_API_ON else SCAN_OFF
     page, n = SCAN_BLOCK.subn(lambda m: box, page)
@@ -397,7 +398,10 @@ def fields():
             if isinstance(o, dict):
                 for k, v in o.items():
                     walk(v, path + '.' + str(k))
-            elif isinstance(o, bool) or o is None or isinstance(o, list):
+            elif isinstance(o, list):  # site 47: a list item by its place, {{index.rules_top.0.short}}
+                for k, v in enumerate(o):
+                    walk(v, path + '.' + str(k))
+            elif isinstance(o, bool) or o is None:
                 return
             elif isinstance(o, float) and o.is_integer():
                 _fields[path] = str(int(o))
@@ -1249,7 +1253,9 @@ def main():
             was = f.read()
         new, n = PLACES.subn(lambda m: m.group(1) + str(FOUNDING_PLACES_LEFT) + m.group(2), was)
         if p == 'index.html':
-            new = sweeps_apply(scan_apply(new))
+            # Site 47: the home page's proof is the v3 {{index...}} fields; the weekly sweeps line (sweeps_apply) is no
+            # longer on it.
+            new = scan_apply(new)
         new = fields_apply(founder_link(new, p))
         if n or p == 'index.html' or new != was or PLACEHOLDER.search(new) or FIELD_SPAN.search(new):
             want[p], shown = new, shown + n

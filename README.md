@@ -11,7 +11,7 @@ It is a static site: plain HTML pages and one stylesheet, with no cookies and no
 - `rescue.html`, served at /rescue: the free rescue form for a rejected ad or a pulled listing, its limits, and a free account checklist. `rescue.js` asks the rescue service at api.merchient.com for a form token and posts the form there; if the service does not answer, or the browser runs no JavaScript, the form opens an email to akhil@merchient.com with the subject "Rescue" instead
 - `claims-watch.html`, served at /claims-watch: public enforcement and policy items on supplement claims, each with its date, who acted, what it means and the source
 - `connect.html`: what to do to connect each surface Vera 360 reads, including sharing a Meta ad account view-only
-- `start.html`, served at /start: what happens after a brand pays, in order, what Vera checks today and what is coming soon, and the limits
+- `start.html`, served at /start: what happens after a brand pays, in order, what Vera checks today and what she does not read, and the limits
 - `pricing.html`, served at /pricing: the three steps (rescue, launch clearance, every day), the guarantees and the billing questions
 - `agencies.html`, served at /agencies: the rescue desk for agencies
 - `sample-report.html`: a fictional brand's free first report, as Vera writes one

@@ -136,7 +136,8 @@
     }
     out.appendChild(el('p', 'cf-foot', 'Customer reviews, menus, footers and offer text are left out. Not read this time: ' +
       and(unread) + '.'));
-    out.appendChild(el('p', 'cf-ai', 'Generated with AI. Verify before use.'));
+    out.appendChild(el('p', 'cf-ai', 'Vera is an AI employee at Merchient. Risk review, not legal advice.'));
+    title.textContent = 'Claims Facts: ' + p.domain;
     out.hidden = false;
     mailForm.hidden = false;
   }
