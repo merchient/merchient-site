@@ -239,7 +239,7 @@ FINAL = '''
   <div class="wrap footer-inner">
     <p>Merchient is a trade name of Orbline LLC, 30 N Gould St, STE R, Sheridan, WY 82801, USA.</p>
     <p><a href="mailto:hello@merchient.com">hello@merchient.com</a></p>
-    <p class="footer-more"><a href="../rescue">Send a rejected ad</a> · <a href="../claims-watch">Claims Watch</a> · <a href="../pricing">Price</a> · <a href="../agencies">Agencies</a></p>
+    <p class="footer-more"><a href="../rescue">Send a rejected ad</a> · <a href="../claims-watch">Claims Watch</a> · <a href="../pricing">Price</a> · <a href="../agencies">Agencies</a> · <a href="../founder">Why I built this</a></p>
     <nav class="footer-links" aria-label="Legal">
       <a href="../privacy.html">Privacy</a>
       <a href="../terms.html">Terms</a>
@@ -362,6 +362,16 @@ def sweeps_apply(page):
     return page
 
 
+FOOTER_MORE = re.compile(r'(<p class="footer-more">)(.*?)(</p>)', re.S)
+
+
+def founder_link(page, rel):
+    """Adds "Why I built this" to the footer line of a hand-written page. The generated pages carry it in their templates."""
+    prefix = '/' if rel == '404.html' else '../' * rel.count(os.sep)
+    link = ' · <a href="%sfounder">Why I built this</a>' % prefix
+    return FOOTER_MORE.sub(lambda m: m.group(0) if 'founder"' in m.group(2) else m.group(1) + m.group(2) + link + m.group(3), page)
+
+
 def fail(message):
     sys.exit('build.py: ' + message)
 
@@ -429,7 +439,7 @@ INDEX_FOOT = '''  </div>
   <div class="wrap footer-inner">
     <p>Merchient is a trade name of Orbline LLC, 30 N Gould St, STE R, Sheridan, WY 82801, USA.</p>
     <p><a href="mailto:hello@merchient.com">hello@merchient.com</a></p>
-    <p class="footer-more"><a href="@UP@rescue">Send a rejected ad</a> · <a href="@UP@claims-watch">Claims Watch</a> · <a href="@UP@pricing">Price</a> · <a href="@UP@agencies">Agencies</a></p>
+    <p class="footer-more"><a href="@UP@rescue">Send a rejected ad</a> · <a href="@UP@claims-watch">Claims Watch</a> · <a href="@UP@pricing">Price</a> · <a href="@UP@agencies">Agencies</a> · <a href="@UP@founder">Why I built this</a></p>
     <nav class="footer-links" aria-label="Legal">
       <a href="@UP@privacy.html">Privacy</a>
       <a href="@UP@terms.html">Terms</a>
@@ -870,10 +880,12 @@ def main():
     want, shown = {}, 0
     for p in pages():
         with open(os.path.join(ROOT, p), encoding='utf-8') as f:
-            new, n = PLACES.subn(lambda m: m.group(1) + str(FOUNDING_PLACES_LEFT) + m.group(2), f.read())
+            was = f.read()
+        new, n = PLACES.subn(lambda m: m.group(1) + str(FOUNDING_PLACES_LEFT) + m.group(2), was)
         if p == 'index.html':
             new = sweeps_apply(scan_apply(new))
-        if n or p == 'index.html':
+        new = founder_link(new, p)
+        if n or p == 'index.html' or new != was:
             want[p], shown = new, shown + n
     if not shown:
         fail('no page shows the founding places left (<strong class="places-left">)')
