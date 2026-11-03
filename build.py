@@ -13,7 +13,7 @@ It writes three things and changes nothing else:
    each guide in data/ (the guides' JSON, copied unchanged from Merchient's library).
 3. sitemap.xml: the pages it already lists stay, and the ingredient guides follow.
 
-The terms state only the total of 5 founding places: a count that changes would
+The terms state only the total of 3 founding places: a count that changes would
 change the contract each time a place goes.
 
 The guides' words are the library's, unchanged. Where a guide points at a part of
@@ -21,9 +21,9 @@ the library that no page shows, such as "(see notes)", the build says so; fix it
 in the library, copy the JSON into data/ again and run the build.
 """
 
-# Founding places still open, out of 5. When a founding brand joins, lower this
+# Founding places still open, out of 3. When a founding brand joins, lower this
 # by one, run python3 build.py, then commit and push.
-FOUNDING_PLACES_LEFT = 5
+FOUNDING_PLACES_LEFT = 3
 
 # The scan box in the home page's hero. False: the box opens the "Free scan request"
 # email, and the home page runs no JavaScript. True: the box posts the website and work
@@ -43,7 +43,7 @@ import os
 import re
 import sys
 
-FOUNDING_PLACES = 5
+FOUNDING_PLACES = 3
 ROOT = os.path.dirname(os.path.abspath(__file__))
 SITE = 'https://merchient.com/'
 SCAN = ('mailto:hello@merchient.com?subject=Free%20scan%20request&amp;'
