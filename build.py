@@ -6,12 +6,14 @@ Run it from this folder after changing FOUNDING_PLACES_LEFT or anything in data/
     python3 build.py            writes the pages
     python3 build.py --check    changes nothing, and fails if a page is out of date
 
-It writes three things and changes nothing else:
+It writes four things and changes nothing else:
 1. The number of founding places left, into each <strong class="places-left">
    on the site's pages.
 2. The ingredient guides: ingredients/index.html, and ingredients/<slug>.html for
    each guide in data/ (the guides' JSON, copied unchanged from Merchient's library).
 3. sitemap.xml: the pages it already lists stay, and the ingredient guides follow.
+4. The ad index: index/index.html (the list) and index/<year>-<month>/index.html for each data/index-<year>-<month>.json,
+   which reports/tools/make_index39.py writes from the sweep files. The pages' URLs are added to sitemap.xml by hand.
 
 The terms state only the total of 3 founding places: a count that changes would
 change the contract each time a place goes.
@@ -364,6 +366,277 @@ def fail(message):
     sys.exit('build.py: ' + message)
 
 
+# The ad index (site 39, 3 Nov 2026): /index/ lists the issues, /index/<year>-<month>/ is one issue. Each issue is built
+# from data/index-<year>-<month>.json, which reports/tools/make_index39.py writes from the sweep files (counts only:
+# no brand, domain, page name, ad id or quote). The sentences that depend on the numbers are checked here; if a number
+# makes one untrue, the build stops and the sentence has to be reworded.
+INDEX_HEAD = '''<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'self'; font-src 'self'; img-src 'self'; base-uri 'none'; form-action 'none'">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>@TITLE@</title>
+<meta name="description" content="@DESC@">
+<link rel="canonical" href="@URL@">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Merchient">
+<meta property="og:title" content="@TITLE@">
+<meta property="og:description" content="@DESC@">
+<meta property="og:url" content="@URL@">
+<meta property="og:image" content="https://merchient.com/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Merchient. Keep the hook. Lose the claim.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="@TITLE@">
+<meta name="twitter:description" content="@DESC@">
+<meta name="twitter:image" content="https://merchient.com/og-image.png">
+<meta name="twitter:image:alt" content="Merchient. Keep the hook. Lose the claim.">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#f2eee3" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#121210" media="(prefers-color-scheme: dark)">
+<link rel="icon" href="@UP@favicon.ico" sizes="32x32">
+<link rel="icon" href="@UP@favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="@UP@apple-touch-icon.png">
+<link rel="preload" href="@UP@fonts/archivo-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="@UP@styles.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="brand" href="@UP@">Merchient</a>
+    <nav class="site-nav" aria-label="Main">
+      <a href="@UP@#how-it-works">How it works</a>
+      <a href="@UP@pricing">Price</a>
+      <a href="@UP@agencies">Agencies</a>
+      <a href="@UP@#faq">FAQ</a>
+      <a href="@UP@rescue">Send a rejected ad</a>
+      <a class="btn btn-small" href="@SCAN@">Get your free scan</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main" class="legal">
+  <div class="wrap narrow">
+'''
+INDEX_FOOT = '''  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <p>Merchient is a trade name of Orbline LLC, 30 N Gould St, STE R, Sheridan, WY 82801, USA.</p>
+    <p><a href="mailto:hello@merchient.com">hello@merchient.com</a></p>
+    <p class="footer-more"><a href="@UP@rescue">Send a rejected ad</a> · <a href="@UP@claims-watch">Claims Watch</a> · <a href="@UP@pricing">Price</a> · <a href="@UP@agencies">Agencies</a></p>
+    <nav class="footer-links" aria-label="Legal">
+      <a href="@UP@privacy.html">Privacy</a>
+      <a href="@UP@terms.html">Terms</a>
+      <a href="@UP@data-deletion.html">Data deletion</a>
+      <a href="@UP@security.html">Security</a>
+    </nav>
+  </div>
+</footer>
+</body>
+</html>
+'''
+
+
+def index_frame(up, title, desc, url, body):
+    head = INDEX_HEAD.replace('@SCAN@', SCAN)
+    for token, value in (('@TITLE@', attr(title)), ('@DESC@', attr(desc)), ('@URL@', url), ('@UP@', up)):
+        head = head.replace(token, value)
+    return head + body + INDEX_FOOT.replace('@UP@', up)
+
+
+def index_issues():
+    """The issues in data/, newest first: (month as 2026-11, the data)."""
+    out = []
+    for name in sorted(os.listdir(os.path.join(ROOT, 'data')), reverse=True):
+        m = re.fullmatch(r'index-(\d{4}-\d\d)\.json', name)
+        if m:
+            with open(os.path.join(ROOT, 'data', name), encoding='utf-8') as f:
+                out.append((m.group(1), json.load(f)))
+    return out
+
+
+def month_name(month):
+    return '%s %s' % (MONTHS[int(month[5:]) - 1], month[:4])
+
+
+def median_text(x):
+    return ('%g' % x)
+
+
+def index_issue_page(month, d):
+    where = 'data/index-%s.json' % month
+    n, t, flagged, brands = d['ads_read'], d['tiers'], d['flagged'], d['brands']
+    if d['month'] != month or sum(t.values()) != n or t['Red'] + t['Yellow'] != flagged or not 0 < brands <= n:
+        fail(where + ': the counts do not add up')
+    if brands != n or d['sweeps'] != 5:
+        fail(where + ': the page says one ad from each brand, and that four of the five sweeps sorted by impressions; '
+                     'with %d ads, %d brands and %d sweeps, reword both sentences' % (n, brands, d['sweeps']))
+    top, all_rules = d['rules_top'], {r['key']: r for r in d['rules_all']}
+    if len(top) != 5 or sum(r['ads'] for r in d['rules_all']) != flagged:
+        fail(where + ': the rules must be five, and every flagged ad must be under one rule')
+    if [r['ads'] for r in top] != sorted((r['ads'] for r in top), reverse=True) or top[-1]['ads'] < max(
+            r['ads'] for r in d['rules_all'][5:]):
+        fail(where + ': the five rules are not the five most hit')
+    cats = d['categories']
+    if sum(c['ads'] for c in cats) != n or sum(c['flagged'] for c in cats) != flagged:
+        fail(where + ': the categories do not add up to the ads read')
+    run = d['running']
+    if [run[k]['ads'] for k in ('Red', 'Yellow', 'Green')] != [t['Red'], t['Yellow'], t['Green']]:
+        fail(where + ': the running table and the tiers disagree')
+    if not all(run[k]['share_90_plus'] > 50 for k in run):
+        fail(where + ': "more than half had been running 90 days or longer" is no longer true for every tier; reword that paragraph')
+    first, last = d['read_first'], d['read_last']
+    month_label = month_name(month)
+    title = 'Supplement ad index: %s' % month_label
+    covered = days([first, last])
+    desc = ('We read %d supplement ads in Meta’s public Ad Library, %s: %d%% carried a line Vera flags. The rules most hit, '
+            'by category, and how long the ads had been running.' % (n, covered, d['share_flagged']))
+    covered_in_text = covered if first[:4] == last[:4] else None
+    if covered_in_text is None:
+        fail(where + ': the reading dates run across two years')
+
+    def pc(v):
+        return '%d%%' % v
+
+    rows = ''.join(
+        '            <tr><th scope="row">%s</th><td>%d</td><td>%s</td></tr>\n' % (label, t[k], pc(d['share_by_tier'][k]))
+        for k, label in (('Red', 'Red'), ('Yellow', 'Yellow'), ('Green', 'Green')))
+    rows += '            <tr><th scope="row">Red and Yellow (flagged)</th><td>%d</td><td>%s</td></tr>\n' % (flagged, pc(d['share_flagged']))
+    rules = ''
+    for r in top:
+        red = ('%d of them Red' % r['red']) if r['red'] else 'none of them Red'
+        rules += ('      <li><b>%s: %s.</b> %d ads, %s. %s <i>Example:</i> %s</li>\n' % (
+            r['authority'], text(r['name'][0].lower() + r['name'][1:]), r['ads'], red, text(r['plain']), text(r['example'])))
+    top_total = sum(r['ads'] for r in top)
+    wordpass = all_rules.get('fda_wordpass', {}).get('ads', 0)
+    cat_items = ''
+    for c in cats:
+        if not c['ads']:
+            continue
+        def short(k):
+            s = all_rules[k]['short']
+            return s[0].lower() + s[1:]
+        if not c['top_rule']:
+            tail = ' Nothing flagged.'
+        elif c['top_rule_tied_with']:
+            tail = ' Most hit, tied at %d ads each: %s.' % (c['top_rule_ads'], text(' and '.join(
+                [short(c['top_rule'])] + [short(k) for k in c['top_rule_tied_with']])))
+        else:
+            tail = ' Most hit: %s, %d ads.' % (text(short(c['top_rule'])), c['top_rule_ads'])
+        cat_items += '      <li><b>%s.</b> %d ads read, %d flagged (%s).%s</li>\n' % (
+            text(c['name']), c['ads'], c['flagged'], pc(c['share_flagged']), tail)
+    small = [c['name'] for c in cats if 0 < c['ads'] < 15 and c['name'] != 'Other']
+    if len(small) > 1:
+        small_text = 'Small groups: %s and %s each have fewer than 15 ads, so read their shares as counts.' % (
+            ', '.join(small[:-1]), small[-1])
+    elif small:
+        small_text = 'Small group: %s has fewer than 15 ads, so read its share as a count.' % small[0]
+    else:
+        small_text = ''
+    run_rows = ''
+    for k in ('Red', 'Yellow', 'Green'):
+        v = run[k]
+        run_rows += ('            <tr><th scope="row">%s</th><td>%d</td><td>%s</td><td>%d (%s)</td><td>%d (%s)</td></tr>\n' % (
+            k, v['ads'], median_text(v['median_days']), v['at_90_plus'], pc(v['share_90_plus']),
+            v['under_30'], pc(v['share_under_30'])))
+    shares = sorted(run[k]['share_90_plus'] for k in run)
+    medians = (median_text(run['Red']['median_days']), median_text(run['Green']['median_days']))
+    body = '''    <p class="kicker"><a href="./">Ad index</a></p>
+    <h1>%(title)s</h1>
+    <p class="section-lede">Supplement ads running on Meta, the share that carried a line Vera flags, the rules most hit and how long the ads had been running when we read them.</p>
+
+    <h2>Ads read</h2>
+    <p>From %(covered)s we read %(n)d supplement ads in Meta’s public Ad Library, in five sweeps, one ad from each of %(brands)d brands (counted by the website the ad leads to). Vera, Merchient’s AI employee, read each ad’s words against Meta’s ad rules and the FTC and FDA guidance, and gave it a tier.</p>
+    <ul class="checklist">
+      <li><b>Red.</b> Wording Vera expects a regulator or a platform to act on.</li>
+      <li><b>Yellow.</b> Every other finding, less likely to be acted on.</li>
+      <li><b>Green.</b> Nothing to flag.</li>
+    </ul>
+    <div class="table-wrap">
+      <table class="value-table">
+        <thead>
+          <tr><th scope="col">Tier</th><th scope="col">Ads</th><th scope="col">Share of ads read</th></tr>
+        </thead>
+        <tbody>
+%(rows)s        </tbody>
+      </table>
+    </div>
+    <p>%(flagged)d of the %(n)d ads (%(flagged_pc)s) carried a line Vera flags, Red or Yellow.</p>
+
+    <h2>The five rules most hit</h2>
+    <p>Each flagged ad is counted once, under the rule its reason points to; we sorted Vera’s reasons into these groups. These five cover %(top_total)d of the %(flagged)d flagged ads. The other %(rest)d are spread over six smaller groups%(wordpass)s. Examples are described, not quoted: no brand, product name or ad is named.</p>
+    <ol class="checklist">
+%(rules)s    </ol>
+
+    <h2>By category</h2>
+    <p>Ads are grouped by the search word that found them, one group for each ad. “Other” holds the searches that fit none of the groups above it, such as prostate, blood pressure, ashwagandha and shilajit.</p>
+    <ul class="checklist">
+%(cats)s    </ul>
+    <p>%(small)s</p>
+
+    <h2>How long the ads had been running when we read them</h2>
+    <p>Meta’s library shows the day each ad started. “Days running” is the number of days between that day and the day we read the ad.</p>
+    <div class="table-wrap">
+      <table class="value-table">
+        <thead>
+          <tr><th scope="col">Tier</th><th scope="col">Ads</th><th scope="col">Median days running</th><th scope="col">90 days or more</th><th scope="col">Under 30 days</th></tr>
+        </thead>
+        <tbody>
+%(run_rows)s        </tbody>
+      </table>
+    </div>
+    <p><b>What it shows.</b> Most of these ads were not new. In every tier more than half (%(lo)d%% to %(hi)d%%) had been running for 90 days or longer when we read them. The median Red ad had been running %(med_red)s days, the median Green ad %(med_green)s.</p>
+    <p><b>What it does not show.</b> These ads were running when we read them, so this cannot say how many flagged ads were stopped, by the brand or by Meta: an ad that had stopped before a sweep is not in these numbers. A recheck of the same ads would show that; this issue does not. It does not say whether Meta has reviewed any of these ads or what it decided. Four of the five sweeps took the library’s active ads sorted by impressions, so the ads lean towards those that reach many people; the first sweep did not record its order, or its filters. These ads are not a random sample of supplement ads.</p>
+
+    <h2>What changed since last issue</h2>
+    <p>This is the first issue, so there is nothing to compare with yet.</p>
+
+    <h2>Method</h2>
+    <p>We read supplement ads in Meta’s public Ad Library: active ads for the United States (the first sweep did not record its filters), found by search words such as the ones grouped above, one ad from each brand. Vera, an AI, read each ad’s words against Meta’s published ad rules and the FTC and FDA guidance. A tier and a rule show what Vera flagged, never what Meta rejected. We do not know what Meta decided about any of these ads. Vera read each ad’s headline and the start of its text, not its picture or video or the page it leads to, so a Green ad had nothing to flag in those words and may still have a problem elsewhere. Start dates are the ones the library shows.</p>
+    <p>Want to know where your own ads fall? Put your website in the box on the home page and <a href="%(up)sscan">see your own panel</a>.</p>
+    <p class="warnings">Risk review, not legal advice.</p>
+    <p class="more-link"><a class="sample-link" href="../">All issues</a> · <a class="sample-link" href="../../weekly/">Weekly</a> · <a class="sample-link" href="../../">Back to the home page</a></p>
+''' % {
+        'title': text(title), 'covered': covered, 'n': n, 'brands': brands, 'rows': rows,
+        'flagged': flagged, 'flagged_pc': pc(d['share_flagged']), 'top_total': top_total, 'rest': flagged - top_total,
+        'wordpass': ('; %d of those were flagged by a word check that named no rule' % wordpass) if wordpass else '',
+        'rules': rules, 'cats': cat_items, 'run_rows': run_rows, 'lo': shares[0], 'hi': shares[-1],
+        'med_red': medians[0], 'med_green': medians[1], 'up': '../../',
+        'small': small_text,
+    }
+    return index_frame('../../', title + ' · Merchient', desc, SITE + 'index/%s/' % month, body)
+
+
+def index_list_page(issues):
+    if not issues:
+        fail('data/: no index-<year>-<month>.json')
+    items = ''.join('      <li><a href="%s/">Supplement ad index: %s</a> · %d ads read, %s</li>\n' % (
+        m, month_name(m), d['ads_read'], days([d['read_first'], d['read_last']])) for m, d in issues)
+    body = '''    <p class="kicker">Ad index</p>
+    <h1>Supplement ad index.</h1>
+    <p class="section-lede">Supplement ads read in Meta’s public Ad Library, the rules their lines meet and how long the ads had been running.</p>
+
+    <h2>The issues</h2>
+    <ul class="checklist">
+%s    </ul>
+
+    <p>What Meta’s ad rules catch, week by week: <a href="../weekly/">the weekly page</a>.</p>
+    <p>Want to know where your own ads fall? Put your website in the box on the <a href="../scan">home page</a> for a free scan.</p>
+
+    <p class="warnings">Risk review, not legal advice.</p>
+    <p class="more-link"><a class="sample-link" href="../weekly/">Weekly</a> · <a class="sample-link" href="../">Back to the home page</a></p>
+''' % items
+    return index_frame('../', 'Supplement ad index · Merchient',
+                       'Supplement ads read in Meta’s public Ad Library: the rules their lines meet, by category, and how long the ads had been running.',
+                       SITE + 'index/', body)
+
+
 def smart(s):
     """Typographic quotes and apostrophes, as on the rest of the site."""
     s = re.sub(r'(^|[\s(\[])"', '\\1\u201c', s).replace('"', '\u201d')
@@ -455,7 +728,8 @@ def load():
             if not s['url'].startswith('https://'):
                 fail(where + ': a source is not an https link')
         guides.append(g)
-    names = sorted(f[:-5] for f in os.listdir(data) if f.endswith('.json') and f not in ('index.json', 'sweeps.json'))
+    names = sorted(f[:-5] for f in os.listdir(data) if f.endswith('.json') and f not in ('index.json', 'sweeps.json')
+                   and not re.fullmatch(r'index-\d{4}-\d\d\.json', f))
     if names != sorted(g['slug'] for g in guides) or index['count'] != len(guides):
         fail('data/ and data/index.json list different guides')
     return index, guides
@@ -607,6 +881,10 @@ def main():
         want[os.path.join('ingredients', g['slug'] + '.html')] = guide_page(g)
     want[os.path.join('ingredients', 'index.html')] = index_page(index, guides)
     want['sitemap.xml'] = sitemap(guides)
+    issues = index_issues()
+    for month, d in issues:
+        want[os.path.join('index', month, 'index.html')] = index_issue_page(month, d)
+    want[os.path.join('index', 'index.html')] = index_list_page(issues)
     if SCAN_API_ON:
         want['scan.js'] = SCAN_JS
 
@@ -637,6 +915,7 @@ def main():
         return
     os.makedirs(folder, exist_ok=True)
     for p in changed:
+        os.makedirs(os.path.dirname(os.path.join(ROOT, p)), exist_ok=True)
         with open(os.path.join(ROOT, p), 'w', encoding='utf-8', newline='\n') as f:
             f.write(want[p])
     for p in stale:

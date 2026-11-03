@@ -1,0 +1,303 @@
+{
+  "month": "2026-11",
+  "source": "site 39 (3 Nov 2026): reports/tools/make_index39.py on the five sweep lines files in the sales lane (handoff/adlibrary/*-lines.tsv, fit = yes) joined by library id to the five mining files (sources/adlibrary) for start date and search word. Counts only: no brand, domain, page name, ad id or quote.",
+  "sweeps": 5,
+  "read_first": "2026-10-30",
+  "read_last": "2026-11-02",
+  "ads_read": 262,
+  "brands": 262,
+  "tiers": {
+    "Red": 108,
+    "Yellow": 86,
+    "Green": 68
+  },
+  "flagged": 194,
+  "share_by_tier": {
+    "Red": 41,
+    "Yellow": 33,
+    "Green": 26
+  },
+  "share_flagged": 74,
+  "rules_top": [
+    {
+      "key": "fda_disease",
+      "authority": "FDA",
+      "name": "A line that promises relief from, or names, a disease or a symptom",
+      "ads": 63,
+      "red": 57,
+      "short": "Disease or symptom claim (FDA)",
+      "plain": "The FDA reads a line that says a product relieves, fixes or prevents a disease or a symptom as a drug claim. A supplement can describe how it supports the body; it can’t say it treats a condition.",
+      "example": "A headline that promises to fix a named gland."
+    },
+    {
+      "key": "ftc_proof",
+      "authority": "FTC",
+      "name": "Proof or ranking words with no basis shown",
+      "ads": 41,
+      "red": 0,
+      "short": "Proof or ranking words (FTC)",
+      "plain": "The FTC expects a brand to be able to prove what its words claim. “Clinically proven”, “science-backed”, “best-selling” and “the only” need evidence behind them, and an ad that shows none is flagged.",
+      "example": "An ad that calls its product “scientifically proven” and names no study."
+    },
+    {
+      "key": "meta_personal",
+      "authority": "Meta",
+      "name": "A line that tells or asks the viewer about their own health",
+      "ads": 29,
+      "red": 20,
+      "short": "Speaks to the viewer’s health (Meta)",
+      "plain": "Meta’s personal-attributes rule bars an ad that tells or asks the viewer about their own health, with words such as “you have”, “struggling with” or “diagnosed with”.",
+      "example": "A line that tells the viewer they have a named urinary symptom."
+    },
+    {
+      "key": "fda_drug",
+      "authority": "FDA",
+      "name": "The product set beside a prescription drug, a medical device or surgery",
+      "ads": 18,
+      "red": 17,
+      "short": "Beside a prescription drug (FDA)",
+      "plain": "Naming a prescription drug, a medical device or surgery next to a supplement, or pitching the supplement to people on a drug, reads to the FDA as a disease claim, and Meta’s health-claims review flags it too.",
+      "example": "A headline that offers a supplement to people on a weight-loss drug."
+    },
+    {
+      "key": "meta_weight",
+      "authority": "Meta",
+      "name": "A weight-loss promise, or picking on a body part",
+      "ads": 12,
+      "red": 10,
+      "short": "Weight loss, body parts (Meta)",
+      "plain": "Meta’s health-and-wellness standards bar weight-loss promises and before-and-after bodies, and an ad that picks on a body part or appearance.",
+      "example": "A review that sells a product by the slimmer waist it gave."
+    }
+  ],
+  "rules_all": [
+    {
+      "key": "fda_disease",
+      "authority": "FDA",
+      "name": "A line that promises relief from, or names, a disease or a symptom",
+      "ads": 63,
+      "red": 57,
+      "short": "Disease or symptom claim (FDA)"
+    },
+    {
+      "key": "ftc_proof",
+      "authority": "FTC",
+      "name": "Proof or ranking words with no basis shown",
+      "ads": 41,
+      "red": 0,
+      "short": "Proof or ranking words (FTC)"
+    },
+    {
+      "key": "meta_personal",
+      "authority": "Meta",
+      "name": "A line that tells or asks the viewer about their own health",
+      "ads": 29,
+      "red": 20,
+      "short": "Speaks to the viewer’s health (Meta)"
+    },
+    {
+      "key": "fda_drug",
+      "authority": "FDA",
+      "name": "The product set beside a prescription drug, a medical device or surgery",
+      "ads": 18,
+      "red": 17,
+      "short": "Beside a prescription drug (FDA)"
+    },
+    {
+      "key": "meta_weight",
+      "authority": "Meta",
+      "name": "A weight-loss promise, or picking on a body part",
+      "ads": 12,
+      "red": 10,
+      "short": "Weight loss, body parts (Meta)"
+    },
+    {
+      "key": "fda_wordpass",
+      "authority": "FDA",
+      "name": "A word that points to a condition, with no rule named",
+      "ads": 8,
+      "red": 0,
+      "short": "A condition word, no rule named (FDA)"
+    },
+    {
+      "key": "fda_disclaimer",
+      "authority": "FDA",
+      "name": "No supplement disclaimer beside a claim about how the body works",
+      "ads": 5,
+      "red": 0,
+      "short": "Missing disclaimer (FDA)"
+    },
+    {
+      "key": "ftc_figure",
+      "authority": "FTC",
+      "name": "A number with no source",
+      "ads": 5,
+      "red": 0,
+      "short": "A number with no source (FTC)"
+    },
+    {
+      "key": "ftc_testimonial",
+      "authority": "FTC",
+      "name": "A customer story about a disease or an unusual result",
+      "ads": 5,
+      "red": 0,
+      "short": "A customer story (FTC)"
+    },
+    {
+      "key": "ftc_deadline",
+      "authority": "FTC",
+      "name": "A result by a deadline, or a guarantee",
+      "ads": 4,
+      "red": 4,
+      "short": "A deadline or a guarantee (FTC)"
+    },
+    {
+      "key": "meta_urgency",
+      "authority": "Meta",
+      "name": "A countdown or a rising price that is not true",
+      "ads": 4,
+      "red": 0,
+      "short": "A false countdown (Meta)"
+    }
+  ],
+  "categories": [
+    {
+      "name": "GLP-1 and weight",
+      "ads": 31,
+      "flagged": 23,
+      "share_flagged": 74,
+      "top_rule": "fda_drug",
+      "top_rule_ads": 6,
+      "top_rule_tied_with": [
+        "ftc_proof"
+      ]
+    },
+    {
+      "name": "Sleep",
+      "ads": 8,
+      "flagged": 5,
+      "share_flagged": 63,
+      "top_rule": "fda_disease",
+      "top_rule_ads": 3,
+      "top_rule_tied_with": []
+    },
+    {
+      "name": "Gut",
+      "ads": 33,
+      "flagged": 27,
+      "share_flagged": 82,
+      "top_rule": "fda_disease",
+      "top_rule_ads": 10,
+      "top_rule_tied_with": []
+    },
+    {
+      "name": "Immunity",
+      "ads": 11,
+      "flagged": 9,
+      "share_flagged": 82,
+      "top_rule": "ftc_proof",
+      "top_rule_ads": 5,
+      "top_rule_tied_with": []
+    },
+    {
+      "name": "Brain",
+      "ads": 20,
+      "flagged": 11,
+      "share_flagged": 55,
+      "top_rule": "fda_disease",
+      "top_rule_ads": 3,
+      "top_rule_tied_with": [
+        "ftc_proof"
+      ]
+    },
+    {
+      "name": "Hormones",
+      "ads": 53,
+      "flagged": 41,
+      "share_flagged": 77,
+      "top_rule": "fda_disease",
+      "top_rule_ads": 18,
+      "top_rule_tied_with": []
+    },
+    {
+      "name": "Joints",
+      "ads": 12,
+      "flagged": 12,
+      "share_flagged": 100,
+      "top_rule": "fda_disease",
+      "top_rule_ads": 8,
+      "top_rule_tied_with": []
+    },
+    {
+      "name": "Skin and hair",
+      "ads": 12,
+      "flagged": 10,
+      "share_flagged": 83,
+      "top_rule": "fda_disease",
+      "top_rule_ads": 4,
+      "top_rule_tied_with": []
+    },
+    {
+      "name": "Other",
+      "ads": 82,
+      "flagged": 56,
+      "share_flagged": 68,
+      "top_rule": "fda_disease",
+      "top_rule_ads": 14,
+      "top_rule_tied_with": []
+    }
+  ],
+  "category_other_words": [
+    "NAD supplement",
+    "ashwagandha",
+    "berberine",
+    "bladder supplement",
+    "blood pressure supplement",
+    "blood sugar support",
+    "cholesterol supplement",
+    "creatine gummies",
+    "detox tea",
+    "electrolyte powder",
+    "eye health supplement",
+    "glutathione",
+    "kids vitamins",
+    "liver detox supplement",
+    "male enhancement supplement",
+    "mushroom coffee",
+    "nerve support",
+    "nitric oxide supplement",
+    "prenatal vitamins",
+    "prostate supplement",
+    "sea moss",
+    "shilajit",
+    "stress relief supplement",
+    "tinnitus",
+    "urinary tract supplement"
+  ],
+  "running": {
+    "Red": {
+      "ads": 108,
+      "median_days": 103.0,
+      "at_90_plus": 60,
+      "under_30": 14,
+      "share_90_plus": 56,
+      "share_under_30": 13
+    },
+    "Yellow": {
+      "ads": 86,
+      "median_days": 114.0,
+      "at_90_plus": 54,
+      "under_30": 12,
+      "share_90_plus": 63,
+      "share_under_30": 14
+    },
+    "Green": {
+      "ads": 68,
+      "median_days": 128.0,
+      "at_90_plus": 39,
+      "under_30": 13,
+      "share_90_plus": 57,
+      "share_under_30": 19
+    }
+  }
+}
