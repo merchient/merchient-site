@@ -377,9 +377,10 @@ def fail(message):
 
 
 # The ad index (site 39, 3 Nov 2026): /index/ lists the issues, /index/<year>-<month>/ is one issue. Each issue is built
-# from data/index-<year>-<month>.json, which reports/tools/make_index39.py writes from the sweep files (counts only:
-# no brand, domain, page name, ad id or quote). The sentences that depend on the numbers are checked here; if a number
-# makes one untrue, the build stops and the sentence has to be reworded.
+# from data/index-<year>-<month>.json, which tools/index_issue.py writes from the sweep files (site 43; it is
+# reports/tools/make_index39.py promoted; counts only: no brand, domain, page name, ad id or quote). Every number on an
+# issue page is read from that file. The sentences that depend on the numbers are checked here; if a number makes one
+# untrue, the build stops and the sentence has to be reworded.
 INDEX_HEAD = '''<!doctype html>
 <html lang="en">
 <head>
@@ -479,14 +480,21 @@ def median_text(x):
     return ('%g' % x)
 
 
+def number_text(n):
+    """A small count in words ("four sweeps"), a larger one in digits."""
+    words = ['no', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten']
+    return words[n] if 0 <= n < len(words) else str(n)
+
+
 def index_issue_page(month, d):
     where = 'data/index-%s.json' % month
     n, t, flagged, brands = d['ads_read'], d['tiers'], d['flagged'], d['brands']
     if d['month'] != month or sum(t.values()) != n or t['Red'] + t['Yellow'] != flagged or not 0 < brands <= n:
         fail(where + ': the counts do not add up')
-    if brands != n or d['sweeps'] != 5:
-        fail(where + ': the page says one ad from each brand, and that four of the five sweeps sorted by impressions; '
-                     'with %d ads, %d brands and %d sweeps, reword both sentences' % (n, brands, d['sweeps']))
+    sweeps, recorded, left_out = d['sweeps'], d['sweeps_recorded'], d['brand_lookups_left_out']
+    if not 0 < recorded <= sweeps or left_out < 0:
+        fail(where + ': the sweeps (%d, %d with their filters recorded) or the brand lookups left out (%d) are wrong' % (
+            sweeps, recorded, left_out))
     top, all_rules = d['rules_top'], {r['key']: r for r in d['rules_all']}
     if len(top) != 5 or sum(r['ads'] for r in d['rules_all']) != flagged:
         fail(where + ': the rules must be five, and every flagged ad must be under one rule')
@@ -497,10 +505,11 @@ def index_issue_page(month, d):
     if sum(c['ads'] for c in cats) != n or sum(c['flagged'] for c in cats) != flagged:
         fail(where + ': the categories do not add up to the ads read')
     run = d['running']
-    if [run[k]['ads'] for k in ('Red', 'Yellow', 'Green')] != [t['Red'], t['Yellow'], t['Green']]:
+    if [run[k]['ads'] + run[k]['no_age'] for k in ('Red', 'Yellow', 'Green')] != [t['Red'], t['Yellow'], t['Green']]:
         fail(where + ': the running table and the tiers disagree')
-    if not all(run[k]['share_90_plus'] > 50 for k in run):
-        fail(where + ': "more than half had been running 90 days or longer" is no longer true for every tier; reword that paragraph')
+    if not all(run[k]['ads'] for k in run):
+        fail(where + ': a tier has no ad with a days-running row, so the age sentence cannot be written')
+    missing_age = sum(run[k]['no_age'] for k in run)
     first, last = d['read_first'], d['read_last']
     month_label = month_name(month)
     title = 'Supplement ad index: %s' % month_label
@@ -524,7 +533,6 @@ def index_issue_page(month, d):
         rules += ('      <li><b>%s: %s.</b> %d ads, %s. %s <i>Example:</i> %s</li>\n' % (
             r['authority'], text(r['name'][0].lower() + r['name'][1:]), r['ads'], red, text(r['plain']), text(r['example'])))
     top_total = sum(r['ads'] for r in top)
-    wordpass = all_rules.get('fda_wordpass', {}).get('ads', 0)
     cat_items = ''
     for c in cats:
         if not c['ads']:
@@ -552,17 +560,44 @@ def index_issue_page(month, d):
     run_rows = ''
     for k in ('Red', 'Yellow', 'Green'):
         v = run[k]
-        run_rows += ('            <tr><th scope="row">%s</th><td>%d</td><td>%s</td><td>%d (%s)</td><td>%d (%s)</td></tr>\n' % (
-            k, v['ads'], median_text(v['median_days']), v['at_90_plus'], pc(v['share_90_plus']),
-            v['under_30'], pc(v['share_under_30'])))
-    shares = sorted(run[k]['share_90_plus'] for k in run)
-    medians = (median_text(run['Red']['median_days']), median_text(run['Green']['median_days']))
-    body = '''    <p class="kicker"><a href="./">Ad index</a></p>
+        run_rows += ('            <tr><th scope="row">%s</th><td>%d</td><td>%s</td><td>%s</td><td>%s</td><td>%d (%s)</td><td>%d (%s)</td></tr>\n' % (
+            k, v['ads'], median_text(v['median_days']), median_text(v['q1_days']), median_text(v['q3_days']),
+            v['at_90_plus'], pc(v['share_90_plus']), v['under_30'], pc(v['share_under_30'])))
+    # Every number in the sentences below is read from the data file; none is typed here.
+    older = '; '.join('%s %s' % (k, pc(run[k]['share_90_plus'])) for k in ('Red', 'Yellow', 'Green'))
+    age_missing_text = (
+        '<p>The days-running file had no row yet for %d of the %d ads read; they are counted everywhere else on this page and left out of this table.</p>\n    '
+        % (missing_age, n)) if missing_age else ''
+    if brands == n:
+        brands_text = ', one ad from each of %d brands (counted by the website the ad leads to)' % brands
+        one_per = ', one ad from each brand'
+    else:
+        brands_text = ', from %d brands (counted by the website the ad leads to)' % brands
+        one_per = ''
+    if recorded == sweeps:
+        filters = 'active ads for the United States, sorted by impressions'
+        order_text = 'Every sweep took the library’s active ads sorted by impressions'
+    else:
+        filters = ('active ads for the United States, sorted by impressions (only %d of the %d sweeps recorded their filters)'
+                   % (recorded, sweeps))
+        order_text = ('%d of the %d sweeps took the library’s active ads sorted by impressions; the others did not record '
+                      'their order, or their filters' % (recorded, sweeps))
+    left_out_text = (
+        '<p>Not counted: %d more ads were found by looking up a brand by name, not by a search word. We chose those brands, '
+        'a search did not find them, so they are left out of every number on this page.</p>\n    ' % left_out) if left_out else ''
+    groups_rest = len(d['rules_all']) - len(top)
+    wordpass = 0 if 'fda_wordpass' in [r['key'] for r in top] else all_rules.get('fda_wordpass', {}).get('ads', 0)
+    other = [c for c in cats if c['name'] == 'Other' and c['ads']]
+    other_text = ('“Other” holds the searches that fit none of the groups, such as %s.' % text(
+        ', '.join(d['category_other_examples'][:-1]) + ' and ' + d['category_other_examples'][-1]
+        if len(d['category_other_examples']) > 1 else ''.join(d['category_other_examples']))) if other and d['category_other_examples'] else ''
+    body ='''    <p class="kicker"><a href="./">Ad index</a></p>
     <h1>%(title)s</h1>
     <p class="section-lede">Supplement ads running on Meta, the share that carried a line Vera flags, the rules most hit and how long the ads had been running when we read them.</p>
+    <p class="warnings">Flagged for review, not a ruling. Meta makes the final call on every ad. Counts only.</p>
 
     <h2>Ads read</h2>
-    <p>From %(covered)s we read %(n)d supplement ads in Meta’s public Ad Library, in five sweeps, one ad from each of %(brands)d brands (counted by the website the ad leads to). Vera, Merchient’s AI employee, read each ad’s words against Meta’s ad rules and the FTC and FDA guidance, and gave it a tier.</p>
+    <p>From %(covered)s we read %(n)d supplement ads in Meta’s public Ad Library, in %(sweeps)s%(brands_text)s. Vera, Merchient’s AI employee, read each ad’s words against Meta’s ad rules and the FTC and FDA guidance, and gave it a tier.</p>
     <ul class="checklist">
       <li><b>Red.</b> Wording Vera expects a regulator or a platform to act on.</li>
       <li><b>Yellow.</b> Every other finding, less likely to be acted on.</li>
@@ -578,47 +613,58 @@ def index_issue_page(month, d):
       </table>
     </div>
     <p>%(flagged)d of the %(n)d ads (%(flagged_pc)s) carried a line Vera flags, Red or Yellow.</p>
-
-    <h2>The five rules most hit</h2>
-    <p>Each flagged ad is counted once, under the rule its reason points to; we sorted Vera’s reasons into these groups. These five cover %(top_total)d of the %(flagged)d flagged ads. The other %(rest)d are spread over six smaller groups%(wordpass)s. Examples are described, not quoted: no brand, product name or ad is named.</p>
+    %(left_out_text)s
+    <h2>The %(top_count)s rules most hit</h2>
+    <p>Each flagged ad is counted once, under the rule its reason points to; we sorted Vera’s reasons into these groups. These %(top_count)s cover %(top_total)d of the %(flagged)d flagged ads.%(rest_text)s Examples are described, not quoted: no brand, product name or ad is named.</p>
     <ol class="checklist">
 %(rules)s    </ol>
 
     <h2>By category</h2>
-    <p>Ads are grouped by the search word that found them, one group for each ad. “Other” holds the searches that fit none of the groups above it, such as prostate, blood pressure, ashwagandha and shilajit.</p>
+    <p>Ads are grouped by the search word that found them, one group for each ad. %(other)s</p>
     <ul class="checklist">
 %(cats)s    </ul>
     <p>%(small)s</p>
 
     <h2>How long the ads had been running when we read them</h2>
-    <p>Meta’s library shows the day each ad started. “Days running” is the number of days between that day and the day we read the ad.</p>
+    <p>Meta’s library shows the day each ad started. “Days running” is the number of days between that day and the day we read the ad. For each tier the table gives the median and the first and third quartiles of days running, from the days-running file of the ads in this issue.</p>
     <div class="table-wrap">
       <table class="value-table">
         <thead>
-          <tr><th scope="col">Tier</th><th scope="col">Ads</th><th scope="col">Median days running</th><th scope="col">90 days or more</th><th scope="col">Under 30 days</th></tr>
+          <tr><th scope="col">Tier</th><th scope="col">Ads</th><th scope="col">Median days running</th><th scope="col">First quartile</th><th scope="col">Third quartile</th><th scope="col">90 days or more</th><th scope="col">Under 30 days</th></tr>
         </thead>
         <tbody>
 %(run_rows)s        </tbody>
       </table>
     </div>
-    <p><b>What it shows.</b> Most of these ads were not new. In every tier more than half (%(lo)d%% to %(hi)d%%) had been running for 90 days or longer when we read them. The median Red ad had been running %(med_red)s days, the median Green ad %(med_green)s.</p>
-    <p><b>What it does not show.</b> These ads were running when we read them, so this cannot say how many flagged ads were stopped, by the brand or by Meta: an ad that had stopped before a sweep is not in these numbers. A recheck of the same ads would show that; this issue does not. It does not say whether Meta has reviewed any of these ads or what it decided. Four of the five sweeps took the library’s active ads sorted by impressions, so the ads lean towards those that reach many people; the first sweep did not record its order, or its filters. These ads are not a random sample of supplement ads.</p>
+    %(age_missing_text)s<p><b>What it shows.</b> Of the %(n_red)d Red lines we read%(red_with_row)s, the median ad had been running %(med_red)s days; Green: %(med_green)s days. Correlation only. Running 90 days or longer: %(older)s.</p>
+    <p><b>What it does not show.</b> These ads were running when we read them, so this cannot say how many flagged ads were stopped, by the brand or by Meta: an ad that had stopped before a sweep is not in these numbers. A recheck of the same ads would show that; this issue does not. It does not say whether Meta has reviewed any of these ads or what it decided. %(order_text)s, so the ads lean towards those that reach many people. These ads are not a random sample of supplement ads.</p>
 
     <h2>What changed since last issue</h2>
     <p>This is the first issue, so there is nothing to compare with yet.</p>
 
+    <h2>How Vera decides</h2>
+    <p>Vera gives each ad one tier: Red for wording she expects a regulator or a platform to act on, Yellow for any other finding, Green for nothing to flag. Each finding carries the rule it rests on and is marked checked or not checked. <a href="%(up)ssample-report.html">See a finding laid out in the sample report</a>.</p>
+
     <h2>Method</h2>
-    <p>We read supplement ads in Meta’s public Ad Library: active ads for the United States (the first sweep did not record its filters), found by search words such as the ones grouped above, one ad from each brand. Vera, an AI, read each ad’s words against Meta’s published ad rules and the FTC and FDA guidance. A tier and a rule show what Vera flagged, never what Meta rejected. We do not know what Meta decided about any of these ads. Vera read each ad’s headline and the start of its text, not its picture or video or the page it leads to, so a Green ad had nothing to flag in those words and may still have a problem elsewhere. Start dates are the ones the library shows.</p>
+    <p>We read supplement ads in Meta’s public Ad Library: %(filters)s, found by search words such as the ones grouped above%(one_per)s. Vera, an AI, read each ad’s words against Meta’s published ad rules and the FTC and FDA guidance. A tier and a rule show what Vera flagged. We do not know what Meta decided about any of these ads. Vera read each ad’s headline and the start of its text, not its picture or video or the page it leads to, so a Green ad had nothing to flag in those words and may still have a problem elsewhere. Start dates are the ones the library shows.</p>
     <p>Want to know where your own ads fall? Put your website in the box on the home page and <a href="%(up)sscan">see your own panel</a>.</p>
     <p class="warnings">Risk review, not legal advice.</p>
     <p class="more-link"><a class="sample-link" href="../">All issues</a> · <a class="sample-link" href="../../weekly/">Weekly</a> · <a class="sample-link" href="../../">Back to the home page</a></p>
 ''' % {
-        'title': text(title), 'covered': covered, 'n': n, 'brands': brands, 'rows': rows,
-        'flagged': flagged, 'flagged_pc': pc(d['share_flagged']), 'top_total': top_total, 'rest': flagged - top_total,
-        'wordpass': ('; %d of those were flagged by a word check that named no rule' % wordpass) if wordpass else '',
-        'rules': rules, 'cats': cat_items, 'run_rows': run_rows, 'lo': shares[0], 'hi': shares[-1],
-        'med_red': medians[0], 'med_green': medians[1], 'up': '../../',
-        'small': small_text,
+        'title': text(title), 'covered': covered, 'n': n, 'brands_text': brands_text, 'rows': rows,
+        'sweeps': ('%s %s' % (number_text(sweeps), 'sweep' if sweeps == 1 else 'sweeps')),
+        'flagged': flagged, 'flagged_pc': pc(d['share_flagged']), 'top_total': top_total,
+        'top_count': number_text(len(top)), 'left_out_text': left_out_text, 'other': other_text,
+        'rest_text': (' The other %d are spread over %s smaller %s%s.' % (
+            flagged - top_total, number_text(groups_rest), 'group' if groups_rest == 1 else 'groups',
+            ('; %d of those were flagged by a word check that named no rule' % wordpass) if wordpass else ''))
+        if flagged > top_total else '',
+        'rules': rules, 'cats': cat_items, 'run_rows': run_rows, 'older': older, 'age_missing_text': age_missing_text,
+        'n_red': run['Red']['ads'],
+        'red_with_row': ' that have a days-running row' if run['Red']['no_age'] else '',    # evidence reviewer: 81 of 83, not "the 81 read"
+'med_red': median_text(run['Red']['median_days']),
+        'med_green': median_text(run['Green']['median_days']), 'order_text': order_text, 'filters': filters,
+        'one_per': one_per, 'up': '../../', 'small': small_text,
     }
     return index_frame('../../', title + ' · Merchient', desc, SITE + 'index/%s/' % month, body)
 
