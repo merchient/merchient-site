@@ -6,7 +6,7 @@ It is a static site: plain HTML pages and one stylesheet, with no cookies and no
 
 ## Pages
 
-- `index.html`: the main page. `hero.js` turns its hero box into "Your website": it asks api.merchient.com for that website's Claims Facts panel (queued and polled when it is not read yet) and draws it in the page; when the service is busy or does not answer, or without JavaScript, the scan form shows instead
+- `index.html`: the main page. `hero.js` turns its hero box into "Your website": it asks api.merchient.com for that website's Claims Facts panel (queued and polled when it is not read yet) and draws it in the page; when the service is busy or does not answer, or without JavaScript, the scan form shows instead. `index.html?site=brand.com` fills the box and asks for the panel once on load (for outreach links); a site the service refuses leaves the plain box. `?v=b` swaps the hero's headline and sentence for the words in their `data-b` attributes, when the page has them, and `v` goes with the panel requests. No other query key is read
 - `cases/`: the case file of pre-cleared ads, each with its timestamps (empty until the first one; not indexed)
 - `rescue.html`, served at /rescue: the free rescue form for a rejected ad or a pulled listing, its limits, and a free account checklist. `rescue.js` asks the rescue service at api.merchient.com for a form token and posts the form there; if the service does not answer, or the browser runs no JavaScript, the form opens an email to akhil@merchient.com with the subject "Rescue" instead
 - `claims-watch.html`, served at /claims-watch: public enforcement and policy items on supplement claims, each with its date, who acted, what it means and the source
@@ -32,7 +32,7 @@ It is a static site: plain HTML pages and one stylesheet, with no cookies and no
 
 ## How it is built
 
-`build.py` also switches the home page’s scan box between opening the "Free scan request" email and posting to the scan service (`SCAN_API_ON`), and writes `scan.js` only while that is on. It writes the number of founding places left (`FOUNDING_PLACES_LEFT`, at the top of the file) into the pages that show it, generates `ingredients/` from the JSON in `data/`, and lists the guides in `sitemap.xml`. After changing either, run `python3 build.py` and commit what it writes. `python3 build.py --check` changes nothing and fails if a page is out of date.
+`build.py` also switches the home page’s scan box between opening the "Free scan request" email and posting to the scan service (`SCAN_API_ON`), and writes `scan.js` only while that is on. It writes the number of founding places left (`FOUNDING_PLACES_LEFT`, at the top of the file) into the pages that show it, generates `ingredients/` from the JSON in `data/`, and lists the guides in `sitemap.xml`. After changing either, run `python3 build.py` and commit what it writes. `python3 build.py --check` changes nothing and fails if a page is out of date. A number in the copy written as `{{field}}` is filled from `data/index-2026-11.json` (`{{index.ads_read}}`) or the mining lane's `survival-number.json` (`{{survival.tiers.Red.median_days}}`) and kept as `<span data-field="...">`, so the next build refills it; `--check` also fails while any `{{field}}` is left unfilled.
 
 ## How it is published
 

@@ -372,6 +372,74 @@ def founder_link(page, rel):
     return FOOTER_MORE.sub(lambda m: m.group(0) if 'founder"' in m.group(2) else m.group(1) + m.group(2) + link + m.group(3), page)
 
 
+# The copy's numbers (site 44, 3 Nov 2026). The content lane's copy writes a number as {{field}}; the page keeps it as
+# <span data-field="field">value</span>, so the next build refills it when the source changes. A field is a dotted path
+# into one of these files, under its prefix: {{index.ads_read}}, {{survival.tiers.Red.median_days}}. A placeholder
+# inside a tag (an attribute) gets the bare value, which a later build cannot refill. A {{field}} that no file has stays
+# in the page, and build.py --check fails on it.
+FIELD_FILES = {
+    'index': os.path.join(ROOT, 'data', 'index-2026-11.json'),
+    'survival': os.path.expanduser('~/code/merchient-mining/sources/adlibrary/survival-number.json'),  # read only
+}
+PLACEHOLDER = re.compile(r'\{\{\s*([A-Za-z0-9_.-]+)\s*\}\}')
+FIELD_SPAN = re.compile(r'(<span data-field="([A-Za-z0-9_.-]+)">)(.*?)(</span>)', re.S)
+_fields = None
+
+
+def fields():
+    """Every scalar in FIELD_FILES as {prefix.dotted.path: text}. A missing file gives no fields (and --check then fails
+    on any placeholder that needs one)."""
+    global _fields
+    if _fields is None:
+        _fields = {}
+
+        def walk(o, path):
+            if isinstance(o, dict):
+                for k, v in o.items():
+                    walk(v, path + '.' + str(k))
+            elif isinstance(o, bool) or o is None or isinstance(o, list):
+                return
+            elif isinstance(o, float) and o.is_integer():
+                _fields[path] = str(int(o))
+            else:
+                _fields[path] = str(o)
+        for prefix, path in FIELD_FILES.items():
+            try:
+                with open(path, encoding='utf-8') as f:
+                    walk(json.load(f), prefix)
+            except FileNotFoundError:
+                print('build.py: note: %s not found; its fields stay unfilled' % path, file=sys.stderr)
+    return _fields
+
+
+def fields_apply(page):
+    """Refills every data-field span, then turns each {{field}} the files know into a span (or the bare value inside a
+    tag). Unknown fields are left as {{field}} for --check to catch."""
+    f = fields()
+    page = FIELD_SPAN.sub(lambda m: m.group(1) + html.escape(f[m.group(2)], quote=False) + m.group(4)
+                          if m.group(2) in f else m.group(0), page)
+
+    def put(m):
+        name = m.group(1)
+        if name not in f:
+            return m.group(0)
+        before = page[:m.start()]
+        if before.rfind('<') > before.rfind('>'):
+            return html.escape(f[name], quote=True)
+        return '<span data-field="%s">%s</span>' % (name, html.escape(f[name], quote=False))
+    return PLACEHOLDER.sub(put, page)
+
+
+def unfilled(want):
+    """[(page, field)] for every {{field}} still in a built page, and every data-field span no file knows."""
+    left = []
+    for p, content in sorted(want.items()):
+        if p.endswith('.html'):
+            left += [(p, m.group(1)) for m in PLACEHOLDER.finditer(content)]
+            left += [(p, m.group(2)) for m in FIELD_SPAN.finditer(content) if m.group(2) not in fields()]
+    return left
+
+
 def fail(message):
     sys.exit('build.py: ' + message)
 
@@ -1077,8 +1145,8 @@ def main():
         new, n = PLACES.subn(lambda m: m.group(1) + str(FOUNDING_PLACES_LEFT) + m.group(2), was)
         if p == 'index.html':
             new = sweeps_apply(scan_apply(new))
-        new = founder_link(new, p)
-        if n or p == 'index.html' or new != was:
+        new = fields_apply(founder_link(new, p))
+        if n or p == 'index.html' or new != was or PLACEHOLDER.search(new) or FIELD_SPAN.search(new):
             want[p], shown = new, shown + n
     if not shown:
         fail('no page shows the founding places left (<strong class="places-left">)')
@@ -1116,9 +1184,16 @@ def main():
     for phrase, slugs in sorted(pointers(guides).items()):
         print('build.py: note: "%s" points at nothing the page shows, in %s (fix it in the library)' % (
             phrase, ', '.join(sorted(slugs))), file=sys.stderr)
+    left = unfilled(want)
+    for p, name in left:
+        print('build.py: unfilled placeholder {{%s}} in %s (no such field in %s)' % (
+            name, p, ' or '.join(sorted(FIELD_FILES))), file=sys.stderr)
     if args == ['--check']:
-        if changed or stale:
-            print('build.py --check: out of date: ' + ', '.join(changed + stale))
+        if changed or stale or left:
+            if changed or stale:
+                print('build.py --check: out of date: ' + ', '.join(changed + stale))
+            if left:
+                print('build.py --check: %d unfilled placeholder(s)' % len(left))
             sys.exit(1)
         print('build.py --check: up to date (%d guides; %d founding places left, shown %d times; scan box %s)' % (
             len(guides), FOUNDING_PLACES_LEFT, shown, 'posts to the scan service' if SCAN_API_ON else 'opens the email'))

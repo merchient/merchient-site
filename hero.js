@@ -3,7 +3,19 @@
 // service for the website's panel and draws it here in the panel's own look. A panel not read yet is queued and
 // polled every 10 seconds for up to 4 minutes. When the service is busy or does not answer, the scan form comes back
 // with one line saying so. Only the domain is sent; nothing is stored in the page; no cookies, no analytics.
+// Site 44: the query is read for two keys only. ?site=brand.com fills the box and asks for the panel once on load (the
+// outreach links use it); a site the panel service refuses leaves the plain box, with no error text. ?v=b swaps the
+// hero's headline and sentence for the data-b words in the page, when the page has them; v ("a" or "b") goes with the
+// panel requests so the app can count scans by variant.
 (function () {
+  var q = window.URLSearchParams ? new URLSearchParams(window.location.search) : null;
+  var siteQuery = q ? (q.get('site') || '') : '';
+  var v = q ? (q.get('v') || '').toLowerCase() : '';
+  v = v === 'a' || v === 'b' ? v : '';
+  if (v === 'b') {
+    var swap = document.querySelectorAll('.hero [data-b]');
+    for (var i = 0; i < swap.length; i++) { swap[i].textContent = swap[i].getAttribute('data-b'); }
+  }
   var form = document.getElementById('hero-form');
   if (!form || !window.fetch || !window.AbortController) { return; }
   var api = form.getAttribute('data-panel');
@@ -145,11 +157,16 @@
     }, 10000);
   }
 
+  // v goes with every panel request, and only when the page was opened with ?v=a or ?v=b.
+  function withV(body) { if (v) { body.v = v; } return body; }
+  var vQuery = v ? '&v=' + v : '';
+  var vOnly = v ? '?v=' + v : '';
+
   function queue() {
     call(api + '/api/panel/queue', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ website: domain })
+      body: JSON.stringify(withV({ website: domain }))
     }).then(function (x) {
       // 503 {"state": "not_yet"} while the queue is closed; 200 with the panel when one turned up meanwhile; 202 queued.
       var p = x.ok && panelOf(x.body);
@@ -159,7 +176,27 @@
       msg.textContent = 'Reading your page: about two minutes';
       progress.value = 0;
       progress.hidden = false;
-      poll(api + '/api/panel/status/' + encodeURIComponent(id), Date.now());
+      poll(api + '/api/panel/status/' + encodeURIComponent(id) + vOnly, Date.now());
+    }).catch(function () { busyForm(); });
+  }
+
+  // The plain box: no value, no message, the button back on. For a ?site= the panel service (or this page's own
+  // check) refuses.
+  function plain() {
+    input.value = '';
+    msg.textContent = '';
+    button.disabled = false;
+  }
+
+  function look(fromQuery) {
+    button.disabled = true;
+    msg.textContent = 'Looking…';
+    call(api + '/api/panel?website=' + encodeURIComponent(domain) + vQuery, { method: 'GET' }).then(function (x) {
+      var p = x.ok && panelOf(x.body);
+      if (p) { render(p); }
+      else if (x.status === 404) { queue(); }
+      else if (fromQuery && (x.status === 400 || x.status === 422)) { plain(); }
+      else { busyForm(x); }
     }).catch(function () { busyForm(); });
   }
 
@@ -167,15 +204,13 @@
     event.preventDefault();
     domain = domainOf(input.value);
     if (!domain) { msg.textContent = 'Type a website, like yourbrand.com.'; return; }
-    button.disabled = true;
-    msg.textContent = 'Looking…';
-    call(api + '/api/panel?website=' + encodeURIComponent(domain), { method: 'GET' }).then(function (x) {
-      var p = x.ok && panelOf(x.body);
-      if (p) { render(p); }
-      else if (x.status === 404) { queue(); }
-      else { busyForm(x); }
-    }).catch(function () { busyForm(); });
+    look(false);
   });
+
+  if (siteQuery) {
+    domain = domainOf(siteQuery);
+    if (domain) { input.value = domain; look(true); } else { plain(); }
+  }
 
   mailForm.addEventListener('submit', function (event) {
     event.preventDefault();
