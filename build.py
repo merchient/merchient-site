@@ -44,6 +44,7 @@ import json
 import os
 import re
 import sys
+import urllib.parse
 
 ROOT = os.path.dirname(os.path.abspath(__file__))
 with open(os.path.join(ROOT, 'config', 'links.json'), encoding='utf-8') as _f:
@@ -53,8 +54,10 @@ FOUNDING_PLACES_LEFT = _links.get('founding_open')
 SITE = 'https://merchient.com/'
 SCAN = ('mailto:hello@merchient.com?subject=Preview%20request&amp;'
         'body=Brand%20name%3A%20%0D%0AWebsite%3A%20%0D%0A')
-BOOK = ('https://calendar.google.com/calendar/appointments/schedules/'
-        'AcZssZ0OC3aykWqaXz8QQ8TZ6hiOhituHjqaoqzefFYIUnyb4OZb6Bv5aZZUh2n_WvxcSyDtiHJmdkrZ')
+# Site 51: the booking link (the 15-minute call) and the audit's checkout links live in config/links.json ("call",
+# "audit"); the configurator block carries them into the home page and /pricing.
+BOOK = _links.get('call') or ''
+AUDIT_LINKS = _links.get('audit') or {}
 MONTHS = ('January', 'February', 'March', 'April', 'May', 'June', 'July',
           'August', 'September', 'October', 'November', 'December')
 GUIDE_KEYS = {'slug', 'ingredient', 'also_called', 'title', 'summary', 'supported_wordings',
@@ -374,6 +377,198 @@ def founder_link(page, rel):
     prefix = '/' if rel == '404.html' else '../' * rel.count(os.sep)
     link = ' · <a href="%sfounder">Why I built this</a>' % prefix
     return FOOTER_MORE.sub(lambda m: m.group(0) if 'founder"' in m.group(2) else m.group(1) + m.group(2) + link + m.group(3), page)
+
+
+# The home page v4 (site 51, 4 Nov 2026; ~/code/merchient-ops/docs/site-v4-brief.md). Three blocks are written here so
+# they stay true and stay the same on both pages: the configurator (index.html and pricing.html, <!--configurator-->),
+# Vera's screen (both, <!--vera-->) and the home page's Winning Lines (index.html, <!--winning-->). Every word is content
+# 44's (~/code/merchient-content/offer/v4/home.md); every price is offer-v3 section 0's. The prices appear on the
+# result cards and in Vera's price line alone; tools/configurator_selftest.py fails on a price anywhere else.
+CFG_QUESTIONS = (
+    ('q1', 'How many ads are live right now?',
+     (('up-to-25', '1–25'), ('26-100', '26–100'), ('over-100', 'More than 100'),
+      ('agency', 'I run ads for several brands'))),
+    ('q2', 'How many pages do they send people to?', (('1-3', '1–3'), ('4-10', '4–10'), ('more', 'More'))),
+    ('q3', 'Has an ad been rejected or the account restricted in the last 90 days?',
+     (('yes', 'Yes'), ('no', 'No'), ('not-sure', 'Not sure'))),
+)
+CFG_BANDS = ('up-to-25', '26-100', 'over-100')
+CFG_Q3 = (
+    ('yes', 'Then start with the lines still running: the audit names each one at risk, and the rule it trips, '
+            'within 48 hours.'),
+    ('no', 'Then this is the quiet time to look, before a review picks the line for you.'),
+    ('not-sure', 'Either way, the audit reads every live ad and names each line at risk with its rule.'),
+)
+CFG_IN = (
+    'Every live ad and page, read in 48 hours.',
+    'The Red and Yellow lines, one line each: the line, the rule it trips in plain words, and a safer line that keeps '
+    'the sell.',
+    'The lines that run longest in your category, with their ages, and your Claim Gap.',
+    'Read by Vera, checked by a person. A numbered case file with your name on it.',
+)
+CFG_CARDS = (
+    {'band': 'up-to-25', 'name': 'The 48-Hour Claims Audit', 'price': '$450',
+     'for': 'Up to 25 live ads, and the pages they send people to.', 'in': CFG_IN,
+     'refund': 'If we find nothing Red or Yellow, the audit is refunded in full, and the Winning Lines are yours to keep.',
+     'start': 'Start my audit', 'soft': ('Prefer to talk first?', 'A 15-minute call, not a pitch.', '')},
+    {'band': '26-100', 'name': 'The 48-Hour Claims Audit', 'price': '$750',
+     'for': '26 to 100 live ads, and the pages they send people to.', 'in': CFG_IN,
+     'refund': 'If we find nothing Red or Yellow, the audit is refunded in full, and the Winning Lines are yours to keep.',
+     'start': 'Start my audit', 'soft': ('Prefer to talk first?', 'A 15-minute call, not a pitch.', '')},
+    {'band': 'over-100', 'name': 'The 48-Hour Claims Audit', 'price': '$1,200',
+     'for': 'More than 100 live ads, and the pages they send people to.', 'in': CFG_IN,
+     'refund': 'If we find nothing Red or Yellow, the audit is refunded in full, and the Winning Lines are yours to keep.',
+     'start': 'Start my audit', 'soft': ('Prefer to talk first?', 'A 15-minute call, not a pitch.', '')},
+    {'band': 'agency', 'name': 'The 48-Hour Claims Audit, per client brand',
+     'price': 'Each client brand at its own band: $450, $750 or $1,200, by its live ads.',
+     'for': 'Vera for your first three client brands at the founding price.',
+     'in': ('For each brand: every live ad and page, read in 48 hours, and a numbered case file with the brand’s name '
+            'on it.',
+            'The Red and Yellow lines, one line each, with the rule in plain words and a safer line that keeps the sell.'),
+     'refund': 'If we find nothing Red or Yellow for a brand, that brand’s audit is refunded in full.',
+     'start': 'Book a 15-minute call',
+     'soft': ('Rather write?', 'Send your client list', ', and a person replies within the business day.')},
+)
+CFG_FAIR = 'The price depends on how much we read, and nothing else. It never goes up after you book.'
+CFG_MAIL = 'hello@merchient.com'
+CONFIGURATOR_BLOCK = re.compile(r'<!--configurator-->.*?<!--/configurator-->', re.S)
+VERA_BLOCK = re.compile(r'<!--vera-->.*?<!--/vera-->', re.S)
+WINNING_BLOCK = re.compile(r'<!--winning-->.*?<!--/winning-->', re.S)
+HOME_WL_SLUG = 'gut'
+HOME_WL_ROWS = 5
+
+
+def cfg_mailto(say):
+    """The email Start my audit opens while the band has no checkout URL. configurator.js builds the same one in the
+    browser (the selftest compares them): content 44's subject "My audit: {band}" and its body, one answer a line, with
+    a Website line (the old pricing email's) for the buyer to fill. say: the answers' words; '' when not answered."""
+    q = lambda s: urllib.parse.quote(s, safe="-_.!~*'()")
+    band = say['q1'] if say.get('value') == 'agency' else say['q1'] + ' live ads'
+    line = lambda k, v: k + v + '.' if v else k
+    body = '\r\n'.join(['Website: ', line('Live ads: ', say['q1']), line('Pages: ', say['q2']),
+                        line('A rejection or restriction in the last 90 days: ', say['q3'])])
+    return 'mailto:%s?subject=%s&body=%s' % (CFG_MAIL, q('My audit: ' + band), q(body))
+
+
+def configurator_html():
+    for b in CFG_BANDS:
+        url = AUDIT_LINKS.get(b, '')
+        if not isinstance(url, str) or (url and not re.fullmatch(r'https://[^\s"<>]+', url)):
+            fail('config/links.json: audit[%s] must be empty or an https URL' % b)
+    if BOOK and not re.fullmatch(r'https://[^\s"<>]+', BOOK):
+        fail('config/links.json: call must be empty or an https URL')
+    say1 = dict(CFG_QUESTIONS[0][2])
+    data = ''.join(' data-checkout-%s="%s"' % (b, html.escape(AUDIT_LINKS.get(b, ''), quote=True)) for b in CFG_BANDS)
+    out = ['<!--configurator-->',
+           '<div class="cfg" id="cfg" data-mail="%s" data-call="%s"%s>' % (CFG_MAIL, html.escape(BOOK, quote=True), data),
+           '  <div class="cfg-qs">']
+    for name, legend, options in CFG_QUESTIONS:
+        out.append('    <fieldset class="cfg-q"><legend>%s</legend><div class="cfg-opts">' % text(legend))
+        for value, label in options:
+            out.append('      <label class="cfg-opt"><input type="radio" name="%s" value="%s" data-say="%s"> %s</label>'
+                       % (name, value, attr(label), text(label)))
+        out.append('    </div></fieldset>')
+    out += ['  </div>', '  <div class="cfg-result" aria-live="polite">']
+    for c in CFG_CARDS:
+        b = c['band']
+        mail = cfg_mailto({'value': b, 'q1': say1[b], 'q2': '', 'q3': ''})
+        start = (BOOK or mail) if b == 'agency' else (AUDIT_LINKS.get(b) or mail)
+        soft = mail if b == 'agency' else (BOOK or mail)
+        price_class = 'cfg-price cfg-price-s' if b == 'agency' else 'cfg-price'
+        out += ['    <article class="panel cfg-card" data-band="%s">' % b,
+                '      <p class="cfg-name">%s</p>' % text(c['name']),
+                '      <div class="bar-xl" aria-hidden="true"></div>',
+                '      <p class="%s">%s</p>' % (price_class, text(c['price'])),
+                '      <p class="cfg-for">%s</p>' % text(c['for'])]
+        out += ['      <p class="cfg-q3" data-q3="%s" hidden>%s</p>' % (k, text(v)) for k, v in CFG_Q3]
+        out.append('      <ul class="cfg-in">%s</ul>' % ''.join('<li>%s</li>' % text(x) for x in c['in']))
+        out.append('      <p class="cfg-refund">%s</p>' % text(c['refund']))
+        out.append('      <a class="btn cfg-start" href="%s">%s</a>' % (html.escape(start, quote=True), text(c['start'])))
+        out.append('      <p class="cfg-call">%s <a href="%s">%s</a>%s</p>' % (
+            text(c['soft'][0]), html.escape(soft, quote=True), text(c['soft'][1]), text(c['soft'][2])))
+        out.append('    </article>')
+    out += ['    <p class="cfg-fair">%s</p>' % text(CFG_FAIR), '  </div>', '</div>',
+            '<script src="configurator.js"></script>', '<!--/configurator-->']
+    return '\n'.join(out)
+
+
+VERA_HTML = '''<!--vera-->
+<h2>After the audit: Vera, every day.</h2>
+<ol class="use">
+  <li><h3>Before it runs</h3><p>Every new ad and page read against the three rule books, with a safer line for each flag.</p></li>
+  <li><h3>While it runs</h3><p>The weekly watch on your live ads, and Winning Lines and your Claim Gap every month.</p></li>
+  <li><h3>When something slips</h3><p>A pulled ad or a restricted account on a claims reason: the rewrite and the appeal letter, the same day.</p></li>
+</ol>
+<ul class="checks guard">
+  <li>Vera never edits an ad or touches your account. She reads; you decide.</li>
+  <li>Public ads and pages: no login, no access to give.</li>
+  <li>A person checks what Vera writes before you see it.</li>
+  <li>You decide what changes, and Meta makes the final call on every ad.</li>
+</ul>
+<p class="vera-price">$1,500 a month for the founding brands, kept for twelve months, cancel any time; ten places.</p>
+<p class="section-lede">Every brand starts with the audit.</p>
+<!--/vera-->'''
+
+
+def short_days(first, last):
+    """'30 October to 2 November': the content's dates, without the year."""
+    f, l = [(int(x[8:]), MONTHS[int(x[5:7]) - 1]) for x in (first, last)]
+    if first == last:
+        return '%d %s' % f
+    return ('%d to %d %s' % (f[0], l[0], l[1]) if f[1] == l[1] else '%d %s to %d %s' % (f + l))
+
+
+def home_winning_html():
+    """The home page's Winning Lines (screen 3): the first rows of data/winning-lines-gut.json, the public file, as
+    the category page shows them (rows 1 to 3 described or quoted, later rows locked), and content 44's method line
+    with the file's count and dates."""
+    found = dict(winning_lines())
+    if HOME_WL_SLUG not in found:
+        fail('data/winning-lines-%s.json is missing (the home page shows it)' % HOME_WL_SLUG)
+    d = found[HOME_WL_SLUG]
+    winning_lines_check(HOME_WL_SLUG, d)
+    rows = []
+    for r in d['rows'][:HOME_WL_ROWS]:
+        if r['shown'] == 'described':
+            line = text(r['described'])
+        elif r['shown'] == 'quoted':
+            line = '<span class="quote">“%s”</span>' % text(r['quote'])
+        else:
+            line = 'Locked: in the audit.'
+        tier = '<span class="tier %s">%s</span>' % (
+            {'Red': 'tier-red', 'Yellow': 'tier-yellow', 'Green': 'tier-open'}[r['tier']], r['tier'])
+        rule = tier + (', ' + r['rule'] if r['rule'] else '')
+        rows.append('    <tr%s><td data-label="Rank">%d</td><td data-label="The line">%s</td>'
+                    '<td data-label="Tier and rule">%s</td><td data-label="Age">%s days</td></tr>' % (
+                        ' class="wl-locked"' if r['shown'] == 'locked' else '', r['rank'], line, rule,
+                        '{:,}'.format(r['age_days'])))
+    return '\n'.join([
+        '<!--winning-->',
+        '<p class="section-lede">Gut health, from Meta’s Ad Library.</p>',
+        '<table class="stack wl-home">',
+        '  <thead><tr><th scope="col">Rank</th><th scope="col">The line</th><th scope="col">Tier and rule</th>'
+        '<th scope="col">Age</th></tr></thead>',
+        '  <tbody>'] + rows + [
+        '  </tbody>',
+        '</table>',
+        '<p class="facts-fn wl-method">%d %s ads from Meta’s Ad Library, read %s. Age is the days from each ad’s start '
+        'date to the last day we saw it running. Running longest is not proof a line sells: a brand keeps an ad running '
+        'for its own reasons. A correlation, not a cause. No brand, product or ad is named; flagged lines are described, '
+        'not quoted.</p>' % (d['ads_in_category'], d['category'].lower(), short_days(d['judged_first'], d['judged_last'])),
+        '<!--/winning-->'])
+
+
+def blocks_apply(page, rel):
+    """Writes the site-51 blocks into the home page and /pricing; fails when a marker is missing."""
+    want = {'index.html': ((CONFIGURATOR_BLOCK, configurator_html), (VERA_BLOCK, lambda: VERA_HTML),
+                           (WINNING_BLOCK, home_winning_html)),
+            'pricing.html': ((CONFIGURATOR_BLOCK, configurator_html), (VERA_BLOCK, lambda: VERA_HTML))}.get(rel, ())
+    for rx, make in want:
+        block = make()
+        page, k = rx.subn(lambda m: block, page)
+        if k != 1:
+            fail('%s: want one %s marker pair, found %d' % (rel, rx.pattern.split('-->')[0] + '-->', k))
+    return page
 
 
 # The copy's numbers (site 44, 3 Nov 2026). The content lane's copy writes a number as {{field}}; the page keeps it as
@@ -1260,6 +1455,7 @@ def main():
             # Site 47: the home page's proof is the v3 {{index...}} fields; the weekly sweeps line (sweeps_apply) is no
             # longer on it.
             new = scan_apply(new)
+        new = blocks_apply(new, p)  # site 51: the configurator, Vera's screen, the home page's Winning Lines
         new = fields_apply(founder_link(new, p))
         if n or p == 'index.html' or new != was or PLACEHOLDER.search(new) or FIELD_SPAN.search(new):
             want[p], shown = new, shown + n

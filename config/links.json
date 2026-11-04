@@ -1,5 +1,6 @@
 {
-  "_note": "Read by tools/build_pricing.py (pricing.html) and build.py (places-left). An empty audit link means the button opens an email to hello@merchient.com. Put the band's https checkout URL here when the app's gate opens, then run python3 tools/build_pricing.py. Lower founding_open by one when a founding brand signs, then run both builds.",
+  "_note": "Read by build.py (site 51: the configurator block on the home page and /pricing, and places-left). An empty audit link means Start my audit opens an email to hello@merchient.com carrying the three answers. Put the band's https checkout URL here when the app's gate opens, then run python3 build.py. call is the 15-minute call's booking link (Google Calendar appointments). Lower founding_open by one when a founding brand signs, then run python3 build.py.",
+  "call": "https://calendar.google.com/calendar/appointments/schedules/AcZssZ0OC3aykWqaXz8QQ8TZ6hiOhituHjqaoqzefFYIUnyb4OZb6Bv5aZZUh2n_WvxcSyDtiHJmdkrZ",
   "audit": {
     "up-to-25": "",
     "26-100": "",
