@@ -16,6 +16,21 @@
     var swap = document.querySelectorAll('.hero [data-b]');
     for (var i = 0; i < swap.length; i++) { swap[i].textContent = swap[i].getAttribute('data-b'); }
   }
+  // Site 51: the box sits under the sample, folded into <details id="preview">. It opens for ?site= (the outreach
+  // links), for #scan (the header's "Read my ads" on every page) and for a click on a #scan link on this page.
+  var fold = document.getElementById('preview');
+  if (fold) {
+    var unfold = function (go) {
+      fold.open = true;
+      if (go) { var at = document.getElementById('scan'); if (at && at.scrollIntoView) { at.scrollIntoView(); } }
+    };
+    if (siteQuery || window.location.hash === '#scan') { unfold(true); }
+    window.addEventListener('hashchange', function () { if (window.location.hash === '#scan') { unfold(true); } });
+    document.addEventListener('click', function (e) {
+      var a = e.target && e.target.closest ? e.target.closest('a[href="#scan"]') : null;
+      if (a) { unfold(false); }
+    });
+  }
   var form = document.getElementById('hero-form');
   if (!form || !window.fetch || !window.AbortController) { return; }
   var api = form.getAttribute('data-panel');
