@@ -58,6 +58,9 @@ SCAN = ('mailto:hello@merchient.com?subject=Preview%20request&amp;'
 # "audit"); the configurator block carries them into the home page and /pricing.
 BOOK = _links.get('call') or ''
 AUDIT_LINKS = _links.get('audit') or {}
+# 4 Nov 20:30 (Varma): no price on the site for now. show_prices false in config/links.json turns the configurator
+# into the one-ad ask on both pages and drops Vera's price line; true puts them back (python3 build.py).
+PRICES_SHOWN = bool(_links.get('show_prices', True))
 MONTHS = ('January', 'February', 'March', 'April', 'May', 'June', 'July',
           'August', 'September', 'October', 'November', 'December')
 GUIDE_KEYS = {'slug', 'ingredient', 'also_called', 'title', 'summary', 'supported_wordings',
@@ -450,7 +453,33 @@ def cfg_mailto(say):
     return 'mailto:%s?subject=%s&body=%s' % (CFG_MAIL, q('My audit: ' + band), q(body))
 
 
+H2_PRICE = '<h2>Your price in 20 seconds.</h2>'
+H2_ASK = '<h2>Send one ad. See what Vera finds.</h2>'
+ASK_SUBJECT = 'One ad for Vera'
+
+
+def ask_html():
+    """The block when prices are off: one ad in, the read back within a US business day, no price anywhere."""
+    q = lambda t: urllib.parse.quote(t, safe="-_.!~*'()")
+    mail = 'mailto:%s?subject=%s&body=%s' % (CFG_MAIL, q(ASK_SUBJECT),
+                                             q('Website: \r\nThe ad (a link, or its text): \r\n'))
+    call = ('  <p class="cfg-call">Prefer to talk first? <a href="%s">A 20-minute call</a>.</p>' % html.escape(BOOK, quote=True)
+            if BOOK else '')
+    return '\n'.join(x for x in [
+        '<!--configurator-->',
+        '<div class="cfg cfg-ask" id="cfg" data-mail="%s" data-call="%s">' % (CFG_MAIL, html.escape(BOOK, quote=True)),
+        '  <p class="section-lede">Send one ad: the one you would least like to lose, or the one that was pulled. '
+        'Within one US business day you get back what Vera found: each line at risk, the rule it trips in plain words, '
+        'and a safer line that keeps the sell.</p>',
+        '  <a class="btn cfg-start" href="%s">Send one ad</a>' % html.escape(mail, quote=True),
+        call,
+        '</div>',
+        '<!--/configurator-->'] if x)
+
+
 def configurator_html():
+    if not PRICES_SHOWN:
+        return ask_html()
     for b in CFG_BANDS:
         url = AUDIT_LINKS.get(b, '')
         if not isinstance(url, str) or (url and not re.fullmatch(r'https://[^\s"<>]+', url)):
@@ -492,7 +521,7 @@ def configurator_html():
     return '\n'.join(out)
 
 
-VERA_HTML = '''<!--vera-->
+VERA_HTML_PRICED = '''<!--vera-->
 <h2>After the audit: Vera, every day.</h2>
 <ol class="use">
   <li><h3>Before it runs</h3><p>Every new ad and page read against the three rule books, with a safer line for each flag.</p></li>
@@ -508,6 +537,9 @@ VERA_HTML = '''<!--vera-->
 <p class="vera-price">$1,500 a month for the founding brands, kept for twelve months, cancel any time; ten places.</p>
 <p class="section-lede">Every brand starts with the audit.</p>
 <!--/vera-->'''
+VERA_PRICE_LINE = '<p class="vera-price">$1,500 a month for the founding brands, kept for twelve months, cancel any time; ten places.</p>\n'
+assert VERA_PRICE_LINE in VERA_HTML_PRICED
+VERA_HTML = VERA_HTML_PRICED if PRICES_SHOWN else VERA_HTML_PRICED.replace(VERA_PRICE_LINE, '')
 
 
 def short_days(first, last):
@@ -563,6 +595,11 @@ def blocks_apply(page, rel):
     want = {'index.html': ((CONFIGURATOR_BLOCK, configurator_html), (VERA_BLOCK, lambda: VERA_HTML),
                            (WINNING_BLOCK, home_winning_html)),
             'pricing.html': ((CONFIGURATOR_BLOCK, configurator_html), (VERA_BLOCK, lambda: VERA_HTML))}.get(rel, ())
+    if rel == 'index.html':
+        if PRICES_SHOWN and H2_ASK in page:
+            page = page.replace(H2_ASK, H2_PRICE)
+        elif not PRICES_SHOWN and H2_PRICE in page:
+            page = page.replace(H2_PRICE, H2_ASK)
     for rx, make in want:
         block = make()
         page, k = rx.subn(lambda m: block, page)

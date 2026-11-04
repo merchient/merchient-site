@@ -1,6 +1,7 @@
 {
-  "_note": "Read by build.py (site 51: the configurator block on the home page and /pricing, and places-left). An empty audit link means Start my audit opens an email to hello@merchient.com carrying the three answers. Put the band's https checkout URL here when the app's gate opens, then run python3 build.py. call is the 15-minute call's booking link (Google Calendar appointments). Lower founding_open by one when a founding brand signs, then run python3 build.py.",
+  "_note": "Read by build.py (site 51: the configurator block on the home page and /pricing, and places-left). An empty audit link means Start my audit opens an email to hello@merchient.com carrying the three answers. Put the band's https checkout URL here when the app's gate opens, then run python3 build.py. call is the 15-minute call's booking link (Google Calendar appointments). Lower founding_open by one when a founding brand signs, then run python3 build.py. show_prices false (4 Nov 20:30, Varma: no price on the site for now) replaces the configurator with the one-ad ask on both pages and drops Vera's price line; set it true and run python3 build.py to put the prices back.",
   "call": "https://calendar.google.com/calendar/appointments/schedules/AcZssZ0OC3aykWqaXz8QQ8TZ6hiOhituHjqaoqzefFYIUnyb4OZb6Bv5aZZUh2n_WvxcSyDtiHJmdkrZ",
+  "show_prices": false,
   "audit": {
     "up-to-25": "",
     "26-100": "",

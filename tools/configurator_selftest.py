@@ -126,6 +126,14 @@ def leaks(html):
     return [s for s, ok in p.found if not ok]
 
 
+def money(html):
+    """Every money amount in a page, allowed or not (the prices-off check wants none at all)."""
+    p = Prices()
+    p.feed(html)
+    p.close()
+    return p.found
+
+
 def node(cases):
     exe = shutil.which("node")
     if not exe:
@@ -150,6 +158,9 @@ def mail_parts(url):
 def main():
     pages = {p: (ROOT / p).read_text(encoding="utf-8") for p in PAGES}
     blocks = {p: BLOCK.findall(t) for p, t in pages.items()}
+    links = json.loads((ROOT / "config" / "links.json").read_text(encoding="utf-8"))
+    if links.get("show_prices", True) is False:
+        return main_no_prices(pages, blocks, links)
     for p, b in blocks.items():
         check("%s has one configurator block" % p, len(b) == 1)
     if not all(len(b) == 1 for b in blocks.values()):
@@ -249,6 +260,29 @@ def main():
     check("no $2,500 on either page", not any("2,500" in t for t in pages.values()))
 
     print("configurator_selftest: %s" % ("ok" if not fails else "%d failure(s)" % len(fails)))
+    return 1 if fails else 0
+
+
+def main_no_prices(pages, blocks, links):
+    """show_prices false (4 Nov): the one-ad ask on both pages, no money amount anywhere on them, no configurator.js."""
+    for p, b in blocks.items():
+        check("%s has one configurator block" % p, len(b) == 1)
+    if not all(len(b) == 1 for b in blocks.values()):
+        return 1
+    check("the block is the same on both pages", blocks["index.html"][0] == blocks["pricing.html"][0])
+    blk = blocks["index.html"][0]
+    check("the ask block", 'class="cfg cfg-ask"' in blk and "Send one ad" in blk)
+    check("the ask emails hello@merchient.com", 'href="mailto:hello@merchient.com?subject=One%20ad%20for%20Vera' in blk)
+    check("the call link is links.json's call", (links.get("call") or "") in blk if links.get("call") else "cfg-call" not in blk)
+    check('index.html says "Send one ad. See what Vera finds."', "Send one ad. See what Vera finds." in pages["index.html"])
+    check("no page loads configurator.js", not any('src="configurator.js"' in t for t in pages.values()))
+    for p, t in pages.items():
+        found = [s for s, ok in money(t)]
+        for s in found:
+            print("  price on %s: %s" % (p, s))
+        check("%s: no money amount anywhere" % p, not found)
+    check("no vera-price line", not any("vera-price" in t for t in pages.values()))
+    print("configurator_selftest (prices off): %s" % ("ok" if not fails else "%d failure(s)" % len(fails)))
     return 1 if fails else 0
 
 
