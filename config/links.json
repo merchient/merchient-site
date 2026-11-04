@@ -1,0 +1,10 @@
+{
+  "_note": "Read by tools/build_pricing.py (pricing.html) and build.py (places-left). An empty audit link means the button opens an email to hello@merchient.com. Put the band's https checkout URL here when the app's gate opens, then run python3 tools/build_pricing.py. Lower founding_open by one when a founding brand signs, then run both builds.",
+  "audit": {
+    "up-to-25": "",
+    "26-100": "",
+    "over-100": ""
+  },
+  "founding_open": 10,
+  "founding_total": 10
+}
