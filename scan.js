@@ -1,4 +1,4 @@
-// The scan box on the home page. Without this script the form opens the "Free scan request" email. With it, the
+// The scan box on the home page. Without this script the form opens the "Preview request" email. With it, the
 // box posts the website and work email as JSON to Merchient's scan service and shows the service's answer, word for
 // word. When the service does not answer, the email opens instead, with the answers filled in.
 (function () {
@@ -11,7 +11,7 @@
 
   function mail(note) {
     msg.textContent = note;
-    window.location.href = 'mailto:hello@merchient.com?subject=Free%20scan%20request&body=' +
+    window.location.href = 'mailto:hello@merchient.com?subject=Preview%20request&body=' +
       encodeURIComponent('Website: ' + website.value.trim() + '\r\nWork email: ' + email.value.trim() + '\r\n');
   }
 

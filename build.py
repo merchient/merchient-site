@@ -23,11 +23,11 @@ the library that no page shows, such as "(see notes)", the build says so; fix it
 in the library, copy the JSON into data/ again and run the build.
 """
 
-# Founding places still open, out of 3. When a founding brand joins, lower this
-# by one, run python3 build.py, then commit and push.
-FOUNDING_PLACES_LEFT = 3
+# Founding places (site 49: ten) come from config/links.json, "founding_open" of "founding_total". When a
+# founding brand signs, lower founding_open by one, run python3 build.py and python3 tools/build_pricing.py,
+# then commit and push.
 
-# The scan box in the home page's hero. False: the box opens the "Free scan request"
+# The scan box in the home page's hero (the preview). False: the box opens the "Preview request"
 # email, and the home page runs no JavaScript. True: the box posts the website and work
 # email as JSON to SCAN_API_URL with scan.js, shows the service's answer, and falls
 # back to that email if the service does not answer (and without JavaScript). Switching
@@ -45,10 +45,13 @@ import os
 import re
 import sys
 
-FOUNDING_PLACES = 3
 ROOT = os.path.dirname(os.path.abspath(__file__))
+with open(os.path.join(ROOT, 'config', 'links.json'), encoding='utf-8') as _f:
+    _links = json.load(_f)
+FOUNDING_PLACES = _links.get('founding_total')
+FOUNDING_PLACES_LEFT = _links.get('founding_open')
 SITE = 'https://merchient.com/'
-SCAN = ('mailto:hello@merchient.com?subject=Free%20scan%20request&amp;'
+SCAN = ('mailto:hello@merchient.com?subject=Preview%20request&amp;'
         'body=Brand%20name%3A%20%0D%0AWebsite%3A%20%0D%0A')
 BOOK = ('https://calendar.google.com/calendar/appointments/schedules/'
         'AcZssZ0OC3aykWqaXz8QQ8TZ6hiOhituHjqaoqzefFYIUnyb4OZb6Bv5aZZUh2n_WvxcSyDtiHJmdkrZ')
@@ -111,7 +114,7 @@ HEAD = '''<!doctype html>
       <a href="../agencies">Agencies</a>
       <a href="../#faq">FAQ</a>
       <a href="../rescue">Send a rejected ad</a>
-      <a class="btn btn-small" href="''' + SCAN + '''">Get your free scan</a>
+      <a class="btn btn-small" href="../#scan">Read my ads</a>
     </nav>
   </div>
 </header>
@@ -223,11 +226,11 @@ INDEX = '''
 FINAL = '''
   <section class="final">
     <div class="wrap">
-      <h2>Check the claims on your own site. Free.</h2>
-      <p>Vera, Merchient’s AI employee, reads your site and emails you the riskiest line, why, a safer rewrite and how many more like it she found. Reply, and you get the free first report.</p>
+      <h2>Read your own ads the same way.</h2>
+      <p>Put your website in the preview on the home page. Vera, Merchient’s AI employee, shows how many lines carry a risk, and emails you one line in full once you confirm your work email. The rest is in the 48-Hour Claims Audit.</p>
       <div class="cta-row">
-        <a class="btn" href="''' + SCAN + '''">Get your free scan</a>
-        <a class="secondary-link" href="''' + BOOK + '''" target="_blank" rel="noopener">Book a 20-minute call</a>
+        <a class="btn" href="../#scan">Read my ads</a>
+        <a class="secondary-link" href="../pricing#audit">The 48-Hour Claims Audit</a>
       </div>
       <p class="alt">Or write to hello@merchient.com</p>
     </div>
@@ -258,27 +261,27 @@ CSP_META = re.compile(r'<meta http-equiv="Content-Security-Policy" content="[^"]
 SCAN_BLOCK = re.compile(r'<!--scan-->.*?<!--/scan-->', re.S)
 SCAN_OFF = '''<!--scan-->
           <form class="scan" action="mailto:hello@merchient.com" method="get">
-            <input type="hidden" name="subject" value="Free&nbsp;scan&nbsp;request">
+            <input type="hidden" name="subject" value="Preview&nbsp;request">
             <label for="scan-website">Your website</label>
             <input id="scan-website" name="body" type="text" inputmode="url" autocomplete="url" placeholder="yourbrand.com" required>
-            <button class="btn" type="submit">Get your free scan</button>
+            <button class="btn" type="submit">Read my ads</button>
             <p class="scan-note">Your email app opens with the request ready to send.</p>
           </form>
           <!--/scan-->'''
 SCAN_ON = '''<!--scan-->
           <form class="scan" action="mailto:hello@merchient.com" method="get" data-api="%s">
-            <input type="hidden" name="subject" value="Free&nbsp;scan&nbsp;request">
+            <input type="hidden" name="subject" value="Preview&nbsp;request">
             <label for="scan-website">Your website</label>
             <input id="scan-website" name="body" type="text" inputmode="url" autocomplete="url" placeholder="yourbrand.com" required>
             <label for="scan-email">Your work email</label>
             <input id="scan-email" name="email" type="email" autocomplete="email" required>
-            <button class="btn" type="submit">Get your free scan</button>
+            <button class="btn" type="submit">Read my ads</button>
             <p class="scan-note">We send your website and work email to Merchient\u2019s scan service (api.merchient.com), which emails you a link to confirm. If it does not answer, your email app opens with the request ready.</p>
             <p class="scan-msg" role="status"></p>
           </form>
           <script src="scan.js"></script>
           <!--/scan-->'''
-SCAN_JS = '''// The scan box on the home page. Without this script the form opens the "Free scan request" email. With it, the
+SCAN_JS = '''// The scan box on the home page. Without this script the form opens the "Preview request" email. With it, the
 // box posts the website and work email as JSON to Merchient's scan service and shows the service's answer, word for
 // word. When the service does not answer, the email opens instead, with the answers filled in.
 (function () {
@@ -291,7 +294,7 @@ SCAN_JS = '''// The scan box on the home page. Without this script the form open
 
   function mail(note) {
     msg.textContent = note;
-    window.location.href = 'mailto:hello@merchient.com?subject=Free%20scan%20request&body=' +
+    window.location.href = 'mailto:hello@merchient.com?subject=Preview%20request&body=' +
       encodeURIComponent('Website: ' + website.value.trim() + '\\r\\nWork email: ' + email.value.trim() + '\\r\\n');
   }
 
@@ -497,7 +500,7 @@ INDEX_HEAD = '''<!doctype html>
       <a href="@UP@agencies">Agencies</a>
       <a href="@UP@#faq">FAQ</a>
       <a href="@UP@rescue">Send a rejected ad</a>
-      <a class="btn btn-small" href="@SCAN@">Get your free scan</a>
+      <a class="btn btn-small" href="@UP@#scan">Read my ads</a>
     </nav>
   </div>
 </header>
@@ -797,7 +800,7 @@ def index_list_page(issues):
 %s    </ul>
 
     <p>What Meta’s ad rules catch, week by week: <a href="../weekly/">the weekly page</a>.</p>
-    <p>Want to know where your own ads fall? Put your website in the box on the <a href="../scan">home page</a> for a free scan.</p>
+    <p>Want to know where your own ads fall? Put your website in the box on the <a href="../scan">home page</a> for the preview.</p>
 
     <p class="warnings">Risk review, not legal advice.</p>
     <p class="more-link"><a class="sample-link" href="../weekly/">Weekly</a> · <a class="sample-link" href="../">Back to the home page</a></p>
@@ -965,7 +968,7 @@ def winning_lines_page(slug, d):
 %(table)s        </tbody>
       </table>
     </div>
-    <p>Want your own page read the same way? <a href="../../scan">Get your free scan</a>.</p>
+    <p>Want your own page read the same way? <a href="../../scan">Put your website in the preview</a>.</p>
 
     <h2>Median days running, by tier</h2>
     <div class="table-wrap">
@@ -1005,7 +1008,7 @@ def winning_lines_list_page(cats):
 %(items)s    </ul>
 
     <p>Every ad we read, by category and rule: <a href="../index/">the supplement ad index</a>.</p>
-    <p>Want your own page read the same way? <a href="../scan">Get your free scan</a>.</p>
+    <p>Want your own page read the same way? <a href="../scan">Put your website in the preview</a>.</p>
 
     <p class="warnings">Risk review, not legal advice.</p>
     <p class="more-link"><a class="sample-link" href="../index/">Ad index</a> · <a class="sample-link" href="../weekly/">Weekly</a> · <a class="sample-link" href="../">Back to the home page</a></p>
@@ -1243,8 +1246,9 @@ def main():
     args = sys.argv[1:]
     if args not in ([], ['--check']):
         sys.exit('usage: python3 build.py [--check]')
-    if type(FOUNDING_PLACES_LEFT) is not int or not 0 <= FOUNDING_PLACES_LEFT <= FOUNDING_PLACES:
-        fail('FOUNDING_PLACES_LEFT must be a whole number from 0 to %d' % FOUNDING_PLACES)
+    if (type(FOUNDING_PLACES) is not int or type(FOUNDING_PLACES_LEFT) is not int
+            or not 0 <= FOUNDING_PLACES_LEFT <= FOUNDING_PLACES):
+        fail('config/links.json: founding_open must be a whole number from 0 to founding_total')
     index, guides = load()
 
     want, shown = {}, 0
