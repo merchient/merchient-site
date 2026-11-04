@@ -11,7 +11,7 @@
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Merchient">
 <meta property="og:title" content="See which lines on your site Vera flags · Merchient">
-<meta property="og:description" content="Type your website to see how many lines Vera flags on it, and the rules behind them. Free. No card.">
+<meta property="og:description" content="Type your website: Vera shows how many lines carry a risk, and emails you one line in full. The rest is in the 48-Hour Claims Audit.">
 <meta property="og:url" content="https://merchient.com/">
 <meta property="og:image" content="https://merchient.com/og-image.png">
 <meta property="og:image:width" content="1200">
@@ -19,7 +19,7 @@
 <meta property="og:image:alt" content="Merchient. Keep the hook. Lose the claim.">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="See which lines on your site Vera flags · Merchient">
-<meta name="twitter:description" content="Type your website to see how many lines Vera flags on it, and the rules behind them. Free. No card.">
+<meta name="twitter:description" content="Type your website: Vera shows how many lines carry a risk, and emails you one line in full. The rest is in the 48-Hour Claims Audit.">
 <meta name="twitter:image" content="https://merchient.com/og-image.png">
 <meta name="twitter:image:alt" content="Merchient. Keep the hook. Lose the claim.">
 <meta name="color-scheme" content="light dark">
@@ -43,7 +43,7 @@
       <a href="agencies">Agencies</a>
       <a href="#faq">FAQ</a>
       <a href="rescue">Send a rejected ad</a>
-      <a class="btn btn-small" href="#scan">Check my claims</a>
+      <a class="btn btn-small" href="#scan">Read my ads</a>
     </nav>
   </div>
 </header>
@@ -58,13 +58,13 @@
       </div>
 
       <aside class="panel scan-panel" id="scan" aria-labelledby="scan-title">
-        <p class="panel-title" id="scan-title">Free scan</p>
+        <p class="panel-title" id="scan-title">The preview</p>
         <div class="bar-xl" aria-hidden="true"></div>
         <form class="scan hero-form" id="hero-form" data-panel="https://api.merchient.com" hidden>
           <label for="hero-website">Your website</label>
           <input id="hero-website" name="website" type="text" inputmode="url" autocomplete="url" placeholder="yourbrand.com" required>
-          <button class="btn" type="submit">Check my claims</button>
-          <p class="scan-note">Free. No card. Your website only.</p>
+          <button class="btn" type="submit">Read my ads</button>
+          <p class="scan-note">The count, and one line in full. The rest is in the audit.</p>
           <p class="scan-msg" role="status"></p>
           <progress class="cf-progress" id="hero-progress" max="240" value="0" hidden>Reading</progress>
         </form>
@@ -78,21 +78,21 @@
           <p class="scan-msg" role="status"></p>
         </form>
         <div id="scan-fallback">
-        <p class="scan-busy" id="scan-busy" hidden>The instant panel is busy; ask for the scan by email instead.</p>
+        <p class="scan-busy" id="scan-busy" hidden>The instant panel is busy; ask for the preview by email instead.</p>
         <!--scan-->
           <form class="scan" action="mailto:hello@merchient.com" method="get" data-api="https://api.merchient.com/api/scan">
-            <input type="hidden" name="subject" value="Free&nbsp;scan&nbsp;request">
+            <input type="hidden" name="subject" value="Preview&nbsp;request">
             <label for="scan-website">Your website</label>
             <input id="scan-website" name="body" type="text" inputmode="url" autocomplete="url" placeholder="yourbrand.com" required>
             <label for="scan-email">Your work email</label>
             <input id="scan-email" name="email" type="email" autocomplete="email" required>
-            <button class="btn" type="submit">Get your free scan</button>
+            <button class="btn" type="submit">Read my ads</button>
             <p class="scan-note">We send your website and work email to Merchient’s scan service (api.merchient.com), which emails you a link to confirm. If it does not answer, your email app opens with the request ready.</p>
             <p class="scan-msg" role="status"></p>
           </form>
           <script src="scan.js"></script>
           <!--/scan-->
-        <p class="cta-line">Here the scan comes by email. We email you a link to confirm your work email; once you click it, Vera emails you the riskiest line on your site, why, a safer rewrite and how many more like it she found.</p>
+        <p class="cta-line">Here the preview comes by email. We email you a link to confirm your work email; once you click it, Vera emails you the riskiest line on your site, why, a safer rewrite and how many more like it she found.</p>
         </div>
       </aside>
       <script src="hero.js"></script>
@@ -120,7 +120,7 @@
         <li><strong>The panel.</strong> How many lines carry a risk, and the top rules. No email needed.</li>
         <li><strong>The riskiest line.</strong> Add a work email and click the confirm link we send. Vera emails you the line, a safer rewrite and how many more like it she found.</li>
         <li><strong>Winning Lines.</strong> What the longest-running ads in your category say.</li>
-        <li><strong>The 14-day trial.</strong> Your ads and pages read each morning. No card. If you do nothing, the emails end after day 14.</li>
+        <li><strong>The rest is in the audit.</strong> Every Red and Yellow line on every live ad and page, read in 48 hours: <a href="pricing#audit">the 48-Hour Claims Audit</a>.</li>
       </ol>
     </div>
   </section>
@@ -139,35 +139,21 @@
 
   <section class="section" id="doors">
     <div class="wrap">
-      <h2>Start free.</h2>
+      <h2>Two ways to work with Vera.</h2>
       <div class="plans">
-        <article class="panel plan" id="free">
-          <p class="panel-title">Free</p>
+        <article class="panel plan" id="audit">
+          <p class="panel-title">The 48-Hour Claims Audit</p>
           <div class="bar-xl" aria-hidden="true"></div>
-          <p>The panel, and your first rescue.</p>
-          <a class="btn" href="#scan">Check my claims</a>
+          <p class="price-tbd">$450, $750 or $1,200, by live ads.</p>
+          <p>Every live ad and page read in 48 hours. The Red and Yellow lines, each with the rule in plain words and a safer line that keeps the sell. Your category’s Winning Lines and your Claim Gap.</p>
+          <a class="btn" href="pricing#audit">Start the audit</a>
         </article>
-        <article class="panel plan" id="starter">
-          <p class="panel-title">Starter <small>· launch price</small></p>
+        <article class="panel plan" id="vera">
+          <p class="panel-title">Vera, your claims employee</p>
           <div class="bar-xl" aria-hidden="true"></div>
-          <p class="price-tbd">$99 a month.</p>
-          <p>Up to 25 live ads and pages watched. 50 checks.</p>
-          <a class="btn" href="#scan">Choose Starter</a>
-        </article>
-        <article class="panel plan" id="growth">
-          <p class="panel-title">Growth <small>· launch price</small></p>
-          <div class="bar-xl" aria-hidden="true"></div>
-          <p class="price-tbd">$199 a month.</p>
-          <p>Up to 100 live ads and pages watched. 200 checks.</p>
-          <p>The full Winning Lines.</p>
-          <a class="btn" href="#scan">Choose Growth</a>
-        </article>
-        <article class="panel plan" id="done-for-you">
-          <p class="panel-title">Vera, done for you <small>· founding price</small></p>
-          <div class="bar-xl" aria-hidden="true"></div>
-          <p class="price-tbd">$750 a month for three months, for the first three brands. Then $1,500 a month.</p>
-          <p>Every new ad checked the same day, before it runs. Your account watched every day.</p>
-          <a class="btn" href="mailto:hello@merchient.com?subject=Founding%20place">Ask for a founding place</a>
+          <p class="price-tbd">$1,500 a month for the founding ten. Then $2,500.</p>
+          <p>Everything pre-cleared before it runs. Same-day rescues and appeals. Every brand starts with the audit.</p>
+          <a class="btn" href="pricing#vera">What Vera does</a>
         </article>
       </div>
     </div>
@@ -184,11 +170,11 @@
     <div class="wrap">
       <h2>Questions</h2>
       <dl class="faq">
-        <div><dt>What do you need from me?</dt><dd>Your website, for the counts. A work email you confirm, to get the riskiest line by email. No login and no card.</dd></div>
+        <div><dt>What do you need from me?</dt><dd>Your website, for the counts. A work email you confirm, to get the riskiest line by email. No login.</dd></div>
         <div><dt>Do you change my ads?</dt><dd>No. Vera only reads. You choose what to change, and you make the change.</dd></div>
         <div><dt>Where do the rules come from?</dt><dd>Meta’s ad policies, and FTC and FDA guidance. Each flagged line names its rule, or says a person should read it.</dd></div>
-        <div><dt>Who checks the lines?</dt><dd>Each line says if a person checked it. Akhil reviews the findings before every first report.</dd></div>
-        <div><dt>What happens after 14 days?</dt><dd>If you do nothing, the emails end after day 14. There is no card on file, so you are not charged.</dd></div>
+        <div><dt>Who checks the lines?</dt><dd>Each line says if a person checked it. A person checks every audit before it goes out.</dd></div>
+        <div><dt>What does the audit cost?</dt><dd>$450, $750 or $1,200, by your live ads, paid when you order. If it finds nothing Red or Yellow, you are refunded in full. <a href="pricing">The prices</a>.</dd></div>
         <div><dt>Do I still need a lawyer?</dt><dd>For a legal question, yes. You get the line, the rule it breaks and a safer rewrite.</dd></div>
       </dl>
     </div>
@@ -200,8 +186,8 @@
       <form class="scan closing-form" action="./" method="get">
         <label for="closing-website">Your website</label>
         <input id="closing-website" name="site" type="text" inputmode="url" autocomplete="url" placeholder="yourbrand.com" required>
-        <button class="btn" type="submit">Check my claims</button>
-        <p class="alt">Free. No card. Your website only.</p>
+        <button class="btn" type="submit">Read my ads</button>
+        <p class="alt">The count, and one line in full.</p>
       </form>
     </div>
   </section>

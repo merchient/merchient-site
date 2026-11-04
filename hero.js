@@ -1,5 +1,5 @@
 // The home page's hero: type a website, see its Claims Facts panel. Without this script the page shows the scan form
-// that opens the "Free scan request" email (scan.js posts it when it can). With it, the hero asks Merchient's panel
+// that opens the "Preview request" email (scan.js posts it when it can). With it, the hero asks Merchient's panel
 // service for the website's panel and draws it here in the panel's own look. A panel not read yet is queued and
 // polled every 10 seconds for up to 4 minutes. When the service is busy or does not answer, the scan form comes back
 // with one line saying so. Only the domain is sent; nothing is stored in the page; no cookies, no analytics.
@@ -61,11 +61,11 @@
   // 503 (the service busy, or the queue not open yet) keeps the paste's line; anything else says the website could not
   // be read now, because then the service did not say it was busy.
   function busyForm(x) {
-    if (!(x && x.status === 503)) { busy.textContent = 'The instant panel can’t read this website right now; ask for the scan by email instead.'; }
+    if (!(x && x.status === 503)) { busy.textContent = 'The instant panel can’t read this website right now; ask for the preview by email instead.'; }
     progress.hidden = true;
     form.hidden = true;
     out.hidden = true;
-    title.textContent = 'Free scan';
+    title.textContent = 'The preview';
     busy.hidden = false;
     fallback.hidden = false;
     var site = document.getElementById('scan-website');
@@ -233,7 +233,7 @@
     }).catch(function () {
       send.disabled = false;
       note.textContent = 'The scan service did not answer, so your email app is opening instead.';
-      window.location.href = 'mailto:hello@merchient.com?subject=Free%20scan%20request&body=' +
+      window.location.href = 'mailto:hello@merchient.com?subject=Preview%20request&body=' +
         encodeURIComponent('Website: ' + domain + '\r\nWork email: ' + email.value.trim() + '\r\n');
     });
   });
