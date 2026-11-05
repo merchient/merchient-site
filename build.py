@@ -249,7 +249,7 @@ FINAL = '''
   <div class="wrap footer-inner">
     <p>Merchient is a trade name of Orbline LLC, 30 N Gould St, STE R, Sheridan, WY 82801, USA.</p>
     <p><a href="mailto:hello@merchient.com">hello@merchient.com</a></p>
-    <p class="footer-more"><a href="../rescue">Send a rejected ad</a> · <a href="../claims-watch">Claims Watch</a> · <a href="../pricing">Price</a> · <a href="../agencies">Agencies</a> · <a href="../founder">Why I built this</a></p>
+    <p class="footer-more"><a href="../rescue">Send a rejected ad</a> · <a href="../claims-watch">Claims Watch</a> · <a href="../pricing">Price</a> · <a href="../agencies">Agencies</a> · <a href="../founder">Why I built this</a> · <a href="../method">How Vera decides</a> · <a href="../cases/">Case files</a></p>
     <nav class="footer-links" aria-label="Legal">
       <a href="../privacy.html">Privacy</a>
       <a href="../terms.html">Terms</a>
@@ -467,10 +467,19 @@ FOOTER_MORE = re.compile(r'(<p class="footer-more">)(.*?)(</p>)', re.S)
 
 
 def founder_link(page, rel):
-    """Adds "Why I built this" to the footer line of a hand-written page. The generated pages carry it in their templates."""
+    """Adds "Why I built this", "How Vera decides" and "Case files" (site 46) to the footer line of a hand-written
+    page. The generated pages carry them in their templates; method.html and cases/ are written by tools/build_method.py."""
     prefix = '/' if rel == '404.html' else '../' * rel.count(os.sep)
-    link = ' · <a href="%sfounder">Why I built this</a>' % prefix
-    return FOOTER_MORE.sub(lambda m: m.group(0) if 'founder"' in m.group(2) else m.group(1) + m.group(2) + link + m.group(3), page)
+    links = (('founder"', ' · <a href="%sfounder">Why I built this</a>'), ('method"', ' · <a href="%smethod">How Vera decides</a>'),
+             ('cases/"', ' · <a href="%scases/">Case files</a>'))
+
+    def add(m):
+        line = m.group(2)
+        for mark, link in links:
+            if mark not in line:
+                line += link % prefix
+        return m.group(1) + line + m.group(3)
+    return FOOTER_MORE.sub(add, page)
 
 
 # The home page v4 (site 51, 4 Nov 2026; ~/code/merchient-ops/docs/site-v4-brief.md). Three blocks are written here so
@@ -627,6 +636,7 @@ VERA_HTML_PRICED = '''<!--vera-->
 </ul>
 <p class="vera-price">$1,500 a month for the founding brands, kept for twelve months, cancel any time; ten places.</p>
 <p class="section-lede">Every brand starts with the audit.</p>
+<p class="more-link"><a class="sample-link" href="method">How Vera decides</a></p>
 <!--/vera-->'''
 VERA_PRICE_LINE = '<p class="vera-price">$1,500 a month for the founding brands, kept for twelve months, cancel any time; ten places.</p>\n'
 assert VERA_PRICE_LINE in VERA_HTML_PRICED
@@ -838,7 +848,7 @@ INDEX_FOOT = '''  </div>
   <div class="wrap footer-inner">
     <p>Merchient is a trade name of Orbline LLC, 30 N Gould St, STE R, Sheridan, WY 82801, USA.</p>
     <p><a href="mailto:hello@merchient.com">hello@merchient.com</a></p>
-    <p class="footer-more"><a href="@UP@rescue">Send a rejected ad</a> · <a href="@UP@claims-watch">Claims Watch</a> · <a href="@UP@pricing">Price</a> · <a href="@UP@agencies">Agencies</a> · <a href="@UP@founder">Why I built this</a></p>
+    <p class="footer-more"><a href="@UP@rescue">Send a rejected ad</a> · <a href="@UP@claims-watch">Claims Watch</a> · <a href="@UP@pricing">Price</a> · <a href="@UP@agencies">Agencies</a> · <a href="@UP@founder">Why I built this</a> · <a href="@UP@method">How Vera decides</a> · <a href="@UP@cases/">Case files</a></p>
     <nav class="footer-links" aria-label="Legal">
       <a href="@UP@privacy.html">Privacy</a>
       <a href="@UP@terms.html">Terms</a>
@@ -1549,6 +1559,7 @@ def sitemap(guides, winning):
     with open(os.path.join(ROOT, 'sitemap.xml'), encoding='utf-8') as f:
         listed = re.findall(r'<loc>([^<]+)</loc>', f.read())
     urls = [u for u in listed if not u.startswith((SITE + 'ingredients/', SITE + 'winning-lines/'))]
+    urls += [SITE + p for p in ('method', 'cases/', 'cases/0000/') if SITE + p not in urls]  # site 46
     if winning:
         urls += [SITE + 'winning-lines/'] + [SITE + 'winning-lines/%s/' % slug for slug, _ in winning]
     urls += [SITE + 'ingredients/'] + [SITE + 'ingredients/%s.html' % g['slug'] for g in guides]
