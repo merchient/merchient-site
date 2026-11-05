@@ -39,6 +39,7 @@ in the library, copy the JSON into data/ again and run the build.
 SCAN_API_ON = True       # site 30 (27 Oct 2026): the app's POST /api/scan is live (app paste 21)
 SCAN_API_URL = 'https://api.merchient.com/api/scan'
 
+import datetime
 import html
 import json
 import os
@@ -369,6 +370,96 @@ def sweeps_apply(page):
     page, k = SWEEPS_BLOCK.subn(lambda m: line, page)
     if k != 1:
         fail('index.html: the sweeps markers are missing')
+    return page
+
+
+# Site 52 (5 Nov 2026): the home page's one proof line is counted at build time from the sales lane's sweep files
+# (read only), so it cannot go stale by hand. A file counts when its date, from its name (YYYY-MM-DD[-suffix]-lines.tsv),
+# is within PROOF_DAYS of the build date; .bak-* files do not match the name. The rule is one row per line: the header
+# is the line that starts "domain<TAB>page<TAB>library_id" and must be the first line; blank lines are not rows; every
+# other line must have PROOF_COLS tab-separated fields, or the build stops (a file with another layout is not counted
+# wrong, it is refused). A row counts when its tier is Red, Yellow or Green; a row with no tier (fit "no": read, not a
+# supplement ad) is left out because the sentence says "graded"; any other tier stops the build. A stale or thin week
+# fails the build: a stale number never ships.
+PROOF_DIR = os.path.expanduser('~/code/merchient-sales/handoff/adlibrary')
+PROOF_DAYS = 7      # a file is read when it is no more than this many days older than the build date
+PROOF_MIN_ROWS = 100
+PROOF_COLS = 12
+PROOF_HEADER = 'domain\tpage\tlibrary_id\t'
+PROOF_TIER_COL = 8   # the "tier" column; a row counts when it is graded Red, Yellow or Green (the sentence says "graded")
+PROOF_TIERS = ('Red', 'Yellow', 'Green')
+PROOF_FILE = re.compile(r'^(\d{4})-(\d{2})-(\d{2})(?:-[A-Za-z0-9]+)*-lines\.tsv$')
+PROOF_BLOCK = re.compile(r'<!--proof-->.*?<!--/proof-->', re.S)
+MONTHS = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November',
+          'December']
+
+
+def proof_dates(first, last):
+    """'2 to 4 November', '30 October to 4 November', '4 November' (a year is added only when the two years differ)."""
+    def one(d, month=True, year=False):
+        return '%d%s%s' % (d.day, ' ' + MONTHS[d.month - 1] if month else '', ' %d' % d.year if year else '')
+    if first == last:
+        return one(first)
+    if first.year != last.year:
+        return '%s to %s' % (one(first, year=True), one(last, year=True))
+    return '%s to %s' % (one(first, month=first.month != last.month), one(last))
+
+
+def proof_rows(today, directory=None):
+    """Reads the sweep files; returns (files, first date, last date) where files is [(name, rows)] in date order."""
+    directory = directory or PROOF_DIR
+    if not os.path.isdir(directory):
+        fail('the sweep folder is missing: ' + directory)
+    files = []
+    for name in sorted(os.listdir(directory)):
+        m = PROOF_FILE.match(name)
+        if not m:
+            continue
+        try:
+            d = datetime.date(int(m.group(1)), int(m.group(2)), int(m.group(3)))
+        except ValueError:
+            fail('the sweep file name has no real date: ' + name)
+        if not 0 <= (today - d).days <= PROOF_DAYS:
+            continue
+        with open(os.path.join(directory, name), encoding='utf-8', newline='') as f:
+            lines = f.read().split('\n')
+        rows = skipped = 0
+        for i, line in enumerate(lines):
+            if not line.strip():
+                continue
+            if i == 0:
+                if not line.startswith(PROOF_HEADER):
+                    fail('%s: the first line is not the header row (domain, page, library_id, ...)' % name)
+                continue
+            if line.startswith(PROOF_HEADER) or line.count('\t') + 1 != PROOF_COLS:
+                fail('%s: line %d is not one row of %d fields' % (name, i + 1, PROOF_COLS))
+            tier = line.split('\t')[PROOF_TIER_COL]
+            if tier in PROOF_TIERS:
+                rows += 1
+            elif tier == '':
+                skipped += 1    # read but not a supplement ad (fit "no"), so not graded: the sentence says "graded"
+            else:
+                fail('%s: line %d has the tier "%s", not Red, Yellow or Green' % (name, i + 1, tier))
+        files.append((name, d, rows, skipped))
+    if not files:
+        # this is also the "newest file is older than seven days" rule: the newest file is out of the window
+        fail('no sweep file in %s is dated within %d days of %s (the newest is too old)' % (directory, PROOF_DAYS, today.isoformat()))
+    newest = max(f[1] for f in files)
+    total = sum(f[2] for f in files)
+    if total < PROOF_MIN_ROWS:
+        fail('only %d graded sweep rows in the last %d days (the proof line needs %d)' % (total, PROOF_DAYS, PROOF_MIN_ROWS))
+    return [(f[0], f[2], f[3]) for f in files], min(f[1] for f in files), newest
+
+
+def proof_apply(page, today=None, directory=None):
+    """Writes the home page's proof line between <!--proof--> and <!--/proof-->. Counts only: no percentage, no brand."""
+    files, first, last = proof_rows(today or datetime.date.today(), directory)
+    total = sum(f[1] for f in files)
+    line = ('<!--proof--><p class="proof-line">This week, %d lines from supplement ads running on Meta, read and graded '
+            'Red, Yellow or Green (our Ad Library sweeps, %s).</p><!--/proof-->' % (total, proof_dates(first, last)))
+    page, k = PROOF_BLOCK.subn(lambda m: line, page)
+    if k != 1:
+        fail('index.html: the proof markers (<!--proof--> ... <!--/proof-->) are missing')
     return page
 
 
@@ -1492,6 +1583,7 @@ def main():
             # Site 47: the home page's proof is the v3 {{index...}} fields; the weekly sweeps line (sweeps_apply) is no
             # longer on it.
             new = scan_apply(new)
+            new = proof_apply(new)  # site 52: the proof line is counted from the sweep files, today
         new = blocks_apply(new, p)  # site 51: the configurator, Vera's screen, the home page's Winning Lines
         new = fields_apply(founder_link(new, p))
         if n or p == 'index.html' or new != was or PLACEHOLDER.search(new) or FIELD_SPAN.search(new):
