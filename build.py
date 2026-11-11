@@ -1556,14 +1556,9 @@ def index_page(index, guides):
 
 
 def sitemap(guides, winning):
-    with open(os.path.join(ROOT, 'sitemap.xml'), encoding='utf-8') as f:
-        listed = re.findall(r'<loc>([^<]+)</loc>', f.read())
-    # Site 53: the demo pages under d/ (tools/make_demo_pages.py) are noindex and never listed.
-    urls = [u for u in listed if not u.startswith((SITE + 'ingredients/', SITE + 'winning-lines/', SITE + 'd/'))]
-    urls += [SITE + p for p in ('method', 'cases/', 'cases/0000/') if SITE + p not in urls]  # site 46
-    if winning:
-        urls += [SITE + 'winning-lines/'] + [SITE + 'winning-lines/%s/' % slug for slug, _ in winning]
-    urls += [SITE + 'ingredients/'] + [SITE + 'ingredients/%s.html' % g['slug'] for g in guides]
+    # Site 54 (11 Nov 2026): the sitemap lists the home page and nothing else: no old pages, ingredient guides, index
+    # issues, winning lines, method, cases or d/. The old pages stay in the repo, reachable only by their addresses.
+    urls = [SITE]
     return ('<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
             + ''.join('  <url><loc>%s</loc></url>\n' % u for u in urls) + '</urlset>\n')
 
@@ -1591,17 +1586,16 @@ def main():
 
     want, shown = {}, 0
     for p in pages():
+        if p == 'index.html':
+            # Site 54 (11 Nov 2026): the home page is hand-written and plain (Varma's text). The build leaves it exactly
+            # as written: no scan box, proof line, blocks, founder link, fields or founding-places count, no markers.
+            continue
         with open(os.path.join(ROOT, p), encoding='utf-8') as f:
             was = f.read()
         new, n = PLACES.subn(lambda m: m.group(1) + str(FOUNDING_PLACES_LEFT) + m.group(2), was)
-        if p == 'index.html':
-            # Site 47: the home page's proof is the v3 {{index...}} fields; the weekly sweeps line (sweeps_apply) is no
-            # longer on it.
-            new = scan_apply(new)
-            new = proof_apply(new)  # site 52: the proof line is counted from the sweep files, today
-        new = blocks_apply(new, p)  # site 51: the configurator, Vera's screen, the home page's Winning Lines
+        new = blocks_apply(new, p)  # site 51: the configurator, Vera's screen (pricing.html); the home page no longer (site 54)
         new = fields_apply(founder_link(new, p))
-        if n or p == 'index.html' or new != was or PLACEHOLDER.search(new) or FIELD_SPAN.search(new):
+        if n or new != was or PLACEHOLDER.search(new) or FIELD_SPAN.search(new):
             want[p], shown = new, shown + n
     if not shown:
         fail('no page shows the founding places left (<strong class="places-left">)')
