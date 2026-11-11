@@ -1566,10 +1566,11 @@ def sitemap(guides, winning):
 def pages():
     """The site's own pages, outside the generated folder. Site 53: d/ (the demo pages, written by
     tools/make_demo_pages.py) is never walked, so no footer, count or field step touches a file under it; and
-    order-desk-template.html is the demo pages' source, not a page (its {{COMPANY}} is not a build field)."""
+    order-desk-template.html is the demo pages' source, not a page (its {{COMPANY}} is not a build field).
+    Site 55: example/ (Varma's hand-written example page, noindex) is never walked or rewritten either."""
     for folder, dirs, files in os.walk(ROOT):
         dirs[:] = sorted(d for d in dirs if not d.startswith('.') and d not in ('ingredients', 'data', 'fonts', 'reports', 'previews')
-                         and not (folder == ROOT and d == 'd'))
+                         and not (folder == ROOT and d in ('d', 'example')))
         for name in sorted(files):
             if name.endswith('.html') and not (folder == ROOT and name == 'order-desk-template.html'):
                 yield os.path.relpath(os.path.join(folder, name), ROOT)

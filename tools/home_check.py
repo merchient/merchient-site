@@ -1,13 +1,17 @@
 #!/usr/bin/env python3
 """Site 54: the check for the plain home page. Run: python3 -I tools/home_check.py
 
-Exits 0 only when all six checks hold; prints one line per check.
+Exits 0 only when all nine checks hold; prints one line per check.
   1. index.html carries Varma's text (11 Nov 2026) word for word, and nothing else, on its visible text.
   2. Every href and src is one of the allowed few; none points at any page or page folder of the repo.
   3. No script, form, img, svg, iframe, og:, twitter:, external URL; the CSP meta has no script-src.
   4. sitemap.xml has exactly one <loc>: https://merchient.com/
   5. Nothing under d/ and not order-desk-template.html differs from HEAD.
   6. Every .html file that HEAD tracks still exists.
+Site 55 adds three:
+  7. example/outbound/index.html exists and has <meta name="robots" content="noindex, nofollow">.
+  8. sitemap.xml does not list it (check 4 holds: exactly one <loc>, the home page).
+  9. index.html has no link to example/.
 """
 import os
 import re
@@ -180,6 +184,40 @@ def main():
     gone = [p for p in tracked if not os.path.exists(os.path.join(ROOT, p))]
     check('pages: all %d .html files tracked at HEAD still exist' % len(tracked),
           gone + ([] if r.returncode == 0 and tracked else ['git ls-tree found nothing']))
+
+    # 7. Varma's example page exists and is noindex
+    problems = []
+    ex = os.path.join(ROOT, 'example', 'outbound', 'index.html')
+    if not os.path.isfile(ex):
+        problems.append('example/outbound/index.html does not exist')
+    else:
+        with open(ex, encoding='utf-8') as f:
+            ex_page = Page()
+            ex_page.feed(f.read())
+        robots = [(m.get('content') or '').replace(' ', '').lower() for m in ex_page.metas
+                  if (m.get('name') or '').lower() == 'robots']
+        if 'noindex,nofollow' not in robots:
+            problems.append('no <meta name="robots" content="noindex, nofollow">; found %r' % robots)
+    check('example: example/outbound/index.html exists and has the noindex, nofollow meta', problems)
+
+    # 8. the sitemap does not list it
+    with open(os.path.join(ROOT, 'sitemap.xml'), encoding='utf-8') as f:
+        sm = f.read()
+    problems = []
+    if 'example' in sm:
+        problems.append('sitemap.xml mentions "example"')
+    if locs != [SITE]:
+        problems.append('sitemap.xml <loc> list is %r, not just %s' % (locs, SITE))
+    check('sitemap: does not list example/outbound/ (still the one <loc>, ' + SITE + ')', problems)
+
+    # 9. the home page does not link to it
+    problems = []
+    for tag, k, v in page.links:
+        if 'example' in v.lower():
+            problems.append('<%s %s="%s">' % (tag, k, v))
+    if re.search(r'example/', raw, re.I):
+        problems.append('index.html contains the text "example/"')
+    check('links: index.html has no link to example/', problems)
 
     bad = 0
     for name, problems in results:

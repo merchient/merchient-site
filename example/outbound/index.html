@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Example: 25 companies that look like your buyers</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600&display=swap">
+<style>
+*{box-sizing:border-box}body{margin:0}[hidden]{display:none!important}
+
+/* Layout: a working sheet. What we read about you, the 25 buyers as a table, three emails, then the offer. */
+:root{
+  --bg:#eef1f4; --surface:#ffffff; --ink:#15222e; --muted:#5a6976; --line:#d5dce3;
+  --accent:#0e5a86; --accent-ink:#ffffff; --flag:#a34a06; --flag-bg:#fdf1e3; --ok:#1b7348; --ok-bg:#e6f4ec; --paper:#f8f9fa;
+  --f-display:"Space Grotesk",system-ui,sans-serif; --f-body:"Inter",system-ui,sans-serif; --f-mono:"IBM Plex Mono",ui-monospace,Menlo,monospace;
+}
+@media (prefers-color-scheme: dark){ :root:not([data-theme="light"]){
+  --bg:#10171d; --surface:#18222b; --ink:#e6edf2; --muted:#9aa9b6; --line:#2c3944;
+  --accent:#5bb1e0; --accent-ink:#08202e; --flag:#f0a55a; --flag-bg:#3a2a17; --ok:#6fd39c; --ok-bg:#16301f; --paper:#131c23; color-scheme:dark } }
+:root[data-theme="dark"]{
+  --bg:#10171d; --surface:#18222b; --ink:#e6edf2; --muted:#9aa9b6; --line:#2c3944;
+  --accent:#5bb1e0; --accent-ink:#08202e; --flag:#f0a55a; --flag-bg:#3a2a17; --ok:#6fd39c; --ok-bg:#16301f; --paper:#131c23; color-scheme:dark }
+body{background:var(--bg);color:var(--ink);font-family:var(--f-body);font-size:15px;line-height:1.5}
+.wrap{max-width:1040px;margin:0 auto;padding-block:28px 48px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));display:flex;flex-direction:column;gap:22px}
+h1{font-family:var(--f-display);font-weight:600;font-size:clamp(24px,4vw,34px);line-height:1.15;margin:0;text-wrap:balance}
+h2{font-family:var(--f-display);font-weight:600;font-size:19px;margin:0;text-wrap:balance}
+p{margin:0}
+.eyebrow{font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);font-weight:600}
+.lead{color:var(--muted);max-width:64ch}
+.note{font-size:13px;color:var(--muted);border-left:3px solid var(--line);padding-left:10px}
+.sample{font-size:13px;background:var(--flag-bg);color:var(--flag);border-radius:6px;padding:8px 12px;font-weight:500}
+.head,.block{display:flex;flex-direction:column;gap:8px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:16px;display:flex;flex-direction:column;gap:12px;min-width:0}
+.read{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px}
+.read div{display:flex;flex-direction:column;gap:2px}
+.read small{font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+.tablebox{overflow-x:auto}
+table{border-collapse:collapse;width:100%;font-size:14px;min-width:640px}
+th{text-align:left;font-weight:600;padding:6px 8px;border-bottom:1px solid var(--line);font-size:12px;letter-spacing:.04em;text-transform:uppercase;color:var(--muted)}
+td{padding:7px 8px;border-bottom:1px solid var(--line);vertical-align:top}
+td.n{font-variant-numeric:tabular-nums;color:var(--muted);width:2.5em}
+td.co{font-weight:500}
+.tabs{display:flex;flex-wrap:wrap;gap:8px}
+.tab{font:inherit;font-weight:500;padding:8px 12px;border:1px solid var(--line);background:var(--surface);color:var(--ink);border-radius:6px;cursor:pointer}
+.tab[aria-selected="true"]{background:var(--accent);color:var(--accent-ink);border-color:var(--accent)}
+.tab:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.mail{background:var(--paper);border-radius:6px;padding:14px;white-space:pre-wrap;font-size:14px}
+.subj{font-family:var(--f-mono);font-size:13px;color:var(--muted)}
+.offer ul{margin:0;padding-left:18px;display:flex;flex-direction:column;gap:4px}
+.cta{font-weight:600;border-top:1px solid var(--line);padding-top:12px}
+</style>
+</head>
+<body>
+
+<div class="wrap">
+  <div class="head">
+    <span class="eyebrow">Example, prepared for an invented company</span>
+    <h1>25 companies that look like your buyers</h1>
+    <p class="lead">We read what your site says you sell and who you sell it to, then looked for companies that match. Below are 25 of them, the role to approach at each, and three first emails written for your product.</p>
+    <p class="sample">This is an example. Fieldlane and all 25 companies on this page are invented. Reply to our email and we make the real page for your company, from your own site and real companies.</p>
+    <p class="note">A real page is built by Merchient from public information. It shows no contact details, and nothing is sent to anyone on it.</p>
+  </div>
+
+  <div class="card">
+    <h2>What we read about you</h2>
+    <div class="read">
+      <div><small>You sell</small><span>Scheduling and dispatch software for heating and cooling contractors</span></div>
+      <div><small>Your best customers</small><span>Contractors with 10 to 80 technicians who still dispatch by phone and whiteboard</span></div>
+      <div><small>Who decides</small><span>The owner at smaller firms; the operations manager above about 40 technicians</span></div>
+      <div><small>We left out</small><span>One-truck shops, national franchises, and firms already naming a dispatch product on their site</span></div>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>The 25</h2>
+    <div class="tablebox"><table>
+      <thead><tr><th>#</th><th>Company</th><th>Where</th><th>Why it fits</th><th>Approach</th></tr></thead>
+      <tbody id="rows"></tbody>
+    </table></div>
+  </div>
+
+  <div class="card">
+    <h2>Three first emails for your product</h2>
+    <div class="tabs" role="tablist" aria-label="Emails">
+      <button class="tab" role="tab" data-i="0">The problem</button>
+      <button class="tab" role="tab" data-i="1">The number</button>
+      <button class="tab" role="tab" data-i="2">The short one</button>
+    </div>
+    <div class="block"><span class="subj" id="subj"></span><div class="mail" id="mail"></div></div>
+  </div>
+
+  <div class="card offer">
+    <h2>This, running every day on your mailboxes</h2>
+    <ul>
+      <li>Target lists checked against what you actually sell, verified contacts, the emails, the sending rules and the reply sorting.</li>
+      <li>A person on your side approves every send. Opt-outs are honoured before each send.</li>
+      <li>$6,000 setup. Built, checked and sending within 7 days of access, at a safe starting volume that rises over the following weeks as your mailboxes warm. $2,000 a month to run and improve it.</li>
+      <li>Half the setup to start. If it is not running 7 days after you give us access, that half is returned.</li>
+      <li>We do not promise a number of meetings. We promise the system, working.</li>
+    </ul>
+    <p class="cta">Reply to our email with yes and we make the real 25 for your company, with three emails written for your product.</p>
+  </div>
+</div>
+
+<script>
+var R=[
+["Harlan Air & Heat","Tulsa, OK","32 technicians; hiring a second dispatcher","Operations manager"],
+["Northpoint Mechanical","Duluth, MN","18 technicians; site lists a phone number as the only way to book","Owner"],
+["Calloway Comfort","Macon, GA","45 technicians across two branches","Operations manager"],
+["Three Rivers Heating","Pittsburgh, PA","Family firm, 22 technicians; reviews mention missed appointment windows","Owner"],
+["Desert Crest Cooling","Mesa, AZ","60 technicians; summer overtime mentioned in job ads","Operations manager"],
+["Bayline HVAC","Mobile, AL","14 technicians; opened a second location this year","Owner"],
+["Kessler Climate","Dayton, OH","27 technicians; job ad asks for 'whiteboard dispatch experience'","Owner"],
+["Summit Ridge Air","Boise, ID","38 technicians; commercial and home service on one schedule","Service manager"],
+["Pinebrook Heating & Air","Raleigh, NC","52 technicians; three dispatchers listed on the team page","Operations manager"],
+["Gulf Shore Mechanical","Corpus Christi, TX","19 technicians; books by phone and web form","Owner"],
+["Lakeview Comfort Systems","Madison, WI","24 technicians; reviews mention long hold times","Owner"],
+["Redwood Valley HVAC","Santa Rosa, CA","41 technicians; maintenance plans with seasonal visits","Operations manager"],
+["Ironwood Air","Flagstaff, AZ","12 technicians; growing, two open technician roles","Owner"],
+["Clearwater Heating","Spokane, WA","29 technicians; after-hours calls go to an answering service","Owner"],
+["Brightside Mechanical","Columbia, SC","35 technicians; new-build and service work mixed","Service manager"],
+["Stonegate Climate","Lexington, KY","16 technicians; owner answers reviews personally","Owner"],
+["Prairie Wind HVAC","Lincoln, NE","21 technicians; covers a 90-mile radius","Owner"],
+["Harborview Air","Portland, ME","13 technicians; winter emergency calls","Owner"],
+["Mesa Verde Cooling","Albuquerque, NM","48 technicians; two shifts","Operations manager"],
+["Oakfield Comfort","Rochester, NY","26 technicians; job ad lists paper work orders","Owner"],
+["Tidewater Heating & Air","Norfolk, VA","57 technicians; military housing contracts","Operations manager"],
+["Blue Ridge Mechanical","Roanoke, VA","17 technicians; reviews mention rescheduled visits","Owner"],
+["Cedar Hollow HVAC","Nashville, TN","33 technicians; bought a smaller competitor this year","Operations manager"],
+["Sandhill Air","Lubbock, TX","20 technicians; one dispatcher","Owner"],
+["Granite State Comfort","Manchester, NH","23 technicians; oil, gas and heat pumps","Owner"]
+];
+var M=[
+["Subject: dispatch at {their company}","Hi {first name},\n\nWhen two technicians call in sick on a 95-degree day, who rebuilds the schedule at {their company}, and how long does it take?\n\nFieldlane rebuilds it in under a minute and texts every customer their new window. Contractors your size use it to stop the afternoon of phone calls.\n\nWould it help to see it on a copy of one of your own busy days?"],
+["Subject: missed windows","Hi {first name},\n\nMost contractors with 20 to 60 technicians lose a few jobs a week to missed arrival windows, and never see the number because nobody counts it.\n\nFieldlane counts it for you in the first week, then cuts it. I can show you what that looks like for a firm your size in ten minutes.\n\nWorth a look?"],
+["Subject: your whiteboard","Hi {first name},\n\nYour job ad mentions dispatching from a whiteboard. Fieldlane replaces it without changing how your dispatcher thinks: same board, on a screen, that updates itself.\n\nOpen to seeing it?"]
+];
+function esc(s){return String(s).replace(/[&<>]/g,function(c){return{"&":"&amp;","<":"&lt;",">":"&gt;"}[c]})}
+document.getElementById("rows").innerHTML=R.map(function(r,i){return '<tr><td class="n">'+(i+1)+'</td><td class="co">'+esc(r[0])+'</td><td>'+esc(r[1])+'</td><td>'+esc(r[2])+'</td><td>'+esc(r[3])+'</td></tr>'}).join("");
+function show(i){document.querySelectorAll(".tab").forEach(function(t){t.setAttribute("aria-selected",t.dataset.i==i?"true":"false")});document.getElementById("subj").textContent=M[i][0];document.getElementById("mail").textContent=M[i][1]}
+document.querySelectorAll(".tab").forEach(function(t){t.addEventListener("click",function(){show(+t.dataset.i)})});
+show(0);
+</script>
+
+</body>
+</html>
