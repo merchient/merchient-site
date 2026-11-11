@@ -1558,7 +1558,8 @@ def index_page(index, guides):
 def sitemap(guides, winning):
     with open(os.path.join(ROOT, 'sitemap.xml'), encoding='utf-8') as f:
         listed = re.findall(r'<loc>([^<]+)</loc>', f.read())
-    urls = [u for u in listed if not u.startswith((SITE + 'ingredients/', SITE + 'winning-lines/'))]
+    # Site 53: the demo pages under d/ (tools/make_demo_pages.py) are noindex and never listed.
+    urls = [u for u in listed if not u.startswith((SITE + 'ingredients/', SITE + 'winning-lines/', SITE + 'd/'))]
     urls += [SITE + p for p in ('method', 'cases/', 'cases/0000/') if SITE + p not in urls]  # site 46
     if winning:
         urls += [SITE + 'winning-lines/'] + [SITE + 'winning-lines/%s/' % slug for slug, _ in winning]
@@ -1568,11 +1569,14 @@ def sitemap(guides, winning):
 
 
 def pages():
-    """The site's own pages, outside the generated folder."""
+    """The site's own pages, outside the generated folder. Site 53: d/ (the demo pages, written by
+    tools/make_demo_pages.py) is never walked, so no footer, count or field step touches a file under it; and
+    order-desk-template.html is the demo pages' source, not a page (its {{COMPANY}} is not a build field)."""
     for folder, dirs, files in os.walk(ROOT):
-        dirs[:] = sorted(d for d in dirs if not d.startswith('.') and d not in ('ingredients', 'data', 'fonts', 'reports', 'previews'))
+        dirs[:] = sorted(d for d in dirs if not d.startswith('.') and d not in ('ingredients', 'data', 'fonts', 'reports', 'previews')
+                         and not (folder == ROOT and d == 'd'))
         for name in sorted(files):
-            if name.endswith('.html'):
+            if name.endswith('.html') and not (folder == ROOT and name == 'order-desk-template.html'):
                 yield os.path.relpath(os.path.join(folder, name), ROOT)
 
 
