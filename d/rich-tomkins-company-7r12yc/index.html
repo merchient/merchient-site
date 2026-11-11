@@ -161,7 +161,7 @@ function show(i){
 function mark(n){var sp=$("steps").children;for(var k=0;k<sp.length;k++)sp[k].classList.toggle("on",k<n)}
 function run(){
   if(busy)return;busy=true;$("result").classList.add("dim");mark(0);$("timer").textContent="Working";
-  var n=0,iv=setInterval(function(){n++;mark(n);if(n>=4){clearInterval(iv);$("result").classList.remove("dim");$("timer").textContent="Recorded run";busy=false}},450);
+  var n=0,iv=setInterval(function(){n++;mark(n);if(n>=4){clearInterval(iv);$("result").classList.remove("dim");$("timer").textContent="Sample run";busy=false}},450);
 }
 document.querySelectorAll(".tab").forEach(function(t){t.addEventListener("click",function(){if(!busy)show(+t.dataset.i)})});
 $("run").addEventListener("click",run);
