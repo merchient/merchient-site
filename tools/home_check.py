@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Site 54: the check for the plain home page. Run: python3 -I tools/home_check.py
 
-Exits 0 only when all nine checks hold; prints one line per check.
+Exits 0 only when all twelve checks hold; prints one line per check.
   1. index.html carries Varma's text (11 Nov 2026) word for word, and nothing else, on its visible text.
   2. Every href and src is one of the allowed few; none points at any page or page folder of the repo.
   3. No script, form, img, svg, iframe, og:, twitter:, external URL; the CSP meta has no script-src.
@@ -12,6 +12,10 @@ Site 55 adds three:
   7. example/outbound/index.html exists and has <meta name="robots" content="noindex, nofollow">.
   8. sitemap.xml does not list it (check 4 holds: exactly one <loc>, the home page).
   9. index.html has no link to example/.
+Site 56 adds three (on Varma's corrected example page):
+ 10. no http:// or https:// reference in any href, src or CSS url(...) (no outside fonts or files).
+ 11. no <form, <img, <iframe and no <script src=; one inline script is allowed (it draws the table).
+ 12. its visible text contains "any likeness to a real business is by chance" and "7 days after you give us access".
 """
 import os
 import re
@@ -82,6 +86,25 @@ class Page(HTMLParser):
             self.header.append(data)
         elif self.part in ('main', 'footer'):
             self.body.append(data)
+
+
+class VisibleText(HTMLParser):
+    """All text a visitor sees: everything outside script, style and title."""
+    def __init__(self):
+        super().__init__(convert_charrefs=True)
+        self.stack, self.parts = [], []
+
+    def handle_starttag(self, tag, attrs):
+        if tag in ('script', 'style', 'title'):
+            self.stack.append(tag)
+
+    def handle_endtag(self, tag):
+        if self.stack and self.stack[-1] == tag:
+            self.stack.pop()
+
+    def handle_data(self, data):
+        if not self.stack:
+            self.parts.append(data)
 
 
 def repo_page_names():
@@ -218,6 +241,43 @@ def main():
     if re.search(r'example/', raw, re.I):
         problems.append('index.html contains the text "example/"')
     check('links: index.html has no link to example/', problems)
+
+    # 10 to 12. Varma's corrected example page: nothing from outside, nothing that takes input, the two lines
+    problems10, problems11, problems12 = [], [], []
+    if not os.path.isfile(ex):
+        for p in (problems10, problems11, problems12):
+            p.append('example/outbound/index.html does not exist')
+    else:
+        with open(ex, encoding='utf-8') as f:
+            ex_raw = f.read()
+        ex_low = ex_raw.lower()
+        # 10. no outside reference in an href, a src or a CSS url(...) (a protocol-relative // counts as outside)
+        refs = re.findall(r'\b(?:href|src)\s*=\s*["\']?\s*([^"\'>\s]+)', ex_raw, re.I)
+        refs += re.findall(r'url\(\s*["\']?\s*([^)"\']+)', ex_raw, re.I)
+        refs += re.findall(r'@import\s+["\']?\s*([^"\';\s]+)', ex_raw, re.I)
+        for v in refs:
+            if re.match(r'(?:https?:)?//', v.strip(), re.I) or re.search(r'https?://', v, re.I):
+                problems10.append('outside reference ' + v)
+        # 11. no form, img, iframe, script src; one inline script allowed
+        for t in ('<form', '<img', '<iframe'):
+            if t in ex_low:
+                problems11.append(t + ' found')
+        if re.search(r'<script\b[^>]*\bsrc\s*=', ex_low):
+            problems11.append('<script src= found')
+        n_scripts = len(re.findall(r'<script\b', ex_low))
+        if n_scripts > 1:
+            problems11.append('want at most one inline script, found %d' % n_scripts)
+        # 12. the two lines, on the visible text
+        vt = VisibleText()
+        vt.feed(ex_raw)
+        ex_visible = collapse(' '.join(vt.parts))
+        for want in ('any likeness to a real business is by chance', '7 days after you give us access'):
+            if want not in ex_visible:
+                problems12.append('visible text lacks "%s"' % want)
+    check('example: no http:// or https:// in any href, src or CSS url(...) (no outside fonts or files)', problems10)
+    check('example: no <form, <img, <iframe, no <script src=; one inline script allowed', problems11)
+    check('example: visible text has "any likeness to a real business is by chance" and "7 days after you give us access"',
+          problems12)
 
     bad = 0
     for name, problems in results:
