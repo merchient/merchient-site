@@ -5,7 +5,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex, nofollow">
 <title>Order desk demonstration for Specialty Lighting Group</title>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600&display=swap">
 <style>
 *{box-sizing:border-box}body{margin:0}[hidden]{display:none!important}
 
@@ -14,7 +13,7 @@
   --bg:#eef1f4; --surface:#ffffff; --ink:#15222e; --muted:#5a6976; --line:#d5dce3;
   --accent:#0e5a86; --accent-ink:#ffffff; --flag:#a34a06; --flag-bg:#fdf1e3; --ok:#1b7348; --ok-bg:#e6f4ec;
   --paper:#f8f9fa;
-  --f-display:"Space Grotesk",system-ui,sans-serif; --f-body:"Inter",system-ui,sans-serif; --f-mono:"IBM Plex Mono",ui-monospace,Menlo,monospace;
+  --f-display:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif; --f-body:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif; --f-mono:ui-monospace,Menlo,Consolas,monospace;
 }
 @media (prefers-color-scheme: dark){ :root:not([data-theme="light"]){
   --bg:#10171d; --surface:#18222b; --ink:#e6edf2; --muted:#9aa9b6; --line:#2c3944;
@@ -79,7 +78,7 @@ td.num,th.num{text-align:right;font-variant-numeric:tabular-nums}
     <span class="eyebrow">Demonstration for <span id="co">Specialty Lighting Group</span></span>
     <h1>Emailed orders, read and laid out without typing</h1>
     <p class="lead">A customer sends an order the way they always do. The order desk reads it, matches each line to a catalog, and stops to ask a person when something is unclear. Pick a sample and press Run.</p>
-    <p class="note">Built by Merchient with sample orders and a sample catalog. It is not connected to your systems and holds none of your data.</p>
+    <p class="note">Built by Merchient with sample orders and a sample catalog. It is not connected to your systems and holds none of your data. The three customers below are invented; any likeness to a real business is by chance.</p>
   </div>
 
   <div class="tabs" role="tablist" aria-label="Sample orders">
@@ -143,9 +142,9 @@ var S=[
   reply:"Hi Dana,\n\nPO 29635 is received: 60 rolls of PTFE tape, 8 hex bolts 5/8-13 x 2in zinc, and 8 gate valves 2in brass, to your usual address.\n\nOne question before we add it: how many #12 stainless hose clamps do you need?"},
  {email:"From: luis@delgado.example\nSubject: PO\n\nOrder for Delgado Marine Services below. (PO#85459)\n\n- large nitrile gloves x 3 case\n- 50 medium nitrile gloves\n- 4.5 flap discs 80 grit x 36\n- penetrating oil cans x 2 case\n- 1\" SS ball valve x 4\n- 4 3/4 PEX crimp rings\nNeed by 11/14/2026.\nSame ship-to as always.\n\nThanks,\nLuis\nDelgado Marine Services",
   f:[["Customer","Delgado Marine Services"],["PO number","85459"],["Need by","14 Nov 2026"],["Ship to","Usual address on file"]],
-  l:[["GL-N-L","Nitrile gloves large box of 100","large nitrile gloves",3,"CS"],["GL-N-M","Nitrile gloves medium box of 100","medium nitrile gloves",50,"BX"],["FD-45-80","Flap disc 4.5in 80 grit","4.5 flap discs 80 grit",36,"EA"],["WD-12","Penetrating oil 12oz aerosol","penetrating oil cans",2,"CS"],["BV-100-SS","Ball valve 1in stainless threaded","1\" SS ball valve",4,"EA"]],
-  flags:[["Not in the catalog","3/4 PEX crimp rings, quantity 4. Not entered. Sent to a person to quote or decline."]],
-  reply:"Hi Luis,\n\nPO 85459 is received for 14 November: 3 cases of large nitrile gloves, 50 boxes of medium, 36 flap discs, 2 cases of penetrating oil, and 4 stainless 1in ball valves.\n\nWe do not list 3/4 PEX crimp rings. Someone from the desk will come back to you on those today."}
+  l:[["GL-N-L","Nitrile gloves large box of 100","large nitrile gloves",3,"CS"],["FD-45-80","Flap disc 4.5in 80 grit","4.5 flap discs 80 grit",36,"EA"],["WD-12","Penetrating oil 12oz aerosol","penetrating oil cans",2,"CS"],["BV-100-SS","Ball valve 1in stainless threaded","1\" SS ball valve",4,"EA"]],
+  flags:[["Unit unclear","50 medium nitrile gloves (GL-N-M, sold by the box of 100): 50 gloves or 50 boxes? Not entered until the customer says."],["Not in the catalog","3/4 PEX crimp rings, quantity 4. Not entered. Sent to a person to quote or decline."]],
+  reply:"Hi Luis,\n\nPO 85459 is received for 14 November: 3 cases of large nitrile gloves, 36 flap discs, 2 cases of penetrating oil, and 4 stainless 1in ball valves.\n\nOne question before we add it: medium nitrile gloves come in boxes of 100. Did you mean 50 boxes, or 50 gloves?\n\nWe do not list 3/4 PEX crimp rings. Someone from the desk will come back to you on those today."}
 ];
 var cur=0,busy=false,$=function(i){return document.getElementById(i)};
 function esc(s){return String(s).replace(/[&<>]/g,function(c){return{"&":"&amp;","<":"&lt;",">":"&gt;"}[c]})}
